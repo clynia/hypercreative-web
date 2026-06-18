@@ -1,0 +1,17 @@
+# OS / sync junk
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Office / Drive lock + temp files
+~$*
+*.tmp
+*.bak
+
+# Build sources (site is pre-generated; these are inputs, not served)
+_content/
+
+# Unused design drafts
+assets/hero-concept-a.png
+assets/hero-concept-b.png
