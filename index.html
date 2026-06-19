@@ -44,7 +44,7 @@
   a{color:inherit;text-decoration:none}
   .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   ::selection{background:var(--red-dim)}
-  .eyebrow,.section-tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink-mute)}
+  .eyebrow,.section-tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-mute)}
   .italic{font-style:italic}
 
   #cursor-halo{position:fixed;top:0;left:0;width:440px;height:440px;border-radius:50%;pointer-events:none;z-index:3;
@@ -72,7 +72,8 @@
   #net{position:absolute;inset:0;width:100%;height:100%;z-index:0}
   .hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(58% 48% at 50% 46%,rgba(247,246,243,.62),rgba(247,246,243,.18) 60%,transparent 82%)}
   .hero-inner{position:relative;z-index:2;max-width:var(--maxw);width:100%;margin:0 auto;padding:7rem clamp(1.25rem,4vw,3.25rem) 6rem;text-align:center}
-  .hero .eyebrow{display:block;margin-bottom:1.5rem}
+  .hero .eyebrow{display:block;margin-bottom:1.6rem;color:var(--ink-soft);font-size:.7rem;letter-spacing:.22em}
+  .hero .eyebrow::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--red);vertical-align:.18em;margin-right:.8em}
   .hero-title{font-family:var(--f-display);font-weight:300;font-size:clamp(3rem,9.5vw,8.4rem);line-height:.95;letter-spacing:-.025em}
   .hero-title span{display:block}
   .hero-title .italic{font-style:italic}
