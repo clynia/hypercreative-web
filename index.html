@@ -81,13 +81,14 @@
   .hero-title .tm{font-size:.28em;vertical-align:.95em;color:var(--ink-mute);font-family:var(--f-mono);font-weight:400;letter-spacing:0;margin-left:.1em}
   /* Ignition Point: the brand mark, the one node that lights up under pressure */
   .hero-title .ip{display:block;margin:.18em auto 0;width:clamp(40px,4.6vw,64px);height:clamp(40px,4.6vw,64px);overflow:visible}
-  .ip .c{stroke:rgba(19,19,15,.34);stroke-width:2.4;stroke-linecap:round;fill:none;stroke-dasharray:34;stroke-dashoffset:34;animation:ipDraw .5s var(--ease) .2s forwards}
-  .ip .c2{animation-delay:.34s}.ip .c3{animation-delay:.46s}
-  .ip .n{fill:rgba(19,19,15,.40);opacity:0;animation:ipFade .35s ease .5s forwards}
+  .ip .c{stroke:rgba(19,19,15,.34);stroke-width:2.4;stroke-linecap:round;fill:none;stroke-dasharray:34;stroke-dashoffset:34;animation:ipLoop 3.4s ease-in-out infinite}
+  .ip .c2{animation-delay:-1.13s}.ip .c3{animation-delay:-2.26s}
+  .ip .n{fill:rgba(19,19,15,.40);opacity:0;animation:ipNode 3.4s ease-in-out infinite}
+  .ip .n2{animation-delay:-1.13s}.ip .n3{animation-delay:-2.26s}
   .ip .d{fill:#13130F;fill-opacity:.36;transform-box:fill-box;transform-origin:center;transform:scale(0);animation:ipDisc .42s var(--ease) .62s forwards,ipFill .42s linear .62s forwards}
   .ip .h{fill:var(--red);transform-box:fill-box;transform-origin:center;transform:scale(.6);opacity:0;animation:ipHalo .5s ease-out .9s forwards}
-  @keyframes ipDraw{to{stroke-dashoffset:0}}
-  @keyframes ipFade{to{opacity:1}}
+  @keyframes ipLoop{0%{stroke-dashoffset:34}35%{stroke-dashoffset:0}65%{stroke-dashoffset:0}100%{stroke-dashoffset:34}}
+  @keyframes ipNode{0%{opacity:0}35%{opacity:.9}65%{opacity:.9}100%{opacity:0}}
   @keyframes ipDisc{0%{transform:scale(0)}68%{transform:scale(1.14)}100%{transform:scale(1)}}
   @keyframes ipFill{to{fill:#E0463C;fill-opacity:1}}
   @keyframes ipHalo{0%{transform:scale(.6);opacity:.45}100%{transform:scale(1.7);opacity:0}}
@@ -235,7 +236,7 @@
       <span class="eyebrow reveal">Creativity training for leadership</span>
       <h1 class="hero-title">
         <span class="sr-only">Hypercreative. Creativity under pressure.</span>
-        <span class="reveal" style="--d:.05s">Hypercreative<sup class="tm">™</sup><svg class="ip" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle class="h" cx="50" cy="50" r="20"/><line class="c c1" x1="24" y1="62" x2="39" y2="53"/><circle class="n" cx="23" cy="63" r="3"/><line class="c c2" x1="74" y1="34" x2="61" y2="45"/><circle class="n" cx="75" cy="33" r="3"/><line class="c c3" x1="66" y1="76" x2="55" y2="62"/><circle class="n" cx="67" cy="77" r="3"/><circle class="d" cx="50" cy="50" r="14"/></svg></span>
+        <span class="reveal" style="--d:.05s">Hypercreative<sup class="tm">™</sup><svg class="ip" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle class="h" cx="50" cy="50" r="20"/><line class="c c1" x1="24" y1="62" x2="39" y2="53"/><circle class="n n1" cx="23" cy="63" r="3"/><line class="c c2" x1="74" y1="34" x2="61" y2="45"/><circle class="n n2" cx="75" cy="33" r="3"/><line class="c c3" x1="66" y1="76" x2="55" y2="62"/><circle class="n n3" cx="67" cy="77" r="3"/><circle class="d" cx="50" cy="50" r="14"/></svg></span>
       </h1>
       <p class="hero-tag reveal" style="--d:.18s">Creativity under pressure<span class="p">.</span></p>
       <p class="hero-sub reveal" style="--d:.32s">We train the teams of the world's most demanding companies to solve any challenge, creatively, on demand.</p>
