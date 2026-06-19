@@ -15,3 +15,6 @@ _content/
 # Unused design drafts
 assets/hero-concept-a.png
 assets/hero-concept-b.png
+
+# Server secret: real n8n webhook URL (create on the host, never commit)
+api/config.php
