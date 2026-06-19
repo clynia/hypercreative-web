@@ -81,10 +81,8 @@
   .hero-title .tm{font-size:.28em;vertical-align:.95em;color:var(--ink-mute);font-family:var(--f-mono);font-weight:400;letter-spacing:0;margin-left:.1em}
   /* Ignition Point: the brand mark, the one node that lights up under pressure */
   .hero-title .ip{display:block;margin:.18em auto 0;width:clamp(40px,4.6vw,64px);height:clamp(40px,4.6vw,64px);overflow:visible}
-  .ip .c{stroke:rgba(19,19,15,.34);stroke-width:2.4;stroke-linecap:round;fill:none;stroke-dasharray:34;stroke-dashoffset:34;animation:ipLoop 3.4s ease-in-out infinite}
-  .ip .c2{animation-delay:-1.13s}.ip .c3{animation-delay:-2.26s}
-  .ip .n{fill:rgba(19,19,15,.40);opacity:0;animation:ipNode 3.4s ease-in-out infinite}
-  .ip .n2{animation-delay:-1.13s}.ip .n3{animation-delay:-2.26s}
+  .ip .c{stroke:rgba(19,19,15,.34);stroke-width:2.4;stroke-linecap:round;fill:none}
+  .ip .n{fill:rgba(19,19,15,.40)}
   .ip .d{fill:#13130F;fill-opacity:.36;transform-box:fill-box;transform-origin:center;transform:scale(0);animation:ipDisc .42s var(--ease) .62s forwards,ipFill .42s linear .62s forwards}
   .ip .h{fill:var(--red);transform-box:fill-box;transform-origin:center;transform:scale(.6);opacity:0;animation:ipHalo .5s ease-out .9s forwards}
   @keyframes ipLoop{0%{stroke-dashoffset:34}35%{stroke-dashoffset:0}65%{stroke-dashoffset:0}100%{stroke-dashoffset:34}}
@@ -408,6 +406,32 @@
     if(cue)cue.style.opacity=cur>0.04?'0':'';
     requestAnimationFrame(frame);
   })(0);
+})();
+</script>
+<script>
+(function(){
+  var ip=document.querySelector('.hero-title .ip'); if(!ip) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var cs=[].slice.call(ip.querySelectorAll('.c')), ns=[].slice.call(ip.querySelectorAll('.n'));
+  if(cs.length<3) return;
+  var cx=50, cy=50, rin=17, DEG=Math.PI/180;
+  var sp=[{b:0,fr:0.50,ph:0.0},{b:120,fr:0.66,ph:1.7},{b:240,fr:0.58,ph:3.1}];
+  var t0=null;
+  function frame(ts){
+    if(t0===null)t0=ts; var t=(ts-t0)/1000;
+    for(var i=0;i<3;i++){
+      var s=sp[i];
+      var a=(s.b + t*18 + 12*Math.sin(t*0.45 + s.ph))*DEG;
+      var R=30 + 9*Math.sin(t*s.fr + s.ph);
+      var ix=cx+rin*Math.cos(a), iy=cy+rin*Math.sin(a);
+      var ox=cx+R*Math.cos(a), oy=cy+R*Math.sin(a);
+      cs[i].setAttribute('x1',ix.toFixed(2)); cs[i].setAttribute('y1',iy.toFixed(2));
+      cs[i].setAttribute('x2',ox.toFixed(2)); cs[i].setAttribute('y2',oy.toFixed(2));
+      if(ns[i]){ ns[i].setAttribute('cx',ox.toFixed(2)); ns[i].setAttribute('cy',oy.toFixed(2)); }
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
 })();
 </script>
 </body>
