@@ -11,9 +11,21 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $url = getenv('HC_LEAD_WEBHOOK');
-if (!$url && file_exists(__DIR__ . '/config.php')) {
-    $cfg = require __DIR__ . '/config.php';
-    $url = is_array($cfg) ? ($cfg['webhook'] ?? null) : null;
+if (!$url) {
+    $candidates = [];
+    if (!empty($_SERVER['DOCUMENT_ROOT'])) {
+        // One level ABOVE the web root: a clean git deploy only touches public_html,
+        // so a secret kept here survives every deploy. Create it once, never again.
+        $candidates[] = dirname($_SERVER['DOCUMENT_ROOT']) . '/hc-config.php';
+    }
+    $candidates[] = __DIR__ . '/config.php'; // in-folder fallback (a clean deploy can wipe this)
+    foreach ($candidates as $p) {
+        if (file_exists($p)) {
+            $cfg = require $p;
+            $url = is_array($cfg) ? ($cfg['webhook'] ?? null) : null;
+            if ($url) break;
+        }
+    }
 }
 if (!$url) {
     http_response_code(500);
