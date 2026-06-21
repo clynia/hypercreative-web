@@ -1,0 +1,16 @@
+# Clean URLs: hide .html and index.html from the address bar.
+RewriteEngine On
+
+# /index.html and /dir/index.html  ->  /  and  /dir/   (301)
+RewriteCond %{THE_REQUEST} \s/+([^?\s]*/)?index\.html[\s?] [NC]
+RewriteRule ^([^?]*/)?index\.html$ /%1 [R=301,L]
+
+# /page.html  ->  /page   (301)
+RewriteCond %{THE_REQUEST} \s/+([^?\s]+)\.html[\s?] [NC]
+RewriteRule ^([^?]+)\.html$ /$1 [R=301,L]
+
+# Internally serve /page from /page.html (no redirect)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
