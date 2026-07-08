@@ -92,25 +92,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* connector panel */
   .conx{position:relative;z-index:2;margin:clamp(3rem,7vh,4.6rem) auto 0;max-width:540px;width:100%;
     background:rgba(255,255,255,.5);border:1px solid var(--line);border-radius:6px;padding:clamp(1.5rem,3.5vw,2.3rem);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
-  .conx-lbl{display:block;text-align:center;margin-bottom:1.4rem}
-  .conx-row{position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;padding-top:2.9rem}
-  .chip{background:var(--tilled);border:1px solid var(--line-soft);border-radius:30px;padding:.5rem .95rem;font-size:.82rem;color:var(--ink-soft);white-space:nowrap;transition:color .5s var(--ease),border-color .5s var(--ease);position:relative;z-index:2}
-  .chip.lit{color:var(--ink);border-color:var(--red)}
-  .conx-arc{position:absolute;top:0;left:9%;right:9%;width:82%;height:2.9rem;z-index:1;overflow:visible}
-  .conx-arc .arc{fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-dasharray:240;stroke-dashoffset:240;transition:stroke-dashoffset 1.1s var(--ease) .25s}
-  .conx-arc .seed{fill:var(--red);opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform .4s var(--ease) 1s,opacity .4s var(--ease) 1s}
-  .conx.on .arc{stroke-dashoffset:0}
-  .conx.on .seed{opacity:1;transform:scale(1);animation:seedPulse 3.4s var(--ease) 1.6s infinite}
-  @keyframes seedPulse{0%,100%{opacity:1}50%{opacity:.45}}
-  .conx-q{font-weight:300;font-size:clamp(1.15rem,2.6vw,1.55rem);line-height:1.25;letter-spacing:-.01em;color:var(--ink);margin-top:1.9rem;
+  .conx-lbl{display:block;text-align:center;margin-bottom:1.5rem}
+  .cg{text-align:center}
+  .cg-row{display:flex;gap:1rem}
+  .cg-cell{flex:1 1 0;min-width:0;display:flex;justify-content:center}
+  .cg-chip{display:inline-block;max-width:100%;background:var(--paper-2);border:1px solid var(--line);border-radius:30px;padding:.55rem 1.05rem;font-size:.86rem;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 1px 2px rgba(19,19,15,.05)}
+  .cg-wire{position:relative;height:3.4rem;margin-top:-1px}
+  .cg-wire svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  .cg-path{fill:none;stroke:rgba(19,19,15,.22);stroke-width:1.2;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:120;stroke-dashoffset:120;transition:stroke-dashoffset 1s var(--ease) .3s}
+  .conx.on .cg-path{stroke-dashoffset:0}
+  .cg-seed{position:absolute;left:50%;bottom:-5px;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--red);opacity:0;transform:scale(0);transition:opacity .45s var(--ease) 1s,transform .45s var(--ease) 1s;z-index:2}
+  .cg-seed::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid var(--red);opacity:0}
+  .conx.on .cg-seed{opacity:1;transform:scale(1)}
+  .conx.on .cg-seed::after{animation:seedHalo 3.2s var(--ease) 1.6s infinite}
+  @keyframes seedHalo{0%{transform:scale(.55);opacity:.55}70%{opacity:0}100%{transform:scale(2);opacity:0}}
+  .cg-q{font-weight:300;font-size:clamp(1.2rem,2.6vw,1.6rem);line-height:1.28;letter-spacing:-.015em;color:var(--ink);margin:1.9rem auto 0;max-width:26ch;
     opacity:0;transform:translateY(8px);transition:opacity .7s var(--ease) 1.2s,transform .7s var(--ease) 1.2s}
-  .conx.on .conx-q{opacity:1;transform:none}
-  .conx-cap{font-size:.82rem;color:var(--ink-mute);margin-top:.9rem;opacity:0;transition:opacity .7s var(--ease) 1.5s}
-  .conx.on .conx-cap{opacity:1}
-  @media(max-width:520px){
-    .chip{white-space:normal;font-size:.76rem}
-    .conx-q{font-size:1.15rem}
-  }
+  .conx.on .cg-q{opacity:1;transform:none}
+  .cg-cap{font-size:.82rem;color:var(--ink-mute);margin-top:.95rem;opacity:0;transition:opacity .7s var(--ease) 1.5s}
+  .conx.on .cg-cap{opacity:1}
+  @media(max-width:520px){.cg-chip{font-size:.78rem;padding:.5rem .85rem;white-space:normal}.cg-q{font-size:1.15rem}}
 
   /* sections */
   section{position:relative;z-index:1}
@@ -203,10 +204,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .reveal.in{opacity:1;transform:none;filter:blur(0)}
   @media (prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;filter:none;transition:none}
-    .conx .arc{stroke-dashoffset:0}
-    .conx .seed{opacity:1;transform:scale(1);animation:none}
-    .conx-q{opacity:1;transform:none}
-    .conx-cap{opacity:1}
+    .conx .cg-path{stroke-dashoffset:0}
+    .conx .cg-seed{opacity:1;transform:scale(1)}
+    .conx .cg-seed::after{animation:none}
+    .cg-q{opacity:1;transform:none}
+    .cg-cap{opacity:1}
   }
 </style>
 </head>
@@ -240,16 +242,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="conx reveal" id="conx" style="--d:.32s" aria-label="How the connector works">
       <span class="conx-lbl lbl">two things you saved</span>
-      <div class="conx-row">
-        <span class="chip chip-near">a client complaint</span>
-        <svg class="conx-arc" viewBox="0 0 200 40" preserveAspectRatio="none" aria-hidden="true">
-          <path class="arc" d="M6,34 Q100,-10 194,34"/>
-          <circle class="seed" cx="100" cy="6" r="4.2"/>
-        </svg>
-        <span class="chip chip-far">scaffolding photo</span>
+      <div class="cg">
+        <div class="cg-row">
+          <div class="cg-cell"><span class="cg-chip">a client complaint</span></div>
+          <div class="cg-cell"><span class="cg-chip">scaffolding photo</span></div>
+        </div>
+        <div class="cg-wire">
+          <svg viewBox="0 0 100 46" preserveAspectRatio="none" aria-hidden="true">
+            <path class="cg-path" d="M25,1 C25,26 50,20 50,45"/>
+            <path class="cg-path" d="M75,1 C75,26 50,20 50,45"/>
+          </svg>
+          <span class="cg-seed" aria-hidden="true"></span>
+        </div>
+        <p class="cg-q">What would you build if the complaint were load-bearing?</p>
+        <p class="cg-cap">One question that connects two of your notes. The idea is yours to make.</p>
       </div>
-      <p class="conx-q">What would you build if the complaint were load-bearing?</p>
-      <p class="conx-cap">One question that connects two of your notes. The idea is yours to make.</p>
     </div>
   </div>
 </section>
@@ -376,7 +383,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   /* reveals + connector trigger */
   var rev=[].slice.call(document.querySelectorAll('.reveal'));
-  function lightConx(){var c=document.getElementById('conx');if(c){c.classList.add('on');var n=c.querySelector('.chip-near'),f=c.querySelector('.chip-far');if(n)setTimeout(function(){n.classList.add('lit')},350);if(f)setTimeout(function(){f.classList.add('lit')},650);}}
+  function lightConx(){var c=document.getElementById('conx');if(c)c.classList.add('on');}
   if(reduce||!('IntersectionObserver'in window)){rev.forEach(function(e){e.classList.add('in')});lightConx();}
   else{
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.16,rootMargin:'0px 0px -8% 0px'});
