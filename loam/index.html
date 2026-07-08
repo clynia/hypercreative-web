@@ -129,18 +129,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .card .k{font-weight:500;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-mute)}
   .card .t{font-weight:300;font-size:1rem;line-height:1.35;color:var(--ink-soft);margin-top:.4rem}
   /* example thumbnails */
-  .thumb{aspect-ratio:16/10;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;margin-bottom:1.15rem;padding:.9rem;display:flex;flex-direction:column;gap:.45rem;text-align:left}
-  .th-h{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
-  .th-note-body{font-size:.98rem;line-height:1.35;color:var(--ink)}
+  .thumb{aspect-ratio:16/11;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;margin-bottom:1.15rem;text-align:left;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(19,19,15,.05)}
+  .th-note{padding:.95rem 1rem}
+  .th-note-title{font-size:.9rem;font-weight:600;color:var(--ink)}
+  .th-note-body{font-size:.96rem;line-height:1.4;color:var(--ink-soft);margin-top:.35rem;flex:1}
+  .th-note-meta{font-size:.62rem;letter-spacing:.04em;color:var(--ink-mute)}
+  .th-link{padding:.9rem 1rem}
   .th-link-row{display:flex;align-items:center;gap:.45rem}
-  .th-fav{width:13px;height:13px;border-radius:3px;background:var(--tilled);border:1px solid var(--line);flex:none}
+  .th-fav{width:13px;height:13px;border-radius:3px;background:#6aa84f;flex:none}
   .th-host{font-size:.66rem;color:var(--ink-mute)}
-  .th-link-a{color:#1a56db;text-decoration:underline;text-underline-offset:2px;font-size:.92rem;line-height:1.35;cursor:pointer}
-  .th-bar{display:flex;gap:5px}
-  .th-bar span{width:9px;height:9px;border-radius:50%;background:var(--tilled)}
-  .th-shot-title{font-size:.95rem;font-weight:500;color:var(--ink);line-height:1.3;margin-top:.1rem}
-  .th-shot-l{display:block;height:6px;border-radius:3px;background:var(--line-soft)}
-  .th-shot-l.short{width:55%}
+  .th-link-a{color:#1a56db;text-decoration:underline;text-underline-offset:2px;font-size:.92rem;line-height:1.32;font-weight:500;margin-top:.45rem;display:block}
+  .th-link-desc{font-size:.78rem;line-height:1.45;color:var(--ink-soft);margin-top:.4rem;flex:1}
+  .th-shot{padding:0}
+  .th-bar{display:flex;align-items:center;gap:5px;padding:.55rem .8rem;border-bottom:1px solid var(--line);background:#faf9f6}
+  .th-bar .dot{width:8px;height:8px;border-radius:50%;background:var(--tilled)}
+  .th-url{margin-left:.55rem;font-size:.58rem;color:var(--ink-mute);background:#fff;border:1px solid var(--line);border-radius:20px;padding:.1rem .55rem}
+  .th-shot-body{padding:.85rem .95rem;flex:1}
+  .th-shot-title{font-size:.95rem;font-weight:600;color:var(--ink);line-height:1.3}
+  .th-shot-text{font-size:.8rem;line-height:1.5;color:var(--ink-soft);margin-top:.4rem}
+  .th-shot-text mark{background:rgba(224,70,60,.16);color:var(--ink);padding:0 .12em;border-radius:2px}
 
   /* quiet band (why / close) */
   .quiet{background:var(--tilled);border-block:1px solid var(--line)}
@@ -266,15 +273,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="sub j reveal" style="--d:.08s">A line you liked. A link worth keeping. A photo of a page. A voice note in the car. Drop it in one tap and never sort it again.</p>
   <div class="cards">
     <div class="card reveal">
-      <div class="thumb th-note"><div class="th-h">Notes</div><div class="th-note-body">People don't buy drills, they buy holes.</div></div>
+      <div class="thumb th-note">
+        <div class="th-note-title">Idea</div>
+        <div class="th-note-body">People don't buy drills, they buy holes.</div>
+        <div class="th-note-meta">Yesterday, 9:41</div>
+      </div>
       <span class="k">Note</span><p class="t">A line you liked.</p>
     </div>
     <div class="card reveal" style="--d:.08s">
-      <div class="thumb th-link"><div class="th-link-row"><span class="th-fav"></span><span class="th-host">blog.duolingo.com</span></div><a class="th-link-a">How Duolingo uses streaks to keep users coming back</a></div>
+      <div class="thumb th-link">
+        <div class="th-link-row"><span class="th-fav"></span><span class="th-host">blog.duolingo.com</span></div>
+        <a class="th-link-a">How Duolingo uses streaks to keep users coming back</a>
+        <p class="th-link-desc">Streaks, reminders, and loss aversion as retention mechanics.</p>
+      </div>
       <span class="k">Link</span><p class="t">A link worth keeping.</p>
     </div>
     <div class="card reveal" style="--d:.16s">
-      <div class="thumb th-shot"><div class="th-bar"><span></span><span></span><span></span></div><div class="th-shot-title">The best interfaces disappear</div><span class="th-shot-l"></span><span class="th-shot-l short"></span></div>
+      <div class="thumb th-shot">
+        <div class="th-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="th-url">read.work</span></div>
+        <div class="th-shot-body">
+          <div class="th-shot-title">The best interfaces disappear</div>
+          <p class="th-shot-text">Good design gets out of the way. <mark>When it works, you stop noticing it.</mark></p>
+        </div>
+      </div>
       <span class="k">Photo</span><p class="t">A page you shot, read with OCR.</p>
     </div>
   </div>
