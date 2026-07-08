@@ -10,27 +10,13 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+// Webhook for the n8n "Hypercreative - Website leads" flow.
+// Set HC_LEAD_WEBHOOK in hPanel (Advanced > PHP env, or a SetEnv in .htaccess) to
+// rotate the endpoint privately without a deploy; otherwise the current instance
+// URL below is used.
 $url = getenv('HC_LEAD_WEBHOOK');
 if (!$url) {
-    $candidates = [];
-    if (!empty($_SERVER['DOCUMENT_ROOT'])) {
-        // One level ABOVE the web root: a clean git deploy only touches public_html,
-        // so a secret kept here survives every deploy. Create it once, never again.
-        $candidates[] = dirname($_SERVER['DOCUMENT_ROOT']) . '/hc-config.php';
-    }
-    $candidates[] = __DIR__ . '/config.php'; // in-folder fallback (a clean deploy can wipe this)
-    foreach ($candidates as $p) {
-        if (file_exists($p)) {
-            $cfg = require $p;
-            $url = is_array($cfg) ? ($cfg['webhook'] ?? null) : null;
-            if ($url) break;
-        }
-    }
-}
-if (!$url) {
-    http_response_code(500);
-    echo json_encode(['ok' => false, 'error' => 'not_configured']);
-    exit;
+    $url = 'https://n8n-ixwg.srv1722506.hstgr.cloud/webhook/hypercreative-lead';
 }
 
 $body = file_get_contents('php://input');

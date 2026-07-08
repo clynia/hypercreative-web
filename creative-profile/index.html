@@ -113,7 +113,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* result */
   .result{display:none;padding:clamp(2rem,5vh,4rem) 0 clamp(5rem,12vh,8rem)}
   .result.on{display:block}
-  .res-tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute)}
+  .res-kicker{font-family:var(--f-display);font-weight:300;font-size:clamp(1rem,1.8vw,1.2rem);color:var(--ink-soft)}
+  .res-blend{margin-top:.6rem;font-family:var(--f-display);font-style:italic;font-weight:300;font-size:clamp(1.15rem,2.6vw,1.7rem);line-height:1.3;color:var(--ink)}
+  .res-blend strong{font-style:normal;font-weight:500;color:var(--red)}
   .res-name{font-family:var(--f-display);font-weight:300;font-size:clamp(2.6rem,7.5vw,5.6rem);line-height:1;letter-spacing:-.03em;margin:.5rem 0 0}
   .res-name .bp{color:var(--red)}
   .res-state{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:clamp(1.3rem,3vw,2rem);line-height:1.28;color:var(--ink);max-width:26ch;margin:1.4rem 0 0}
@@ -131,10 +133,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .res-last .bp{color:var(--red)}
 
   /* card */
-  .card-wrap{margin-top:clamp(3rem,7vh,5rem)}
-  .card-lead{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:1.3rem}
-  .imprint{max-width:340px;aspect-ratio:9/16;background:var(--ink);color:var(--paper);border-radius:12px;padding:2rem 1.8rem;display:flex;flex-direction:column;position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(19,19,15,.5)}
-  .imprint::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at center,rgba(224,70,60,.28),transparent 70%)}
+  .card-wrap{margin-top:clamp(3rem,7vh,5rem);background:var(--ink);color:var(--paper);border-radius:18px;padding:clamp(2.2rem,5vw,3.6rem) clamp(1.4rem,4vw,3rem);position:relative;overflow:hidden;isolation:isolate}
+  .card-wrap::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(620px 320px at 12% -5%,rgba(224,70,60,.22),transparent 62%),radial-gradient(560px 420px at 108% 108%,rgba(224,70,60,.18),transparent 60%)}
+  .card-lead{display:flex;align-items:center;justify-content:center;gap:.55em;font-family:var(--f-display);font-weight:400;font-size:clamp(1.1rem,2.3vw,1.4rem);letter-spacing:-.01em;color:var(--paper);margin-bottom:1.5rem;text-align:center}
+  .card-lead svg{width:1.15em;height:1.15em;flex:none;color:var(--red)}
+  .card-name-in{display:flex;justify-content:center;margin-bottom:1.6rem}
+  .card-name-in input{width:min(340px,100%);text-align:center;background:rgba(247,246,243,.06);border:1px solid rgba(247,246,243,.18);border-radius:999px;padding:.62rem 1.1rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper)}
+  .card-name-in input::placeholder{color:rgba(247,246,243,.5);letter-spacing:.1em}
+  .card-name-in input:focus{outline:none;border-color:var(--red);background:rgba(247,246,243,.1)}
+  .card-stage{position:relative;display:flex;justify-content:center;padding:1.2rem 0 .4rem}
+  .card-stage::before{content:"";position:absolute;top:6%;left:50%;transform:translateX(-50%);width:80%;height:80%;background:radial-gradient(ellipse at center,rgba(224,70,60,.5),transparent 68%);filter:blur(58px);z-index:0;pointer-events:none}
+  .imprint{position:relative;z-index:1;width:340px;max-width:100%;aspect-ratio:9/16;background:var(--ink);color:var(--paper);border-radius:14px;padding:2rem 1.8rem;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(247,246,243,.1);box-shadow:0 0 90px -8px rgba(224,70,60,.4),0 40px 80px -28px rgba(0,0,0,.8)}
+  .imprint::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at center,rgba(224,70,60,.3),transparent 70%)}
+  .imp-owner{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
+  .imp-under{margin-top:.55rem;font-family:var(--f-mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,246,243,.55)}
   .imp-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,246,243,.6);z-index:1}
   .imp-dot{width:7px;height:7px;border-radius:50%;background:var(--red)}
   .imp-mid{margin-top:auto;z-index:1}
@@ -143,7 +155,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .imp-one{margin-top:.7rem;color:rgba(247,246,243,.72);font-size:.92rem;line-height:1.45}
   .imp-id{margin-top:1.1rem;font-family:var(--f-display);font-style:italic;font-size:.98rem;line-height:1.4;color:var(--paper)}
   .imp-bot{margin-top:1.4rem;padding-top:1rem;border-top:1px solid rgba(247,246,243,.16);display:flex;justify-content:space-between;align-items:end;font-family:var(--f-mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,246,243,.5);z-index:1}
-  .card-actions{margin-top:1.6rem;display:flex;gap:12px;flex-wrap:wrap}
+  .card-actions{margin-top:1.9rem;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .card-actions .btn{color:var(--paper);border-color:rgba(247,246,243,.28)}
+  .card-actions .btn-primary{background:var(--red);border-color:var(--red);color:var(--paper)}
+  .card-actions .btn-primary:hover{background:#c93b32;border-color:#c93b32;transform:translateY(-1px)}
+  .card-actions .btn-ghost:hover{color:var(--paper);border-color:var(--paper)}
 
   /* email */
   .unlock{margin-top:clamp(3rem,7vh,5rem);border-top:1px solid var(--line);padding-top:clamp(2.4rem,6vh,3.5rem);max-width:560px}
@@ -209,8 +225,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <section class="result" id="result">
-    <span class="res-tag">Your type, right now</span>
+    <p class="res-kicker">You came out as</p>
     <h1 class="res-name" id="res-name"></h1>
+    <p class="res-blend" id="res-blend"></p>
     <p class="res-state" id="res-state"></p>
 
     <div class="res-grid">
@@ -221,16 +238,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="res-last">This points to a tendency, not a verdict<span class="bp">.</span> What you do with it is yours.</p>
 
     <div class="card-wrap reveal">
-      <div class="card-lead">Your Hypercreative Imprint &mdash; keep it, share it</div>
-      <div class="imprint" id="imprint">
-        <div class="imp-top"><span>The Hypercreative Method</span><span class="imp-dot" aria-hidden="true"></span></div>
-        <div class="imp-mid">
-          <div class="imp-fam" id="imp-fam"></div>
-          <div class="imp-name" id="imp-name"></div>
-          <div class="imp-one" id="imp-one"></div>
-          <div class="imp-id" id="imp-id"></div>
+      <div class="card-lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>Send it to someone who thinks like you</div>
+      <div class="card-name-in"><input type="text" id="imp-name-in" maxlength="26" placeholder="Add your name to the card" aria-label="Your name on the card" autocomplete="name"></div>
+      <div class="card-stage">
+        <div class="imprint" id="imprint">
+          <div class="imp-top"><span>The Hypercreative Method</span><span class="imp-dot" aria-hidden="true"></span></div>
+          <div class="imp-mid">
+            <div class="imp-owner" id="imp-owner" hidden></div>
+            <div class="imp-fam" id="imp-fam"></div>
+            <div class="imp-name" id="imp-name"></div>
+            <div class="imp-one" id="imp-one"></div>
+            <div class="imp-under" id="imp-under"></div>
+            <div class="imp-id" id="imp-id"></div>
+          </div>
+          <div class="imp-bot"><span id="imp-serial"></span><span>hypercreativemethod.com</span></div>
         </div>
-        <div class="imp-bot"><span id="imp-serial"></span><span>hypercreativemethod.com</span></div>
       </div>
       <div class="card-actions">
         <button class="btn btn-primary" id="dl-card" type="button">Download my card</button>
@@ -346,6 +368,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       fill=document.getElementById('qbar-fill'),qcount=document.getElementById('qcount'),
       calc=document.getElementById('calc'),back=document.getElementById('q-back'),
       resultSec=document.getElementById('result');
+  var nameIn=document.getElementById('imp-name-in'),owner=document.getElementById('imp-owner');
+  function applyOwner(){if(NAME){owner.textContent=NAME;owner.hidden=false;}else{owner.textContent='';owner.hidden=true;}}
+  nameIn.addEventListener('input',function(){NAME=nameIn.value.trim();applyOwner();});
 
   function renderQ(){
     var item=Q[idx];
@@ -373,11 +398,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   back.addEventListener('click',goBack);
 
-  function winner(){
-    var best=null,bestScore=-1;
-    for(var i=0;i<PRIORITY.length;i++){var k=PRIORITY[i];if(scores[k]>bestScore){bestScore=scores[k];best=k;}}
-    return best;
-  }
+  function order(){return PRIORITY.slice().sort(function(a,b){return scores[b]-scores[a];});}
+  function winner(){return order()[0];}
   function finish(){
     qWrap.innerHTML=''; qcount.textContent=''; fill.style.width='100%'; back.hidden=true;
     calc.classList.add('on');
@@ -386,21 +408,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     setTimeout(function(){calc.classList.remove('on');showResult(key);},1600);
   }
 
-  var SERIAL='';
+  var SERIAL='',NAME='',CUR={key:null,sec:null};
   function showResult(key){
-    var t=TYPES[key];
+    var t=TYPES[key],secKey=order()[1],s=TYPES[secKey];
+    CUR.key=key;CUR.sec=secKey;
     document.getElementById('res-name').innerHTML=t.name+'<span class="bp">.</span>';
+    document.getElementById('res-blend').innerHTML='with the <strong>'+s.name.replace(/^The /,'')+'</strong> running underneath';
     document.getElementById('res-state').textContent=t.state;
     document.getElementById('res-sig').innerHTML=t.sig;
     document.getElementById('res-shadow').innerHTML=t.shadow;
     document.getElementById('imp-fam').textContent=t.family;
     document.getElementById('imp-name').textContent=t.name;
     document.getElementById('imp-one').textContent=t.one;
+    document.getElementById('imp-under').textContent='Underlying · '+s.name;
     document.getElementById('imp-id').textContent='“'+t.id+'”';
     var d=new Date();
     var mm=('0'+(d.getMonth()+1)).slice(-2),dd=('0'+d.getDate()).slice(-2);
     SERIAL='HCM-'+key.slice(0,3).toUpperCase()+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
     document.getElementById('imp-serial').textContent=SERIAL+'  ·  '+d.getFullYear()+'-'+mm+'-'+dd;
+    applyOwner();
     testSec.hidden=true;
     resultSec.classList.add('on');
     revealAll(resultSec);
@@ -430,14 +456,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var W=1080,H=1920,P=110;
     var idLines=wrapText('“'+t.id+'”',30);
     var oneLines=wrapText(t.one,34);
+    var sec=CUR.sec?TYPES[CUR.sec]:null;
+    var ownerSVG=NAME?'<text x="'+P+'" y="245" fill="#E0463C" font-family="Space Mono, monospace" font-size="30" letter-spacing="4">'+esc(NAME.toUpperCase())+'</text>':'';
+    var underSVG=sec?'<text x="'+P+'" y="1470" fill="#F7F6F3" fill-opacity="0.55" font-family="Space Mono, monospace" font-size="26" letter-spacing="3">'+esc('UNDERLYING · '+sec.name.toUpperCase())+'</text>':'';
     return '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+
     '<rect width="'+W+'" height="'+H+'" fill="#13130F"/>'+
     '<circle cx="'+(W-40)+'" cy="150" r="360" fill="#E0463C" opacity="0.16"/>'+
     '<text x="'+P+'" y="150" fill="#F7F6F3" fill-opacity="0.6" font-family="Space Mono, monospace" font-size="26" letter-spacing="4">THE HYPERCREATIVE METHOD</text>'+
     '<circle cx="'+(W-P)+'" cy="142" r="12" fill="#E0463C"/>'+
+    ownerSVG+
     '<text x="'+P+'" y="1120" fill="#E0463C" font-family="Space Mono, monospace" font-size="30" letter-spacing="5">'+esc(t.family.toUpperCase())+'</text>'+
     '<text x="'+P+'" y="1230" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="300" font-size="110" letter-spacing="-3">'+esc(t.name)+'</text>'+
     '<text fill="#F7F6F3" fill-opacity="0.72" font-family="Inter, sans-serif" font-weight="300" font-size="42">'+tspans(oneLines,P,1330,58)+'</text>'+
+    underSVG+
     '<text fill="#F7F6F3" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="48">'+tspans(idLines,P,1560,64)+'</text>'+
     '<line x1="'+P+'" y1="1740" x2="'+(W-P)+'" y2="1740" stroke="#F7F6F3" stroke-opacity="0.16"/>'+
     '<text x="'+P+'" y="1800" fill="#F7F6F3" fill-opacity="0.5" font-family="Space Mono, monospace" font-size="24" letter-spacing="3">'+esc(SERIAL)+'</text>'+
@@ -478,7 +509,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var v=(uemail.value||'').trim();
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){uemail.classList.add('err');uemail.focus();return;}
     uemail.classList.remove('err'); usub.disabled=true; var old=usub.textContent; usub.textContent='Sending…';
-    var payload={source:"creative-profile",email:v,profile_type:(window.__profileType||''),serial:SERIAL};
+    var pt=(window.__profileType||''),under=(CUR.sec?TYPES[CUR.sec].name:'');
+    var payload={name:NAME,email:v,consent:true,
+      message:"Creative Profile — Type: "+pt+(under?(" · Underlying: "+under):"")+" · Serial: "+SERIAL,
+      source:"creative-profile",profile_type:pt,serial:SERIAL};
     fetch("/api/lead.php",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})
       .then(function(r){if(!r.ok)throw 0;
         dl('creative_profile_email',{profile_type:(window.__profileType||'')});
