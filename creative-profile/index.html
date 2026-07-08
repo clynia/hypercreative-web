@@ -111,7 +111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .calc p{font-family:var(--f-display);font-style:italic;font-weight:300;font-size:clamp(1.4rem,3vw,2rem);color:var(--ink-soft)}
 
   /* result */
-  .result{display:none;padding:clamp(2rem,5vh,4rem) 0 clamp(5rem,12vh,8rem)}
+  .result{display:none;padding:clamp(2rem,5vh,4rem) 0 clamp(5rem,12vh,8rem);scroll-margin-top:84px}
   .result.on{display:block}
   .res-kicker{font-family:var(--f-display);font-weight:300;font-size:clamp(1rem,1.8vw,1.2rem);color:var(--ink-soft)}
   .res-blend{margin-top:.6rem;font-family:var(--f-display);font-style:italic;font-weight:300;font-size:clamp(1.15rem,2.6vw,1.7rem);line-height:1.3;color:var(--ink)}
@@ -133,8 +133,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .res-last .bp{color:var(--red)}
 
   /* card */
-  .card-wrap{margin-top:clamp(3rem,7vh,5rem);background:var(--ink);color:var(--paper);border-radius:18px;padding:clamp(2.2rem,5vw,3.6rem) clamp(1.4rem,4vw,3rem);position:relative;overflow:hidden;isolation:isolate}
-  .card-wrap::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(620px 320px at 12% -5%,rgba(224,70,60,.22),transparent 62%),radial-gradient(560px 420px at 108% 108%,rgba(224,70,60,.18),transparent 60%)}
+  .card-wrap{margin-top:clamp(3rem,7vh,5rem);width:100vw;margin-left:calc(50% - 50vw);background:var(--ink);color:var(--paper);padding:clamp(3rem,7vw,5.5rem) 0;position:relative;overflow:hidden;isolation:isolate}
+  .card-wrap::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(760px 380px at 16% -8%,rgba(224,70,60,.2),transparent 60%),radial-gradient(680px 500px at 100% 108%,rgba(224,70,60,.16),transparent 60%)}
+  .card-inner{max-width:660px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2rem)}
   .card-lead{display:flex;align-items:center;justify-content:center;gap:.55em;font-family:var(--f-display);font-weight:400;font-size:clamp(1.1rem,2.3vw,1.4rem);letter-spacing:-.01em;color:var(--paper);margin-bottom:1.5rem;text-align:center}
   .card-lead svg{width:1.15em;height:1.15em;flex:none;color:var(--red)}
   .card-name-in{display:flex;justify-content:center;margin-bottom:1.6rem}
@@ -145,7 +146,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .card-stage::before{content:"";position:absolute;top:6%;left:50%;transform:translateX(-50%);width:80%;height:80%;background:radial-gradient(ellipse at center,rgba(224,70,60,.5),transparent 68%);filter:blur(58px);z-index:0;pointer-events:none}
   .imprint{position:relative;z-index:1;width:340px;max-width:100%;aspect-ratio:9/16;background:var(--ink);color:var(--paper);border-radius:14px;padding:2rem 1.8rem;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(247,246,243,.1);box-shadow:0 0 90px -8px rgba(224,70,60,.4),0 40px 80px -28px rgba(0,0,0,.8)}
   .imprint::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle at center,rgba(224,70,60,.3),transparent 70%)}
-  .imp-owner{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
+  .imp-owner{font-family:var(--f-display);font-weight:400;font-size:1.3rem;line-height:1.1;letter-spacing:-.01em;color:var(--paper);margin-bottom:.55rem}
   .imp-under{margin-top:.55rem;font-family:var(--f-mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,246,243,.55)}
   .imp-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,246,243,.6);z-index:1}
   .imp-dot{width:7px;height:7px;border-radius:50%;background:var(--red)}
@@ -179,6 +180,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .foot-legal{max-width:var(--maxw);margin:0 auto;padding:1.5rem clamp(1.25rem,4vw,3.25rem) 0;display:flex;gap:1.2rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute)}
   .foot-legal a:hover{color:var(--ink)}
   .foot-fine{flex-basis:100%;text-transform:none;letter-spacing:.03em;color:var(--ink-mute);opacity:.9;margin-top:.4rem}
+
+  /* nine types */
+  .types{padding:clamp(3.5rem,9vh,7rem) 0 clamp(1rem,3vh,2rem)}
+  .types .section-tag{display:block;margin-bottom:1.1rem}
+  .types .section-tag::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--red);vertical-align:.18em;margin-right:.7em}
+  .types-h{font-family:var(--f-display);font-weight:300;font-size:clamp(1.9rem,4.5vw,3.1rem);line-height:1.05;letter-spacing:-.02em;max-width:20ch}
+  .types-lead{margin-top:1.1rem;color:var(--ink-soft);max-width:62ch;font-size:clamp(1.02rem,1.4vw,1.16rem);text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .types-lead strong{color:var(--ink);font-weight:500}
+  .types-lead em{font-style:italic;color:var(--red)}
+  .types-grid{margin-top:clamp(2.2rem,5vh,3.4rem);display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+  .fiche{border:1px solid var(--line);border-radius:10px;padding:1.5rem 1.4rem;background:var(--paper-2);transition:border-color .25s var(--ease),transform .25s var(--ease)}
+  .fiche:hover{border-color:var(--red);transform:translateY(-2px)}
+  .fiche-fam{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+  .fiche-name{font-family:var(--f-display);font-weight:300;font-size:1.5rem;letter-spacing:-.02em;margin:.45rem 0 .5rem}
+  .fiche-one{font-family:var(--f-display);font-style:italic;color:var(--ink);font-size:1.05rem;line-height:1.3;margin-bottom:.7rem}
+  .fiche-sig{font-size:.92rem;line-height:1.55;color:var(--ink-soft);text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .fiche-sig strong{color:var(--ink);font-weight:500}
 
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
   .reveal.in{opacity:1;transform:none}
@@ -214,6 +232,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <section class="types" id="types">
+    <span class="section-tag reveal">The nine types</span>
+    <h2 class="types-h reveal" style="--d:.05s">One type leads<span class="bp">.</span> Another runs underneath<span class="bp">.</span></h2>
+    <p class="types-lead reveal" style="--d:.1s">Everyone builds from one dominant type, shaded by a second one running beneath it, the way a star sign carries a rising sign. Nine lead types, each crossed with one of the other eight: that is <strong>seventy-two</strong> ways to be creative. Here are the nine you start from, grouped by what they do with an idea: <em>feed</em> it, <em>sharpen</em> it, or <em>protect</em> it.</p>
+    <div class="types-grid" id="types-grid"></div>
+  </section>
+
   <section class="test" id="test" hidden>
     <div class="test-inner">
       <div class="qbar"><div class="qbar-fill" id="qbar-fill"></div></div>
@@ -238,25 +263,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="res-last">This points to a tendency, not a verdict<span class="bp">.</span> What you do with it is yours.</p>
 
     <div class="card-wrap reveal">
-      <div class="card-lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>Send it to someone who thinks like you</div>
-      <div class="card-name-in"><input type="text" id="imp-name-in" maxlength="26" placeholder="Add your name to the card" aria-label="Your name on the card" autocomplete="name"></div>
-      <div class="card-stage">
-        <div class="imprint" id="imprint">
-          <div class="imp-top"><span>The Hypercreative Method</span><span class="imp-dot" aria-hidden="true"></span></div>
-          <div class="imp-mid">
-            <div class="imp-owner" id="imp-owner" hidden></div>
-            <div class="imp-fam" id="imp-fam"></div>
-            <div class="imp-name" id="imp-name"></div>
-            <div class="imp-one" id="imp-one"></div>
-            <div class="imp-under" id="imp-under"></div>
-            <div class="imp-id" id="imp-id"></div>
+      <div class="card-inner">
+        <div class="card-lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>Send it to someone who thinks like you</div>
+        <div class="card-name-in"><input type="text" id="imp-name-in" maxlength="26" placeholder="Add your name to the card" aria-label="Your name on the card" autocomplete="name"></div>
+        <div class="card-stage">
+          <div class="imprint" id="imprint">
+            <div class="imp-top"><span>The Hypercreative Method</span><span class="imp-dot" aria-hidden="true"></span></div>
+            <div class="imp-mid">
+              <div class="imp-owner" id="imp-owner" hidden></div>
+              <div class="imp-fam" id="imp-fam"></div>
+              <div class="imp-name" id="imp-name"></div>
+              <div class="imp-one" id="imp-one"></div>
+              <div class="imp-under" id="imp-under"></div>
+              <div class="imp-id" id="imp-id"></div>
+            </div>
+            <div class="imp-bot"><span id="imp-serial"></span><span>hypercreativemethod.com</span></div>
           </div>
-          <div class="imp-bot"><span id="imp-serial"></span><span>hypercreativemethod.com</span></div>
         </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn btn-primary" id="dl-card" type="button">Download my card</button>
-        <button class="btn btn-ghost" id="retake" type="button">Take it again</button>
+        <div class="card-actions">
+          <button class="btn btn-primary" id="dl-card" type="button">Download my card</button>
+          <button class="btn btn-ghost" id="retake" type="button">Take it again</button>
+        </div>
       </div>
     </div>
 
@@ -417,7 +444,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('res-state').textContent=t.state;
     document.getElementById('res-sig').innerHTML=t.sig;
     document.getElementById('res-shadow').innerHTML=t.shadow;
-    document.getElementById('imp-fam').textContent=t.family;
+    document.getElementById('imp-fam').textContent=t.family+' family';
     document.getElementById('imp-name').textContent=t.name;
     document.getElementById('imp-one').textContent=t.one;
     document.getElementById('imp-under').textContent='Underlying · '+s.name;
@@ -430,7 +457,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     testSec.hidden=true;
     resultSec.classList.add('on');
     revealAll(resultSec);
-    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    resultSec.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
     window.__profileType=t.name;
   }
 
@@ -457,7 +484,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var idLines=wrapText('“'+t.id+'”',30);
     var oneLines=wrapText(t.one,34);
     var sec=CUR.sec?TYPES[CUR.sec]:null;
-    var ownerSVG=NAME?'<text x="'+P+'" y="245" fill="#E0463C" font-family="Space Mono, monospace" font-size="30" letter-spacing="4">'+esc(NAME.toUpperCase())+'</text>':'';
+    var ownerSVG=NAME?'<text x="'+P+'" y="1040" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="400" font-size="62" letter-spacing="-1">'+esc(NAME)+'</text>':'';
     var underSVG=sec?'<text x="'+P+'" y="1470" fill="#F7F6F3" fill-opacity="0.55" font-family="Space Mono, monospace" font-size="26" letter-spacing="3">'+esc('UNDERLYING · '+sec.name.toUpperCase())+'</text>':'';
     return '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+
     '<rect width="'+W+'" height="'+H+'" fill="#13130F"/>'+
@@ -465,7 +492,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     '<text x="'+P+'" y="150" fill="#F7F6F3" fill-opacity="0.6" font-family="Space Mono, monospace" font-size="26" letter-spacing="4">THE HYPERCREATIVE METHOD</text>'+
     '<circle cx="'+(W-P)+'" cy="142" r="12" fill="#E0463C"/>'+
     ownerSVG+
-    '<text x="'+P+'" y="1120" fill="#E0463C" font-family="Space Mono, monospace" font-size="30" letter-spacing="5">'+esc(t.family.toUpperCase())+'</text>'+
+    '<text x="'+P+'" y="1120" fill="#E0463C" font-family="Space Mono, monospace" font-size="30" letter-spacing="5">'+esc(t.family.toUpperCase()+' FAMILY')+'</text>'+
     '<text x="'+P+'" y="1230" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="300" font-size="110" letter-spacing="-3">'+esc(t.name)+'</text>'+
     '<text fill="#F7F6F3" fill-opacity="0.72" font-family="Inter, sans-serif" font-weight="300" font-size="42">'+tspans(oneLines,P,1330,58)+'</text>'+
     underSVG+
@@ -523,6 +550,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       .catch(function(){usub.disabled=false;usub.textContent=old;
         unote.textContent="We couldn't send that. Try again in a moment.";});
   });
+
+  /* render the nine type fiches on the landing */
+  (function(){var g=document.getElementById('types-grid');if(!g)return;var h='';
+    for(var fk in TYPES){var ft=TYPES[fk];
+      h+='<article class="fiche"><span class="fiche-fam">'+ft.family+' family</span><h3 class="fiche-name">'+ft.name+'</h3><p class="fiche-one">'+ft.one+'</p><p class="fiche-sig">'+ft.sig+'</p></article>';}
+    g.innerHTML=h;})();
 })();
 </script>
 </body>
