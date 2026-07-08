@@ -510,8 +510,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)){uemail.classList.add('err');uemail.focus();return;}
     uemail.classList.remove('err'); usub.disabled=true; var old=usub.textContent; usub.textContent='Sending…';
     var pt=(window.__profileType||''),under=(CUR.sec?TYPES[CUR.sec].name:'');
-    var payload={name:NAME,email:v,consent:true,
-      message:"Creative Profile — Type: "+pt+(under?(" · Underlying: "+under):"")+" · Serial: "+SERIAL,
+    var payload={origen:"Perfil Creativo",name:NAME,email:v,consent:true,
+      message:"Type: "+pt+(under?(" · Underlying: "+under):"")+" · Serial: "+SERIAL,
       source:"creative-profile",profile_type:pt,serial:SERIAL};
     fetch("/api/lead.php",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})
       .then(function(r){if(!r.ok)throw 0;
