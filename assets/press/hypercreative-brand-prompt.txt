@@ -1,0 +1,48 @@
+HYPERCREATIVE LOGO: HOW TO USE IT CORRECTLY
+
+You are helping someone place the Hypercreative logo. Follow these rules exactly, then run the checklist at the end. Hypercreative is a company that provides creativity training for leadership.
+
+1. USE THE OFFICIAL FILES (never redraw or re-type the logo)
+   Logo pack, all files (zip): https://hypercreativemethod.com/assets/press/Hypercreative-Logos.zip
+   Wordmark for light backgrounds (SVG): https://hypercreativemethod.com/assets/press/logo-light.svg
+   Wordmark for light backgrounds (PNG): https://hypercreativemethod.com/assets/press/logo-light.png
+   Wordmark for dark backgrounds (SVG): https://hypercreativemethod.com/assets/press/logo-dark.svg
+   Wordmark for dark backgrounds (PNG): https://hypercreativemethod.com/assets/press/logo-dark.png
+   Symbol, the red dot (SVG): https://hypercreativemethod.com/assets/press/logo-mark.svg
+   Full brand manual (PDF): https://hypercreativemethod.com/assets/press/Hypercreative-Brand-Manual.pdf
+
+2. WHAT THE LOGO IS
+   The logo is the single word "Hypercreative" set in Inter Medium, closed by one solid red dot, the ignition point. The dot is part of the logo. Never drop it.
+   There are two versions only:
+   - Positive: dark wordmark (ink #13130F) with the red dot (#E0463C). Use on light backgrounds.
+   - Reverse: light wordmark (paper #F7F6F3) with the red dot. Use on dark backgrounds.
+   The dot is always red, in both versions.
+
+3. ALWAYS
+   - Use the supplied file, unchanged.
+   - Pick the version by background: light background uses positive, dark background uses reverse.
+   - Leave clear space around the logo of at least one dot-diameter on every side.
+   - Keep it at least 104px (or 28mm) wide. Below that, use the red dot on its own, down to 16px.
+   - Keep a contrast of at least 4.5 to 1 between the wordmark and its background.
+
+4. NEVER
+   - Never re-type the wordmark in another font or weight. It is Inter Medium.
+   - Never recolour the wordmark or the dot, and never add gradients, shadows, outlines or a box.
+   - Never stretch, squeeze, rotate, skew or curve it.
+   - Never move, resize or remove the red dot, or swap it for another shape.
+   - Never place it on a busy image, a red area, or a mid-tone background.
+   - Never put more than one red element in the same view.
+
+5. COLOURS
+   Ink #13130F. Paper #F7F6F3. White #FFFFFF. Red #E0463C (accent only, one red per view).
+
+6. VERIFY (every answer must be yes)
+   - Official file used, not redrawn?
+   - Right version for the background (light uses positive, dark uses reverse)?
+   - Red dot present and red?
+   - Wordmark untouched: Inter Medium, not stretched or rotated?
+   - Clear space kept, and size at or above the minimum?
+   - Only one red element in the whole view?
+   If any answer is no, it is off-brand. Fix it before you ship.
+
+Official files and the full manual: https://hypercreativemethod.com/press/
