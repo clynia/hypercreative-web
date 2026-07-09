@@ -174,12 +174,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .unlock-done{color:var(--ink);font-family:var(--f-display);font-style:italic;font-size:1.2rem;margin-top:.4rem}
 
   footer{border-top:1px solid var(--line);padding:clamp(3rem,7vh,4.5rem) clamp(1.25rem,4vw,3.25rem) 3rem;margin-top:2rem}
-  .foot{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;
-    font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
-  .foot .brand{text-transform:none;letter-spacing:-.01em;color:var(--ink);font-size:1rem}
-  .foot-legal{max-width:var(--maxw);margin:0 auto;padding:1.5rem clamp(1.25rem,4vw,3.25rem) 0;display:flex;gap:1.2rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute)}
-  .foot-legal a:hover{color:var(--ink)}
-  .foot-fine{flex-basis:100%;text-transform:none;letter-spacing:.03em;color:var(--ink-mute);opacity:.9;margin-top:.4rem}
+  .foot{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;gap:2.6rem 3rem;flex-wrap:wrap}
+  .foot .brand{text-transform:none;letter-spacing:-.01em;color:var(--ink);font-size:1.2rem}
+  .foot-lead{flex:1 1 17rem;max-width:22rem}
+  .foot-claim{margin-top:.75rem;color:var(--ink-soft);font-size:.95rem;line-height:1.5}
+  .foot-talk{display:inline-flex;align-items:center;gap:.45rem;margin-top:1.15rem;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+  .foot-talk span{transition:transform .25s var(--ease)}.foot-talk:hover span{transform:translateX(4px)}
+  .foot-nav{display:flex;gap:clamp(2rem,5vw,4.5rem);flex-wrap:wrap}
+  .foot-col{display:flex;flex-direction:column;gap:.72rem}
+  .foot-h{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:.35rem}
+  .foot-col a{color:var(--ink-soft);font-size:.95rem;transition:color .2s var(--ease)}.foot-col a:hover{color:var(--ink)}
+  .foot-legal{max-width:var(--maxw);margin:2.6rem auto 0;padding:1.4rem 0 0;display:flex;justify-content:space-between;gap:.8rem 1.5rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);border-top:1px solid var(--line)}.foot-legal a:hover{color:var(--ink)}
+  .foot-fine{text-transform:none;letter-spacing:.03em;color:var(--ink-mute);opacity:.9}
 
   /* nine types */
   .types{padding:clamp(3.5rem,9vh,7rem) 0 clamp(1rem,3vh,2rem)}
@@ -301,10 +307,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer>
   <div class="foot">
-    <a class="brand" href="/">Hypercreative<span class="bp">.</span></a>
-    <span>Creativity training for leadership.</span>
+    <div class="foot-lead">
+      <a class="brand" href="/">Hypercreative<span class="bp">.</span></a>
+      <p class="foot-claim">Creativity training for leadership.</p>
+      <a class="foot-talk" href="/#request">Start a conversation <span aria-hidden="true">&#8594;</span></a>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <div class="foot-col">
+        <p class="foot-h">Explore</p>
+        <a href="/#method">The method</a>
+        <a href="/what-we-do/">What we do</a>
+        <a href="/creative-profile/">Creative Profile</a>
+        <a href="/blog/">Journal</a>
+      </div>
+      <div class="foot-col">
+        <p class="foot-h">Company</p>
+        <a href="/press/">Press &amp; media kit</a>
+        <a href="/#request">Contact</a>
+      </div>
+      <div class="foot-col">
+        <p class="foot-h">Legal</p>
+        <a href="/legal/legal-notice">Legal notice</a>
+        <a href="/legal/privacy">Privacy</a>
+        <a href="/legal/cookies">Cookies</a>
+        <a href="/legal/terms">Terms</a>
+      </div>
+    </nav>
   </div>
-  <div class="foot-legal"><a href="/press/">Press</a><a href="/legal/legal-notice">Legal notice</a><a href="/legal/privacy">Privacy</a><a href="/legal/cookies">Cookies</a><a href="/legal/terms">Terms</a><span class="foot-fine">&copy; 2026 Hypercreative&#8482;</span></div>
+  <div class="foot-legal"><span class="foot-fine">&copy; 2026 Hypercreative&#8482;. All rights reserved.</span><span class="foot-fine">Creativity training for leadership.</span></div>
 </footer>
 
 <script>
