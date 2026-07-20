@@ -215,9 +215,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .fam-num{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);align-self:center}
   .fam-blurb{flex:1 1 32ch;color:var(--ink-soft);font-size:clamp(.98rem,1.3vw,1.1rem);line-height:1.55;max-width:66ch;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
   .fam-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:14px}
+  .fam-cards.collapsed{display:none}
   /* hover or focus a card and the whole family warms up */
   .fam-group:hover .fiche,.fam-group:focus-within .fiche{border-color:rgba(224,70,60,.34)}
   .fam-group:hover .fiche:hover,.fam-group:focus-within .fiche:focus-within{border-color:var(--red)}
+  .types-cta{margin-top:clamp(1.6rem,4vh,2.4rem);display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .types-toggle-hint{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;color:var(--ink-mute);align-self:center}
 
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
   .reveal.in{opacity:1;transform:none}
@@ -508,12 +511,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window.__profileType=t.name;
   }
 
-  document.getElementById('start-btn').addEventListener('click',function(){
+  function startTest(){
     if(!started){started=true;dl('creative_profile_start');}
     testSec.hidden=false; idx=0; answers=[]; for(var k in TYPES)scores[k]=0;
     renderQ();
     testSec.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
-  });
+  }
+  document.getElementById('start-btn').addEventListener('click',startTest);
   document.getElementById('retake').addEventListener('click',function(){
     resultSec.classList.remove('on');
     for(var k in TYPES)scores[k]=0; answers=[]; idx=0;
@@ -598,7 +602,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         unote.textContent="We couldn't send that. Try again in a moment.";});
   });
 
-  /* render the nine types on the landing, grouped into their three families */
+  /* render the three families on the landing; the nine cards sit collapsed behind a toggle */
   (function(){var g=document.getElementById('types-grid');if(!g)return;
     var FAMS=[
       {k:"Feed",verb:"Feed",blurb:"Where your ideas come from. These types fill the tank: they master their own field, wander into ones that aren't theirs, and keep everything worth keeping."},
@@ -609,8 +613,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     for(var fi=0;fi<FAMS.length;fi++){var F=FAMS[fi],cards='',n=0;
       for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;n++;
         cards+='<article class="fiche"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p><p class="fiche-sig">'+ft.sig+'</p></article>';}
-      h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title"><span class="fam-verb">'+F.verb+'</span> family</h3><span class="fam-num">'+n+' of the nine</span><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
-    g.innerHTML=h;})();
+      h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title"><span class="fam-verb">'+F.verb+'</span> family</h3><span class="fam-num">'+n+' of the nine</span><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards collapsed">'+cards+'</div></section>';}
+    h+='<div class="types-cta"><button class="btn btn-primary js-start" type="button">Find my type</button><button class="btn btn-ghost" id="types-toggle" type="button" aria-expanded="false">Meet the nine types</button><span class="types-toggle-hint">2 minutes gets you yours</span></div>';
+    g.innerHTML=h;
+    var expanded=false,tg=document.getElementById('types-toggle');
+    tg.addEventListener('click',function(){
+      expanded=!expanded;
+      [].slice.call(g.querySelectorAll('.fam-cards')).forEach(function(c){c.classList.toggle('collapsed',!expanded);});
+      tg.textContent=expanded?'Hide the nine types':'Meet the nine types';
+      tg.setAttribute('aria-expanded',String(expanded));
+    });
+    [].slice.call(g.querySelectorAll('.js-start')).forEach(function(b){b.addEventListener('click',startTest);});
+  })();
 })();
 </script>
 </body>
