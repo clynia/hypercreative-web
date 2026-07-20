@@ -197,18 +197,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .types-lead{margin-top:1.1rem;color:var(--ink-soft);max-width:62ch;font-size:clamp(1.02rem,1.4vw,1.16rem);text-align:justify;hyphens:auto;-webkit-hyphens:auto}
   .types-lead strong{color:var(--ink);font-weight:500}
   .types-lead em{font-style:italic;color:var(--red)}
-  .types-grid{margin-top:clamp(2.2rem,5vh,3.4rem);display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+  .types-grid{margin-top:clamp(2.2rem,5vh,3.4rem)}
   .fiche{border:1px solid var(--line);border-radius:10px;padding:1.5rem 1.4rem;background:var(--paper-2);transition:border-color .25s var(--ease),transform .25s var(--ease)}
-  .fiche:hover{border-color:var(--red);transform:translateY(-2px)}
+  .fiche:hover,.fiche:focus-within{border-color:var(--red);transform:translateY(-2px)}
   .fiche-fam{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
   .fiche-name{font-family:var(--f-display);font-weight:300;font-size:1.5rem;letter-spacing:-.02em;margin:.45rem 0 .5rem}
   .fiche-one{font-family:var(--f-display);font-style:italic;color:var(--ink);font-size:1.05rem;line-height:1.3;margin-bottom:.7rem}
   .fiche-sig{font-size:.92rem;line-height:1.55;color:var(--ink-soft);text-align:justify;hyphens:auto;-webkit-hyphens:auto}
   .fiche-sig strong{color:var(--ink);font-weight:500}
 
+  /* family groups */
+  .fam-group{margin-top:clamp(2.4rem,5.5vh,3.6rem)}
+  .fam-group:first-child{margin-top:0}
+  .fam-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1.4rem;padding-bottom:1.05rem;border-bottom:1px solid var(--line);margin-bottom:1.5rem}
+  .fam-title{font-family:var(--f-display);font-weight:400;font-size:clamp(1.35rem,2.7vw,1.8rem);letter-spacing:-.01em;color:var(--ink)}
+  .fam-title .fam-verb{color:var(--red)}
+  .fam-num{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);align-self:center}
+  .fam-blurb{flex:1 1 32ch;color:var(--ink-soft);font-size:clamp(.98rem,1.3vw,1.1rem);line-height:1.55;max-width:66ch;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .fam-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:14px}
+  /* hover or focus a card and the whole family warms up */
+  .fam-group:hover .fiche,.fam-group:focus-within .fiche{border-color:rgba(224,70,60,.34)}
+  .fam-group:hover .fiche:hover,.fam-group:focus-within .fiche:focus-within{border-color:var(--red)}
+
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
   .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.calc-dot{animation:none}}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.calc-dot{animation:none}.fiche:hover,.fiche:focus-within{transform:none}}
 </style>
 </head>
 <body>
@@ -231,7 +244,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="hero" id="top">
     <span class="section-tag reveal">Creative Profile</span>
     <h1 class="h1 reveal" style="--d:.05s">What <em>kind</em> of creative are you?</h1>
-    <p class="hero-sub reveal" style="--d:.12s">Not how creative you are. What kind. This isn't a score, it's a type: it tells you what your creativity is made of and where it tends to break under pressure. Nine types, from the eleven habits of the Hypercreative Method. You'll leave with a card you can keep.</p>
+    <p class="hero-sub reveal" style="--d:.12s">Not how creative you are. What kind. This isn't a score, it's a type: it tells you what your creativity is made of, where it tends to crack when it's tested, and the one habit to work on next. Nine types, built from the eleven habits of the Hypercreative Method, our framework for how creative work holds up under pressure. You'll leave with a card you can keep.</p>
+    <div class="hero-meta reveal" style="--d:.18s">
+      <span>Under 3 minutes</span>
+      <span>Free, no sign-up</span>
+      <span>A card you keep</span>
+    </div>
     <div class="actions reveal" style="--d:.24s">
       <button class="btn btn-primary" id="start-btn" type="button">Find my type</button>
     </div>
@@ -240,7 +258,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="types" id="types">
     <span class="section-tag reveal">The nine types</span>
     <h2 class="types-h reveal" style="--d:.05s">One type leads<span class="bp">.</span> Another runs underneath<span class="bp">.</span></h2>
-    <p class="types-lead reveal" style="--d:.1s">Everyone builds from one dominant type, shaded by a second one running beneath it, the way a star sign carries a rising sign. Nine lead types, each crossed with one of the other eight: that is <strong>seventy-two</strong> ways to be creative. Here are the nine you start from, grouped by what they do with an idea: <em>feed</em> it, <em>sharpen</em> it, or <em>protect</em> it.</p>
+    <p class="types-lead reveal" style="--d:.1s">Below are the nine types, sorted into the three moves the method runs on, by what each one does with an idea: <em>feed</em> it, <em>sharpen</em> it, or <em>protect</em> it. You come out as one lead type, with a second running underneath, the way a star sign carries a rising sign.</p>
     <div class="types-grid" id="types-grid"></div>
   </section>
 
@@ -355,7 +373,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var TYPES={
     cartographer:{name:"The Cartographer",family:"Feed",one:"You own your terrain and know it cold.",
       state:"Right now your energy concentrates on mastering the ground you already stand on.",
-      sig:"You go <strong>deeper than anyone</strong> on the field that is yours. Give you a domain and you will find the floor of it.",
+      sig:"You go <strong>deeper than anyone</strong> on the field that's yours. Hand you a subject and you dig all the way to the bottom of it.",
       shadow:"Spend real hours this month in a field that <strong>isn't</strong> yours. Depth without breadth eventually starts repeating itself.",
       id:"I'm a Cartographer. I know my terrain cold and I go deeper than anyone."},
     explorer:{name:"The Explorer",family:"Feed",one:"You collect worlds that aren't yours.",
@@ -363,16 +381,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       sig:"You have <strong>rare breadth</strong>. You connect things because you have actually been there, not because you read about it.",
       shadow:"Go deep on your <strong>own</strong> craft again this month. Breadth on a stale home base turns into being a dilettante about your own work.",
       id:"I'm an Explorer. I bring back raw material from worlds that aren't mine."},
-    seedcollector:{name:"The Seed Collector",family:"Feed",one:"Your bank is full; you lose nothing.",
+    seedcollector:{name:"The Seed Collector",family:"Feed",one:"You save everything worth keeping; nothing slips past you.",
       state:"Right now your energy concentrates on capturing everything and sorting none of it.",
-      sig:"Nothing worth keeping gets away from you. Your <strong>raw material is deep</strong> when everyone else is starting from a blank page.",
-      shadow:"This month, <strong>collide</strong> two things you already saved instead of saving a third. A full bank you never cross is just a warehouse.",
+      sig:"Nothing worth keeping gets away from you. While everyone else stares at a <strong>blank page</strong>, you start from a full one.",
+      shadow:"This month, <strong>combine</strong> two things you already saved instead of saving a third. An archive you never reopen is just a warehouse.",
       id:"I'm a Seed Collector. Nothing worth keeping ever gets away from me."},
-    notary:{name:"The Notary",family:"Sharpen",one:"You catch the anomaly everyone walked past.",
+    notary:{name:"The Notary",family:"Sharpen",one:"You catch the odd detail everyone else walked past.",
       state:"Right now your energy concentrates on observing without judging and catching what others miss.",
-      sig:"You <strong>see the anomaly</strong> before you have an opinion about it. You notice for a living.",
-      shadow:"Change one question and <strong>close</strong> it this month. Observation that never decides is a notebook, not a result.",
-      id:"I'm a Notary. I catch the anomaly before anyone else even looks."},
+      sig:"You <strong>spot the strange detail</strong> before you have an opinion about it. Noticing is your resting state.",
+      shadow:"Pick one question and <strong>answer</strong> it this month. Observation that never decides is a notebook, not a result.",
+      id:"I'm a Notary. I catch the odd detail before anyone else even looks."},
     reframer:{name:"The Reframer",family:"Sharpen",one:"You find the better question under the problem.",
       state:"Right now your energy concentrates on rewriting the problem until a better answer shows up.",
       sig:"You know the best idea lives in the <strong>best question</strong>, and you keep digging for it while others answer the first one.",
@@ -381,7 +399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     collider:{name:"The Collider",family:"Sharpen",one:"You combine things that don't belong together.",
       state:"Right now your energy concentrates on colliding far-apart ideas into one.",
       sig:"You make <strong>long-range connections</strong> most people never see, the ones two fields apart.",
-      shadow:"<strong>Feed the bank</strong> this month. Under pressure you reach for the comfortable bridge; only a deeper bank hands you a braver one.",
+      shadow:"<strong>Feed your raw material</strong> this month. Under pressure you reach for the comfortable link; only a deeper well hands you a braver one.",
       id:"I'm a Collider. I slam far-apart ideas together until something new survives."},
     sketcher:{name:"The Sketcher",family:"Sharpen",one:"You generate rough and judge it cold.",
       state:"Right now your energy concentrates on generating without judging, then sifting in cold blood.",
@@ -580,10 +598,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         unote.textContent="We couldn't send that. Try again in a moment.";});
   });
 
-  /* render the nine type fiches on the landing */
-  (function(){var g=document.getElementById('types-grid');if(!g)return;var h='';
-    for(var fk in TYPES){var ft=TYPES[fk];
-      h+='<article class="fiche"><span class="fiche-fam">'+ft.family+' family</span><h3 class="fiche-name">'+ft.name+'</h3><p class="fiche-one">'+ft.one+'</p><p class="fiche-sig">'+ft.sig+'</p></article>';}
+  /* render the nine types on the landing, grouped into their three families */
+  (function(){var g=document.getElementById('types-grid');if(!g)return;
+    var FAMS=[
+      {k:"Feed",verb:"Feed",blurb:"Where your ideas come from. These types fill the tank: they master their own field, wander into ones that aren't theirs, and keep everything worth keeping."},
+      {k:"Sharpen",verb:"Sharpen",blurb:"How raw material turns into an idea. These types make it cut: they notice what others miss, rewrite the question, slam far-apart things together and think in drafts."},
+      {k:"Protect",verb:"Protect",blurb:"How the work survives contact with the world. These types defend what they build, from the noise outside and the committee inside, and keep their own hands on the controls."}
+    ];
+    var h='';
+    for(var fi=0;fi<FAMS.length;fi++){var F=FAMS[fi],cards='',n=0;
+      for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;n++;
+        cards+='<article class="fiche"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p><p class="fiche-sig">'+ft.sig+'</p></article>';}
+      h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title"><span class="fam-verb">'+F.verb+'</span> family</h3><span class="fam-num">'+n+' of the nine</span><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
     g.innerHTML=h;})();
 })();
 </script>
