@@ -152,18 +152,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .imp-dot{width:7px;height:7px;border-radius:50%;background:var(--red);flex:none}
   .imp-core{margin:auto 0;text-align:center;z-index:1}
   .imp-emblem{position:relative;width:110px;height:110px;margin:0 auto 1.1rem}
-  .emb-ring{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(224,70,60,.55);border-radius:50%;color:var(--red)}
+  .emb-ring{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(247,246,243,.5);border-radius:50%;color:var(--paper)}
   .emb-ring svg{width:50px;height:50px}
-  .emb-badge{position:absolute;right:-3px;bottom:-3px;width:40px;height:40px;border-radius:50%;background:var(--ink);border:1.5px solid rgba(247,246,243,.3);display:flex;align-items:center;justify-content:center;color:var(--paper)}
+  .emb-badge{position:absolute;right:-3px;bottom:-3px;width:40px;height:40px;border-radius:50%;background:var(--ink);border:1.5px solid rgba(224,70,60,.6);display:flex;align-items:center;justify-content:center;color:var(--red)}
   .emb-badge svg{width:21px;height:21px}
   .imp-name{font-family:var(--f-display);font-weight:300;font-size:2.05rem;line-height:1.04;letter-spacing:-.02em}
   .imp-blend{margin-top:.25rem;font-family:var(--f-display);font-style:italic;font-weight:300;font-size:1rem;color:rgba(247,246,243,.8)}
   .imp-blend b{font-style:normal;font-weight:500;color:var(--red)}
-  .imp-fam{margin-top:.9rem;font-size:.8rem;line-height:1.4;color:rgba(224,70,60,.92)}
+  .imp-fam{margin-top:.9rem;font-size:.8rem;line-height:1.4;color:rgba(247,246,243,.66)}
   .imp-desc{margin-top:.55rem;color:rgba(247,246,243,.72);font-size:.88rem;line-height:1.5}
   .imp-cta{z-index:1;border-top:1px solid rgba(247,246,243,.16);padding-top:.85rem;text-align:center}
   .imp-hook{font-family:var(--f-display);font-weight:400;font-size:1rem;line-height:1.2;color:var(--paper)}
-  .imp-url{margin-top:.35rem;font-family:var(--f-mono);font-size:.54rem;letter-spacing:.06em;text-transform:uppercase;color:var(--red);line-height:1.3}
+  .imp-url{margin-top:.4rem;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);line-height:1.3}
   .imp-bot{margin-top:.85rem;display:flex;justify-content:space-between;align-items:end;font-family:var(--f-mono);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,246,243,.42);z-index:1}
   .card-actions{margin-top:1.9rem;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
   .card-actions .btn{color:var(--paper);border-color:rgba(247,246,243,.28)}
@@ -343,7 +343,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="imp-cta">
               <div class="imp-hook">What kind of creative are you?</div>
-              <div class="imp-url">Take the test &middot; hypercreativemethod.com/creative-profile</div>
+              <div class="imp-url">www.hypercreativemethod.com</div>
             </div>
             <div class="imp-bot"><span id="imp-serial"></span><span id="imp-owner"></span></div>
           </div>
@@ -624,10 +624,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var primI=TYPE_ICON[CUR.key]||'', secI=(sec?TYPE_ICON[CUR.sec]:'')||'';
     function cwrap(str,y,size,fill,op,max,lh){var lines=wrapText(str,max),s='';for(var i=0;i<lines.length;i++){s+='<text x="'+CX+'" y="'+(y+i*lh)+'" text-anchor="middle" fill="'+fill+'" fill-opacity="'+op+'" font-family="Inter, sans-serif" font-weight="300" font-size="'+size+'">'+esc(lines[i])+'</text>';}return s;}
     var rCy=560,rR=180,bX=CX+128,bY=560+128,bR=58;
-    var emblem='<circle cx="'+CX+'" cy="'+rCy+'" r="'+rR+'" fill="none" stroke="#E0463C" stroke-opacity="0.6" stroke-width="3"/>'+
-      '<g transform="translate('+(CX-108)+','+(rCy-108)+') scale(9)" fill="none" stroke="#E0463C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">'+primI+'</g>'+
-      (sec?('<circle cx="'+bX+'" cy="'+bY+'" r="'+bR+'" fill="#13130F" stroke="#F7F6F3" stroke-opacity="0.3" stroke-width="2.5"/>'+
-      '<g transform="translate('+(bX-42)+','+(bY-42)+') scale(3.5)" fill="none" stroke="#F7F6F3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+secI+'</g>'):'');
+    var emblem='<circle cx="'+CX+'" cy="'+rCy+'" r="'+rR+'" fill="none" stroke="#F7F6F3" stroke-opacity="0.5" stroke-width="3"/>'+
+      '<g transform="translate('+(CX-108)+','+(rCy-108)+') scale(9)" fill="none" stroke="#F7F6F3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">'+primI+'</g>'+
+      (sec?('<circle cx="'+bX+'" cy="'+bY+'" r="'+bR+'" fill="#13130F" stroke="#E0463C" stroke-opacity="0.6" stroke-width="2.5"/>'+
+      '<g transform="translate('+(bX-42)+','+(bY-42)+') scale(3.5)" fill="none" stroke="#E0463C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+secI+'</g>'):'');
     var famStr=t.family+' family: '+(FAM_DESC[t.family]||'');
     var bl=(typeof INFLECT!=='undefined'&&INFLECT[CUR.key]&&INFLECT[CUR.key][CUR.sec])?(t.state+' '+INFLECT[CUR.key][CUR.sec]):t.state;
     return '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+
@@ -639,11 +639,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       emblem+
       '<text x="'+CX+'" y="905" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="300" font-size="84" letter-spacing="-2">'+esc(t.name)+'</text>'+
       (sec?('<text x="'+CX+'" y="972" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(sec.name.replace(/^The /,''))+'</tspan></text>'):'')+
-      cwrap(famStr,1082,32,'#E0463C',0.92,44,44)+
+      cwrap(famStr,1082,32,'#F7F6F3',0.66,44,44)+
       cwrap(bl,1150,34,'#F7F6F3',0.74,42,46)+
       '<line x1="'+P+'" y1="1500" x2="'+(W-P)+'" y2="1500" stroke="#F7F6F3" stroke-opacity="0.16"/>'+
       '<text x="'+CX+'" y="1590" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="400" font-size="46">What kind of creative are you?</text>'+
-      '<text x="'+CX+'" y="1656" text-anchor="middle" fill="#E0463C" font-family="Space Mono, monospace" font-size="22" letter-spacing="1.5">TAKE THE TEST &#183; HYPERCREATIVEMETHOD.COM/CREATIVE-PROFILE</text>'+
+      '<text x="'+CX+'" y="1656" text-anchor="middle" fill="#E0463C" font-family="Space Mono, monospace" font-size="28" letter-spacing="2.5">WWW.HYPERCREATIVEMETHOD.COM</text>'+
       '<text x="'+P+'" y="1822" fill="#F7F6F3" fill-opacity="0.42" font-family="Space Mono, monospace" font-size="22" letter-spacing="2">'+esc(SERIAL)+'</text>'+
       (NAME?'<text x="'+(W-P)+'" y="1822" text-anchor="end" fill="#F7F6F3" fill-opacity="0.42" font-family="Space Mono, monospace" font-size="22" letter-spacing="2">'+esc(NAME.toUpperCase())+'</text>':'')+
       '</svg>';
