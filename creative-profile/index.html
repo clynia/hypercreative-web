@@ -241,6 +241,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .res-icon .ico-main svg{width:100%;height:100%}
   .res-icon .ico-sub{position:absolute;bottom:-9px;right:-24px;width:34px;height:34px;color:var(--ink)}
   .res-icon .ico-sub svg{width:100%;height:100%;opacity:.7}
+  .res-how{margin-top:2.2rem;border-top:1px solid var(--line);padding-top:1.4rem;max-width:44rem}
+  .res-how summary{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);cursor:pointer;list-style:none}
+  .res-how summary::-webkit-details-marker{display:none}
+  .res-how summary::before{content:"+ "}
+  .res-how[open] summary::before{content:"\00d7 "}
+  .res-how-body p{color:var(--ink-soft);font-size:.98rem;line-height:1.6;margin-top:1.1rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .res-how-sci{font-style:italic;color:var(--ink-mute)!important}
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
   .reveal.in{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.calc-dot{animation:none}.fiche:hover,.fiche:focus-within{transform:none}}
@@ -270,7 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1 class="h1 reveal" style="--d:.05s">What <em>kind</em> of creative are you?</h1>
     <p class="hero-sub reveal" style="--d:.12s">Not how creative you are. What kind. This isn't a score, it's a type: it tells you what your creativity is made of, where it tends to crack when it's tested, and the one habit to work on next. Nine types, built from the eleven habits of the Hypercreative Method, our framework for how creative work holds up under pressure. You'll leave with a card you can keep.</p>
     <div class="hero-meta reveal" style="--d:.18s">
-      <span>Under 3 minutes</span>
+      <span>A few minutes</span>
       <span>Free, no sign-up</span>
       <span>A card you keep</span>
     </div>
@@ -282,7 +289,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="types" id="types">
     <span class="section-tag reveal">The nine types</span>
     <h2 class="types-h reveal" style="--d:.05s">One type leads<span class="bp">.</span> Another runs underneath<span class="bp">.</span></h2>
-    <p class="types-lead reveal" style="--d:.1s">Below are the nine types, sorted into the three moves the method runs on, by what each one does with an idea: <em>feed</em> it, <em>sharpen</em> it, or <em>protect</em> it. You come out as one lead type, with a second running underneath, the way a star sign carries a rising sign.</p>
+    <p class="types-lead reveal" style="--d:.1s">Below are the nine lead types, in the three moves the method runs on: <em>feed</em> an idea, <em>sharpen</em> it, or <em>protect</em> it. Your test gives you one lead type and a second running underneath, the way a rising sign runs beneath a sun sign. Nine leads, each shaded by one of the other eight: that is <strong>seventy-two signatures</strong> in all, and one of them is yours.</p>
     <div class="types-grid" id="types-grid"></div>
   </section>
 
@@ -309,6 +316,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <p class="res-last">This points to a tendency, not a verdict<span class="bp">.</span> What you do with it is yours.</p>
+
+    <details class="res-how">
+      <summary>How we read your answers</summary>
+      <div class="res-how-body">
+        <p>The Creative Profile does not score you. It maps you. Every question offers two real ways of working, not a right answer and a wrong one, so there is nothing to game, only a direction to reveal. Your choices gather across the three families that organise the method's eleven habits: how you feed ideas, how you sharpen them, how you protect the work. Your lead type is the orientation your choices keep returning to; your underlying type is the one running just beneath it. Some questions return to the same tension from a new angle, which is how the reading stays honest. What we never do is rank you: there is no top, no percentile, no better type.</p>
+        <p>You will not find a number, a percentile or a rank anywhere here, and that is deliberate. Creativity is not a quantity you hold more or less of, and treating it like one only teaches people to perform for a scoreboard. So we tell you which kind of creative you are and leave how good you are out of it entirely. The profile is a mirror, not a measurement.</p>
+        <p class="res-how-sci">The nine types are our own reading of creative habits, drawn from the method's eleven, offered as a lens, not a lab result, which is why it never hands you a score.</p>
+      </div>
+    </details>
 
     <div class="card-wrap reveal">
       <div class="card-inner">
@@ -464,19 +480,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* plain-language meaning of each family, for the card */
   var FAM_DESC={Feed:"you fill the tank with raw material",Sharpen:"you make raw ideas cut",Protect:"you keep the work alive under pressure"};
 
+  /* 20 forced-choice items in three family rounds; each type is contested 4-5 times */
   var Q=[
-    {q:"A new project lands on your desk. First instinct?",a:{t:"Go deep on the field that's already mine.",type:"cartographer"},b:{t:"Go wander somewhere that isn't mine for raw material.",type:"explorer"}},
-    {q:"Your saved notes, links and screenshots are&hellip;",a:{t:"Overflowing. I keep everything and sort nothing.",type:"seedcollector"},b:{t:"Lean. I only keep what I've decided matters.",type:"persona"}},
-    {q:"Your sharpest move on a blank problem?",a:{t:"Spot the anomaly nobody else noticed.",type:"notary"},b:{t:"Rewrite it into a better question.",type:"reframer"}},
-    {q:"When an idea actually lands, it came from&hellip;",a:{t:"Colliding two far-apart things.",type:"collider"},b:{t:"A pile of rough drafts, sifted cold.",type:"sketcher"}},
-    {q:"What guards your creative work most?",a:{t:"No one touches my controls uninvited.",type:"guardian"},b:{t:"I've already decided who I am when I create.",type:"persona"}},
-    {q:"People come to you because you&hellip;",a:{t:"Know one domain deeper than anyone.",type:"cartographer"},b:{t:"Always drag in something from a weird, unrelated place.",type:"explorer"}},
-    {q:"The trap you catch yourself in?",a:{t:"Describing forever, never deciding.",type:"notary"},b:{t:"Reframing forever, never shipping.",type:"reframer"}},
-    {q:"Alone with a mountain of your own material, you&hellip;",a:{t:"Cross and combine it into something new.",type:"collider"},b:{t:"Go collect more before you touch it.",type:"seedcollector"}},
-    {q:"Your creativity depends most on&hellip;",a:{t:"The right ritual and my state.",type:"persona"},b:{t:"Keeping outside opinions off the controls.",type:"guardian"}},
-    {q:"The thing you have to force yourself to do?",a:{t:"Actually launch the rough version.",type:"sketcher"},b:{t:"Leave my home turf and explore.",type:"cartographer"}},
-    {q:"Closer to the truth about you?",a:{t:"I never lose a fragment worth keeping.",type:"seedcollector"},b:{t:"I make long-range links most people miss.",type:"collider"}},
-    {q:"Under a hard deadline, your instinct is to&hellip;",a:{t:"Reframe until the ask is right.",type:"reframer"},b:{t:"Ship a draft and fix it live.",type:"sketcher"}}
+    /* --- Feed round --- */
+    {fam:"Feed",q:"A new project lands on your desk. First instinct?",a:{t:"Go deep on the field that's already mine.",type:"cartographer"},b:{t:"Go wander somewhere that isn't mine for raw material.",type:"explorer"}},
+    {fam:"Feed",q:"Your saved notes, links and screenshots are&hellip;",a:{t:"Overflowing. I keep everything and sort nothing.",type:"seedcollector"},b:{t:"Lean. I only keep what I've decided matters.",type:"persona"}},
+    {fam:"Feed",q:"People come to you because you&hellip;",a:{t:"Know one domain deeper than anyone.",type:"cartographer"},b:{t:"Always drag in something from a weird, unrelated place.",type:"explorer"}},
+    {fam:"Feed",q:"Your raw material comes mostly from&hellip;",a:{t:"Everything I've saved and never lose.",type:"seedcollector"},b:{t:"Places and worlds I've actually gone to.",type:"explorer"}},
+    {fam:"Feed",q:"You do your sharpest thinking when&hellip;",a:{t:"I'm deep in the field I own.",type:"cartographer"},b:{t:"I've stepped into the creative self I've chosen.",type:"persona"}},
+    {fam:"Feed",q:"Alone with a pile of your own material, you&hellip;",a:{t:"Go collect more before I touch it.",type:"seedcollector"},b:{t:"Make rough drafts and sift them cold.",type:"sketcher"}},
+    {fam:"Feed",q:"Blank problem in front of you. You reach first for&hellip;",a:{t:"The detail everyone else walked past.",type:"notary"},b:{t:"Something from an unrelated world.",type:"explorer"}},
+    /* --- Sharpen round --- */
+    {fam:"Sharpen",q:"Your sharpest move on a blank problem?",a:{t:"Spot the anomaly nobody else noticed.",type:"notary"},b:{t:"Rewrite it into a better question.",type:"reframer"}},
+    {fam:"Sharpen",q:"When an idea actually lands, it came from&hellip;",a:{t:"Colliding two far-apart things.",type:"collider"},b:{t:"A pile of rough drafts, sifted cold.",type:"sketcher"}},
+    {fam:"Sharpen",q:"The trap you catch yourself in?",a:{t:"Describing forever, never deciding.",type:"notary"},b:{t:"Reframing forever, never shipping.",type:"reframer"}},
+    {fam:"Sharpen",q:"Under a hard deadline, your instinct is to&hellip;",a:{t:"Reframe until the ask is right.",type:"reframer"},b:{t:"Ship a draft and fix it live.",type:"sketcher"}},
+    {fam:"Sharpen",q:"What unlocks a problem that's stuck?",a:{t:"Rewriting it into a sharper question.",type:"reframer"},b:{t:"Colliding it with something far away.",type:"collider"}},
+    {fam:"Sharpen",q:"Alone with a mountain of your own material, you&hellip;",a:{t:"Cross and combine it into something new.",type:"collider"},b:{t:"Go collect more before you touch it.",type:"seedcollector"}},
+    {fam:"Sharpen",q:"Closer to the truth about you?",a:{t:"I never lose a fragment worth keeping.",type:"seedcollector"},b:{t:"I make long-range links most people miss.",type:"collider"}},
+    {fam:"Sharpen",q:"The thing you have to force yourself to do?",a:{t:"Actually launch the rough version.",type:"sketcher"},b:{t:"Leave my home turf and explore.",type:"cartographer"}},
+    /* --- Protect round --- */
+    {fam:"Protect",q:"What guards your creative work most?",a:{t:"No one touches my controls uninvited.",type:"guardian"},b:{t:"I've already decided who I am when I create.",type:"persona"}},
+    {fam:"Protect",q:"Your creativity depends most on&hellip;",a:{t:"The right ritual and my state.",type:"persona"},b:{t:"Keeping outside opinions off the controls.",type:"guardian"}},
+    {fam:"Protect",q:"Unasked-for feedback lands on your work. You&hellip;",a:{t:"Keep my criteria mine and carry on.",type:"guardian"},b:{t:"Go check it against how other fields do it.",type:"explorer"}},
+    {fam:"Protect",q:"Under pressure, your real edge is&hellip;",a:{t:"Catching the detail everyone else missed.",type:"notary"},b:{t:"Keeping outside noise off the controls.",type:"guardian"}},
+    {fam:"Protect",q:"People trust your judgment because you&hellip;",a:{t:"Don't outsource your criteria.",type:"guardian"},b:{t:"See what others overlook before forming an opinion.",type:"notary"}}
   ];
 
   var scores={},answers=[],idx=0,started=false;
@@ -492,7 +520,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   function renderQ(){
     var item=Q[idx];
-    qcount.textContent="Question "+(idx+1)+" of "+Q.length;
+    qcount.textContent=item.fam+" · round "+({Feed:1,Sharpen:2,Protect:3}[item.fam])+" of 3";
     fill.style.width=Math.round(idx/Q.length*100)+"%";
     back.hidden=(idx===0);
     var opts=[item.a,item.b],html='<div class="qstep on"><p class="q">'+item.q+'</p><div class="q-opts">';
@@ -662,7 +690,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;
         cards+='<article class="fiche"><span class="fiche-ico">'+iconSVG(fk)+'</span><div class="fiche-body"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p></div></article>';}
       h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title">'+F.verb+'</h3><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
-    h+='<div class="type-cta"><p class="type-cta-kicker">So, which one is you?</p><h3 class="type-cta-h">Find your type, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at your lead type, the one running underneath it, and the single thing to work on next. You leave with a card you can keep.</p><button class="btn type-cta-btn js-start" type="button">Find my type</button><p class="type-cta-meta">Under 3 minutes · Free · No sign-up</p></div>';
+    h+='<div class="type-cta"><p class="type-cta-kicker">So, which one is you?</p><h3 class="type-cta-h">Find your type, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at your lead type, the one running underneath it, and the single thing to work on next. You leave with a card you can keep.</p><button class="btn type-cta-btn js-start" type="button">Find my type</button><p class="type-cta-meta">A few minutes · Free · No sign-up</p></div>';
     g.innerHTML=h;
     [].slice.call(g.querySelectorAll('.js-start')).forEach(function(b){b.addEventListener('click',startTest);});
   })();
