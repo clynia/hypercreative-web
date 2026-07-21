@@ -584,7 +584,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('imp-name').textContent=t.name;
     document.getElementById('imp-blend').innerHTML='with an underlying <b>'+s.name.replace(/^The /,'')+'</b>';
     document.getElementById('imp-fam').textContent=t.family+' family: '+FAM_DESC[t.family];
-    document.getElementById('imp-desc').textContent=t.one;
+    document.getElementById('imp-desc').textContent=_bl;
     var d=new Date();
     var mm=('0'+(d.getMonth()+1)).slice(-2),dd=('0'+d.getDate()).slice(-2);
     SERIAL='HCM-'+key.slice(0,3).toUpperCase()+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
@@ -629,6 +629,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       (sec?('<circle cx="'+bX+'" cy="'+bY+'" r="'+bR+'" fill="#13130F" stroke="#F7F6F3" stroke-opacity="0.3" stroke-width="2.5"/>'+
       '<g transform="translate('+(bX-42)+','+(bY-42)+') scale(3.5)" fill="none" stroke="#F7F6F3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+secI+'</g>'):'');
     var famStr=t.family+' family: '+(FAM_DESC[t.family]||'');
+    var bl=(typeof INFLECT!=='undefined'&&INFLECT[CUR.key]&&INFLECT[CUR.key][CUR.sec])?(t.state+' '+INFLECT[CUR.key][CUR.sec]):t.state;
     return '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+
       '<defs><radialGradient id="g" cx="50%" cy="30%" r="55%"><stop offset="0" stop-color="#E0463C" stop-opacity="0.17"/><stop offset="1" stop-color="#E0463C" stop-opacity="0"/></radialGradient></defs>'+
       '<rect width="'+W+'" height="'+H+'" fill="#13130F"/>'+
@@ -639,7 +640,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       '<text x="'+CX+'" y="905" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="300" font-size="84" letter-spacing="-2">'+esc(t.name)+'</text>'+
       (sec?('<text x="'+CX+'" y="972" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(sec.name.replace(/^The /,''))+'</tspan></text>'):'')+
       cwrap(famStr,1082,32,'#E0463C',0.92,44,44)+
-      cwrap(t.one,1200,40,'#F7F6F3',0.72,32,54)+
+      cwrap(bl,1150,34,'#F7F6F3',0.74,42,46)+
       '<line x1="'+P+'" y1="1500" x2="'+(W-P)+'" y2="1500" stroke="#F7F6F3" stroke-opacity="0.16"/>'+
       '<text x="'+CX+'" y="1590" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="400" font-size="46">What kind of creative are you?</text>'+
       '<text x="'+CX+'" y="1656" text-anchor="middle" fill="#E0463C" font-family="Space Mono, monospace" font-size="22" letter-spacing="1.5">TAKE THE TEST &#183; HYPERCREATIVEMETHOD.COM/CREATIVE-PROFILE</text>'+
