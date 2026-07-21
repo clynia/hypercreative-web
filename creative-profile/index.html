@@ -228,6 +228,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .type-cta-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
   .type-cta-meta{margin-top:1.1rem;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
 
+  /* type icons on result + card */
+  .res-icon{position:relative;display:inline-block;color:var(--red);margin:0 0 1.2rem;line-height:0}
+  .res-icon .ico-main{display:block;width:80px;height:80px}
+  .res-icon .ico-main svg{width:100%;height:100%}
+  .res-icon .ico-sub{position:absolute;top:-10px;right:-24px;width:34px;height:34px;color:var(--ink)}
+  .res-icon .ico-sub svg{width:100%;height:100%;opacity:.7}
+  .imp-bg{position:absolute;right:-26px;bottom:-34px;width:224px;height:224px;color:var(--red);opacity:.16;z-index:0;pointer-events:none;line-height:0}
+  .imp-bg svg{width:100%;height:100%}
+  .imp-name{position:relative;z-index:1}
+  .imp-exp{display:inline-block;width:.46em;height:.46em;color:var(--red);vertical-align:.62em;margin-left:.14em}
+  .imp-exp svg{width:100%;height:100%}
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
   .reveal.in{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.calc-dot{animation:none}.fiche:hover,.fiche:focus-within{transform:none}}
@@ -284,6 +295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <section class="result" id="result">
+    <div class="res-icon" id="res-icon" aria-hidden="true"></div>
     <p class="res-kicker">You came out as</p>
     <h1 class="res-name" id="res-name"></h1>
     <p class="res-blend" id="res-blend"></p>
@@ -302,6 +314,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="card-name-in"><input type="text" id="imp-name-in" maxlength="26" placeholder="Add your name to the card" aria-label="Your name on the card" autocomplete="name"></div>
         <div class="card-stage">
           <div class="imprint" id="imprint">
+            <div class="imp-bg" id="imp-bg" aria-hidden="true"></div>
             <div class="imp-top"><span>The Hypercreative Method</span><span class="imp-dot" aria-hidden="true"></span></div>
             <div class="imp-mid">
               <div class="imp-owner" id="imp-owner" hidden></div>
@@ -431,6 +444,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* tie-break priority: rarer / more-specific types win a tie */
   var PRIORITY=["guardian","explorer","notary","persona","reframer","sketcher","collider","seedcollector","cartographer"];
 
+  /* one icon per type, used everywhere: landing cards, result and the card */
+  var TYPE_ICON={
+    cartographer:'<path d="M3 8c3-2 6-2 9 0s6 2 9 0"/><path d="M3 13c3-2 6-2 9 0s6 2 9 0"/><path d="M3 18c3-2 6-2 9 0s6 2 9 0"/>',
+    explorer:'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+    seedcollector:'<path d="M12 3C7 7 5 10 5 14a7 7 0 0 0 14 0c0-4-2-7-7-11z"/><path d="M12 21v-9"/>',
+    notary:'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="2.6"/>',
+    reframer:'<path d="M4 9V6a2 2 0 0 1 2-2h3"/><path d="M20 9V6a2 2 0 0 0-2-2h-3"/><path d="M4 15v3a2 2 0 0 0 2 2h3"/><path d="M20 15v3a2 2 0 0 1-2 2h-3"/>',
+    collider:'<path d="M3 12h6M6 9l3 3-3 3"/><path d="M21 12h-6M18 9l-3 3 3 3"/>',
+    sketcher:'<path d="M4 20l3.5-1L18 8.5 15.5 6 5 16.5 4 20z"/><path d="M14 7.5l2.5 2.5"/>',
+    guardian:'<path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3z"/>',
+    persona:'<path d="M4 6c5-1.5 11-1.5 16 0 0 6-3 12-8 14C7 18 4 12 4 6z"/><circle cx="9.2" cy="9.5" r=".9"/><circle cx="14.8" cy="9.5" r=".9"/><path d="M9.5 13.5c1.5 1.3 3.5 1.3 5 0"/>'
+  };
+  function iconSVG(key,cls,sw){return '<svg class="'+(cls||'')+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="'+(sw||1.6)+'" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(TYPE_ICON[key]||'')+'</svg>';}
+
   var Q=[
     {q:"A new project lands on your desk. First instinct?",a:{t:"Go deep on the field that's already mine.",type:"cartographer"},b:{t:"Go wander somewhere that isn't mine for raw material.",type:"explorer"}},
     {q:"Your saved notes, links and screenshots are&hellip;",a:{t:"Overflowing. I keep everything and sort nothing.",type:"seedcollector"},b:{t:"Lean. I only keep what I've decided matters.",type:"persona"}},
@@ -503,7 +530,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('res-sig').innerHTML=t.sig;
     document.getElementById('res-shadow').innerHTML=t.shadow;
     document.getElementById('imp-fam').textContent=t.family;
-    document.getElementById('imp-name').textContent=t.name;
+    document.getElementById('res-icon').innerHTML='<span class="ico-main">'+iconSVG(key)+'</span><span class="ico-sub">'+iconSVG(secKey)+'</span>';
+    document.getElementById('imp-bg').innerHTML=iconSVG(key,'',1.4);
+    document.getElementById('imp-name').innerHTML=t.name+'<span class="imp-exp">'+iconSVG(secKey,'',1.8)+'</span>';
     document.getElementById('imp-one').textContent=t.one;
     document.getElementById('imp-under').textContent='Underlying · '+s.name;
     document.getElementById('imp-id').textContent='“'+t.id+'”';
@@ -548,6 +577,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     return '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+
     '<rect width="'+W+'" height="'+H+'" fill="#13130F"/>'+
     '<circle cx="'+(W-40)+'" cy="150" r="360" fill="#E0463C" opacity="0.16"/>'+
+    '<g transform="translate(590,300) scale(20)" fill="none" stroke="#E0463C" stroke-opacity="0.13" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">'+(TYPE_ICON[CUR.key]||'')+'</g>'+
+    (CUR.sec?'<g transform="translate(866,232) scale(3.6)" fill="none" stroke="#F7F6F3" stroke-opacity="0.82" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+(TYPE_ICON[CUR.sec]||'')+'</g>':'')+
     '<text x="'+P+'" y="150" fill="#F7F6F3" fill-opacity="0.6" font-family="Space Mono, monospace" font-size="26" letter-spacing="4">THE HYPERCREATIVE METHOD</text>'+
     '<circle cx="'+(W-P)+'" cy="142" r="12" fill="#E0463C"/>'+
     ownerSVG+
@@ -612,18 +643,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   /* render the three families on the landing, all nine types always visible, each with its mark (style A: monoline) */
   (function(){var g=document.getElementById('types-grid');if(!g)return;
-    var S='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
-    var ICONS={
-      cartographer:S+'<path d="M3 8c3-2 6-2 9 0s6 2 9 0"/><path d="M3 13c3-2 6-2 9 0s6 2 9 0"/><path d="M3 18c3-2 6-2 9 0s6 2 9 0"/></svg>',
-      explorer:S+'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>',
-      seedcollector:S+'<path d="M12 3C7 7 5 10 5 14a7 7 0 0 0 14 0c0-4-2-7-7-11z"/><path d="M12 21v-9"/></svg>',
-      notary:S+'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="2.6"/></svg>',
-      reframer:S+'<path d="M4 9V6a2 2 0 0 1 2-2h3"/><path d="M20 9V6a2 2 0 0 0-2-2h-3"/><path d="M4 15v3a2 2 0 0 0 2 2h3"/><path d="M20 15v3a2 2 0 0 1-2 2h-3"/></svg>',
-      collider:S+'<path d="M3 12h6M6 9l3 3-3 3"/><path d="M21 12h-6M18 9l-3 3 3 3"/></svg>',
-      sketcher:S+'<path d="M4 20l3.5-1L18 8.5 15.5 6 5 16.5 4 20z"/><path d="M14 7.5l2.5 2.5"/></svg>',
-      guardian:S+'<path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3z"/></svg>',
-      persona:S+'<path d="M4 6c5-1.5 11-1.5 16 0 0 6-3 12-8 14C7 18 4 12 4 6z"/><circle cx="9.2" cy="9.5" r=".9"/><circle cx="14.8" cy="9.5" r=".9"/><path d="M9.5 13.5c1.5 1.3 3.5 1.3 5 0"/></svg>'
-    };
     var FAMS=[
       {k:"Feed",verb:"Feed",blurb:"Where your ideas come from. These types fill the tank: they master their own field, wander into ones that aren't theirs, and keep everything worth keeping."},
       {k:"Sharpen",verb:"Sharpen",blurb:"How raw material turns into an idea. These types make it cut: they notice what others miss, rewrite the question, slam far-apart things together and think in drafts."},
@@ -632,7 +651,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var h='';
     for(var fi=0;fi<FAMS.length;fi++){var F=FAMS[fi],cards='';
       for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;
-        cards+='<article class="fiche"><span class="fiche-ico">'+(ICONS[fk]||'')+'</span><div class="fiche-body"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p></div></article>';}
+        cards+='<article class="fiche"><span class="fiche-ico">'+iconSVG(fk)+'</span><div class="fiche-body"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p></div></article>';}
       h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title">'+F.verb+'</h3><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
     h+='<div class="type-cta"><p class="type-cta-kicker">So, which one is you?</p><h3 class="type-cta-h">Find your type, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at your lead type, the one running underneath it, and the single thing to work on next. You leave with a card you can keep.</p><button class="btn type-cta-btn js-start" type="button">Find my type</button><p class="type-cta-meta">Under 3 minutes · Free · No sign-up</p></div>';
     g.innerHTML=h;
