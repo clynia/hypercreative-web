@@ -198,29 +198,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .types-lead strong{color:var(--ink);font-weight:500}
   .types-lead em{font-style:italic;color:var(--red)}
   .types-grid{margin-top:clamp(2.2rem,5vh,3.4rem)}
-  .fiche{border:1px solid var(--line);border-radius:10px;padding:1.5rem 1.4rem;background:var(--paper-2);transition:border-color .25s var(--ease),transform .25s var(--ease)}
+  .fiche{display:flex;gap:.85rem;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:1.15rem 1.2rem;background:var(--paper-2);transition:border-color .25s var(--ease),transform .25s var(--ease)}
   .fiche:hover,.fiche:focus-within{border-color:var(--red);transform:translateY(-2px)}
-  .fiche-fam{font-family:var(--f-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
-  .fiche-name{font-family:var(--f-display);font-weight:300;font-size:1.5rem;letter-spacing:-.02em;margin:.45rem 0 .5rem}
-  .fiche-one{font-family:var(--f-display);font-style:italic;color:var(--ink);font-size:1.05rem;line-height:1.3;margin-bottom:.7rem}
-  .fiche-sig{font-size:.92rem;line-height:1.55;color:var(--ink-soft);text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-  .fiche-sig strong{color:var(--ink);font-weight:500}
+  .fiche-ico{flex:none;width:30px;height:30px;color:var(--red);margin-top:.15rem}
+  .fiche-ico svg{width:100%;height:100%;display:block}
+  .fiche-body{min-width:0}
+  .fiche-name{font-family:var(--f-display);font-weight:300;font-size:1.35rem;letter-spacing:-.02em;margin:0 0 .3rem}
+  .fiche-one{font-family:var(--f-display);font-style:italic;color:var(--ink-soft);font-size:1rem;line-height:1.35}
 
   /* family groups */
   .fam-group{margin-top:clamp(2.4rem,5.5vh,3.6rem)}
   .fam-group:first-child{margin-top:0}
   .fam-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1.4rem;padding-bottom:1.05rem;border-bottom:1px solid var(--line);margin-bottom:1.5rem}
-  .fam-title{font-family:var(--f-display);font-weight:400;font-size:clamp(1.35rem,2.7vw,1.8rem);letter-spacing:-.01em;color:var(--ink)}
-  .fam-title .fam-verb{color:var(--red)}
-  .fam-num{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute);align-self:center}
+  .fam-title{font-family:var(--f-display);font-weight:400;font-size:clamp(1.35rem,2.7vw,1.85rem);letter-spacing:-.01em;color:var(--ink);display:inline-flex;align-items:center;gap:.55em}
+  .fam-title::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red);flex:none}
   .fam-blurb{flex:1 1 32ch;color:var(--ink-soft);font-size:clamp(.98rem,1.3vw,1.1rem);line-height:1.55;max-width:66ch;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-  .fam-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:14px}
-  .fam-cards.collapsed{display:none}
+  .fam-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr));gap:12px}
   /* hover or focus a card and the whole family warms up */
   .fam-group:hover .fiche,.fam-group:focus-within .fiche{border-color:rgba(224,70,60,.34)}
   .fam-group:hover .fiche:hover,.fam-group:focus-within .fiche:focus-within{border-color:var(--red)}
-  .types-cta{margin-top:clamp(1.6rem,4vh,2.4rem);display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-  .types-toggle-hint{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;color:var(--ink-mute);align-self:center}
+
+  /* the invitation, after we've explained the types */
+  .type-cta{margin-top:clamp(3rem,7vh,5rem);background:var(--red);color:#fff;border-radius:16px;padding:clamp(2.3rem,4.5vw,3.6rem) clamp(1.4rem,4vw,3rem);text-align:center;position:relative;overflow:hidden;isolation:isolate;box-shadow:0 24px 60px -26px rgba(224,70,60,.7)}
+  .type-cta::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(620px 300px at 50% -25%,rgba(255,255,255,.2),transparent 66%)}
+  .type-cta-kicker{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+  .type-cta-h{font-family:var(--f-display);font-weight:400;font-size:clamp(1.7rem,3.8vw,2.6rem);line-height:1.1;letter-spacing:-.02em;margin:.7rem auto 0;max-width:19ch}
+  .type-cta-p{margin:1rem auto 0;max-width:46ch;color:rgba(255,255,255,.9);font-size:clamp(1rem,1.4vw,1.12rem);line-height:1.5}
+  .type-cta-btn{margin-top:1.9rem;background:#fff;color:var(--ink);border-color:#fff;font-size:.86rem;padding:1.15rem 2.5rem}
+  .type-cta-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
+  .type-cta-meta{margin-top:1.1rem;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
 
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s)}
   .reveal.in{opacity:1;transform:none}
@@ -494,7 +500,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('res-state').textContent=t.state;
     document.getElementById('res-sig').innerHTML=t.sig;
     document.getElementById('res-shadow').innerHTML=t.shadow;
-    document.getElementById('imp-fam').textContent=t.family+' family';
+    document.getElementById('imp-fam').textContent=t.family;
     document.getElementById('imp-name').textContent=t.name;
     document.getElementById('imp-one').textContent=t.one;
     document.getElementById('imp-under').textContent='Underlying · '+s.name;
@@ -543,7 +549,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     '<text x="'+P+'" y="150" fill="#F7F6F3" fill-opacity="0.6" font-family="Space Mono, monospace" font-size="26" letter-spacing="4">THE HYPERCREATIVE METHOD</text>'+
     '<circle cx="'+(W-P)+'" cy="142" r="12" fill="#E0463C"/>'+
     ownerSVG+
-    '<text x="'+P+'" y="1120" fill="#E0463C" font-family="Space Mono, monospace" font-size="30" letter-spacing="5">'+esc(t.family.toUpperCase()+' FAMILY')+'</text>'+
+    '<text x="'+P+'" y="1120" fill="#E0463C" font-family="Space Mono, monospace" font-size="30" letter-spacing="5">'+esc(t.family.toUpperCase())+'</text>'+
     '<text x="'+P+'" y="1230" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="300" font-size="110" letter-spacing="-3">'+esc(t.name)+'</text>'+
     '<text fill="#F7F6F3" fill-opacity="0.72" font-family="Inter, sans-serif" font-weight="300" font-size="42">'+tspans(oneLines,P,1330,58)+'</text>'+
     underSVG+
@@ -602,27 +608,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         unote.textContent="We couldn't send that. Try again in a moment.";});
   });
 
-  /* render the three families on the landing; the nine cards sit collapsed behind a toggle */
+  /* render the three families on the landing, all nine types always visible, each with its mark (style A: monoline) */
   (function(){var g=document.getElementById('types-grid');if(!g)return;
+    var S='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
+    var ICONS={
+      cartographer:S+'<path d="M3 8c3-2 6-2 9 0s6 2 9 0"/><path d="M3 13c3-2 6-2 9 0s6 2 9 0"/><path d="M3 18c3-2 6-2 9 0s6 2 9 0"/></svg>',
+      explorer:S+'<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>',
+      seedcollector:S+'<path d="M12 3C7 7 5 10 5 14a7 7 0 0 0 14 0c0-4-2-7-7-11z"/><path d="M12 21v-9"/></svg>',
+      notary:S+'<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="2.6"/></svg>',
+      reframer:S+'<path d="M4 9V6a2 2 0 0 1 2-2h3"/><path d="M20 9V6a2 2 0 0 0-2-2h-3"/><path d="M4 15v3a2 2 0 0 0 2 2h3"/><path d="M20 15v3a2 2 0 0 1-2 2h-3"/></svg>',
+      collider:S+'<path d="M3 12h6M6 9l3 3-3 3"/><path d="M21 12h-6M18 9l-3 3 3 3"/></svg>',
+      sketcher:S+'<path d="M4 20l3.5-1L18 8.5 15.5 6 5 16.5 4 20z"/><path d="M14 7.5l2.5 2.5"/></svg>',
+      guardian:S+'<path d="M12 3l7 3v5c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3z"/></svg>',
+      persona:S+'<path d="M4 6c5-1.5 11-1.5 16 0 0 6-3 12-8 14C7 18 4 12 4 6z"/><circle cx="9.2" cy="9.5" r=".9"/><circle cx="14.8" cy="9.5" r=".9"/><path d="M9.5 13.5c1.5 1.3 3.5 1.3 5 0"/></svg>'
+    };
     var FAMS=[
       {k:"Feed",verb:"Feed",blurb:"Where your ideas come from. These types fill the tank: they master their own field, wander into ones that aren't theirs, and keep everything worth keeping."},
       {k:"Sharpen",verb:"Sharpen",blurb:"How raw material turns into an idea. These types make it cut: they notice what others miss, rewrite the question, slam far-apart things together and think in drafts."},
       {k:"Protect",verb:"Protect",blurb:"How the work survives contact with the world. These types defend what they build, from the noise outside and the committee inside, and keep their own hands on the controls."}
     ];
     var h='';
-    for(var fi=0;fi<FAMS.length;fi++){var F=FAMS[fi],cards='',n=0;
-      for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;n++;
-        cards+='<article class="fiche"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p><p class="fiche-sig">'+ft.sig+'</p></article>';}
-      h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title"><span class="fam-verb">'+F.verb+'</span> family</h3><span class="fam-num">'+n+' of the nine</span><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards collapsed">'+cards+'</div></section>';}
-    h+='<div class="types-cta"><button class="btn btn-primary js-start" type="button">Find my type</button><button class="btn btn-ghost" id="types-toggle" type="button" aria-expanded="false">Meet the nine types</button><span class="types-toggle-hint">2 minutes gets you yours</span></div>';
+    for(var fi=0;fi<FAMS.length;fi++){var F=FAMS[fi],cards='';
+      for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;
+        cards+='<article class="fiche"><span class="fiche-ico">'+(ICONS[fk]||'')+'</span><div class="fiche-body"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p></div></article>';}
+      h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title">'+F.verb+'</h3><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
+    h+='<div class="type-cta"><p class="type-cta-kicker">So, which one is you?</p><h3 class="type-cta-h">Find your type, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at your lead type, the one running underneath it, and the single thing to work on next. You leave with a card you can keep.</p><button class="btn type-cta-btn js-start" type="button">Find my type</button><p class="type-cta-meta">Under 3 minutes · Free · No sign-up</p></div>';
     g.innerHTML=h;
-    var expanded=false,tg=document.getElementById('types-toggle');
-    tg.addEventListener('click',function(){
-      expanded=!expanded;
-      [].slice.call(g.querySelectorAll('.fam-cards')).forEach(function(c){c.classList.toggle('collapsed',!expanded);});
-      tg.textContent=expanded?'Hide the nine types':'Meet the nine types';
-      tg.setAttribute('aria-expanded',String(expanded));
-    });
     [].slice.call(g.querySelectorAll('.js-start')).forEach(function(b){b.addEventListener('click',startTest);});
   })();
 })();
