@@ -234,6 +234,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .type-cta-btn{margin-top:1.9rem;background:#fff;color:var(--ink);border-color:#fff;font-size:.86rem;padding:1.15rem 2.5rem}
   .type-cta-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
   .type-cta-meta{margin-top:1.1rem;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+  body.has-result .type-cta{display:none}
 
   /* type icons on result + card */
   .res-icon{position:relative;display:inline-block;color:var(--red);margin:0 0 1.2rem;line-height:0}
@@ -433,7 +434,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     notary:{name:"The Notary",family:"Sharpen",one:"You catch the odd detail everyone else walked past.",
       state:"Right now your energy concentrates on observing without judging and catching what others miss.",
       sig:"You <strong>spot the strange detail</strong> before you have an opinion about it. Noticing is your resting state.",
-      shadow:"Pick one question and <strong>answer</strong> it this month. Observation that never decides is a notebook, not a result.",
+      shadow:"This month, take one thing you've spotted and <strong>decide</strong> what it means. Noticing is your strength; the growth is committing to a call instead of only adding to the pile of things you've observed.",
       id:"I'm a Notary. I catch the odd detail before anyone else even looks."},
     reframer:{name:"The Reframer",family:"Sharpen",one:"You find the better question under the problem.",
       state:"Right now your energy concentrates on rewriting the problem until a better answer shows up.",
@@ -460,6 +461,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       sig:"You can <strong>summon your creative state on purpose</strong>, not wait for it. You have a way in.",
       shadow:"<strong>Protect the window</strong> this month. You lean on the ritual and good weather; defend the conditions before you need them.",
       id:"I'm a Persona. I decide who I am when I create, then I become it."}
+  };
+  /* lead x underlying blend: how the underlying inflects the lead. Notary row done as the pattern; other leads fall back to lead-only until filled. */
+  var INFLECT={
+    notary:{
+      cartographer:"Your Cartographer side aims that noticing at the one field you know cold, so you catch what others miss exactly where it matters most.",
+      explorer:"Your Explorer side sends that noticing into territory that isn't yours, so the odd thing you spot is often what a whole other field walked past too.",
+      seedcollector:"Your Collector side keeps every fragment you catch, so the details pile up into a private archive nobody else is holding.",
+      reframer:"Your Reframer side rarely lets a detail stay a detail; you turn it into a sharper question about what everyone else assumed.",
+      collider:"Your Collider side slams two of those noticed details together and finds a link two fields apart never saw coming.",
+      sketcher:"Your Sketcher side turns noticing into making fast, spinning the details into rough drafts you then sift cold.",
+      guardian:"Your Guardian side flags only the detail you decided matters, never the one the room told you to see.",
+      persona:"Your Persona side can switch that noticing on by choice, stepping into the observer on purpose instead of waiting for the detail to find you."
+    }
   };
   /* tie-break priority: rarer / more-specific types win a tie */
   var PRIORITY=["guardian","explorer","notary","persona","reframer","sketcher","collider","seedcollector","cartographer"];
@@ -560,7 +574,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     CUR.key=key;CUR.sec=secKey;
     document.getElementById('res-name').innerHTML=t.name+'<span class="bp">.</span>';
     document.getElementById('res-blend').innerHTML='with the <strong>'+s.name.replace(/^The /,'')+'</strong> running underneath';
-    document.getElementById('res-state').textContent=t.state;
+    var _bl=(INFLECT[key]&&INFLECT[key][secKey])?(t.state+' '+INFLECT[key][secKey]):t.state;
+    document.getElementById('res-state').textContent=_bl;
+    document.body.classList.add('has-result');
     document.getElementById('res-sig').innerHTML=t.sig;
     document.getElementById('res-shadow').innerHTML=t.shadow;
     document.getElementById('res-icon').innerHTML='<span class="ico-main">'+iconSVG(key)+'</span><span class="ico-sub">'+iconSVG(secKey)+'</span>';
@@ -583,6 +599,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   function startTest(){
     if(!started){started=true;dl('creative_profile_start');}
+    document.body.classList.remove('has-result');
     testSec.hidden=false; idx=0; answers=[]; for(var k in TYPES)scores[k]=0;
     renderQ();
     testSec.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
@@ -590,6 +607,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   document.getElementById('start-btn').addEventListener('click',startTest);
   document.getElementById('retake').addEventListener('click',function(){
     resultSec.classList.remove('on');
+    document.body.classList.remove('has-result');
     for(var k in TYPES)scores[k]=0; answers=[]; idx=0;
     testSec.hidden=false; renderQ();
     window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
