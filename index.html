@@ -69,10 +69,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .nav-links a:hover{color:var(--ink)}
   .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--red);opacity:.8;transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
   .nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
-  @media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
+  @media(max-width:760px){.nav-toggle{display:flex}.nav-links{position:fixed;top:0;bottom:0;right:0;width:min(80vw,300px);flex-direction:column;justify-content:center;align-items:flex-start;gap:1.7rem;padding:2rem;background:var(--paper);box-shadow:-24px 0 60px -30px rgba(0,0,0,.55);transform:translateX(100%);transition:transform .4s var(--ease);font-size:.85rem;z-index:55}.nav.open .nav-links{transform:none}.nav-links a::after{display:none}.nav-cta{margin-top:.4rem}}
   .nav-cta{border:1px solid var(--line);padding:8px 15px;border-radius:2px;color:var(--ink)!important}
   .nav-cta::after{display:none}
   .nav-cta:hover{border-color:var(--red)}
+  .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0;border:0;background:none;cursor:pointer;z-index:60}
+  .nav-toggle span{display:block;width:24px;height:2px;background:var(--ink);transition:transform .3s var(--ease),opacity .3s var(--ease)}
+  .nav.open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav.open .nav-toggle span:nth-child(2){opacity:0}
+  .nav.open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   .nav-links a.nav-hot::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--red);vertical-align:.14em;margin-right:.55em;animation:ndot 2.4s var(--ease) infinite}
   @keyframes ndot{0%,100%{box-shadow:0 0 0 0 rgba(224,70,60,.55)}55%{box-shadow:0 0 0 5px rgba(224,70,60,0)}}
   @media (prefers-reduced-motion:reduce){.nav-links a.nav-hot::before{animation:none}}
@@ -256,7 +261,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="nav" id="nav">
   <a class="brand" href="#top">Hypercreative<span class="bp">.</span></a>
-  <nav class="nav-links" aria-label="Primary">
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks" aria-label="Primary">
     <a href="/#method">The method</a>
     <a href="/what-we-do/">What we do</a>
     <a class="nav-hot" href="/creative-profile/">Creative Profile</a>
@@ -265,6 +271,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a class="nav-cta" href="/#request">Let's talk</a>
   </nav>
 </header>
+<script>(function(){var n=document.getElementById("nav"),t=document.getElementById("navToggle");if(!n||!t)return;function set(o){n.classList.toggle("open",o);t.setAttribute("aria-expanded",o?"true":"false");t.setAttribute("aria-label",o?"Close menu":"Open menu");}t.addEventListener("click",function(){set(!n.classList.contains("open"));});n.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){set(false);});});})();</script>
 
 <section class="hero" id="top">
   <div class="hero-pin">
@@ -356,7 +363,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#method">The method</a>
         <a href="what-we-do/">What we do</a>
         <a href="creative-profile/">Creative Profile</a>
-        <a href="blog/">Journal</a>
+        <a href="blog/">Blog</a>
       </div>
       <div class="foot-col">
         <p class="foot-h">Company</p>
