@@ -351,35 +351,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 <script>(function(){var EP="/api/lead.php";var pre=null;document.querySelectorAll(".prod-cta").forEach(function(a){a.addEventListener("click",function(){pre=a.getAttribute("data-prod");});});var f=document.getElementById("rq");if(f){var steps=[].slice.call(f.querySelectorAll(".qstep")),fill=document.getElementById("rq-fill"),back=document.getElementById("q-back"),st={},i=0;function vis(k){var s=steps[k],c=s.getAttribute("data-if");return !(c&&st.product!==c);}function show(k){var dir=k>=i?1:-1;while(k>0&&k<steps.length&&!vis(k))k+=dir;i=Math.max(0,Math.min(steps.length-1,k));steps.forEach(function(s,m){s.classList.toggle("on",m===i);});fill.style.width=Math.round(i/(steps.length-1)*100)+"%";back.hidden=(i===0||steps[i].getAttribute("data-q")==="done");var inp=steps[i].querySelector("input,textarea");if(inp)setTimeout(function(){inp.focus();},60);}function nx(){if(i<steps.length-1)show(i+1);}function err(s,m){var e=s.querySelector(".q-err");if(!e){e=document.createElement("p");e.className="q-err";s.appendChild(e);}e.textContent=m;}function submit(btn){var s=steps[i];btn.disabled=true;var t=btn.textContent;btn.textContent="Sending…";st.source="website";fetch(EP,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(st)}).then(function(r){if(!r.ok)throw 0;show(steps.length-1);}).catch(function(){btn.disabled=false;btn.textContent=t;err(s,"We could not send your request. Please try again in a moment.");});}f.querySelectorAll(".q-opt").forEach(function(b){b.addEventListener("click",function(){st[b.getAttribute("data-name")]=b.getAttribute("data-val");nx();});});f.querySelectorAll(".q-next").forEach(function(b){b.addEventListener("click",function(){var s=steps[i],inp=s.querySelector("input,textarea");if(inp){if(inp.hasAttribute("required")&&!inp.value.trim()){inp.classList.add("err");inp.focus();return;}inp.classList.remove("err");st[inp.getAttribute("data-name")]=inp.value;}if(s.getAttribute("data-q")==="message"){submit(b);}else{show(steps.length-1>i?i+1:i);}});});f.addEventListener("keydown",function(e){if(e.key==="Enter"){var s=steps[i];if(s.querySelector("textarea"))return;e.preventDefault();var nb=s.querySelector(".q-next");if(nb)nb.click();}});back.addEventListener("click",function(){show(i-1);});document.querySelectorAll(".prod-cta").forEach(function(a){a.addEventListener("click",function(){setTimeout(function(){if(pre){st.product=pre;show(1);}},10);});});show(0);}})();</script>
 <!--/GEN-->
-<footer id="contact">
-  <div class="foot">
-    <div class="foot-lead">
-      <a class="brand" href="#top">Hypercreative<span class="bp">.</span></a>
-      <p class="foot-claim">Creativity training for leadership.</p>
-    </div>
-    <nav class="foot-nav" aria-label="Footer">
-      <div class="foot-col">
-        <p class="foot-h">Explore</p>
-        <a href="#method">The method</a>
-        <a href="what-we-do/">What we do</a>
-        <a href="creative-profile/">Creative Profile</a>
-        <a href="blog/">Blog</a>
-      </div>
-      <div class="foot-col">
-        <p class="foot-h">Company</p>
-        <a href="press/">Press &amp; media kit</a>
-        <a href="#request">Contact</a>
-      </div>
-      <div class="foot-col">
-        <p class="foot-h">Legal</p>
-        <a href="legal/legal-notice">Legal notice</a>
-        <a href="legal/privacy">Privacy</a>
-        <a href="legal/cookies">Cookies</a>
-        <a href="legal/terms">Terms</a>
-      </div>
-    </nav>
-  </div>
-  <div class="foot-legal"><span class="foot-fine">&copy; 2026 Hypercreative&#8482;. All rights reserved.</span><span class="foot-fine">Creativity training for leadership.</span></div></footer>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
 
 <script>
 (function(){
