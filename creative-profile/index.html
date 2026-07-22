@@ -729,11 +729,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var bl=(typeof INFLECT!=='undefined'&&INFLECT[CUR.key]&&INFLECT[CUR.key][CUR.sec])?(t.state+' '+INFLECT[CUR.key][CUR.sec]):t.state;
     var headline=NAME?NAME:t.name;
     var typeName=t.name.replace(/^The /,''),subName=sec?sec.name.replace(/^The /,''):'';
+    var hlY=868,hlLH=86,hlLines=wrapText(headline,15).length;
+    var roleY=hlY+(hlLines-1)*hlLH+94;
+    var famY=roleY+64;
+    var descY=famY+(wrapText(famStr,44).length-1)*44+60;
     var roleSVG;
     if(NAME){
-      roleSVG='<text x="'+CX+'" y="1012" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="36"><tspan fill="#F7F6F3" fill-opacity="0.85">you are a </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(typeName)+'</tspan>'+(sec?('<tspan fill="#F7F6F3" fill-opacity="0.85">, with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan>'):'')+'</text>';
+      roleSVG='<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="36"><tspan fill="#F7F6F3" fill-opacity="0.85">you are a </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(typeName)+'</tspan>'+(sec?('<tspan fill="#F7F6F3" fill-opacity="0.85">, with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan>'):'')+'</text>';
     }else{
-      roleSVG=sec?('<text x="'+CX+'" y="1012" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan></text>'):'';
+      roleSVG=sec?('<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan></text>'):'';
     }
     return '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+
       '<defs><radialGradient id="g" cx="50%" cy="30%" r="55%"><stop offset="0" stop-color="#E0463C" stop-opacity="0.17"/><stop offset="1" stop-color="#E0463C" stop-opacity="0"/></radialGradient></defs>'+
@@ -741,10 +745,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       '<rect width="'+W+'" height="'+H+'" fill="url(#g)"/>'+
       '<text x="'+CX+'" y="152" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="44" letter-spacing="-1"><tspan fill="#F7F6F3">Hypercreative</tspan><tspan fill="#E0463C">.</tspan></text>'+
       emblem+
-      cwrap(headline,880,78,'#F7F6F3',1,15,86)+
+      cwrap(headline,hlY,78,'#F7F6F3',1,15,hlLH)+
       roleSVG+
-      cwrap(famStr,1082,32,'#F7F6F3',0.66,44,44)+
-      cwrap(bl,1150,34,'#F7F6F3',0.74,42,46)+
+      cwrap(famStr,famY,32,'#F7F6F3',0.66,44,44)+
+      cwrap(bl,descY,34,'#F7F6F3',0.74,42,46)+
       '<line x1="'+P+'" y1="1500" x2="'+(W-P)+'" y2="1500" stroke="#F7F6F3" stroke-opacity="0.16"/>'+
       '<text x="'+CX+'" y="1590" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="400" font-size="46">What kind of creative are you?</text>'+
       '<text x="'+CX+'" y="1740" text-anchor="middle" fill="#F7F6F3" fill-opacity="0.42" font-family="Inter, sans-serif" font-size="22" letter-spacing="1">'+esc(SERIAL)+'</text>'+
@@ -763,16 +767,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       URL.revokeObjectURL(url);
       try{
         c.toBlob(function(b){
-          var a=document.createElement('a');a.download='hypercreative-imprint-'+key+'.png';
+          var a=document.createElement('a');a.download='Hypercreative Card.png';
           a.href=URL.createObjectURL(b);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);},1000);
         },'image/png');
       }catch(e){
-        var a2=document.createElement('a');a2.download='hypercreative-imprint-'+key+'.svg';
+        var a2=document.createElement('a');a2.download='Hypercreative Card.svg';
         a2.href='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);a2.click();
       }
     };
     img.onerror=function(){
-      var a=document.createElement('a');a.download='hypercreative-imprint-'+key+'.svg';
+      var a=document.createElement('a');a.download='Hypercreative Card.svg';
       a.href='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);a.click();
     };
     img.src=url;
