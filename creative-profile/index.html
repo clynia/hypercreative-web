@@ -170,6 +170,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .card-actions .btn-primary{background:var(--red);border-color:var(--red);color:var(--paper)}
   .card-actions .btn-primary:hover{background:#c93b32;border-color:#c93b32;transform:translateY(-1px)}
   .card-actions .btn-ghost:hover{color:var(--paper);border-color:var(--paper)}
+  .card-share-note{margin:1.15rem auto 0;max-width:38rem;text-align:center;color:rgba(247,246,243,.72);font-size:.92rem;line-height:1.55}
 
   /* email */
   .unlock{margin-top:clamp(3rem,7vh,5rem);border-top:1px solid var(--line);padding-top:clamp(2.4rem,6vh,3.5rem);max-width:560px}
@@ -329,7 +330,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="card-wrap reveal">
       <div class="card-inner">
-        <div class="card-lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>Send it to someone who thinks like you</div>
         <div class="card-name-in"><input type="text" id="imp-name-in" maxlength="26" placeholder="Add your name to the card" aria-label="Your name on the card" autocomplete="name"></div>
         <div class="card-stage">
           <div class="imprint" id="imprint">
@@ -349,9 +349,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <div class="card-actions">
-          <button class="btn btn-primary" id="dl-card" type="button">Download my card</button>
-          <button class="btn btn-ghost" id="retake" type="button">Take it again</button>
+          <button class="btn btn-primary" id="dl-card" type="button">Download the card</button>
+          <button class="btn btn-ghost" id="share-card" type="button">Share</button>
         </div>
+        <p class="card-share-note">Post your card, or share the test so a friend finds their type too.</p>
       </div>
     </div>
 
@@ -695,14 +696,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     testSec.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
   }
   document.getElementById('start-btn').addEventListener('click',startTest);
-  document.getElementById('retake').addEventListener('click',function(){
-    resultSec.classList.remove('on');
-    document.body.classList.remove('has-result');
-    for(var k in TYPES)scores[k]=0; answers=[]; idx=0;
-    testSec.hidden=false; renderQ();
-    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
-    testSec.scrollIntoView({behavior:reduce?'auto':'smooth'});
-  });
+  var shareBtn=document.getElementById('share-card');
+  if(shareBtn){shareBtn.addEventListener('click',function(){
+    var url='https://hypercreativemethod.com/creative-profile/';
+    var txt='What kind of creative are you? Find your type with the Hypercreative Creative Profile.';
+    if(navigator.share){navigator.share({title:'Creative Profile',text:txt,url:url}).catch(function(){});}
+    else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(function(){var o=shareBtn.textContent;shareBtn.textContent='Link copied';setTimeout(function(){shareBtn.textContent=o;},1800);}).catch(function(){window.prompt('Copy this link',url);});}
+    else{window.prompt('Copy this link',url);}
+    dl('creative_profile_share',{});
+  });}
 
   /* ---- card download: pure-SVG so canvas export is not tainted ---- */
   function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
