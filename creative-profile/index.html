@@ -148,7 +148,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .card-stage::before{content:"";position:absolute;top:6%;left:50%;transform:translateX(-50%);width:80%;height:80%;background:radial-gradient(ellipse at center,rgba(224,70,60,.5),transparent 68%);filter:blur(58px);z-index:0;pointer-events:none}
   .imprint{position:relative;z-index:1;width:340px;max-width:100%;aspect-ratio:9/16;background:var(--ink);color:var(--paper);border-radius:14px;padding:1.7rem 1.5rem;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(247,246,243,.1);box-shadow:0 0 90px -8px rgba(224,70,60,.4),0 40px 80px -28px rgba(0,0,0,.8)}
   .imprint::after{content:"";position:absolute;left:50%;top:36%;transform:translate(-50%,-50%);width:250px;height:250px;border-radius:50%;background:radial-gradient(circle at center,rgba(224,70,60,.2),transparent 70%);pointer-events:none}
-  .imp-top{display:flex;justify-content:space-between;align-items:center;font-family:var(--f-mono);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,246,243,.6);z-index:1}
+  .imp-top{text-align:center;z-index:1}
+  .imp-brand{font-family:var(--f-display);font-weight:500;font-size:1.18rem;letter-spacing:-.01em;color:var(--paper)}
+  .imp-brand .bp{color:var(--red)}
   .imp-dot{width:7px;height:7px;border-radius:50%;background:var(--red);flex:none}
   .imp-core{margin:auto 0;text-align:center;z-index:1}
   .imp-emblem{position:relative;width:110px;height:110px;margin:0 auto 1.1rem}
@@ -163,7 +165,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .imp-desc{margin-top:.55rem;color:rgba(247,246,243,.72);font-size:.88rem;line-height:1.5}
   .imp-cta{z-index:1;border-top:1px solid rgba(247,246,243,.16);padding-top:.85rem;text-align:center}
   .imp-hook{font-family:var(--f-display);font-weight:400;font-size:1rem;line-height:1.2;color:var(--paper)}
-  .imp-url{margin-top:.4rem;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);line-height:1.3}
+  .imp-url{margin-top:.3rem;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);line-height:1.3}
+  .imp-foot{margin-top:1.1rem;text-align:center;z-index:1}
+  .imp-serial{font-family:var(--f-mono);font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,246,243,.4)}
   .imp-bot{margin-top:.85rem;display:flex;justify-content:space-between;align-items:end;font-family:var(--f-mono);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,246,243,.42);z-index:1}
   .card-actions{margin-top:1.9rem;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
   .card-actions .btn{color:var(--paper);border-color:rgba(247,246,243,.28)}
@@ -333,7 +337,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="card-name-in"><input type="text" id="imp-name-in" maxlength="26" placeholder="Add your name to the card" aria-label="Your name on the card" autocomplete="name"></div>
         <div class="card-stage">
           <div class="imprint" id="imprint">
-            <div class="imp-top"><span>The Hypercreative Method</span><span class="imp-dot" aria-hidden="true"></span></div>
+            <div class="imp-top"><span class="imp-brand">Hypercreative<span class="bp">.</span></span></div>
             <div class="imp-core">
               <div class="imp-emblem" id="imp-emblem" aria-hidden="true"></div>
               <div class="imp-name" id="imp-name"></div>
@@ -343,9 +347,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="imp-cta">
               <div class="imp-hook">What kind of creative are you?</div>
-              <div class="imp-url">www.hypercreativemethod.com</div>
             </div>
-            <div class="imp-bot"><span id="imp-serial"></span><span id="imp-owner"></span></div>
+            <div class="imp-foot">
+              <div class="imp-serial" id="imp-serial"></div>
+              <div class="imp-url">www.hypercreativemethod.com</div>
+              <span id="imp-owner" hidden></span>
+            </div>
           </div>
         </div>
         <div class="card-actions">
@@ -734,8 +741,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       '<defs><radialGradient id="g" cx="50%" cy="30%" r="55%"><stop offset="0" stop-color="#E0463C" stop-opacity="0.17"/><stop offset="1" stop-color="#E0463C" stop-opacity="0"/></radialGradient></defs>'+
       '<rect width="'+W+'" height="'+H+'" fill="#13130F"/>'+
       '<rect width="'+W+'" height="'+H+'" fill="url(#g)"/>'+
-      '<text x="'+P+'" y="128" fill="#F7F6F3" fill-opacity="0.6" font-family="Space Mono, monospace" font-size="26" letter-spacing="4">THE HYPERCREATIVE METHOD</text>'+
-      '<circle cx="'+(W-P)+'" cy="120" r="11" fill="#E0463C"/>'+
+      '<text x="'+CX+'" y="152" text-anchor="middle" font-family="Inter, sans-serif" font-weight="500" font-size="44" letter-spacing="-1"><tspan fill="#F7F6F3">Hypercreative</tspan><tspan fill="#E0463C">.</tspan></text>'+
       emblem+
       cwrap(headline,880,78,'#F7F6F3',1,15,86)+
       roleSVG+
@@ -743,8 +749,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       cwrap(bl,1150,34,'#F7F6F3',0.74,42,46)+
       '<line x1="'+P+'" y1="1500" x2="'+(W-P)+'" y2="1500" stroke="#F7F6F3" stroke-opacity="0.16"/>'+
       '<text x="'+CX+'" y="1590" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="400" font-size="46">What kind of creative are you?</text>'+
-      '<text x="'+CX+'" y="1656" text-anchor="middle" fill="#E0463C" font-family="Space Mono, monospace" font-size="28" letter-spacing="2.5">WWW.HYPERCREATIVEMETHOD.COM</text>'+
-      '<text x="'+P+'" y="1822" fill="#F7F6F3" fill-opacity="0.42" font-family="Space Mono, monospace" font-size="22" letter-spacing="2">'+esc(SERIAL)+'</text>'+
+      '<text x="'+CX+'" y="1740" text-anchor="middle" fill="#F7F6F3" fill-opacity="0.4" font-family="Space Mono, monospace" font-size="20" letter-spacing="2">'+esc(SERIAL)+'</text>'+
+      '<text x="'+CX+'" y="1812" text-anchor="middle" fill="#E0463C" font-family="Space Mono, monospace" font-size="28" letter-spacing="2.5">WWW.HYPERCREATIVEMETHOD.COM</text>'+
       ''+
       '</svg>';
   }
