@@ -340,7 +340,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="imp-emblem" id="imp-emblem" aria-hidden="true"></div>
               <div class="imp-name" id="imp-name"></div>
               <div class="imp-blend" id="imp-blend"></div>
-              <div class="imp-fam" id="imp-fam"></div>
               <div class="imp-desc" id="imp-desc"></div>
             </div>
             <div class="imp-cta">
@@ -679,7 +678,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('res-shadow').innerHTML=t.shadow;
     document.getElementById('res-icon').innerHTML='<span class="emb-ring">'+iconSVG(key)+'</span><span class="emb-badge">'+iconSVG(secKey)+'</span>';
     document.getElementById('imp-emblem').innerHTML='<span class="emb-ring">'+iconSVG(key)+'</span><span class="emb-badge">'+iconSVG(secKey)+'</span>';
-    document.getElementById('imp-fam').textContent=t.family+' family: '+FAM_DESC[t.family];
     document.getElementById('imp-desc').textContent=_bl;
     var d=new Date();
     var mm=('0'+(d.getMonth()+1)).slice(-2),dd=('0'+d.getDate()).slice(-2);
@@ -731,8 +729,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var typeName=t.name.replace(/^The /,''),subName=sec?sec.name.replace(/^The /,''):'';
     var hlY=868,hlLH=86,hlLines=wrapText(headline,15).length;
     var roleY=hlY+(hlLines-1)*hlLH+94;
-    var famY=roleY+64;
-    var descY=famY+(wrapText(famStr,44).length-1)*44+60;
+    var descY=roleY+82;
     var roleSVG;
     if(NAME){
       roleSVG='<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="36"><tspan fill="#F7F6F3" fill-opacity="0.85">you are a </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(typeName)+'</tspan>'+(sec?('<tspan fill="#F7F6F3" fill-opacity="0.85">, with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan>'):'')+'</text>';
@@ -747,7 +744,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       emblem+
       cwrap(headline,hlY,78,'#F7F6F3',1,15,hlLH)+
       roleSVG+
-      cwrap(famStr,famY,32,'#F7F6F3',0.66,44,44)+
       cwrap(bl,descY,34,'#F7F6F3',0.74,42,46)+
       '<line x1="'+P+'" y1="1500" x2="'+(W-P)+'" y2="1500" stroke="#F7F6F3" stroke-opacity="0.16"/>'+
       '<text x="'+CX+'" y="1590" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="400" font-size="46">What kind of creative are you?</text>'+
