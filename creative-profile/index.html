@@ -156,7 +156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .emb-ring svg{width:50px;height:50px}
   .emb-badge{position:absolute;right:-3px;bottom:-3px;width:40px;height:40px;border-radius:50%;background:var(--ink);border:1.5px solid rgba(224,70,60,.6);display:flex;align-items:center;justify-content:center;color:var(--red)}
   .emb-badge svg{width:21px;height:21px}
-  .imp-name{font-family:var(--f-display);font-weight:300;font-size:2.05rem;line-height:1.04;letter-spacing:-.02em}
+  .imp-name{font-family:var(--f-display);font-weight:300;font-size:2.2rem;line-height:1.05;letter-spacing:-.02em;text-wrap:balance}
   .imp-blend{margin-top:.25rem;font-family:var(--f-display);font-style:italic;font-weight:300;font-size:1rem;color:rgba(247,246,243,.8)}
   .imp-blend b{font-style:normal;font-weight:500;color:var(--red)}
   .imp-fam{margin-top:.9rem;font-size:.8rem;line-height:1.4;color:rgba(247,246,243,.66)}
@@ -609,7 +609,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       calc=document.getElementById('calc'),back=document.getElementById('q-back'),
       resultSec=document.getElementById('result');
   var nameIn=document.getElementById('imp-name-in'),owner=document.getElementById('imp-owner');
-  function applyOwner(){if(NAME){owner.textContent=NAME;owner.hidden=false;}else{owner.textContent='';owner.hidden=true;}}
+  function applyOwner(){
+    if(!CUR.key)return;
+    var t=TYPES[CUR.key],s=CUR.sec?TYPES[CUR.sec]:null;
+    var typeName=t.name.replace(/^The /,''),subName=s?s.name.replace(/^The /,''):'';
+    if(NAME){
+      document.getElementById('imp-name').textContent=NAME;
+      document.getElementById('imp-blend').innerHTML='is a <b>'+typeName+'</b>'+(s?', with an underlying <b>'+subName+'</b>':'');
+    }else{
+      document.getElementById('imp-name').textContent=t.name;
+      document.getElementById('imp-blend').innerHTML=s?'with an underlying <b>'+subName+'</b>':'';
+    }
+    if(owner){owner.textContent='';owner.hidden=true;}
+  }
   nameIn.addEventListener('input',function(){NAME=nameIn.value.trim();applyOwner();});
 
   function renderQ(){
@@ -661,8 +673,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('res-shadow').innerHTML=t.shadow;
     document.getElementById('res-icon').innerHTML='<span class="ico-main">'+iconSVG(key)+'</span><span class="ico-sub">'+iconSVG(secKey)+'</span>';
     document.getElementById('imp-emblem').innerHTML='<span class="emb-ring">'+iconSVG(key)+'</span><span class="emb-badge">'+iconSVG(secKey)+'</span>';
-    document.getElementById('imp-name').textContent=t.name;
-    document.getElementById('imp-blend').innerHTML='with an underlying <b>'+s.name.replace(/^The /,'')+'</b>';
     document.getElementById('imp-fam').textContent=t.family+' family: '+FAM_DESC[t.family];
     document.getElementById('imp-desc').textContent=_bl;
     var d=new Date();
@@ -710,6 +720,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       '<g transform="translate('+(bX-42)+','+(bY-42)+') scale(3.5)" fill="none" stroke="#E0463C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+secI+'</g>'):'');
     var famStr=t.family+' family: '+(FAM_DESC[t.family]||'');
     var bl=(typeof INFLECT!=='undefined'&&INFLECT[CUR.key]&&INFLECT[CUR.key][CUR.sec])?(t.state+' '+INFLECT[CUR.key][CUR.sec]):t.state;
+    var headline=NAME?NAME:t.name;
+    var typeName=t.name.replace(/^The /,''),subName=sec?sec.name.replace(/^The /,''):'';
+    var roleSVG;
+    if(NAME){
+      roleSVG='<text x="'+CX+'" y="1012" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="36"><tspan fill="#F7F6F3" fill-opacity="0.85">is a </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(typeName)+'</tspan>'+(sec?('<tspan fill="#F7F6F3" fill-opacity="0.85">, with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan>'):'')+'</text>';
+    }else{
+      roleSVG=sec?('<text x="'+CX+'" y="1012" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan></text>'):'';
+    }
     return '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+
       '<defs><radialGradient id="g" cx="50%" cy="30%" r="55%"><stop offset="0" stop-color="#E0463C" stop-opacity="0.17"/><stop offset="1" stop-color="#E0463C" stop-opacity="0"/></radialGradient></defs>'+
       '<rect width="'+W+'" height="'+H+'" fill="#13130F"/>'+
@@ -717,15 +735,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       '<text x="'+P+'" y="128" fill="#F7F6F3" fill-opacity="0.6" font-family="Space Mono, monospace" font-size="26" letter-spacing="4">THE HYPERCREATIVE METHOD</text>'+
       '<circle cx="'+(W-P)+'" cy="120" r="11" fill="#E0463C"/>'+
       emblem+
-      '<text x="'+CX+'" y="905" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="300" font-size="84" letter-spacing="-2">'+esc(t.name)+'</text>'+
-      (sec?('<text x="'+CX+'" y="972" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(sec.name.replace(/^The /,''))+'</tspan></text>'):'')+
+      cwrap(headline,880,78,'#F7F6F3',1,15,86)+
+      roleSVG+
       cwrap(famStr,1082,32,'#F7F6F3',0.66,44,44)+
       cwrap(bl,1150,34,'#F7F6F3',0.74,42,46)+
       '<line x1="'+P+'" y1="1500" x2="'+(W-P)+'" y2="1500" stroke="#F7F6F3" stroke-opacity="0.16"/>'+
       '<text x="'+CX+'" y="1590" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="400" font-size="46">What kind of creative are you?</text>'+
       '<text x="'+CX+'" y="1656" text-anchor="middle" fill="#E0463C" font-family="Space Mono, monospace" font-size="28" letter-spacing="2.5">WWW.HYPERCREATIVEMETHOD.COM</text>'+
       '<text x="'+P+'" y="1822" fill="#F7F6F3" fill-opacity="0.42" font-family="Space Mono, monospace" font-size="22" letter-spacing="2">'+esc(SERIAL)+'</text>'+
-      (NAME?'<text x="'+(W-P)+'" y="1822" text-anchor="end" fill="#F7F6F3" fill-opacity="0.42" font-family="Space Mono, monospace" font-size="22" letter-spacing="2">'+esc(NAME.toUpperCase())+'</text>':'')+
+      ''+
       '</svg>';
   }
   document.getElementById('dl-card').addEventListener('click',function(){
