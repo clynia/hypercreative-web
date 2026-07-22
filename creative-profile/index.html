@@ -615,7 +615,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var typeName=t.name.replace(/^The /,''),subName=s?s.name.replace(/^The /,''):'';
     if(NAME){
       document.getElementById('imp-name').textContent=NAME;
-      document.getElementById('imp-blend').innerHTML='is a <b>'+typeName+'</b>'+(s?', with an underlying <b>'+subName+'</b>':'');
+      document.getElementById('imp-blend').innerHTML='you are a <b>'+typeName+'</b>'+(s?', with an underlying <b>'+subName+'</b>':'');
     }else{
       document.getElementById('imp-name').textContent=t.name;
       document.getElementById('imp-blend').innerHTML=s?'with an underlying <b>'+subName+'</b>':'';
@@ -724,7 +724,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var typeName=t.name.replace(/^The /,''),subName=sec?sec.name.replace(/^The /,''):'';
     var roleSVG;
     if(NAME){
-      roleSVG='<text x="'+CX+'" y="1012" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="36"><tspan fill="#F7F6F3" fill-opacity="0.85">is a </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(typeName)+'</tspan>'+(sec?('<tspan fill="#F7F6F3" fill-opacity="0.85">, with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan>'):'')+'</text>';
+      roleSVG='<text x="'+CX+'" y="1012" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="36"><tspan fill="#F7F6F3" fill-opacity="0.85">you are a </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(typeName)+'</tspan>'+(sec?('<tspan fill="#F7F6F3" fill-opacity="0.85">, with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan>'):'')+'</text>';
     }else{
       roleSVG=sec?('<text x="'+CX+'" y="1012" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">with an underlying </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan></text>'):'';
     }
