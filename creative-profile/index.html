@@ -242,11 +242,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   body.has-result .type-cta{display:none}
 
   /* type icons on result + card */
-  .res-icon{position:relative;display:inline-block;color:var(--red);margin:0 0 1.2rem;line-height:0}
-  .res-icon .ico-main{display:block;width:80px;height:80px}
-  .res-icon .ico-main svg{width:100%;height:100%}
-  .res-icon .ico-sub{position:absolute;bottom:-9px;right:-24px;width:34px;height:34px;color:var(--ink)}
-  .res-icon .ico-sub svg{width:100%;height:100%;opacity:.7}
+  .res-icon{position:relative;display:inline-block;width:110px;height:110px;margin:0 0 1.2rem}
+  .res-icon .emb-ring{border-color:rgba(19,19,15,.22);color:var(--ink)}
+  .res-icon .emb-badge{background:var(--paper)}
   .res-how{margin-top:2.2rem;border-top:1px solid var(--line);padding-top:1.4rem;max-width:44rem}
   .res-how summary{font-family:var(--f-display);font-weight:500;font-size:clamp(1.18rem,2.6vw,1.42rem);letter-spacing:-.015em;line-height:1.2;color:var(--red);cursor:pointer;list-style:none}
   .res-how summary::-webkit-details-marker{display:none}
@@ -679,7 +677,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.body.classList.add('has-result');
     document.getElementById('res-sig').innerHTML=t.sig;
     document.getElementById('res-shadow').innerHTML=t.shadow;
-    document.getElementById('res-icon').innerHTML='<span class="ico-main">'+iconSVG(key)+'</span><span class="ico-sub">'+iconSVG(secKey)+'</span>';
+    document.getElementById('res-icon').innerHTML='<span class="emb-ring">'+iconSVG(key)+'</span><span class="emb-badge">'+iconSVG(secKey)+'</span>';
     document.getElementById('imp-emblem').innerHTML='<span class="emb-ring">'+iconSVG(key)+'</span><span class="emb-badge">'+iconSVG(secKey)+'</span>';
     document.getElementById('imp-fam').textContent=t.family+' family: '+FAM_DESC[t.family];
     document.getElementById('imp-desc').textContent=_bl;
