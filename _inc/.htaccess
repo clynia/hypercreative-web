@@ -1,0 +1,2 @@
+# Partials are used only via PHP include, never served directly.
+Require all denied
