@@ -77,7 +77,7 @@ article a{color:var(--ink);text-decoration:underline;text-decoration-color:var(-
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBPM9KTK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<header class="snav" id="nav"><a class="brand" href="/">Hypercreative<span class="bp">.</span></a><button class="snav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button><nav class="snav-links" id="navLinks" aria-label="Primary"><a href="/#method">The method</a><a href="/what-we-do/">What we do</a><a class="nav-hot" href="/creative-profile/">Creative Profile</a><a href="/blog/">Blog</a><a href="/press/">Press</a><a class="nav-cta" href="/#request">Let&#39;s talk</a></nav></header>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
 <style>
 .pr h2{font-family:var(--fd);font-weight:400;font-size:1.5rem;letter-spacing:-.01em;margin:3.2rem 0 1rem}
 .pr .lead{font-family:var(--fm);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);display:block;margin:0 0 .6rem}
@@ -214,9 +214,6 @@ Official files and the full manual: https://hypercreativemethod.com/press/</pre>
 
 <h2>Press contact</h2>
 <div class="contact-card"><p style="margin:0;color:var(--ink)">For interviews, speaking and media enquiries, write to <a href="mailto:press@hypercreativemethod.com">press@hypercreativemethod.com</a>.</p></div></main>
-<script>document.querySelectorAll(".copy").forEach(function(b){b.addEventListener("click",function(){var p=b.closest(".bp-card").querySelector("pre, p");navigator.clipboard.writeText(p.innerText).then(function(){var o=b.textContent;b.textContent="Copied";setTimeout(function(){b.textContent=o;},1500);});});});</script><footer class="foot"><div class="foot-top"><div class="foot-lead"><a class="brand" href="../">Hypercreative<span class="bp">.</span></a><p class="foot-claim">Creativity training for leadership.</p><a class="foot-talk" href="../#request">Start a conversation <span aria-hidden="true">&#8594;</span></a></div>
-<nav class="foot-nav" aria-label="Footer"><div class="foot-col"><p class="foot-h">Explore</p><a href="../#method">The method</a><a href="../what-we-do/">What we do</a><a href="../creative-profile/">Creative Profile</a><a href="../blog/">Blog</a></div><div class="foot-col"><p class="foot-h">Company</p><a href="../press/">Press &amp; media kit</a><a href="../#request">Contact</a></div><div class="foot-col"><p class="foot-h">Legal</p><a href="../legal/legal-notice">Legal notice</a><a href="../legal/privacy">Privacy</a><a href="../legal/cookies">Cookies</a><a href="../legal/terms">Terms</a></div></nav></div>
-<div class="foot-legal"><span class="foot-fine">&copy; 2026 Hypercreative&#8482;. All rights reserved.</span><span class="foot-fine">Creativity training for leadership.</span></div>
-</footer>
-<script>(function(){var n=document.getElementById("nav"),t=document.getElementById("navToggle");if(!n||!t)return;function set(o){n.classList.toggle("open",o);t.setAttribute("aria-expanded",o?"true":"false");t.setAttribute("aria-label",o?"Close menu":"Open menu");}t.addEventListener("click",function(){set(!n.classList.contains("open"));});n.querySelectorAll(".snav-links a").forEach(function(a){a.addEventListener("click",function(){set(false);});});})();</script>
+<script>document.querySelectorAll(".copy").forEach(function(b){b.addEventListener("click",function(){var p=b.closest(".bp-card").querySelector("pre, p");navigator.clipboard.writeText(p.innerText).then(function(){var o=b.textContent;b.textContent="Copied";setTimeout(function(){b.textContent=o;},1500);});});});</script><?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
+
 </body></html>
