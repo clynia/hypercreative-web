@@ -265,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav class="nav-links" id="navLinks" aria-label="Primary">
     <a href="/#method">The method</a>
     <a href="/what-we-do/">What we do</a>
-    <a class="nav-hot" href="/creative-profile/">Creative Profile</a>
+    <a class="nav-hot" href="/creative-world/">Creative World</a>
     <a href="/blog/">Blog</a>
     <a href="/press/">Press</a>
     <a class="nav-cta" href="/#request">Let's talk</a>
@@ -334,12 +334,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p class="lede reveal" style="--d:.06s">Two ways in. Everything we do is built around your organisation.</p>
 <div class="prods"><div class="prod reveal"><h3>Request a keynote</h3><p>Alfonso on stage for your leadership, your offsite or your convention. Pick one of our keynotes or tell us the room and we will guide you.</p><a class="prod-cta" href="#request" data-prod="Keynote">Request a keynote &#8594;</a></div><div class="prod reveal" style="--d:.12s"><h3>Tailor-made</h3><p>A program designed for your team and your challenge, from a half day to a full transformation. Built for you, never off a shelf.</p><a class="prod-cta" href="#request" data-prod="Tailor-made">Contact us for a tailor-made &#8594;</a></div></div>
 </section>
-<section class="tq" id="creative-profile-cta" aria-label="Take the Creative Profile test">
+<section class="tq" id="creative-world-cta" aria-label="Take the Creative World test">
   <div class="tq-in">
-    <h2 class="tq-h">What kind of creative <span class="p">are you</span>?</h2>
-    <p class="tq-sub">Every mind creates differently, so the method starts by naming how yours works. Answer twenty quick either/or questions and the Creative Profile gives you your lead type, the one running underneath it, and the single habit to work on next.</p>
+    <h2 class="tq-h">Which creative world are you on <span class="p">right now</span>?</h2>
+    <p class="tq-sub">The eleven habits of the method fall into three families: feed, sharpen and protect. Picture them as three suns, with nine worlds turning around them. Twenty quick either/or questions tell you which world you are on this quarter, the one running underneath it, and the single habit to work on next.</p>
     <p class="tq-types">Cartographer &middot; Explorer &middot; Collector &middot; Notary &middot; Reframer &middot; Collider &middot; Sketcher &middot; Guardian &middot; Persona</p>
-    <div class="tq-cta"><a class="btn tq-btn" href="/creative-profile/">Find your type</a></div>
+    <div class="tq-cta"><a class="btn tq-btn" href="/creative-world/">Find your world</a></div>
     <p class="tq-meta">A few minutes &middot; Free &middot; No sign-up &middot; A card you keep</p>
   </div>
 </section>
