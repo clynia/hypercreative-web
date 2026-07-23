@@ -620,10 +620,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var typeName=t.name.replace(/^The /,''),subName=s?s.name.replace(/^The /,''):'';
     if(NAME){
       document.getElementById('imp-name').textContent=NAME;
-      document.getElementById('imp-blend').innerHTML='you are on the <b>'+typeName+"</b>'s world"+(s?', shaded by the <b>'+subName+'</b>':'');
+      document.getElementById('imp-blend').innerHTML='your world right now: <b>'+typeName+'</b>'+(s?', shaded by <b>'+subName+'</b>':'');
     }else{
       document.getElementById('imp-name').textContent=t.name;
-      document.getElementById('imp-blend').innerHTML=s?'shaded by the <b>'+subName+'</b>':'';
+      document.getElementById('imp-blend').innerHTML=s?'shaded by <b>'+subName+'</b>':'';
     }
     if(owner){owner.textContent='';owner.hidden=true;}
   }
@@ -732,9 +732,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var descY=roleY+82;
     var roleSVG;
     if(NAME){
-      roleSVG='<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="36"><tspan fill="#F7F6F3" fill-opacity="0.85">you are on the </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(typeName)+'</tspan><tspan fill="#F7F6F3" fill-opacity="0.85">&apos;s world</tspan>'+(sec?('<tspan fill="#F7F6F3" fill-opacity="0.85">, shaded by the </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan>'):'')+'</text>';
+      roleSVG='<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="36"><tspan fill="#F7F6F3" fill-opacity="0.85">your world right now: </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(typeName)+'</tspan>'+(sec?('<tspan fill="#F7F6F3" fill-opacity="0.85">, shaded by </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan>'):'')+'</text>';
     }else{
-      roleSVG=sec?('<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">shaded by the </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan></text>'):'';
+      roleSVG=sec?('<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">shaded by </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan></text>'):'';
     }
     return '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+
       '<defs><radialGradient id="g" cx="50%" cy="30%" r="55%"><stop offset="0" stop-color="#E0463C" stop-opacity="0.17"/><stop offset="1" stop-color="#E0463C" stop-opacity="0"/></radialGradient></defs>'+
