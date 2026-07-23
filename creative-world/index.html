@@ -292,8 +292,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="types" id="types">
     <span class="section-tag reveal">The nine types</span>
-    <h2 class="types-h reveal" style="--d:.05s">One type leads<span class="bp">.</span> Another runs underneath<span class="bp">.</span></h2>
-    <p class="types-lead reveal" style="--d:.1s">Below are the nine worlds, grouped by the sun they orbit: <em>feed</em> an idea, <em>sharpen</em> it, or <em>protect</em> it. Your test gives you the world you are on and a second running underneath it. Nine worlds, each shaded by one of the other eight: that is <strong>seventy-two signatures</strong> in all, and one of them is yours.</p>
+    <h2 class="types-h reveal" style="--d:.05s">One world leads<span class="bp">.</span> Another shades it<span class="bp">.</span></h2>
+    <p class="types-lead reveal" style="--d:.1s">Below are the nine worlds, grouped by the sun they orbit: <em>feed</em> an idea, <em>sharpen</em> it, or <em>protect</em> it. Your test gives you the world you are on and the second that shades it. Nine worlds, each shaded by one of the other eight: that is <strong>seventy-two signatures</strong> in all, and one of them is yours.</p>
     <div class="types-grid" id="types-grid"></div>
   </section>
 
@@ -620,10 +620,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var typeName=t.name.replace(/^The /,''),subName=s?s.name.replace(/^The /,''):'';
     if(NAME){
       document.getElementById('imp-name').textContent=NAME;
-      document.getElementById('imp-blend').innerHTML='you are on the <b>'+typeName+"</b>'s world"+(s?', with the <b>'+subName+'</b> underneath':'');
+      document.getElementById('imp-blend').innerHTML='you are on the <b>'+typeName+"</b>'s world"+(s?', shaded by the <b>'+subName+'</b>':'');
     }else{
       document.getElementById('imp-name').textContent=t.name;
-      document.getElementById('imp-blend').innerHTML=s?'with the <b>'+subName+'</b> underneath':'';
+      document.getElementById('imp-blend').innerHTML=s?'shaded by the <b>'+subName+'</b>':'';
     }
     if(owner){owner.textContent='';owner.hidden=true;}
   }
@@ -670,7 +670,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var t=TYPES[key],secKey=order()[1],s=TYPES[secKey];
     CUR.key=key;CUR.sec=secKey;
     document.getElementById('res-name').innerHTML=t.name+'<span class="bp">.</span>';
-    document.getElementById('res-blend').innerHTML='with the <strong>'+s.name.replace(/^The /,'')+'</strong> running underneath';
+    document.getElementById('res-blend').innerHTML='shaded by the <strong>'+s.name.replace(/^The /,'')+'</strong>';
     var _bl=(INFLECT[key]&&INFLECT[key][secKey])?(t.state+' '+INFLECT[key][secKey]):t.state;
     document.getElementById('res-state').textContent=_bl;
     document.body.classList.add('has-result');
@@ -732,9 +732,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var descY=roleY+82;
     var roleSVG;
     if(NAME){
-      roleSVG='<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="36"><tspan fill="#F7F6F3" fill-opacity="0.85">you are on the </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(typeName)+'</tspan>'+(sec?('<tspan fill="#F7F6F3" fill-opacity="0.85">&apos;s world, with the </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan>'):'')+'</text>';
+      roleSVG='<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="36"><tspan fill="#F7F6F3" fill-opacity="0.85">you are on the </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(typeName)+'</tspan><tspan fill="#F7F6F3" fill-opacity="0.85">&apos;s world</tspan>'+(sec?('<tspan fill="#F7F6F3" fill-opacity="0.85">, shaded by the </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan>'):'')+'</text>';
     }else{
-      roleSVG=sec?('<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">with the </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan></text>'):'';
+      roleSVG=sec?('<text x="'+CX+'" y="'+roleY+'" text-anchor="middle" font-family="Inter, sans-serif" font-style="italic" font-weight="300" font-size="40"><tspan fill="#F7F6F3" fill-opacity="0.8">shaded by the </tspan><tspan fill="#E0463C" font-style="normal" font-weight="500">'+esc(subName)+'</tspan></text>'):'';
     }
     return '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">'+
       '<defs><radialGradient id="g" cx="50%" cy="30%" r="55%"><stop offset="0" stop-color="#E0463C" stop-opacity="0.17"/><stop offset="1" stop-color="#E0463C" stop-opacity="0"/></radialGradient></defs>'+
@@ -813,7 +813,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;
         cards+='<article class="fiche"><span class="fiche-ico">'+iconSVG(fk)+'</span><div class="fiche-body"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p></div></article>';}
       h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title">'+F.verb+'</h3><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
-    h+='<div class="type-cta"><p class="type-cta-kicker">So, which one are you on?</p><h3 class="type-cta-h">Find your world, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at the world you are on this quarter, the one running underneath it, and the single thing to work on next. You leave with a card you can keep.</p><button class="btn type-cta-btn js-start" type="button">Find my world</button><p class="type-cta-meta">A few minutes · Free · No sign-up</p></div>';
+    h+='<div class="type-cta"><p class="type-cta-kicker">So, which one are you on?</p><h3 class="type-cta-h">Find your world, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at the world you are on this quarter, the one that shades it, and the single thing to work on next. You leave with a card you can keep.</p><button class="btn type-cta-btn js-start" type="button">Find my world</button><p class="type-cta-meta">A few minutes · Free · No sign-up</p></div>';
     g.innerHTML=h;
     [].slice.call(g.querySelectorAll('.js-start')).forEach(function(b){b.addEventListener('click',startTest);});
   })();
