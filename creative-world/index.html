@@ -71,6 +71,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,4vw,3.25rem);width:100%}
   main.wrap{flex:1 0 auto}
   .hero{padding:clamp(8rem,18vh,12rem) 0 clamp(3rem,7vh,5rem)}
+
+  /* ---- the map as the front door ---- */
+  body.nh .nav:not(.scrolled) .brand{color:#F7F6F3}
+  body.nh .nav:not(.scrolled) .nav-links a{color:rgba(247,246,243,.72)}
+  body.nh .nav:not(.scrolled) .nav-links a:hover{color:#F7F6F3}
+  body.nh .nav:not(.scrolled) .nav-cta{color:#F7F6F3!important;border-color:rgba(247,246,243,.26)}
+  .cw-hero{position:relative;background:#111110;height:clamp(600px,94svh,940px);overflow:hidden}
+  .cw-hero::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+    background:radial-gradient(120% 92% at 60% 46%,transparent 52%,rgba(0,0,0,.5) 100%)}
+  #hero-sky{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y}
+  .cw-hud{position:absolute;z-index:3;left:clamp(1.25rem,4vw,3.25rem);top:50%;transform:translateY(-50%);
+    max-width:min(88vw,560px);pointer-events:none}
+  .cw-hud .h1{color:#F7F6F3;font-size:clamp(2.3rem,5vw,4.2rem)}
+  .cw-hud .h1 em{color:var(--red)}
+  .cw-sub{margin:1.4rem 0 0;max-width:50ch;color:rgba(247,246,243,.76);font-size:clamp(.98rem,1.35vw,1.14rem);
+    line-height:1.65;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .cw-hud .actions{pointer-events:auto;align-items:center}
+  .cw-full{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+    color:rgba(247,246,243,.85);border-bottom:1px solid var(--red);padding-bottom:4px;transition:opacity .3s ease}
+  .cw-full:hover{opacity:.7}
+  .cw-hud .hero-meta span{background:rgba(247,246,243,.05);border-color:rgba(247,246,243,.16);color:rgba(247,246,243,.85)}
+  .cw-hud .hero-meta span:last-child{color:#ff9d96;border-color:rgba(224,70,60,.5);background:rgba(224,70,60,.14)}
+  .cw-hint{position:absolute;left:0;right:0;bottom:clamp(12px,2vw,20px);z-index:3;text-align:center;pointer-events:none;
+    font-family:var(--f-mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(247,246,243,.5)}
+  .cw-hero .panel{position:absolute;right:clamp(14px,3vw,44px);bottom:clamp(46px,6vw,58px);z-index:6;
+    width:min(88vw,352px);background:rgba(17,17,16,.78);border:1px solid rgba(247,246,243,.15);border-radius:4px;
+    padding:1.1rem 1.2rem 1.25rem;backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px) saturate(130%);
+    box-shadow:0 24px 60px -28px rgba(0,0,0,.9);transition:opacity .28s ease,transform .28s ease;color:#F7F6F3}
+  .cw-hero .panel[hidden]{display:none}
+  .cw-hero .panel.enter{opacity:0;transform:translateY(8px)}
+  .cw-hero .p-ico{width:28px;height:28px;color:#F7F6F3;opacity:.92}
+  .cw-hero .p-ico svg{width:100%;height:100%}
+  .cw-hero .p-ico.multi{width:auto;display:flex;gap:.6rem}
+  .cw-hero .p-ico.multi svg{width:24px;height:24px}
+  .cw-hero .p-fam{margin-top:.6rem;font-weight:500;font-size:.78rem}
+  .cw-hero .p-name{margin:.14rem 0 0;font-weight:600;font-size:1.24rem;letter-spacing:-.02em;line-height:1.06}
+  .cw-hero .p-sub{margin-top:.28rem;font-size:.8rem;color:#9C9A90}
+  .cw-hero .p-sub b{color:#F7F6F3;font-weight:600}
+  .cw-hero .p-body{margin:.7rem 0 0;font-size:.86rem;line-height:1.55;color:#F7F6F3;opacity:.87;
+    text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .cw-hero .px{position:absolute;top:.5rem;right:.65rem;background:none;border:0;color:#9C9A90;
+    font-size:1.2rem;line-height:1;cursor:pointer;padding:.1rem .2rem}
+  .cw-hero .px:hover{color:#F7F6F3}
+  @media(max-width:760px){
+    .cw-hero{height:clamp(560px,90svh,780px)}
+    .cw-hud{top:clamp(84px,13vh,120px);transform:none}
+    .cw-hero .panel{right:auto;left:14px;bottom:44px}
+    .cw-hint{display:none}
+  }
+
+  /* ---- the card, shown before the test as the proof you leave with ---- */
+  .type-cta .tc-flex{display:flex;align-items:center;justify-content:center;gap:clamp(2rem,4.5vw,4rem);flex-wrap:wrap}
+  .tc-copy{flex:1 1 30ch;max-width:52ch;text-align:left}
+  .tc-copy .type-cta-h,.tc-copy .type-cta-p{margin-left:0;max-width:none}
+  .mock-wrap{flex:0 0 auto;display:flex;flex-direction:column;align-items:center}
+  .mock-card{width:min(238px,70vw);aspect-ratio:9/13.6;background:#111110;border:1px solid rgba(247,246,243,.1);
+    border-radius:14px;padding:1.05rem 1.15rem;display:flex;flex-direction:column;transform:rotate(3deg);
+    box-shadow:0 34px 64px -26px rgba(0,0,0,.6)}
+  .mk-top{font-family:var(--f-display);font-weight:500;font-size:.8rem;color:#F7F6F3;text-align:left}
+  .mk-top span{color:var(--red)}
+  .mk-mid{margin:auto 0;text-align:center}
+  .mk-ico{display:inline-block;width:36px;height:36px;color:var(--red)}
+  .mk-ico svg{width:100%;height:100%}
+  .mk-name{font-family:var(--f-display);font-weight:300;font-size:1.3rem;letter-spacing:-.02em;color:#F7F6F3;margin-top:.45rem}
+  .mk-role{margin-top:.35rem;font-family:var(--f-display);font-style:italic;font-size:.72rem;color:rgba(247,246,243,.72);line-height:1.4}
+  .mk-role b{font-style:normal;font-weight:500;color:var(--red)}
+  .mk-foot{display:flex;justify-content:space-between;gap:.6rem;font-family:var(--f-mono);font-size:.48rem;letter-spacing:.06em;color:rgba(247,246,243,.42)}
+  .mock-cap{margin-top:.85rem;max-width:250px;font-family:var(--f-mono);font-size:.58rem;letter-spacing:.1em;
+    text-transform:uppercase;color:rgba(255,255,255,.8);text-align:center;line-height:1.7}
+  @media(max-width:820px){.tc-copy{text-align:center}}
   .hero .section-tag{display:block;margin-bottom:1.5rem}
   .hero .section-tag::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--red);vertical-align:.18em;margin-right:.7em}
   .h1{font-family:var(--f-display);font-weight:300;font-size:clamp(2.6rem,7vw,5.4rem);line-height:.98;letter-spacing:-.025em;max-width:15ch}
@@ -272,7 +342,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.calc-dot{animation:none}.fiche:hover,.fiche:focus-within{transform:none}}
 </style>
 </head>
-<body>
+<body class="nh">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBPM9KTK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -290,27 +360,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </nav>
 </header>
 
-<main class="wrap">
-  <section class="hero" id="top">
-    <span class="section-tag reveal">Creative World</span>
+<section class="cw-hero" id="top">
+  <canvas id="hero-sky" role="img" aria-label="A map you can turn: three suns, nine worlds running their orbits around them, and the 72 signatures hanging between the worlds"></canvas>
+  <div class="cw-hud">
     <h1 class="h1 reveal" style="--d:.05s">Which creative world are you on <em>right now</em>?</h1>
-    <p class="hero-sub reveal" style="--d:.12s">Not how creative you are. Where you are creating from. The eleven habits of the Hypercreative Method fall into three families: feed, sharpen and protect. Picture them as three suns, with nine worlds turning around them. This tells you which world you are on this quarter, where it tends to crack when it's tested, and the one habit to work on next. You'll leave with a card you can keep.</p>
-    <div class="hero-meta reveal" style="--d:.18s">
+    <p class="cw-sub reveal" style="--d:.12s">Three suns, nine worlds, and the seventy-two signatures hanging between them: the whole method, drawn as a map you can turn. Right now you are working from one of these worlds. Two minutes tells you which one, what shades it, and the habit to train next.</p>
+    <div class="actions reveal" style="--d:.2s">
+      <button class="btn btn-primary" id="start-btn" type="button">Find my world</button>
+      <a class="cw-full" href="/universe/">Open the map full screen</a>
+    </div>
+    <div class="hero-meta reveal" style="--d:.26s">
       <span>A few minutes</span>
       <span>Free, no sign-up</span>
       <span>A card you keep</span>
     </div>
-    <div class="actions reveal" style="--d:.24s">
-      <button class="btn btn-primary" id="start-btn" type="button">Find my world</button>
-    </div>
-  </section>
+  </div>
+  <div class="cw-hint" id="cw-hint">Drag to orbit &middot; hover to slow, click to hold</div>
+  <aside class="panel" id="hpanel" aria-live="polite" hidden>
+    <button class="px" id="hpx" type="button" aria-label="Close">&times;</button>
+    <div class="p-ico" id="hpIco"></div>
+    <div class="p-fam" id="hpFam"></div>
+    <h2 class="p-name" id="hpName"></h2>
+    <div class="p-sub" id="hpSub"></div>
+    <p class="p-body" id="hpBody"></p>
+  </aside>
+</section>
+
+<main class="wrap">
 
   <section class="types" id="types">
-    <span class="section-tag reveal">The nine types</span>
+    <span class="section-tag reveal">The nine worlds</span>
     <h2 class="types-h reveal" style="--d:.05s">One world leads<span class="bp">.</span> Another shades it<span class="bp">.</span></h2>
-    <p class="types-lead reveal" style="--d:.1s">Below are the nine worlds, grouped by the sun they orbit: <em>feed</em> an idea, <em>sharpen</em> it, or <em>protect</em> it. Your test gives you the world you are on and the second that shades it. Nine worlds, each shaded by one of the other eight: that is <strong>seventy-two signatures</strong> in all, and one of them is yours.</p>
-    <div class="sky reveal" style="--d:.14s"><canvas id="sky" role="img" aria-label="The nine creative worlds running their orbits around the three suns"></canvas></div>
-    <p class="sky-cap reveal" style="--d:.18s">The nine worlds, turning. <a href="/universe/">Open the full universe</a></p>
+    <p class="types-lead reveal" style="--d:.1s">These are the nine worlds from the map above, grouped by the sun they orbit: <em>feed</em> an idea, <em>sharpen</em> it, or <em>protect</em> it. Your test gives you the world you are on and the second that shades it. Nine worlds, each shaded by one of the other eight: that is <strong>seventy-two signatures</strong> in all, and one of them is yours.</p>
     <div class="types-grid" id="types-grid"></div>
   </section>
 
@@ -336,7 +417,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="res-cell"><div class="res-k">The habit to train this month</div><div class="res-v" id="res-shadow"></div></div>
     </div>
 
-    <a class="res-map" id="res-map" href="/universe/" target="_blank" rel="noopener">See your signature on the map <span aria-hidden="true">&#8599;</span></a>
+    <div class="sky reveal"><canvas id="sig-sky" role="img" aria-label="Your signature lit on the map of the seventy-two"></canvas></div>
+    <p class="sky-cap">Your signature, lit on the map. <a id="res-map" href="/universe/" target="_blank" rel="noopener">Open it full screen <span aria-hidden="true">&#8599;</span></a></p>
 
     <p class="res-last">This points to a tendency, not a verdict<span class="bp">.</span> What you do with it is yours.</p>
 
@@ -552,6 +634,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('res-sig').innerHTML=t.sig;
     document.getElementById('res-shadow').innerHTML=t.shadow;
     document.getElementById('res-map').href='/universe/?w='+encodeURIComponent(key)+'&u='+encodeURIComponent(secKey);
+    if(window.HCUniverse){
+      var sc=document.getElementById('sig-sky');
+      if(sc&&!window.__SIG)window.__SIG=HCUniverse.mount({canvas:sc,anchor:'center',interactive:false});
+      if(window.__SIG)window.__SIG.focus(key,secKey);
+    }
     document.getElementById('res-icon').innerHTML='<span class="emb-ring">'+iconSVG(key)+'</span><span class="emb-badge">'+iconSVG(secKey)+'</span>';
     document.getElementById('imp-emblem').innerHTML='<span class="emb-ring">'+iconSVG(key)+'</span><span class="emb-badge">'+iconSVG(secKey)+'</span>';
     document.getElementById('imp-desc').textContent=_bl;
@@ -689,16 +776,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;
         cards+='<article class="fiche"><span class="fiche-ico">'+iconSVG(fk)+'</span><div class="fiche-body"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p></div></article>';}
       h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title">'+F.verb+'</h3><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
-    h+='<div class="type-cta"><p class="type-cta-kicker">So, which one are you on?</p><h3 class="type-cta-h">Find your world, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at the world you are on this quarter, the one that shades it, and the single thing to work on next. You leave with a card you can keep.</p><button class="btn type-cta-btn js-start" type="button">Find my world</button><p class="type-cta-meta">A few minutes · Free · No sign-up</p></div>';
+    h+='<div class="type-cta"><div class="tc-flex"><div class="tc-copy"><p class="type-cta-kicker">So, which one are you on?</p><h3 class="type-cta-h">Find your world, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at the world you are on this quarter, the one that shades it, and the single thing to work on next.</p><button class="btn type-cta-btn js-start" type="button">Find my world</button><p class="type-cta-meta">A few minutes · Free · No sign-up</p></div><div class="mock-wrap"><div class="mock-card" aria-hidden="true"><div class="mk-top">Hypercreative<span>.</span></div><div class="mk-mid"><span class="mk-ico">'+iconSVG('cartographer')+'</span><div class="mk-name">The Cartographer</div><div class="mk-role">your world right now: <b>Cartographer</b>, shaded by <b>Notary</b></div></div><div class="mk-foot"><span>HCM-CAR-····</span><span>hypercreativemethod.com</span></div></div><p class="mock-cap">An example. Yours carries your world, the one that shades it, and your name.</p></div></div></div>';
     g.innerHTML=h;
     [].slice.call(g.querySelectorAll('.js-start')).forEach(function(b){b.addEventListener('click',startTest);});
   })();
 
-  /* the sky above the nine: same engine as /universe/, with the chords and the
-     72 left out so it stays a portrait of the nine worlds, not the whole web */
-  (function(){var c=document.getElementById('sky');
+  /* the map is the front door: the full universe, live, behind the question.
+     The wheel stays with the page (a landing must scroll), so zooming lives
+     on /universe/; here you drag, hover and click. */
+  (function(){
+    var c=document.getElementById('hero-sky');
     if(!c||!window.HCUniverse)return;
-    HCUniverse.mount({canvas:c,anchor:'center',interactive:false,chords:false,nodes:false});
+    if(matchMedia('(pointer:coarse)').matches){
+      var hn=document.getElementById('cw-hint');
+      if(hn)hn.innerHTML='Drag to orbit &middot; tap a world to read it';
+    }
+    HCUniverse.mount({canvas:c,anchor:'left',wheelZoom:false,panel:{
+      root:document.getElementById('hpanel'),
+      ico:document.getElementById('hpIco'),
+      fam:document.getElementById('hpFam'),
+      name:document.getElementById('hpName'),
+      sub:document.getElementById('hpSub'),
+      body:document.getElementById('hpBody'),
+      close:document.getElementById('hpx')
+    }});
   })();
 })();
 </script>

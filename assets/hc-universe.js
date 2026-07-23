@@ -12,6 +12,8 @@
      canvas        the canvas element (required)
      panel         {root, ico, fam, name, sub, body, close} for the reading card
      interactive   pointer drag, zoom and picking (default true)
+     wheelZoom     wheel zooms the sky (default true; landings turn it off
+                   so the page keeps scrolling)
      chords        draw the 36 chords (default true)
      nodes         draw the 72 signatures (default true)
      anchor        "left" leaves room for a reading column, "center" fills
@@ -72,6 +74,7 @@ window.HCUniverse=(function(){
     if(!ctx) return null;
 
     var interactive=opt.interactive!==false;
+    var wheelZoom=opt.wheelZoom!==false;
     var wantChords=opt.chords!==false;
     var wantNodes=opt.nodes!==false;
     var anchor=opt.anchor||"center";
@@ -525,7 +528,7 @@ window.HCUniverse=(function(){
       cv.addEventListener("pointermove",onMove);
       cv.addEventListener("pointerup",endPtr);
       cv.addEventListener("pointercancel",endPtr);
-      cv.addEventListener("wheel",onWheel,{passive:false});
+      if(wheelZoom) cv.addEventListener("wheel",onWheel,{passive:false});
       if(opt.hint && matchMedia("(pointer:coarse)").matches){
         opt.hint.innerHTML="Drag to orbit &middot; pinch to zoom &middot; tap to hold";
       }
