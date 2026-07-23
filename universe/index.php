@@ -23,8 +23,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
-:root{--ground:#111110;--ink:#F7F6F3;--muted:#9C9A90;--line:rgba(247,246,243,.15);
-  --red:#E0463C;--panel:rgba(17,17,16,.78);
+:root{--ground:#F7F6F3;--ink:#13130F;--muted:#56554E;--line:rgba(0,0,0,.12);
+  --red:#E0463C;--panel:rgba(255,255,255,.86);
   --fd:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --fm:'Space Mono',ui-monospace,Consolas,monospace}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -34,21 +34,11 @@ body.night a{color:inherit;text-decoration:none}
 :focus-visible{outline:1px solid var(--red);outline-offset:3px}
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 
-/* the night version of the site header: same markup, same links, darker air */
-body.night .snav{background:rgba(17,17,16,.72);border-bottom:1px solid rgba(247,246,243,.10)}
-body.night .snav .brand{color:var(--ink)}
-body.night .snav-links a{color:var(--muted)}
-body.night .snav-links a:hover{color:var(--ink)}
-body.night .snav .nav-cta{border-color:var(--line);color:var(--ink)}
-body.night .snav .nav-cta:hover{border-color:var(--red)}
-body.night .snav-toggle span{background:var(--ink)}
-@media(max-width:760px){body.night .snav-links{background:#141413;box-shadow:-24px 0 60px -30px rgba(0,0,0,.85)}}
-
 .screen{height:100dvh;display:flex;flex-direction:column}
 .stage{position:relative;flex:1 1 auto;min-height:0;overflow:hidden;
   -webkit-user-select:none;user-select:none;touch-action:none}
 .stage::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
-  background:radial-gradient(120% 92% at 50% 44%,transparent 52%,rgba(0,0,0,.48) 100%)}
+  background:radial-gradient(120% 92% at 50% 44%,transparent 55%,rgba(247,246,243,.9) 100%)}
 #uni{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab}
 
 .hud{position:absolute;top:clamp(18px,4vh,44px);left:clamp(16px,4vw,52px);z-index:3;
@@ -81,7 +71,7 @@ body.focused .note{display:none}
 .panel{position:absolute;left:clamp(14px,4vw,52px);bottom:clamp(50px,7vw,64px);z-index:6;
   width:min(88vw,364px);background:var(--panel);border:1px solid var(--line);border-radius:4px;
   padding:1.15rem 1.25rem 1.3rem;backdrop-filter:blur(16px) saturate(130%);
-  -webkit-backdrop-filter:blur(16px) saturate(130%);box-shadow:0 24px 60px -28px rgba(0,0,0,.9);
+  -webkit-backdrop-filter:blur(16px) saturate(130%);box-shadow:0 24px 60px -28px rgba(0,0,0,.18);
   transition:opacity .28s ease,transform .28s ease}
 .panel[hidden]{display:none}
 .panel.enter{opacity:0;transform:translateY(8px)}
@@ -114,15 +104,6 @@ body.focused .note{display:none}
 .sun-p{font-size:.9rem;line-height:1.6;color:var(--muted);text-align:left}
 .sun-w{margin-top:.55rem;font-family:var(--fm);font-size:.66rem;letter-spacing:.12em;
   text-transform:uppercase;color:var(--muted);opacity:.75}
-
-/* the night version of the site footer */
-body.night .foot{border-top:1px solid rgba(247,246,243,.12)}
-body.night .foot .brand{color:var(--ink)}
-body.night .foot-claim,body.night .foot-col a{color:var(--muted)}
-body.night .foot-col a:hover{color:var(--ink)}
-body.night .foot-talk{color:var(--ink)}
-body.night .foot-h,body.night .foot-fine{color:#7d7b73}
-body.night .foot-legal{border-top:1px solid rgba(247,246,243,.12)}
 
 @media (max-height:720px){.note,.mine{display:none}body.focused .mine{display:none}}
 @media (max-width:640px){.hud{max-width:78vw}}
@@ -220,6 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   HCUniverse.mount({
     canvas:cv,
     anchor:"left",
+    theme:"paper",
     hint:document.getElementById("hint"),
     focus:w?{lead:w,under:u}:null,
     panel:{

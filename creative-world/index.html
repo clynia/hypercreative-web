@@ -72,48 +72,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   main.wrap{flex:1 0 auto}
   .hero{padding:clamp(8rem,18vh,12rem) 0 clamp(3rem,7vh,5rem)}
 
-  /* ---- the map as the front door ---- */
-  body.nh .nav:not(.scrolled) .brand{color:#F7F6F3}
-  body.nh .nav:not(.scrolled) .nav-links a{color:rgba(247,246,243,.72)}
-  body.nh .nav:not(.scrolled) .nav-links a:hover{color:#F7F6F3}
-  body.nh .nav:not(.scrolled) .nav-cta{color:#F7F6F3!important;border-color:rgba(247,246,243,.26)}
-  .cw-hero{position:relative;background:#111110;height:clamp(600px,94svh,940px);overflow:hidden}
+  /* ---- the map as the front door, drawn on the same paper as the page ---- */
+  .cw-hero{position:relative;background:var(--paper);height:clamp(600px,94svh,940px);overflow:hidden}
   .cw-hero::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
-    background:radial-gradient(120% 92% at 60% 46%,transparent 52%,rgba(0,0,0,.5) 100%)}
+    background:radial-gradient(120% 92% at 60% 46%,transparent 55%,rgba(247,246,243,.9) 100%)}
   #hero-sky{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y}
   .cw-hud{position:absolute;z-index:3;left:clamp(1.25rem,4vw,3.25rem);top:50%;transform:translateY(-50%);
     max-width:min(88vw,560px);pointer-events:none}
-  .cw-hud .h1{color:#F7F6F3;font-size:clamp(2.3rem,5vw,4.2rem)}
+  .cw-hud .h1{font-size:clamp(2.3rem,5vw,4.2rem)}
   .cw-hud .h1 em{color:var(--red)}
-  .cw-sub{margin:1.4rem 0 0;max-width:50ch;color:rgba(247,246,243,.76);font-size:clamp(.98rem,1.35vw,1.14rem);
+  .cw-sub{margin:1.4rem 0 0;max-width:50ch;color:var(--ink-soft);font-size:clamp(.98rem,1.35vw,1.14rem);
     line-height:1.65;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
   .cw-hud .actions{pointer-events:auto;align-items:center}
   .cw-full{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
-    color:rgba(247,246,243,.85);border-bottom:1px solid var(--red);padding-bottom:4px;transition:opacity .3s ease}
+    color:var(--ink);border-bottom:1px solid var(--red);padding-bottom:4px;transition:opacity .3s ease}
   .cw-full:hover{opacity:.7}
-  .cw-hud .hero-meta span{background:rgba(247,246,243,.05);border-color:rgba(247,246,243,.16);color:rgba(247,246,243,.85)}
-  .cw-hud .hero-meta span:last-child{color:#ff9d96;border-color:rgba(224,70,60,.5);background:rgba(224,70,60,.14)}
   .cw-hint{position:absolute;left:0;right:0;bottom:clamp(12px,2vw,20px);z-index:3;text-align:center;pointer-events:none;
-    font-family:var(--f-mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(247,246,243,.5)}
+    font-family:var(--f-mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-mute)}
   .cw-hero .panel{position:absolute;right:clamp(14px,3vw,44px);bottom:clamp(46px,6vw,58px);z-index:6;
-    width:min(88vw,352px);background:rgba(17,17,16,.78);border:1px solid rgba(247,246,243,.15);border-radius:4px;
+    width:min(88vw,352px);background:rgba(255,255,255,.86);border:1px solid var(--line);border-radius:4px;
     padding:1.1rem 1.2rem 1.25rem;backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px) saturate(130%);
-    box-shadow:0 24px 60px -28px rgba(0,0,0,.9);transition:opacity .28s ease,transform .28s ease;color:#F7F6F3}
+    box-shadow:0 24px 60px -28px rgba(0,0,0,.18);transition:opacity .28s ease,transform .28s ease;color:var(--ink)}
   .cw-hero .panel[hidden]{display:none}
   .cw-hero .panel.enter{opacity:0;transform:translateY(8px)}
-  .cw-hero .p-ico{width:28px;height:28px;color:#F7F6F3;opacity:.92}
+  .cw-hero .p-ico{width:28px;height:28px;color:var(--ink);opacity:.92}
   .cw-hero .p-ico svg{width:100%;height:100%}
   .cw-hero .p-ico.multi{width:auto;display:flex;gap:.6rem}
   .cw-hero .p-ico.multi svg{width:24px;height:24px}
   .cw-hero .p-fam{margin-top:.6rem;font-weight:500;font-size:.78rem}
   .cw-hero .p-name{margin:.14rem 0 0;font-weight:600;font-size:1.24rem;letter-spacing:-.02em;line-height:1.06}
-  .cw-hero .p-sub{margin-top:.28rem;font-size:.8rem;color:#9C9A90}
-  .cw-hero .p-sub b{color:#F7F6F3;font-weight:600}
-  .cw-hero .p-body{margin:.7rem 0 0;font-size:.86rem;line-height:1.55;color:#F7F6F3;opacity:.87;
+  .cw-hero .p-sub{margin-top:.28rem;font-size:.8rem;color:var(--ink-soft)}
+  .cw-hero .p-sub b{color:var(--ink);font-weight:600}
+  .cw-hero .p-body{margin:.7rem 0 0;font-size:.86rem;line-height:1.55;color:var(--ink);opacity:.87;
     text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-  .cw-hero .px{position:absolute;top:.5rem;right:.65rem;background:none;border:0;color:#9C9A90;
+  .cw-hero .px{position:absolute;top:.5rem;right:.65rem;background:none;border:0;color:var(--ink-mute);
     font-size:1.2rem;line-height:1;cursor:pointer;padding:.1rem .2rem}
-  .cw-hero .px:hover{color:#F7F6F3}
+  .cw-hero .px:hover{color:var(--ink)}
   @media(max-width:760px){
     .cw-hero{height:clamp(560px,90svh,780px)}
     .cw-hud{top:clamp(84px,13vh,120px);transform:none}
@@ -285,9 +279,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .types-lead em{font-style:italic;color:var(--red)}
   /* the nine worlds, live, opening the section that lists them */
   .sky{margin-top:clamp(1.8rem,4vh,2.6rem);position:relative;height:clamp(280px,44vh,440px);
-    border-radius:4px;overflow:hidden;background:#111110;border:1px solid rgba(0,0,0,.12)}
+    border-radius:4px;overflow:hidden;background:var(--paper-2);border:1px solid var(--line)}
   .sky::after{content:"";position:absolute;inset:0;pointer-events:none;
-    background:radial-gradient(120% 92% at 50% 50%,transparent 54%,rgba(0,0,0,.5) 100%)}
+    background:radial-gradient(120% 92% at 50% 50%,transparent 58%,rgba(255,255,255,.85) 100%)}
   .sky canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
   .sky-cap{margin-top:.75rem;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;
     text-transform:uppercase;color:var(--ink-mute)}
@@ -342,7 +336,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.calc-dot{animation:none}.fiche:hover,.fiche:focus-within{transform:none}}
 </style>
 </head>
-<body class="nh">
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBPM9KTK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -636,7 +630,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('res-map').href='/universe/?w='+encodeURIComponent(key)+'&u='+encodeURIComponent(secKey);
     if(window.HCUniverse){
       var sc=document.getElementById('sig-sky');
-      if(sc&&!window.__SIG)window.__SIG=HCUniverse.mount({canvas:sc,anchor:'center',interactive:false});
+      if(sc&&!window.__SIG)window.__SIG=HCUniverse.mount({canvas:sc,anchor:'center',interactive:false,theme:'paper'});
       if(window.__SIG)window.__SIG.focus(key,secKey);
     }
     document.getElementById('res-icon').innerHTML='<span class="emb-ring">'+iconSVG(key)+'</span><span class="emb-badge">'+iconSVG(secKey)+'</span>';
@@ -791,7 +785,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var hn=document.getElementById('cw-hint');
       if(hn)hn.innerHTML='Drag to orbit &middot; tap a world to read it';
     }
-    HCUniverse.mount({canvas:c,anchor:'left',wheelZoom:false,panel:{
+    HCUniverse.mount({canvas:c,anchor:'left',wheelZoom:false,theme:'paper',panel:{
       root:document.getElementById('hpanel'),
       ico:document.getElementById('hpIco'),
       fam:document.getElementById('hpFam'),

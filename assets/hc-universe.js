@@ -14,6 +14,9 @@
      interactive   pointer drag, zoom and picking (default true)
      wheelZoom     wheel zooms the sky (default true; landings turn it off
                    so the page keeps scrolling)
+     theme         "night" (default) or "paper": ink and light swap, the
+                   stars stay home and the air turns to watercolour, so the
+                   map can sit on the site's paper instead of a dark page
      chords        draw the 36 chords (default true)
      nodes         draw the 72 signatures (default true)
      anchor        "left" leaves room for a reading column, "center" fills
@@ -75,6 +78,8 @@ window.HCUniverse=(function(){
 
     var interactive=opt.interactive!==false;
     var wheelZoom=opt.wheelZoom!==false;
+    var LIGHT=opt.theme==="paper";
+    var FG=LIGHT?GROUND_INK:PAPER;
     var wantChords=opt.chords!==false;
     var wantNodes=opt.nodes!==false;
     var anchor=opt.anchor||"center";
@@ -246,22 +251,24 @@ window.HCUniverse=(function(){
       ctx.clearRect(0,0,W,H);
 
       /* the air each sun breathes out, added as light */
-      ctx.globalCompositeOperation="lighter";
+      ctx.globalCompositeOperation=LIGHT?"multiply":"lighter";
       FAM_ORDER.forEach(function(fam){
         var fc=famCenters[fam], pr=project(fc), col=fc.col;
         var rad=Math.max(80, 340*pr.s);
         var g=ctx.createRadialGradient(pr.x,pr.y,0,pr.x,pr.y,rad);
         var depth=Math.max(0.25,Math.min(1,pr.s*0.9));
-        g.addColorStop(0,rgba(col,0.13*depth));
-        g.addColorStop(0.5,rgba(col,0.05*depth));
+        g.addColorStop(0,rgba(col,(LIGHT?0.20:0.13)*depth));
+        g.addColorStop(0.5,rgba(col,(LIGHT?0.08:0.05)*depth));
         g.addColorStop(1,rgba(col,0));
         ctx.fillStyle=g; ctx.beginPath(); ctx.arc(pr.x,pr.y,rad,0,6.283); ctx.fill();
       });
-      for(var i=0;i<stars.length;i++){
-        var s0=stars[i], p0=project(s0);
-        var tw=reduce?1:(0.6+0.4*Math.sin(t*0.001+s0.tw));
-        ctx.fillStyle="rgba("+PAPER+","+(s0.b*0.5*tw*Math.min(1,p0.s))+")";
-        ctx.fillRect(p0.x,p0.y,s0.sz,s0.sz);
+      if(!LIGHT){
+        for(var i=0;i<stars.length;i++){
+          var s0=stars[i], p0=project(s0);
+          var tw=reduce?1:(0.6+0.4*Math.sin(t*0.001+s0.tw));
+          ctx.fillStyle="rgba("+PAPER+","+(s0.b*0.5*tw*Math.min(1,p0.s))+")";
+          ctx.fillRect(p0.x,p0.y,s0.sz,s0.sz);
+        }
       }
       ctx.globalCompositeOperation="source-over";
 
@@ -270,7 +277,7 @@ window.HCUniverse=(function(){
       for(var q=0;q<SUNS.length;q++){
         var pl=SUNS[q], o=pl.orb, fc2=famCenters[pl.fam];
         var lit=active&&(hotTypes[pl.key]||hotFams[pl.fam]);
-        ctx.strokeStyle=rgba(pl.col, lit?0.30:0.055);
+        ctx.strokeStyle=rgba(pl.col, lit?0.34:(LIGHT?0.10:0.055));
         ctx.lineWidth=1;
         ctx.beginPath();
         for(var e=0;e<=ORBSEG;e++){
@@ -293,7 +300,7 @@ window.HCUniverse=(function(){
           for(var k=0;k<pr2.pts.length;k++) proj.push(project(pr2.pts[k]));
           var first=proj[0], last=proj[proj.length-1];
           var depth2=Math.min(1,(first.s+last.s)/2);
-          var al=(hot?0.55:(active?0.05:0.17))*depth2;
+          var al=(hot?(LIGHT?0.62:0.55):(active?0.06:(LIGHT?0.24:0.17)))*depth2;
           var lg=ctx.createLinearGradient(first.x,first.y,last.x,last.y);
           lg.addColorStop(0,rgba(pr2.colA,al));
           if(!hot){
@@ -325,14 +332,14 @@ window.HCUniverse=(function(){
           var pulse=reduce?1:(1+0.045*Math.sin(t*0.0011+ob.ph));
           var fr=Math.max(8, 18*p.s)*pulse;
           var fg=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,fr*3.6);
-          fg.addColorStop(0,"rgba(255,251,243,"+(0.52*fb)+")");
+          fg.addColorStop(0,LIGHT?rgba(ob.col,0.9*fb):"rgba(255,251,243,"+(0.52*fb)+")");
           fg.addColorStop(0.09,rgba(ob.col,0.55*fb));
           fg.addColorStop(0.26,rgba(ob.col,0.20*fb));
           fg.addColorStop(0.58,rgba(ob.col,0.07*fb));
           fg.addColorStop(1,rgba(ob.col,0));
           ctx.fillStyle=fg; ctx.beginPath(); ctx.arc(p.x,p.y,fr*3.6,0,6.283); ctx.fill();
           if(p.s>0.5){
-            ctx.fillStyle=rgba(ob.col,fon?1:(hotFams[ob.fam]?0.85:(active?0.26:0.7)));
+            ctx.fillStyle=rgba(LIGHT?mixCol(ob.col,[19,19,15],0.35):ob.col,fon?1:(hotFams[ob.fam]?0.85:(active?0.26:0.7)));
             ctx.font="600 "+Math.round(15*Math.min(1.3,p.s))+"px Inter, system-ui, sans-serif";
             ctx.textAlign="center"; ctx.textBaseline="top";
             ctx.fillText(ob.fam,p.x,p.y+fr*1.6);
@@ -343,7 +350,7 @@ window.HCUniverse=(function(){
              only darkens, so the nine always read as bodies against the light. */
           var isOn=active&&active.kind==="sun"&&active.lead===ob.key;
           var full=(!active||hotTypes[ob.key]);
-          var body=full?ob.col:mixCol(ob.col,[17,17,16],0.45);
+          var body=full?ob.col:mixCol(ob.col,LIGHT?[247,246,243]:[17,17,16],0.45);
           var r=Math.max(6, 13*p.s);
           var gg=ctx.createRadialGradient(p.x,p.y,r*0.75,p.x,p.y,r*3);
           gg.addColorStop(0,rgba(ob.col,full?0.30:0.09));
@@ -353,7 +360,7 @@ window.HCUniverse=(function(){
           ctx.fillStyle=rgba(body,1);
           ctx.beginPath(); ctx.arc(p.x,p.y,r,0,6.283); ctx.fill();
           if(isOn){
-            ctx.strokeStyle="rgba("+PAPER+",.85)"; ctx.lineWidth=1.5;
+            ctx.strokeStyle="rgba("+FG+",.85)"; ctx.lineWidth=1.5;
             ctx.beginPath(); ctx.arc(p.x,p.y,r+4.5,0,6.283); ctx.stroke();
           }
           if(r>=8 && ICON_PATH[ob.key]){
@@ -366,7 +373,7 @@ window.HCUniverse=(function(){
             ctx.restore();
           }
           if(p.s>0.6){
-            ctx.fillStyle="rgba("+PAPER+","+(isOn?0.95:(full?0.75:0.32))+")";
+            ctx.fillStyle="rgba("+FG+","+(isOn?0.95:(full?0.75:0.32))+")";
             ctx.font="600 "+Math.round(12*Math.min(1.25,p.s))+"px Inter, system-ui, sans-serif";
             ctx.textAlign="center"; ctx.textBaseline="top";
             ctx.fillText(TYPES[ob.key].name.replace("The ",""), p.x, p.y+r+8);
@@ -391,9 +398,9 @@ window.HCUniverse=(function(){
           ctx.fillStyle=rgba(ob.col,rel*dep);
           ctx.beginPath(); ctx.arc(p.x,p.y,rn,0,6.283); ctx.fill();
           if(isAct){
-            ctx.fillStyle="rgba(255,253,248,.9)";
+            ctx.fillStyle=LIGHT?"rgba(17,17,16,.85)":"rgba(255,253,248,.9)";
             ctx.beginPath(); ctx.arc(p.x,p.y,rn*0.42,0,6.283); ctx.fill();
-            ctx.strokeStyle="rgba("+PAPER+",.8)"; ctx.lineWidth=1.4;
+            ctx.strokeStyle="rgba("+FG+",.8)"; ctx.lineWidth=1.4;
             ctx.beginPath(); ctx.arc(p.x,p.y,rn+5,0,6.283); ctx.stroke();
           }
         }
