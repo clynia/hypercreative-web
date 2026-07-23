@@ -129,6 +129,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .tq-btn{background:var(--paper);color:var(--ink)!important;border-color:var(--paper)}
   .tq-btn:hover{background:var(--red);color:var(--paper)!important;border-color:var(--red);transform:translateY(-2px)}
   .tq-meta{margin-top:1.15rem;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,246,243,.6)}
+.tq-more{margin-top:1.5rem;font-size:.92rem;color:rgba(247,246,243,.5)}
+.tq-more a{color:rgba(247,246,243,.78);border-bottom:1px solid rgba(224,70,60,.7);padding-bottom:3px;transition:color .3s ease}
+.tq-more a:hover{color:var(--paper)}
   .scroll-cue{position:absolute;left:50%;bottom:2.2rem;transform:translateX(-50%);z-index:2;width:24px;height:40px;border:1px solid var(--line);border-radius:20px;display:grid;place-items:start center;padding-top:7px}
   .scroll-cue span{width:3px;height:8px;border-radius:3px;background:var(--red);animation:sp 2.2s var(--ease) infinite}
   @keyframes sp{0%{opacity:0;transform:translateY(-3px)}35%{opacity:1}70%{opacity:0;transform:translateY(11px)}100%{opacity:0}}
@@ -341,6 +344,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="tq-types">Cartographer &middot; Explorer &middot; Collector &middot; Notary &middot; Reframer &middot; Collider &middot; Sketcher &middot; Guardian &middot; Persona</p>
     <div class="tq-cta"><a class="btn tq-btn" href="/creative-world/">Find your world</a></div>
     <p class="tq-meta">A few minutes &middot; Free &middot; No sign-up &middot; A card you keep</p>
+<p class="tq-more"><a href="/universe/">Or open the universe and look around first</a></p>
   </div>
 </section>
 <section class="band manifesto" id="manifesto" style="padding-bottom:clamp(2rem,5vh,3.5rem)"><h2 class="band-title reveal">The 7 laws of our manifesto</h2><p class="manifesto-lead reveal" style="--d:.05s">We did not invent creativity. We refuse to leave it to luck.</p><ol class="laws"><li class="law reveal" style="--d:0.04s"><span class="law-n">01</span><p class="law-t">We believe creativity is the most valuable asset a company owns, and the worst trained.</p></li><li class="law reveal" style="--d:0.10s"><span class="law-n">02</span><p class="law-t">It was never a gift handed to a lucky few. It is a discipline, and discipline can be built.</p></li><li class="law reveal" style="--d:0.16s"><span class="law-n">03</span><p class="law-t">The hard part is not having ideas. It is having the useful one, on time, when everything is against you. That is the only test that matters: creativity under pressure.</p></li><li class="law reveal" style="--d:0.22s"><span class="law-n">04</span><p class="law-t">If it cannot be repeated, it is not a method, it is luck. What you can name, break into steps and parameterize, you can run again on demand.</p></li><li class="law reveal" style="--d:0.28s"><span class="law-n">05</span><p class="law-t">Every mind creates differently, so a rigid method is a broken one. Ours adapts to the person in front of it, not the other way around.</p></li><li class="law reveal" style="--d:0.34s"><span class="law-n">06</span><p class="law-t">A team that creates together beats a room full of talent creating apart.</p></li><li class="law reveal" style="--d:0.40s"><span class="law-n">07</span><p class="law-t">The future belongs to the people who can build the answer no one has yet.</p></li></ol></section>
