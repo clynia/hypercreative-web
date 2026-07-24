@@ -205,6 +205,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-family:var(--f-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
     color:var(--ink);border-bottom:1px solid var(--red);padding-bottom:5px;transition:opacity .3s ease}
   .res-map:hover{opacity:.7}
+  .res-retake{margin-top:1.2rem;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute);background:none;border:none;border-bottom:1px solid var(--red);padding:0 0 4px;cursor:pointer;transition:color .3s ease}
+  .res-retake:hover{color:var(--ink)}
   .res-last{margin-top:2.2rem;font-family:var(--f-display);font-weight:300;font-size:clamp(1.1rem,2vw,1.4rem);line-height:1.4;color:var(--ink);max-width:34ch}
   .res-last .bp{color:var(--red)}
 
@@ -418,6 +420,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="sky-cap">Your signature, lit on the map. <a id="res-map" href="/universe/" target="_blank" rel="noopener">Open it full screen <span aria-hidden="true">&#8599;</span></a></p>
 
     <p class="res-last">This points to a tendency, not a verdict<span class="bp">.</span> What you do with it is yours.</p>
+    <button type="button" id="res-retake" class="res-retake">Take the test again</button>
 
     <details class="res-how">
       <summary>How we read your answers</summary>
@@ -582,7 +585,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     if(owner){owner.textContent='';owner.hidden=true;}
   }
-  nameIn.addEventListener('input',function(){NAME=nameIn.value.trim();applyOwner();});
+  nameIn.addEventListener('input',function(){NAME=nameIn.value.trim();applyOwner();if(CUR.key)saveResult();});
 
   function renderQ(){
     var item=Q[idx];
@@ -621,8 +624,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 
   var SERIAL='',NAME='',CUR={key:null,sec:null};
-  function showResult(key){
-    var t=TYPES[key],secKey=order()[1],s=TYPES[secKey];
+  function showResult(key,restore){
+    var t=TYPES[key],secKey=(restore&&restore.sec)?restore.sec:order()[1],s=TYPES[secKey];
     CUR.key=key;CUR.sec=secKey;
     document.getElementById('res-name').innerHTML=t.name+'<span class="bp">.</span>';
     document.getElementById('res-blend').innerHTML='shaded by the <strong>'+s.name.replace(/^The /,'')+'</strong>';
@@ -642,13 +645,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('imp-desc').textContent=_bl;
     var d=new Date();
     var mm=('0'+(d.getMonth()+1)).slice(-2),dd=('0'+d.getDate()).slice(-2);
-    SERIAL='HCM-'+key.slice(0,3).toUpperCase()+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
+    SERIAL=(restore&&restore.serial)?restore.serial:('HCM-'+key.slice(0,3).toUpperCase()+'-'+Math.random().toString(36).slice(2,6).toUpperCase());
     document.getElementById('imp-serial').textContent=SERIAL+'  ·  '+d.getFullYear()+'-'+mm+'-'+dd;
     applyOwner();
     testSec.hidden=true;
     resultSec.classList.add('on');
     revealAll(resultSec);
-    resultSec.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+    resultSec.scrollIntoView({behavior:(reduce||restore)?'auto':'smooth',block:'start'});
+    if(!restore)saveResult();
     window.__profileType=t.name;
   }
 
@@ -661,7 +665,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
   }
   document.getElementById('start-btn').addEventListener('click',startTest);
-  if(new URLSearchParams(location.search).get('start')==='1'){startTest();}
+  var rt=document.getElementById('res-retake');if(rt)rt.addEventListener('click',function(){try{localStorage.removeItem('hcpr');}catch(e){}startTest();});
+  function saveResult(){try{localStorage.setItem('hcpr',JSON.stringify({key:CUR.key,sec:CUR.sec,serial:SERIAL,name:NAME}));}catch(e){}}
+  var restored=(function(){var saved;try{saved=JSON.parse(localStorage.getItem('hcpr')||'null');}catch(e){saved=null;}if(saved&&TYPES[saved.key]&&(!saved.sec||TYPES[saved.sec])){NAME=saved.name||'';if(nameIn)nameIn.value=NAME;showResult(saved.key,{sec:saved.sec,serial:saved.serial||''});return true;}return false;})();
+  if(!restored&&new URLSearchParams(location.search).get('start')==='1'){startTest();}
   var shareBtn=document.getElementById('share-card');
   if(shareBtn){shareBtn.addEventListener('click',function(){
     var url='https://hypercreativemethod.com/creative-profile/';
