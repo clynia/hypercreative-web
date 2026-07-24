@@ -205,7 +205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     anchor:"left",
     theme:"paper",
     hint:document.getElementById("hint"),
-    focus:w?{lead:w,under:u}:null,
+    focus:w?{lead:w,under:u,live:true}:null,
     panel:{
       root:document.getElementById("panel"),
       ico:document.getElementById("pIco"),

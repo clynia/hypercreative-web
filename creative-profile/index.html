@@ -638,7 +638,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if(window.HCUniverse){
       var sc=document.getElementById('sig-sky');
       if(sc&&!window.__SIG)window.__SIG=HCUniverse.mount({canvas:sc,anchor:'center',interactive:false,theme:'paper'});
-      if(window.__SIG)window.__SIG.focus(key,secKey);
+      if(window.__SIG)window.__SIG.focus(key,secKey,true);
     }
     document.getElementById('res-icon').innerHTML='<span class="emb-ring">'+iconSVG(key)+'</span><span class="emb-badge">'+iconSVG(secKey)+'</span>';
     document.getElementById('imp-emblem').innerHTML='<span class="emb-ring">'+iconSVG(key)+'</span><span class="emb-badge">'+iconSVG(secKey)+'</span>';

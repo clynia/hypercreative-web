@@ -225,7 +225,9 @@ window.HCUniverse=(function(){
       return {ry:Math.atan2(p.x,p.z), rx:Math.max(-1.15,Math.min(1.15,Math.atan2(p.y,flat)))};
     }
 
-    var active=null, pinned=false, hotTypes={}, hotPairs={}, hotFams={};
+    var active=null, pinned=false, spotlight=false, hotTypes={}, hotPairs={}, hotFams={};
+    /* the light warm grey the unpicked worlds sink to while a result is spotlit */
+    var SPOT_GREY=LIGHT?[178,176,172]:[96,96,92], SPOT_MIX=LIGHT?0.88:0.82;
     function computeHot(){
       hotTypes={}; hotPairs={}; hotFams={};
       if(!active) return;
@@ -353,7 +355,10 @@ window.HCUniverse=(function(){
              only darkens, so the nine always read as bodies against the light. */
           var isOn=active&&active.kind==="sun"&&active.lead===ob.key;
           var full=(!active||hotTypes[ob.key]);
-          var body=full?ob.col:mixCol(ob.col,LIGHT?[247,246,243]:[17,17,16],0.45);
+          /* while a result is spotlit the unpicked worlds sink to a flat grey,
+             so only the two that matter keep their colour */
+          var body=full?ob.col:(spotlight?mixCol(ob.col,SPOT_GREY,SPOT_MIX)
+                                          :mixCol(ob.col,LIGHT?[247,246,243]:[17,17,16],0.45));
           var r=Math.max(6, 13*p.s);
           var gg=ctx.createRadialGradient(p.x,p.y,r*0.75,p.x,p.y,r*3);
           gg.addColorStop(0,rgba(ob.col,full?0.30:0.09));
@@ -376,7 +381,7 @@ window.HCUniverse=(function(){
             ctx.restore();
           }
           if(p.s>0.6){
-            ctx.fillStyle="rgba("+FG+","+(isOn?0.95:(full?0.75:0.32))+")";
+            ctx.fillStyle="rgba("+FG+","+(isOn?0.95:(full?0.75:(spotlight?0.2:0.32)))+")";
             ctx.font="600 "+Math.round(12*Math.min(1.25,p.s))+"px Inter, system-ui, sans-serif";
             ctx.textAlign="center"; ctx.textBaseline="top";
             ctx.fillText(TYPES[ob.key].name.replace("The ",""), p.x, p.y+r+8);
@@ -473,7 +478,7 @@ window.HCUniverse=(function(){
     }
     function hidePanel(){
       if(panel&&panel.root) panel.root.hidden=true;
-      active=null; pinned=false; computeHot();
+      active=null; pinned=false; spotlight=false; computeHot();
       if(onPick) onPick(null);
     }
     if(panel&&panel.close) panel.close.addEventListener("click",hidePanel);
@@ -488,7 +493,7 @@ window.HCUniverse=(function(){
       cv.setPointerCapture(e.pointerId);
       ptrs[e.pointerId]=pxy(e);
       var n=Object.keys(ptrs).length;
-      if(n===1){var q2=pxy(e);downX=q2.x;downY=q2.y;lastX=q2.x;lastY=q2.y;dragMoved=false;orbiting=true;tween=null;cv.style.cursor="grabbing";}
+      if(n===1){var q2=pxy(e);downX=q2.x;downY=q2.y;lastX=q2.x;lastY=q2.y;dragMoved=false;orbiting=true;tween=null;spotlight=false;cv.style.cursor="grabbing";}
       if(n===2){var k=Object.keys(ptrs),a=ptrs[k[0]],b=ptrs[k[1]];pinchD=Math.hypot(a.x-b.x,a.y-b.y);orbiting=false;}
       lastAct=performance.now();
     }
@@ -510,7 +515,7 @@ window.HCUniverse=(function(){
       } else if(!pinned){
         var hit=pick(here.x,here.y);
         cv.style.cursor=hit?"pointer":"grab";
-        if(hit) showPanel(hit); else hidePanel();
+        if(hit){ spotlight=false; showPanel(hit); } else hidePanel();
       }
     }
     function endPtr(e){
@@ -519,7 +524,7 @@ window.HCUniverse=(function(){
       if(wasSingle && !dragMoved){
         var hit=pick(lastX,lastY);
         if(hit){
-          showPanel(hit); pinned=true;
+          spotlight=false; showPanel(hit); pinned=true;
           /* clicking a sun or a world swings the camera round to face it */
           if(hit.kind==="fam") tween=famCenters[hit.fam];
           else if(hit.kind==="sun") tween=SUNBY[hit.lead];
@@ -565,7 +570,9 @@ window.HCUniverse=(function(){
         var ei=1-Math.pow(1-introK,3);
         izoom=0.86+0.14*ei;
       }else izoom=1;
-      var want=reduce?0:(pinned?0:(active?HOVER_FLOW:1));
+      /* a spotlit result keeps the whole sky in motion; only a live hover or a
+         held pin brakes it */
+      var want=reduce?0:(pinned?0:((active&&!spotlight)?HOVER_FLOW:1));
       var tau=(want<flow)?BRAKE_TAU:RELEASE_TAU;
       flow+=(want-flow)*(1-Math.exp(-dt/tau));
       simT+=dt*flow;
@@ -596,18 +603,22 @@ window.HCUniverse=(function(){
     raf=requestAnimationFrame(frame);
 
     /* light one signature (or one world) and turn the sky round to face it */
-    function focus(lead,under){
+    /* live=true spotlights the reading (unpicked worlds fade to grey) but leaves
+       the sky turning; the default holds it still, as a pinned pick does */
+    function focus(lead,under,live){
       var nd=under?nodeBy[lead+"|"+under]:null;
       if(nd){
         showPanel({kind:"node",lead:nd.lead,under:nd.under,fam:nd.fam,pi:nd.pi});
-        pinned=true; tween=nd;
+        if(live){spotlight=true;pinned=false;}else{pinned=true;}
+        tween=nd;
       }else if(SUNBY[lead]){
         showPanel({kind:"sun",lead:lead,fam:SUNBY[lead].fam});
-        pinned=true; tween=SUNBY[lead];
+        if(live){spotlight=true;pinned=false;}else{pinned=true;}
+        tween=SUNBY[lead];
       }
     }
 
-    if(opt.focus && opt.focus.lead) focus(opt.focus.lead, opt.focus.under);
+    if(opt.focus && opt.focus.lead) focus(opt.focus.lead, opt.focus.under, !!opt.focus.live);
 
     return {
       focus:focus,
