@@ -122,6 +122,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .tc-copy{flex:1 1 30ch;max-width:52ch;text-align:left}
   .tc-copy .type-cta-h,.tc-copy .type-cta-p{margin-left:0;max-width:none}
   .mock-wrap{flex:0 0 auto;display:flex;flex-direction:column;align-items:center}
+  .mock-stage{position:relative;width:212px;height:378px;flex:0 0 auto}
+  .mock-stage .imprint{position:absolute;top:0;left:0;margin:0;width:340px;max-width:none;transform-origin:top left;transform:scale(.624)}
   .mock-card{width:min(238px,70vw);aspect-ratio:9/13.6;background:#111110;border:1px solid rgba(247,246,243,.1);
     border-radius:14px;padding:1.05rem 1.15rem;display:flex;flex-direction:column;transform:rotate(3deg);
     box-shadow:0 34px 64px -26px rgba(0,0,0,.6)}
@@ -156,6 +158,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* test */
   .test{padding:clamp(1rem,3vh,2rem) 0 clamp(5rem,12vh,8rem);min-height:60svh}
+  body.testing .cw-hero,body.testing #types,body.testing footer{display:none}
+  body.testing .test{padding-top:clamp(5rem,12vh,7rem);animation:qin .5s var(--ease)}
   .test-inner{max-width:640px}
   .qbar{height:2px;background:var(--line);margin-bottom:.9rem}
   .qbar-fill{height:2px;background:var(--red);width:0;transition:width .45s var(--ease)}
@@ -582,7 +586,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   function renderQ(){
     var item=Q[idx];
-    qcount.textContent=item.fam+" · round "+({Feed:1,Sharpen:2,Protect:3}[item.fam])+" of 3";
+    qcount.textContent="Question "+(idx+1)+" of "+Q.length;
     fill.style.width=Math.round(idx/Q.length*100)+"%";
     back.hidden=(idx===0);
     var opts=[item.a,item.b],html='<div class="qstep on"><p class="q">'+item.q+'</p><div class="q-opts">';
@@ -624,7 +628,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('res-blend').innerHTML='shaded by the <strong>'+s.name.replace(/^The /,'')+'</strong>';
     var _bl=(INFLECT[key]&&INFLECT[key][secKey])?(t.state+' '+INFLECT[key][secKey]):t.state;
     document.getElementById('res-state').textContent=_bl;
-    document.body.classList.add('has-result');
+    document.body.classList.remove('testing');document.body.classList.add('has-result');
     document.getElementById('res-sig').innerHTML=t.sig;
     document.getElementById('res-shadow').innerHTML=t.shadow;
     document.getElementById('res-map').href='/universe/?w='+encodeURIComponent(key)+'&u='+encodeURIComponent(secKey);
@@ -651,11 +655,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function startTest(){
     if(!started){started=true;dl('creative_profile_start');}
     document.body.classList.remove('has-result');
+    document.body.classList.add('testing');
     testSec.hidden=false; idx=0; answers=[]; for(var k in TYPES)scores[k]=0;
     renderQ();
-    testSec.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
   }
   document.getElementById('start-btn').addEventListener('click',startTest);
+  if(new URLSearchParams(location.search).get('start')==='1'){startTest();}
   var shareBtn=document.getElementById('share-card');
   if(shareBtn){shareBtn.addEventListener('click',function(){
     var url='https://hypercreativemethod.com/creative-profile/';
@@ -770,8 +776,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;
         cards+='<article class="fiche"><span class="fiche-ico">'+iconSVG(fk)+'</span><div class="fiche-body"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p></div></article>';}
       h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title">'+F.verb+'</h3><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
-    h+='<div class="type-cta"><div class="tc-flex"><div class="tc-copy"><p class="type-cta-kicker">So, which one are you on?</p><h3 class="type-cta-h">Find your profile, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at the profile you are on this quarter, the one that shades it, and the single thing to work on next.</p><button class="btn type-cta-btn js-start" type="button">Find my profile</button><p class="type-cta-meta">A few minutes · Free · No sign-up</p></div><div class="mock-wrap"><div class="mock-card" aria-hidden="true"><div class="mk-top">Hypercreative<span>.</span></div><div class="mk-mid"><span class="mk-ico">'+iconSVG('cartographer')+'</span><div class="mk-name">The Cartographer</div><div class="mk-role">your profile right now: <b>Cartographer</b>, shaded by <b>Notary</b></div></div><div class="mk-foot"><span>HCM-CAR-····</span><span>hypercreativemethod.com</span></div></div><p class="mock-cap">An example Imprint. Yours carries your profile, the one that shades it, and your name.</p></div></div></div>';
+    h+='<div class="type-cta"><div class="tc-flex"><div class="tc-copy"><p class="type-cta-kicker">So, which one are you on?</p><h3 class="type-cta-h">Find your profile, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at the profile you are on this quarter, the one that shades it, and the single thing to work on next.</p><button class="btn type-cta-btn js-start" type="button">Find my profile</button><p class="type-cta-meta">A few minutes · Free · No sign-up</p></div><div class="mock-wrap"><div class="mock-stage" id="ex-imprint" aria-hidden="true"></div><p class="mock-cap">An example Imprint. Yours carries your profile, the one that shades it, and your name.</p></div></div></div>';
     g.innerHTML=h;
+    (function(){var ex=document.getElementById('ex-imprint');if(!ex)return;var k='explorer',s='sketcher',et=TYPES[k],es=TYPES[s];var d=(INFLECT[k]&&INFLECT[k][s])?(et.state+' '+INFLECT[k][s]):et.state;ex.innerHTML='<div class="imprint"><div class="imp-top"><span class="imp-brand">Hypercreative<span class="bp">.</span></span></div>'+'<div class="imp-core"><div class="imp-emblem"><span class="emb-ring">'+iconSVG(k)+'</span><span class="emb-badge">'+iconSVG(s)+'</span></div>'+'<div class="imp-name">'+et.name+'</div><div class="imp-blend">shaded by <b>'+es.name.replace(/^The /,'')+'</b></div>'+'<div class="imp-desc">'+d+'</div></div>'+'<div class="imp-cta"><div class="imp-hook">Which creative profile are you on?</div></div>'+'<div class="imp-foot"><div class="imp-serial">HCM-EXP-2K4F  &middot;  2026</div><div class="imp-url">www.hypercreativemethod.com</div></div></div>';})();
     [].slice.call(g.querySelectorAll('.js-start')).forEach(function(b){b.addEventListener('click',startTest);});
   })();
 

@@ -130,7 +130,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="lead">The eleven habits of the method fall into three families: feed, sharpen and protect. <em>You pull most of the energy you create with from one of them and orbit it nearly all the time.</em> Nine profiles turn around those families, and right now you are on one.</p>
       <p class="note"><b>Right now, and that is the point.</b> Your profile says where you are pulling from this quarter, not who you are. Train the habits of another family and your orbit moves. No family is better than another.</p>
       <p class="mine" id="mine"></p>
-      <a class="go" href="/creative-profile/">Find your profile</a>
+      <a class="go" href="/creative-profile/?start=1">Find your profile</a>
     </div>
 
     <div class="hint" id="hint">Drag to orbit &middot; scroll to zoom &middot; hover to slow, click to hold</div>
@@ -169,7 +169,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <p>None of this is a ranking. There is no best family, no top profile and no score anywhere in it. Where you are pulling from is a fact about this quarter, not a verdict about you, and it moves the moment you train the habits of another family.</p>
-  <a class="go" href="/creative-profile/">Find the profile you are on</a>
+  <a class="go" href="/creative-profile/?start=1">Find the profile you are on</a>
 </main>
 
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
