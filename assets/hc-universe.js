@@ -449,7 +449,7 @@ window.HCUniverse=(function(){
         panel.name.style.color=famColorCss(a.fam);
         panel.sub.innerHTML='one of the three families';
         panel.body.innerHTML='Pull from this family and you '+FAM_DESC[a.fam].replace(/^you /,"")+'. '+
-          (NUMWORD[mem.length]||mem.length).toLowerCase()+' worlds run their orbits around it: '+listNames(mem)+'.';
+          (NUMWORD[mem.length]||mem.length).toLowerCase()+' profiles run their orbits around it: '+listNames(mem)+'.';
       }else{
         panel.ico.className="p-ico";
         panel.ico.innerHTML=iconSVG(a.lead);
@@ -462,7 +462,7 @@ window.HCUniverse=(function(){
           panel.sub.innerHTML='shaded by the <b>'+TYPES[a.under].name.replace("The ","")+'</b>';
           panel.body.innerHTML=INFLECT[a.lead][a.under];
         }else{
-          panel.sub.innerHTML='a world orbiting the '+a.fam+' family';
+          panel.sub.innerHTML='a profile orbiting the '+a.fam+' family';
           panel.body.innerHTML=TYPES[a.lead].one+' '+TYPES[a.lead].sig;
         }
       }

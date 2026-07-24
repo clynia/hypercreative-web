@@ -1,9 +1,9 @@
 # Clean URLs: hide .html and .php from the address bar.
 RewriteEngine On
 
-# The Creative Profile became the Creative World (2026-07-23). Keep the old
+# The Creative World tab reverted to the Creative Profile (2026-07-24). Keep the
 # address working for anything already linked or indexed.
-RewriteRule ^creative-profile/?$ /creative-world/ [R=301,L]
+RewriteRule ^creative-world/?$ /creative-profile/ [R=301,L]
 
 # /index.(html|php) and /dir/index.(html|php)  ->  /  and  /dir/   (301)
 RewriteCond %{THE_REQUEST} \s/+([^?\s]*/)?index\.(html|php)[\s?] [NC]
