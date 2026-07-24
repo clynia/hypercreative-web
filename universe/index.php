@@ -44,6 +44,8 @@ body.night a{color:inherit;text-decoration:none}
 .hud{position:absolute;top:clamp(18px,4vh,44px);left:clamp(16px,4vw,52px);z-index:3;
   pointer-events:none;max-width:min(70vw,420px);
   animation:rise .8s .15s cubic-bezier(.22,.61,.36,1) both}
+.hud::before{content:"";position:absolute;inset:-2rem -2.5rem;z-index:-1;
+  background:radial-gradient(closest-side,rgba(247,246,243,.94),rgba(247,246,243,.6) 60%,transparent)}
 .title{margin:0;font-family:var(--fd);font-weight:600;font-size:clamp(1.6rem,4.4vw,2.4rem);
   letter-spacing:-.028em;line-height:1.02;text-wrap:balance}
 .lead{margin:.85rem 0 0;font-size:.86rem;line-height:1.6;color:var(--muted);

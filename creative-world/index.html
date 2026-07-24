@@ -79,6 +79,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #hero-sky{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y}
   .cw-hud{position:absolute;z-index:3;left:clamp(1.25rem,4vw,3.25rem);top:50%;transform:translateY(-50%);
     max-width:min(88vw,560px);pointer-events:none}
+  .cw-hud::before{content:"";position:absolute;inset:-2.5rem -3rem;z-index:-1;
+    background:radial-gradient(closest-side,rgba(247,246,243,.94),rgba(247,246,243,.6) 60%,transparent)}
   .cw-hud .h1{font-size:clamp(2.3rem,5vw,4.2rem)}
   .cw-hud .h1 em{color:var(--red)}
   .cw-sub{margin:1.4rem 0 0;max-width:50ch;color:var(--ink-soft);font-size:clamp(.98rem,1.35vw,1.14rem);
@@ -361,12 +363,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="cw-sub reveal" style="--d:.12s">Not how creative you are. Where you are creating from. Three suns, nine worlds, and the seventy-two signatures hanging between them: the whole method, drawn as a map you can turn. Right now you are working from one of these worlds. Two minutes tells you which one, what shades it, and the habit to train next.</p>
     <div class="actions reveal" style="--d:.2s">
       <button class="btn btn-primary" id="start-btn" type="button">Find my world</button>
-      <a class="cw-full" href="/universe/">Open the map full screen</a>
-    </div>
-    <div class="hero-meta reveal" style="--d:.26s">
-      <span>A few minutes</span>
-      <span>Free, no sign-up</span>
-      <span>A card you keep</span>
+      <a class="cw-full" href="/universe/">Open the Hypercreative Universe, full screen</a>
     </div>
   </div>
   <div class="cw-hint" id="cw-hint">Drag to orbit &middot; hover to slow, click to hold</div>

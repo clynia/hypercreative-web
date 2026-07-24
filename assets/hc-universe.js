@@ -183,7 +183,7 @@ window.HCUniverse=(function(){
 
     /* ---------- canvas + state ---------- */
     var W=0,H=0,dpr=1,cx0=0,cy0=0;
-    var rotY=0.6, rotX=-0.20, zoom=1, izoom=1;
+    var rotY=0.6, rotX=-0.20, zoom=1, izoom=1, fitZ=1;
     var CAM=910, F=800;
     var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
     var lastAct=performance.now();
@@ -203,6 +203,9 @@ window.HCUniverse=(function(){
       }else{
         cx0=W/2; cy0=H/2;
       }
+      /* the map takes the room it is given: a big canvas earns a big map,
+         a small one keeps today's size rather than clipping */
+      fitZ=Math.max(1,Math.min(1.7,Math.min(W,H)/520));
     }
     window.addEventListener("resize",resize);
     if(typeof ResizeObserver!=="undefined"){ new ResizeObserver(resize).observe(cv); }
@@ -213,7 +216,7 @@ window.HCUniverse=(function(){
       var cx=Math.cos(rotX), sx=Math.sin(rotX);
       var y2=y1*cx - z1*sx, z2=y1*sx + z1*cx;
       var dz=CAM - z2; if(dz<40) dz=40;
-      var sc=F/dz*zoom*izoom;
+      var sc=F/dz*zoom*izoom*fitZ;
       return {x:cx0+x1*sc, y:cy0+y2*sc, s:sc, z2:z2};
     }
     /* the camera angles that bring a point round to face us */
