@@ -125,9 +125,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .tq-h .p{color:var(--red);font-style:italic}
   .tq-sub{margin:1.35rem auto 0;max-width:56ch;color:rgba(247,246,243,.82);font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.6}
   .tq-types{margin:1.8rem auto 0;max-width:60ch;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;color:rgba(247,246,243,.55);line-height:2}
-  .tq-cta{margin-top:2.3rem}
+  .tq-cta{margin-top:2.3rem;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
   .tq-btn{background:var(--paper);color:var(--ink)!important;border-color:var(--paper)}
   .tq-btn:hover{background:var(--red);color:var(--paper)!important;border-color:var(--red);transform:translateY(-2px)}
+  .tq-btn2{background:transparent;color:var(--paper)!important;border-color:rgba(247,246,243,.4)}
+  .tq-btn2:hover{border-color:var(--red);color:var(--paper)!important;transform:translateY(-2px)}
   .tq-meta{margin-top:1.15rem;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,246,243,.6)}
 .tq-more{margin-top:1.5rem;font-size:.92rem;color:rgba(247,246,243,.5)}
 .tq-more a{color:rgba(247,246,243,.78);border-bottom:1px solid rgba(224,70,60,.7);padding-bottom:3px;transition:color .3s ease}
@@ -341,10 +343,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="tq-in">
     <h2 class="tq-h">Which creative profile are you on <span class="p">right now</span>?</h2>
     <p class="tq-sub">The eleven habits of the method fall into three families: feed, sharpen and protect. Nine profiles turn around them. Twenty quick either/or questions tell you which profile you are on this quarter, the one running underneath it, and the single habit to work on next.</p>
-    <p class="tq-types">Cartographer &middot; Explorer &middot; Collector &middot; Notary &middot; Reframer &middot; Collider &middot; Sketcher &middot; Guardian &middot; Persona</p>
-    <div class="tq-cta"><a class="btn tq-btn" href="/creative-profile/">Find your profile</a></div>
-    <p class="tq-meta">A few minutes &middot; Free &middot; No sign-up &middot; A card you keep</p>
-<p class="tq-more"><a href="/universe/">Or open the map and look around first</a></p>
+    <div class="tq-cta"><a class="btn tq-btn" href="/creative-profile/">Find your profile</a><a class="btn tq-btn2" href="/universe/">Open the map</a></div>
   </div>
 </section>
 <section class="band manifesto" id="manifesto" style="padding-bottom:clamp(2rem,5vh,3.5rem)"><h2 class="band-title reveal">The 7 laws of our manifesto</h2><p class="manifesto-lead reveal" style="--d:.05s">We did not invent creativity. We refuse to leave it to luck.</p><ol class="laws"><li class="law reveal" style="--d:0.04s"><span class="law-n">01</span><p class="law-t">We believe creativity is the most valuable asset a company owns, and the worst trained.</p></li><li class="law reveal" style="--d:0.10s"><span class="law-n">02</span><p class="law-t">It was never a gift handed to a lucky few. It is a discipline, and discipline can be built.</p></li><li class="law reveal" style="--d:0.16s"><span class="law-n">03</span><p class="law-t">The hard part is not having ideas. It is having the useful one, on time, when everything is against you. That is the only test that matters: creativity under pressure.</p></li><li class="law reveal" style="--d:0.22s"><span class="law-n">04</span><p class="law-t">If it cannot be repeated, it is not a method, it is luck. What you can name, break into steps and parameterize, you can run again on demand.</p></li><li class="law reveal" style="--d:0.28s"><span class="law-n">05</span><p class="law-t">Every mind creates differently, so a rigid method is a broken one. Ours adapts to the person in front of it, not the other way around.</p></li><li class="law reveal" style="--d:0.34s"><span class="law-n">06</span><p class="law-t">A team that creates together beats a room full of talent creating apart.</p></li><li class="law reveal" style="--d:0.40s"><span class="law-n">07</span><p class="law-t">The future belongs to the people who can build the answer no one has yet.</p></li></ol></section>
