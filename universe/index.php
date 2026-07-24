@@ -6,19 +6,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TBPM9KTK');</script>
 <!-- End Google Tag Manager --><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Hypercreative Universe | Three suns, nine creative worlds</title>
-<meta name="description" content="A map you can turn. Three suns, nine creative worlds running their orbits around them, and the 72 signatures they make in pairs. Find the world you are on right now.">
+<title>The map behind the Creative World test | Hypercreative</title>
+<meta name="description" content="The full map behind the Creative World test: nine creative worlds in three families, and the 72 signatures they make in pairs. Find the world you are on right now.">
 <link rel="canonical" href="https://hypercreativemethod.com/universe/"><meta name="robots" content="index,follow">
 <meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="en_US"><meta property="og:type" content="website">
-<meta property="og:title" content="The Hypercreative Universe | Three suns, nine creative worlds">
-<meta property="og:description" content="A map you can turn. Three suns, nine creative worlds running their orbits around them, and the 72 signatures they make in pairs.">
+<meta property="og:title" content="The map behind the Creative World test | Hypercreative">
+<meta property="og:description" content="The full map behind the Creative World test: nine creative worlds in three families, and the 72 signatures they make in pairs.">
 <meta property="og:url" content="https://hypercreativemethod.com/universe/">
 <meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Hypercreative Universe | Three suns, nine creative worlds">
-<meta name="twitter:description" content="A map you can turn. Three suns, nine creative worlds running their orbits around them, and the 72 signatures they make in pairs.">
+<meta name="twitter:title" content="The map behind the Creative World test | Hypercreative">
+<meta name="twitter:description" content="The full map behind the Creative World test: nine creative worlds in three families, and the 72 signatures they make in pairs.">
 <meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hypercreativemethod.com/"},{"@type":"ListItem","position":2,"name":"Creative World","item":"https://hypercreativemethod.com/creative-world/"},{"@type":"ListItem","position":3,"name":"The Hypercreative Universe","item":"https://hypercreativemethod.com/universe/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hypercreativemethod.com/"},{"@type":"ListItem","position":2,"name":"Creative World","item":"https://hypercreativemethod.com/creative-world/"},{"@type":"ListItem","position":3,"name":"The map","item":"https://hypercreativemethod.com/universe/"}]}</script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
@@ -123,12 +123,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
 
   <div class="stage">
-    <canvas id="uni" role="img" aria-label="A map you can turn: three suns, nine worlds running their orbits around them, and the 72 signatures hanging between the worlds"></canvas>
+    <canvas id="uni" role="img" aria-label="A map you can turn: three families, nine worlds running their orbits around them, and the 72 signatures hanging between the worlds"></canvas>
 
     <div class="hud">
-      <h1 class="title">The Hypercreative Universe</h1>
-      <p class="lead">Eleven habits fall into three families: feed, sharpen and protect. <em>If it helps you see it, picture them as three suns.</em> You pull most of the energy you create with from one of them and orbit it nearly all the time. Nine worlds turn around those suns, and right now you are on one.</p>
-      <p class="note"><b>Right now, and that is the point.</b> Your world says where you are pulling from this quarter, not who you are. Train the habits of another family and your orbit moves. No sun is better than another.</p>
+      <h1 class="title">The map of the method</h1>
+      <p class="lead">The eleven habits of the method fall into three families: feed, sharpen and protect. <em>You pull most of the energy you create with from one of them and orbit it nearly all the time.</em> Nine worlds turn around those families, and right now you are on one.</p>
+      <p class="note"><b>Right now, and that is the point.</b> Your world says where you are pulling from this quarter, not who you are. Train the habits of another family and your orbit moves. No family is better than another.</p>
       <p class="mine" id="mine"></p>
       <a class="go" href="/creative-world/">Find your world</a>
     </div>
@@ -168,7 +168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
-  <p>None of this is a ranking. There is no best sun, no top world and no score anywhere in it. Where you are pulling from is a fact about this quarter, not a verdict about you, and it moves the moment you train the habits of another family.</p>
+  <p>None of this is a ranking. There is no best family, no top world and no score anywhere in it. Where you are pulling from is a fact about this quarter, not a verdict about you, and it moves the moment you train the habits of another family.</p>
   <a class="go" href="/creative-world/">Find the world you are on</a>
 </main>
 
@@ -194,9 +194,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     mine.innerHTML=u
       ? 'Lit below is your own signature: the <b>'+lead.replace(/^The /,"")+
         '</b>, shaded by the <b>'+HCW.TYPES[u].name.replace(/^The /,"")+
-        '</b>. Turn the sky and you can see what it hangs between.'
+        '</b>. Turn the map and you can see what it hangs between.'
       : 'Lit below is the world your test gave you: the <b>'+lead.replace(/^The /,"")+
-        '</b>. Turn the sky and you can see what it orbits.';
+        '</b>. Turn the map and you can see what it orbits.';
     document.body.classList.add("focused");
   }
 

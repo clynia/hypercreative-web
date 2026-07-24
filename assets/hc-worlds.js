@@ -1,6 +1,6 @@
 /* The nine worlds of the Hypercreative Method, the 72 signatures they make in
-   pairs, the icon each world wears and the colour of each sun. Single source of
-   truth: the Creative World test and the Universe both read from here, so they
+   pairs, the icon each world wears and the colour of each family. Single source
+   of truth: the Creative World test and the map both read from here, so they
    can never drift apart. Do not copy this data anywhere else. */
 window.HCW=(function(){
   "use strict";
@@ -155,7 +155,7 @@ window.HCW=(function(){
     persona:'<path d="M4 6c5-1.5 11-1.5 16 0 0 6-3 12-8 14C7 18 4 12 4 6z"/><circle cx="9.2" cy="9.5" r=".9"/><circle cx="14.8" cy="9.5" r=".9"/><path d="M9.5 13.5c1.5 1.3 3.5 1.3 5 0"/>'
   };
   var FAM_DESC={Feed:"you fill the tank with raw material",Sharpen:"you make raw ideas cut",Protect:"you keep the work alive under pressure"};
-  /* the colour of the air around each sun; the nine worlds and the 72
+  /* the colour of the air around each family; the nine worlds and the 72
      signatures all take their colour from here */
   var FAMILIES={Feed:{col:[232,166,74]},Sharpen:{col:[224,70,60]},Protect:{col:[79,186,172]}};
   var FAM_ORDER=["Feed","Sharpen","Protect"];

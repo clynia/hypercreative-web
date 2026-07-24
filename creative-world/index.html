@@ -280,6 +280,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .types-lead strong{color:var(--ink);font-weight:500}
   .types-lead em{font-style:italic;color:var(--red)}
   /* the nine worlds, live, opening the section that lists them */
+  .test-h{font-family:var(--f-display);font-weight:300;font-size:clamp(1.5rem,3.4vw,2.2rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:1.8rem;text-align:center}
   .sky{margin-top:clamp(1.8rem,4vh,2.6rem);position:relative;height:clamp(280px,44vh,440px);
     border-radius:4px;overflow:hidden;background:var(--paper-2);border:1px solid var(--line)}
   .sky::after{content:"";position:absolute;inset:0;pointer-events:none;
@@ -357,13 +358,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <section class="cw-hero" id="top">
-  <canvas id="hero-sky" role="img" aria-label="A map you can turn: three suns, nine worlds running their orbits around them, and the 72 signatures hanging between the worlds"></canvas>
+  <canvas id="hero-sky" role="img" aria-label="A map you can turn: three families, nine worlds running their orbits around them, and the 72 signatures hanging between the worlds"></canvas>
   <div class="cw-hud">
     <h1 class="h1 reveal" style="--d:.05s">Which creative world are you on <em>right now</em>?</h1>
-    <p class="cw-sub reveal" style="--d:.12s">Not how creative you are. Where you are creating from. Three suns, nine worlds, and the seventy-two signatures hanging between them: the whole method, drawn as a map you can turn. Right now you are working from one of these worlds. Two minutes tells you which one, what shades it, and the habit to train next.</p>
+    <p class="cw-sub reveal" style="--d:.12s">Not how creative you are. Where you are creating from. The eleven habits of the method fall into three families: feed, sharpen and protect. Nine worlds turn around those families, and the seventy-two signatures hang between the worlds: the whole method, drawn as a map you can turn. Right now you are working from one of those worlds. Two minutes tells you which one, what shades it, and the habit to train next.</p>
     <div class="actions reveal" style="--d:.2s">
       <button class="btn btn-primary" id="start-btn" type="button">Find my world</button>
-      <a class="cw-full" href="/universe/">Open the Hypercreative Universe, full screen</a>
+      <a class="cw-full" href="/universe/">Open the map full screen</a>
     </div>
   </div>
   <div class="cw-hint" id="cw-hint">Drag to orbit &middot; hover to slow, click to hold</div>
@@ -382,12 +383,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="types" id="types">
     <span class="section-tag reveal">The nine worlds</span>
     <h2 class="types-h reveal" style="--d:.05s">One world leads<span class="bp">.</span> Another shades it<span class="bp">.</span></h2>
-    <p class="types-lead reveal" style="--d:.1s">These are the nine worlds from the map above, grouped by the sun they orbit: <em>feed</em> an idea, <em>sharpen</em> it, or <em>protect</em> it. Your test gives you the world you are on and the second that shades it. Nine worlds, each shaded by one of the other eight: that is <strong>seventy-two signatures</strong> in all, and one of them is yours.</p>
+    <p class="types-lead reveal" style="--d:.1s">These are the nine worlds from the map above, grouped by the family they belong to: <em>feed</em> an idea, <em>sharpen</em> it, or <em>protect</em> it. Each world is named for who you become while you work from it, which is why your result will name a world like the Cartographer or the Guardian. Your test gives you the world you are on and the second that shades it. Nine worlds, each shaded by one of the other eight: that is <strong>seventy-two signatures</strong> in all, and one of them is yours.</p>
     <div class="types-grid" id="types-grid"></div>
   </section>
 
   <section class="test" id="test" hidden>
     <div class="test-inner">
+      <h2 class="test-h">Twenty questions, no right answers<span class="bp">.</span></h2>
       <div class="qbar"><div class="qbar-fill" id="qbar-fill"></div></div>
       <div class="qcount" id="qcount"></div>
       <div id="questions"></div>
@@ -404,7 +406,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="res-state" id="res-state"></p>
 
     <div class="res-grid">
-      <div class="res-cell"><div class="res-k">Your signature</div><div class="res-v" id="res-sig"></div></div>
+      <div class="res-cell"><div class="res-k">Your edge</div><div class="res-v" id="res-sig"></div></div>
       <div class="res-cell"><div class="res-k">The habit to train this month</div><div class="res-v" id="res-shadow"></div></div>
     </div>
 
@@ -416,7 +418,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <details class="res-how">
       <summary>How we read your answers</summary>
       <div class="res-how-body">
-        <p>The Creative World does not score you. It maps you. Every question offers two real ways of working, not a right answer and a wrong one, so there is nothing to game, only a direction to reveal. Your choices gather across the three families that organise the method's eleven habits: how you feed ideas, how you sharpen them, how you protect the work. The world you land on is the orientation your choices keep returning to; the underlying one is running just beneath it. Some questions return to the same tension from a new angle, which is how the reading stays honest. What we never do is rank you: there is no top, no percentile, no better world.</p>
+        <p>The Creative World test does not score you. It maps you. Every question offers two real ways of working, not a right answer and a wrong one, so there is nothing to game, only a direction to reveal. Your choices gather across the three families that organise the method's eleven habits: how you feed ideas, how you sharpen them, how you protect the work. The world you land on is the orientation your choices keep returning to; the underlying one is running just beneath it. Some questions return to the same tension from a new angle, which is how the reading stays honest. What we never do is rank you: there is no top, no percentile, no better world.</p>
         <p>You will not find a number, a percentile or a rank anywhere here, and that is deliberate. Creativity is not a quantity you hold more or less of, and treating it like one only teaches people to perform for a scoreboard. So we tell you which world you are on and leave how good you are out of it entirely. This is a mirror, not a measurement.</p>
         <p class="res-how-sci">The nine types are our own reading of creative habits, drawn from the method's eleven, offered as a lens, not a lab result, which is why it never hands you a score.</p>
       </div>
@@ -424,6 +426,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="card-wrap reveal">
       <div class="card-inner">
+        <h2 class="card-lead">Your Hypercreative Imprint<span class="bp">.</span></h2>
         <div class="card-name-in"><input type="text" id="imp-name-in" maxlength="26" placeholder="Add your name to the card" aria-label="Your name on the card" autocomplete="name"></div>
         <div class="card-stage">
           <div class="imprint" id="imprint">
@@ -477,7 +480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/#method">The method</a>
         <a href="/what-we-do/">What we do</a>
         <a href="/creative-world/">Creative World</a>
-        <a href="/universe/">The universe</a>
+        <a href="/universe/">The map</a>
         <a href="/blog/">Journal</a>
       </div>
       <div class="foot-col">
@@ -767,12 +770,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;
         cards+='<article class="fiche"><span class="fiche-ico">'+iconSVG(fk)+'</span><div class="fiche-body"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p></div></article>';}
       h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title">'+F.verb+'</h3><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
-    h+='<div class="type-cta"><div class="tc-flex"><div class="tc-copy"><p class="type-cta-kicker">So, which one are you on?</p><h3 class="type-cta-h">Find your world, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at the world you are on this quarter, the one that shades it, and the single thing to work on next.</p><button class="btn type-cta-btn js-start" type="button">Find my world</button><p class="type-cta-meta">A few minutes · Free · No sign-up</p></div><div class="mock-wrap"><div class="mock-card" aria-hidden="true"><div class="mk-top">Hypercreative<span>.</span></div><div class="mk-mid"><span class="mk-ico">'+iconSVG('cartographer')+'</span><div class="mk-name">The Cartographer</div><div class="mk-role">your world right now: <b>Cartographer</b>, shaded by <b>Notary</b></div></div><div class="mk-foot"><span>HCM-CAR-····</span><span>hypercreativemethod.com</span></div></div><p class="mock-cap">An example. Yours carries your world, the one that shades it, and your name.</p></div></div></div>';
+    h+='<div class="type-cta"><div class="tc-flex"><div class="tc-copy"><p class="type-cta-kicker">So, which one are you on?</p><h3 class="type-cta-h">Find your world, and the one habit that will move you most.</h3><p class="type-cta-p">Two minutes points you at the world you are on this quarter, the one that shades it, and the single thing to work on next.</p><button class="btn type-cta-btn js-start" type="button">Find my world</button><p class="type-cta-meta">A few minutes · Free · No sign-up</p></div><div class="mock-wrap"><div class="mock-card" aria-hidden="true"><div class="mk-top">Hypercreative<span>.</span></div><div class="mk-mid"><span class="mk-ico">'+iconSVG('cartographer')+'</span><div class="mk-name">The Cartographer</div><div class="mk-role">your world right now: <b>Cartographer</b>, shaded by <b>Notary</b></div></div><div class="mk-foot"><span>HCM-CAR-····</span><span>hypercreativemethod.com</span></div></div><p class="mock-cap">An example Imprint. Yours carries your world, the one that shades it, and your name.</p></div></div></div>';
     g.innerHTML=h;
     [].slice.call(g.querySelectorAll('.js-start')).forEach(function(b){b.addEventListener('click',startTest);});
   })();
 
-  /* the map is the front door: the full universe, live, behind the question.
+  /* the map is the front door: the full map, live, behind the question.
      The wheel stays with the page (a landing must scroll), so zooming lives
      on /universe/; here you drag, hover and click. */
   (function(){
