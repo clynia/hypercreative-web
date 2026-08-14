@@ -1,3 +1,6 @@
+# Anything that does not exist lands on the branded 404 (status stays 404).
+ErrorDocument 404 /404.php
+
 # Clean URLs: hide .html and .php from the address bar.
 RewriteEngine On
 
