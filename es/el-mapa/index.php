@@ -6,17 +6,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TBPM9KTK');</script>
 <!-- End Google Tag Manager --><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>El mapa que hay detrás del test Creative Profile | Hypercreative</title>
-<meta name="description" content="El mapa completo que hay detrás del test Creative Profile: nueve perfiles creativos repartidos en tres familias y las 72 firmas que forman al emparejarse. Encuentra el perfil en el que estás ahora.">
+<title>El mapa del test Creative Profile | Hypercreative</title>
+<meta name="description" content="El mapa que hay detrás del test Creative Profile: nueve perfiles creativos en tres familias y las 72 firmas que forman al emparejarse. Encuentra el tuyo.">
 <?php echo hc_hreflang(); ?><meta name="robots" content="index,follow">
 <meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="es_ES"><meta property="og:type" content="website">
-<meta property="og:title" content="El mapa que hay detrás del test Creative Profile | Hypercreative">
-<meta property="og:description" content="El mapa completo que hay detrás del test Creative Profile: nueve perfiles creativos repartidos en tres familias y las 72 firmas que forman al emparejarse.">
+<meta property="og:title" content="El mapa del test Creative Profile | Hypercreative">
+<meta property="og:description" content="El mapa que hay detrás del test Creative Profile: nueve perfiles creativos en tres familias y las 72 firmas que forman al emparejarse. Encuentra el tuyo.">
 <meta property="og:url" content="https://hypercreativemethod.com/es/el-mapa/">
 <meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="El mapa que hay detrás del test Creative Profile | Hypercreative">
-<meta name="twitter:description" content="El mapa completo que hay detrás del test Creative Profile: nueve perfiles creativos repartidos en tres familias y las 72 firmas que forman al emparejarse.">
+<meta name="twitter:title" content="El mapa del test Creative Profile | Hypercreative">
+<meta name="twitter:description" content="El mapa que hay detrás del test Creative Profile: nueve perfiles creativos en tres familias y las 72 firmas que forman al emparejarse. Encuentra el tuyo.">
 <meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"es","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://hypercreativemethod.com/es/"},{"@type":"ListItem","position":2,"name":"Creative Profile","item":"https://hypercreativemethod.com/es/perfil-creativo/"},{"@type":"ListItem","position":3,"name":"El mapa","item":"https://hypercreativemethod.com/es/el-mapa/"}]}</script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -133,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="go" href="/es/perfil-creativo/?start=1">Encuentra tu perfil</a>
     </div>
 
-    <div class="hint" id="hint">Arrastra para orbitar &middot; gira la rueda para acercar &middot; pasa el cursor para frenar, clic para fijar</div>
+    <div class="hint" id="hint">Arrastra para orbitar &middot; gira la rueda para acercar &middot; pasa el cursor para frenar, haz clic para fijar</div>
 
     <aside class="panel" id="panel" aria-live="polite" hidden>
       <button class="px" id="px" type="button" aria-label="Cerrar">&times;</button>

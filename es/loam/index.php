@@ -12,14 +12,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Loam · Siembra cualquier cosa. Cultiva ideas.</title>
 <link rel="icon" href="/loam/assets/loam-icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/loam/assets/loam-icon.png">
-<meta name="description" content="Un banco de semillas para tus ideas que no acaba en trastero. Captura cualquier fragmento sin ordenar nada. Cuando te atascas, tu propia tierra te lo devuelve en preguntas, nunca en respuestas. Una herramienta de Hypercreative.">
+<meta name="description" content="Un banco de semillas para tus ideas que no acaba en trastero. Cuando te atascas, tu propia tierra te lo devuelve en preguntas, nunca en respuestas.">
 <?php echo hc_hreflang(); ?>
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:site_name" content="Hypercreative">
 <meta property="og:locale" content="es_ES">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Loam · Siembra cualquier cosa. Cultiva ideas.">
-<meta property="og:description" content="Un banco de semillas para tus ideas que no acaba en trastero. Captura lo que sea sin ordenar nada. Cuando un problema real necesita una idea, tu propia tierra te la devuelve en preguntas, nunca en respuestas.">
+<meta property="og:description" content="Un banco de semillas para tus ideas que no acaba en trastero. Cuando un problema real necesita una idea, te lo devuelve en preguntas, nunca en respuestas.">
 <meta property="og:url" content="https://hypercreativemethod.com/es/loam/">
 <meta property="og:image" content="https://hypercreativemethod.com/loam/assets/og-loam.png">
 <meta name="twitter:card" content="summary_large_image">

@@ -1,5 +1,5 @@
-/* Versión española de hc-worlds.js: los nueve perfiles del Método
-   Hipercreativo, las 72 firmas que forman por parejas, el icono de cada perfil
+/* Versión española de hc-worlds.js: los nueve perfiles del método de
+   Hypercreative, las 72 firmas que forman por parejas, el icono de cada perfil
    y el color de cada familia. Solo cambia el texto que lee una persona. Las
    claves internas (cartographer, explorer, Feed, Sharpen, Protect...) NO se
    traducen: las usa el motor del test y el mapa para casar datos y colores, y

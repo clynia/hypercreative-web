@@ -10,25 +10,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Creative Profile: ¿en qué perfil estás ahora mismo? | Hypercreative</title>
+<title>Creative Profile: en qué perfil estás ahora | Hypercreative</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Un test de dos minutos que te dice en cuál de los nueve perfiles creativos estás ahora mismo, no cuánto de creativo eres. Sin nota, con una tarjeta para compartir. Del método Hypercreative.">
+<meta name="description" content="Un test de dos minutos: en cuál de los nueve perfiles creativos estás ahora mismo, no cuánto de creativo eres. Sin nota y con una tarjeta para compartir.">
 <?php echo hc_hreflang(); ?>
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:site_name" content="Hypercreative">
 <meta property="og:locale" content="es_ES">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Creative Profile: ¿en qué perfil estás ahora mismo?">
+<meta property="og:title" content="Creative Profile: en qué perfil estás ahora">
 <meta property="og:description" content="No cuánto de creativo eres. En qué perfil estás. Nueve perfiles, sin nota y una tarjeta que te llevas. Dos minutos, del método Hypercreative.">
 <meta property="og:url" content="https://hypercreativemethod.com/es/perfil-creativo/">
 <meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Creative Profile: ¿en qué perfil estás ahora mismo?">
+<meta name="twitter:title" content="Creative Profile: en qué perfil estás ahora">
 <meta name="twitter:description" content="No cuánto de creativo eres. En qué perfil estás. Nueve perfiles, sin nota y una tarjeta que te llevas.">
 <meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"WebPage","@id":"https://hypercreativemethod.com/es/perfil-creativo/#page","url":"https://hypercreativemethod.com/es/perfil-creativo/","name":"Creative Profile: ¿en qué perfil estás ahora mismo?","isPartOf":{"@id":"https://hypercreativemethod.com/#website"},"inLanguage":"es","description":"Una tipología de la creatividad: en cuál de los nueve perfiles creativos estás ahora mismo, no cuánto de creativo eres. Sin nota, con una tarjeta para compartir.","publisher":{"@id":"https://hypercreativemethod.com/#org"}},
+{"@type":"WebPage","@id":"https://hypercreativemethod.com/es/perfil-creativo/#page","url":"https://hypercreativemethod.com/es/perfil-creativo/","name":"Creative Profile: en qué perfil estás ahora","isPartOf":{"@id":"https://hypercreativemethod.com/#website"},"inLanguage":"es","description":"Una tipología de la creatividad: en cuál de los nueve perfiles creativos estás ahora mismo, no cuánto de creativo eres. Sin nota, con una tarjeta para compartir.","publisher":{"@id":"https://hypercreativemethod.com/#org"}},
 {"@type":"Organization","@id":"https://hypercreativemethod.com/#org","name":"Hypercreative","url":"https://hypercreativemethod.com/"}
 ]}
 </script>
@@ -372,7 +372,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </header>
 
 <section class="cw-hero" id="top">
-  <canvas id="hero-sky" role="img" aria-label="Un mapa que puedes girar: tres familias, nueve perfiles recorriendo sus órbitas alrededor de ellas y las 72 firmas colgando entre los perfiles"></canvas>
+  <canvas id="hero-sky" role="img" aria-label="Un mapa que puedes girar: tres familias, nueve perfiles recorriendo sus órbitas alrededor de ellas y las 72 firmas colgadas entre los perfiles"></canvas>
   <div class="cw-hud">
     <h1 class="h1 reveal" style="--d:.05s">¿En qué perfil creativo estás <em>ahora mismo</em>?</h1>
     <p class="cw-sub reveal" style="--d:.12s">No cuánto de creativo eres. Desde dónde estás creando. Los once hábitos del método se reparten en tres familias: alimentar, afilar y proteger. Nueve perfiles giran alrededor de esas familias, y las setenta y dos firmas cuelgan entre los perfiles: el método entero, dibujado como un mapa que puedes girar. Ahora mismo estás trabajando desde uno de esos perfiles. Dos minutos te dicen cuál, qué lo matiza y qué hábito toca entrenar.</p>
@@ -381,7 +381,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="cw-full" href="/es/el-mapa/">Abre el mapa a pantalla completa</a>
     </div>
   </div>
-  <div class="cw-hint" id="cw-hint">Arrastra para girar &middot; pasa el ratón para frenar, haz clic para fijar</div>
+  <div class="cw-hint" id="cw-hint">Arrastra para orbitar &middot; pasa el cursor para frenar, haz clic para fijar</div>
   <aside class="panel" id="hpanel" aria-live="polite" hidden>
     <button class="px" id="hpx" type="button" aria-label="Cerrar">&times;</button>
     <div class="p-ico" id="hpIco"></div>
@@ -585,7 +585,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {fam:"Sharpen",q:"¿Qué se acerca más a lo que eres?",a:{t:"Nunca pierdo un fragmento que merezca la pena.",type:"seedcollector"},b:{t:"Hago conexiones a larga distancia que casi nadie ve.",type:"collider"}},
     {fam:"Sharpen",q:"¿Qué es lo que te tienes que obligar a hacer?",a:{t:"Lanzar de una vez la versión sucia.",type:"sketcher"},b:{t:"Salir de mi terreno y explorar.",type:"cartographer"}},
     /* --- ronda Proteger --- */
-    {fam:"Protect",q:"¿Qué es lo que más protege tu trabajo creativo?",a:{t:"Que nadie toca mis mandos sin que yo le invite.",type:"guardian"},b:{t:"Que ya tengo decidido quién soy cuando creo.",type:"persona"}},
+    {fam:"Protect",q:"¿Qué es lo que más protege tu trabajo creativo?",a:{t:"Que nadie toque mis mandos sin que yo le invite.",type:"guardian"},b:{t:"Que ya tengo decidido quién soy cuando creo.",type:"persona"}},
     {fam:"Protect",q:"Tu creatividad depende sobre todo de&hellip;",a:{t:"El ritual que me pone y el estado en el que llego.",type:"persona"},b:{t:"Mantener las opiniones ajenas lejos de los mandos.",type:"guardian"}},
     {fam:"Protect",q:"Te cae encima una opinión que no pediste. ¿Qué haces?",a:{t:"Mi criterio sigue siendo mío y sigo adelante.",type:"guardian"},b:{t:"Voy a contrastarla con cómo lo hacen en otros campos.",type:"explorer"}},
     {fam:"Protect",q:"Bajo presión, tu ventaja real es&hellip;",a:{t:"Pillar el detalle que se le ha escapado a todo el mundo.",type:"notary"},b:{t:"Mantener el ruido de fuera lejos de los mandos.",type:"guardian"}},
@@ -824,7 +824,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if(!c||!window.HCUniverse)return;
     if(matchMedia('(pointer:coarse)').matches){
       var hn=document.getElementById('cw-hint');
-      if(hn)hn.innerHTML='Arrastra para girar &middot; toca un perfil para leerlo';
+      if(hn)hn.innerHTML='Arrastra para orbitar &middot; toca un perfil para leerlo';
     }
     HCUniverse.mount({canvas:c,anchor:'left',wheelZoom:false,theme:'paper',i18n:I18N_ES,panel:{
       root:document.getElementById('hpanel'),
