@@ -140,7 +140,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <img src="/assets/press/ai/openai.svg" alt="ChatGPT" title="ChatGPT"><img src="/assets/press/ai/claude.svg" alt="Claude" title="Claude"><img src="/assets/press/ai/gemini.svg" alt="Gemini" title="Gemini"><img src="/assets/press/ai/copilot.svg" alt="Copilot" title="Copilot"><img src="/assets/press/ai/grok.svg" alt="Grok" title="Grok">
 </div>
 
-<div class="manual-card"><div class="mt"><h3>Pack de logotipos (todos los archivos)</h3><p>El logotipo para fondos claros y oscuros (SVG y PNG), el símbolo, el favicon y un archivo léeme breve.</p></div><a class="dl" href="/assets/press/Hypercreative-Logos.zip" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Descargar el pack</a></div>
 <span class="lead" style="margin-top:1.4rem">El prompt</span>
 <p style="margin:0 0 .8rem">Cópialo en cualquier IA o descárgalo como archivo. Sirve para cualquiera, no hacen falta conocimientos de diseño.</p>
 <div class="bp-card prompt-card"><button class="copy" type="button" aria-label="Copiar el prompt de marca">Copiar</button><pre class="prompt">LOGOTIPO DE HYPERCREATIVE: CÓMO USARLO BIEN
@@ -196,6 +195,7 @@ Archivos oficiales y manual completo: https://hypercreativemethod.com/es/prensa/
 <h2>Si prefieres la vía clásica</h2>
 <p>Si prefieres pasarle un briefing a un diseñador o hacerlo a mano, aquí tienes el dosier de prensa de siempre.</p>
 
+<div class="manual-card"><div class="mt"><h3>Pack de logotipos (todos los archivos)</h3><p>El logotipo para fondos claros y oscuros (SVG y PNG), el símbolo, el favicon y un archivo léeme breve.</p></div><a class="dl" href="/assets/press/Hypercreative-Logos.zip" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Descargar el pack</a></div>
 <h2>Manual de marca</h2>
 <div class="manual-card"><div class="mt"><h3>El manual de marca (PDF)</h3><p>Las normas completas: logotipo, aire, color, tipografía, lo que se hace y lo que no, aplicaciones y legal.</p></div><a class="dl" href="/assets/press/Hypercreative-Brand-Manual.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Descargar el PDF</a></div>
 

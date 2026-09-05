@@ -140,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <img src="../assets/press/ai/openai.svg" alt="ChatGPT" title="ChatGPT"><img src="../assets/press/ai/claude.svg" alt="Claude" title="Claude"><img src="../assets/press/ai/gemini.svg" alt="Gemini" title="Gemini"><img src="../assets/press/ai/copilot.svg" alt="Copilot" title="Copilot"><img src="../assets/press/ai/grok.svg" alt="Grok" title="Grok">
 </div>
 
-<div class="manual-card"><div class="mt"><h3>Logo pack (all files)</h3><p>Wordmark for light and dark backgrounds (SVG and PNG), the symbol, the favicon and a short readme.</p></div><a class="dl" href="../assets/press/Hypercreative-Logos.zip" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Download logo pack</a></div>
+
 <span class="lead" style="margin-top:1.4rem">The prompt</span>
 <p style="margin:0 0 .8rem">Copy this into any AI, or download it as a file. It works for anyone, no design skills needed.</p>
 <div class="bp-card prompt-card"><button class="copy" type="button" aria-label="Copy the brand prompt">Copy</button><pre class="prompt">HYPERCREATIVE LOGO: HOW TO USE IT CORRECTLY
@@ -196,6 +196,7 @@ Official files and the full manual: https://hypercreativemethod.com/press/</pre>
 <h2>Prefer the classic way</h2>
 <p>If you would rather brief a designer or do it by hand, here is the usual press kit.</p>
 
+<div class="manual-card"><div class="mt"><h3>Logo pack (all files)</h3><p>Wordmark for light and dark backgrounds (SVG and PNG), the symbol, the favicon and a short readme.</p></div><a class="dl" href="../assets/press/Hypercreative-Logos.zip" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Download logo pack</a></div>
 <h2>Brand manual</h2>
 <div class="manual-card"><div class="mt"><h3>The brand manual (PDF)</h3><p>The full guidelines: logo, clear space, colour, type, do and don&#8217;ts, applications and legal.</p></div><a class="dl" href="../assets/press/Hypercreative-Brand-Manual.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Download PDF</a></div>
 
