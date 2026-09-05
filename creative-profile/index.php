@@ -395,7 +395,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main class="wrap">
 
   <section class="types" id="types">
-    <span class="section-tag reveal">The nine profiles</span>
     <h2 class="types-h reveal" style="--d:.05s">One profile leads<span class="bp">.</span> Another shades it<span class="bp">.</span></h2>
     <p class="types-lead reveal" style="--d:.1s">These are the nine profiles from the map above, grouped by the family they belong to: <em>feed</em> an idea, <em>sharpen</em> it, or <em>protect</em> it. Each profile is named for who you become while you work from it, which is why your result will name a profile like the Cartographer or the Guardian. Your test gives you the profile you are on and the second that shades it. Nine profiles, each shaded by one of the other eight: that is <strong>seventy-two signatures</strong> in all, and one of them is yours.</p>
     <div class="types-grid" id="types-grid"></div>

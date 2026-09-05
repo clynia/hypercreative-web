@@ -115,8 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </style>
 <main class="wrap pr">
 <a class="back" href="../">&#8592; Home</a>
-<p class="eyebrow" style="margin-top:1.4rem">Press / Media kit</p>
-<h1 class="t">Press kit</h1>
+<h1 class="t" style="margin-top:1.4rem">Press kit</h1>
 <p class="dek">Everything you need to write about Hypercreative: logos, the brand manual, colours, type and boilerplate. If you need anything else, just ask.</p>
 
 <h2>Boilerplate</h2>

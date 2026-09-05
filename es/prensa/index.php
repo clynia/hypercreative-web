@@ -115,15 +115,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </style>
 <main class="wrap pr">
 <a class="back" href="/es/">&#8592; Inicio</a>
-<p class="eyebrow" style="margin-top:1.4rem">Prensa / Dosier</p>
-<h1 class="t">Dosier de prensa</h1>
+<h1 class="t" style="margin-top:1.4rem">Dosier de prensa</h1>
 <p class="dek">Todo lo que necesitas para escribir sobre Hypercreative: logotipos, manual de marca, colores, tipografía y textos corporativos. Si te hace falta cualquier otra cosa, pídela.</p>
 
 <h2>Texto corporativo</h2>
 <span class="lead">Corto</span>
 <div class="bp-card"><button class="copy" type="button" aria-label="Copiar el texto corporativo corto">Copiar</button><p>Hypercreative entrena a los equipos de las empresas más exigentes del mundo para crear ideas útiles a demanda. Convierte la creatividad en una disciplina entrenable y deja de tratarla como un rasgo de carácter.</p></div>
 <span class="lead">Largo</span>
-<div class="bp-card"><button class="copy" type="button" aria-label="Copiar el texto corporativo largo">Copiar</button><p>Hypercreative es una empresa de entrenamiento creativo para organizaciones. Enseña a los equipos directivos y a sus personas a generar ideas útiles y originales a demanda, con keynotes y programas a medida. El método se construyó dentro de equipos creativos de alta presión del cine y la producción, y hoy se exporta a grandes organizaciones. Hypercreative es una marca comercial.</p></div>
+<div class="bp-card"><button class="copy" type="button" aria-label="Copiar el texto corporativo largo">Copiar</button><p>Hypercreative es una empresa de entrenamiento creativo para organizaciones. Enseña a los equipos directivos y a sus personas a generar ideas útiles y originales a demanda, con conferencias y programas a medida. El método se construyó dentro de equipos creativos de alta presión del cine y la producción, y hoy se exporta a grandes organizaciones. Hypercreative es una marca comercial.</p></div>
 
 <h2>Logotipo</h2>
 <p>Usa siempre los archivos que te damos. Deja aire alrededor del logotipo y no lo alteres, ni le cambies el color, ni lo gires, ni lo vuelvas a componer con otra tipografía. Las reglas completas están en el manual de marca.</p>

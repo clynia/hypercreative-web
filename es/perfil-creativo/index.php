@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Creative Profile: en qué perfil estás ahora | Hypercreative</title>
+<title>Creative Profile: cuál es tu perfil ahora | Hypercreative</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="Un test de dos minutos: en cuál de los nueve perfiles creativos estás ahora mismo, no cuánto de creativo eres. Sin nota y con una tarjeta para compartir.">
 <?php echo hc_hreflang(); ?>
@@ -18,17 +18,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="Hypercreative">
 <meta property="og:locale" content="es_ES">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Creative Profile: en qué perfil estás ahora">
+<meta property="og:title" content="Creative Profile: cuál es tu perfil ahora">
 <meta property="og:description" content="No cuánto de creativo eres. En qué perfil estás. Nueve perfiles, sin nota y una tarjeta que te llevas. Dos minutos, del método Hypercreative.">
 <meta property="og:url" content="https://hypercreativemethod.com/es/perfil-creativo/">
 <meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Creative Profile: en qué perfil estás ahora">
+<meta name="twitter:title" content="Creative Profile: cuál es tu perfil ahora">
 <meta name="twitter:description" content="No cuánto de creativo eres. En qué perfil estás. Nueve perfiles, sin nota y una tarjeta que te llevas.">
 <meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"WebPage","@id":"https://hypercreativemethod.com/es/perfil-creativo/#page","url":"https://hypercreativemethod.com/es/perfil-creativo/","name":"Creative Profile: en qué perfil estás ahora","isPartOf":{"@id":"https://hypercreativemethod.com/#website"},"inLanguage":"es","description":"Una tipología de la creatividad: en cuál de los nueve perfiles creativos estás ahora mismo, no cuánto de creativo eres. Sin nota, con una tarjeta para compartir.","publisher":{"@id":"https://hypercreativemethod.com/#org"}},
+{"@type":"WebPage","@id":"https://hypercreativemethod.com/es/perfil-creativo/#page","url":"https://hypercreativemethod.com/es/perfil-creativo/","name":"Creative Profile: cuál es tu perfil ahora","isPartOf":{"@id":"https://hypercreativemethod.com/#website"},"inLanguage":"es","description":"Una tipología de la creatividad: en cuál de los nueve perfiles creativos estás ahora mismo, no cuánto de creativo eres. Sin nota, con una tarjeta para compartir.","publisher":{"@id":"https://hypercreativemethod.com/#org"}},
 {"@type":"Organization","@id":"https://hypercreativemethod.com/#org","name":"Hypercreative","url":"https://hypercreativemethod.com/"}
 ]}
 </script>
@@ -374,7 +374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cw-hero" id="top">
   <canvas id="hero-sky" role="img" aria-label="Un mapa que puedes girar: tres familias, nueve perfiles recorriendo sus órbitas alrededor de ellas y las 72 firmas colgadas entre los perfiles"></canvas>
   <div class="cw-hud">
-    <h1 class="h1 reveal" style="--d:.05s">¿En qué perfil creativo estás <em>ahora mismo</em>?</h1>
+    <h1 class="h1 reveal" style="--d:.05s">¿Cuál es tu perfil creativo <em>ahora mismo</em>?</h1>
     <p class="cw-sub reveal" style="--d:.12s">No cuánto de creativo eres. Desde dónde estás creando. Los once hábitos del método se reparten en tres familias: alimentar, afilar y proteger. Nueve perfiles giran alrededor de esas familias, y las setenta y dos firmas cuelgan entre los perfiles: el método entero, dibujado como un mapa que puedes girar. Ahora mismo estás trabajando desde uno de esos perfiles. Dos minutos te dicen cuál, qué lo matiza y qué hábito toca entrenar.</p>
     <div class="actions reveal" style="--d:.2s">
       <button class="btn btn-primary" id="start-btn" type="button">Encuentra tu perfil</button>
@@ -395,7 +395,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main class="wrap">
 
   <section class="types" id="types">
-    <span class="section-tag reveal">Los nueve perfiles</span>
     <h2 class="types-h reveal" style="--d:.05s">Un perfil manda<span class="bp">.</span> Otro lo matiza<span class="bp">.</span></h2>
     <p class="types-lead reveal" style="--d:.1s">Estos son los nueve perfiles del mapa de arriba, agrupados por la familia a la que pertenecen: <em>alimentar</em> una idea, <em>afilarla</em> o <em>protegerla</em>. Cada perfil lleva el nombre de aquello en lo que te conviertes mientras trabajas desde él, y por eso tu resultado te dará un perfil como el Cartógrafo o el Guardián. El test te dice en qué perfil estás y cuál es el segundo que lo matiza. Nueve perfiles, cada uno matizado por uno de los otros ocho: eso son <strong>setenta y dos firmas</strong> en total, y una de ellas es la tuya.</p>
     <div class="types-grid" id="types-grid"></div>
@@ -453,7 +452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="imp-desc" id="imp-desc"></div>
             </div>
             <div class="imp-cta">
-              <div class="imp-hook">¿En qué perfil creativo estás?</div>
+              <div class="imp-hook">¿Cuál es tu perfil creativo?</div>
             </div>
             <div class="imp-foot">
               <div class="imp-serial" id="imp-serial"></div>
@@ -700,7 +699,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var shareBtn=document.getElementById('share-card');
   if(shareBtn){shareBtn.addEventListener('click',function(){
     var url='https://hypercreativemethod.com/es/perfil-creativo/';
-    var txt='¿En qué perfil creativo estás ahora mismo? Encuentra el tuyo con Hypercreative.';
+    var txt='¿Cuál es tu perfil creativo ahora mismo? Encuentra el tuyo con Hypercreative.';
     if(navigator.share){navigator.share({title:'Creative Profile',text:txt,url:url}).catch(function(){});}
     else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(function(){var o=shareBtn.textContent;shareBtn.textContent='Enlace copiado';setTimeout(function(){shareBtn.textContent=o;},1800);}).catch(function(){window.prompt('Copia este enlace',url);});}
     else{window.prompt('Copia este enlace',url);}
@@ -743,7 +742,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       roleSVG+
       cwrap(bl,descY,34,'#F7F6F3',0.74,42,46)+
       '<line x1="'+P+'" y1="1500" x2="'+(W-P)+'" y2="1500" stroke="#F7F6F3" stroke-opacity="0.16"/>'+
-      '<text x="'+CX+'" y="1590" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="400" font-size="46">¿En qué perfil creativo estás?</text>'+
+      '<text x="'+CX+'" y="1590" text-anchor="middle" fill="#F7F6F3" font-family="Inter, sans-serif" font-weight="400" font-size="46">¿Cuál es tu perfil creativo?</text>'+
       '<text x="'+CX+'" y="1740" text-anchor="middle" fill="#F7F6F3" fill-opacity="0.42" font-family="Inter, sans-serif" font-size="22" letter-spacing="1">'+esc(SERIAL)+'</text>'+
       '<text x="'+CX+'" y="1812" text-anchor="middle" fill="#E0463C" font-family="Inter, sans-serif" font-weight="500" font-size="32" letter-spacing="0">www.hypercreativemethod.com</text>'+
       ''+
@@ -812,7 +811,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title">'+F.verb+'</h3><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
     h+='<div class="type-cta"><div class="tc-flex"><div class="tc-copy"><p class="type-cta-kicker">Entonces, ¿en cuál estás?</p><h3 class="type-cta-h">Encuentra tu perfil y el hábito que más te va a mover.</h3><p class="type-cta-p">Dos minutos te señalan el perfil en el que estás este trimestre, el que lo matiza y lo único en lo que toca trabajar ahora.</p><button class="btn type-cta-btn js-start" type="button">Encuentra tu perfil</button></div><div class="mock-wrap"><div class="mock-stage" id="ex-imprint" aria-hidden="true"></div></div></div></div>';
     g.innerHTML=h;
-    (function(){var ex=document.getElementById('ex-imprint');if(!ex)return;var k='explorer',s='sketcher',et=TYPES[k],es=TYPES[s];var d=(INFLECT[k]&&INFLECT[k][s])?(et.state+' '+INFLECT[k][s]):et.state;ex.innerHTML='<div class="imprint"><div class="imp-top"><span class="imp-brand">Hypercreative<span class="bp">.</span></span></div>'+'<div class="imp-core"><div class="imp-emblem"><span class="emb-ring">'+iconSVG(k)+'</span><span class="emb-badge">'+iconSVG(s)+'</span></div>'+'<div class="imp-name">'+et.name+'</div><div class="imp-blend">matizado por <b>'+shortName(es.name)+'</b></div>'+'<div class="imp-desc">'+d+'</div></div>'+'<div class="imp-cta"><div class="imp-hook">¿En qué perfil creativo estás?</div></div>'+'<div class="imp-foot"><div class="imp-serial">HCM-EXP-2K4F  &middot;  2026</div><div class="imp-url">www.hypercreativemethod.com</div></div></div>';})();
+    (function(){var ex=document.getElementById('ex-imprint');if(!ex)return;var k='explorer',s='sketcher',et=TYPES[k],es=TYPES[s];var d=(INFLECT[k]&&INFLECT[k][s])?(et.state+' '+INFLECT[k][s]):et.state;ex.innerHTML='<div class="imprint"><div class="imp-top"><span class="imp-brand">Hypercreative<span class="bp">.</span></span></div>'+'<div class="imp-core"><div class="imp-emblem"><span class="emb-ring">'+iconSVG(k)+'</span><span class="emb-badge">'+iconSVG(s)+'</span></div>'+'<div class="imp-name">'+et.name+'</div><div class="imp-blend">matizado por <b>'+shortName(es.name)+'</b></div>'+'<div class="imp-desc">'+d+'</div></div>'+'<div class="imp-cta"><div class="imp-hook">¿Cuál es tu perfil creativo?</div></div>'+'<div class="imp-foot"><div class="imp-serial">HCM-EXP-2K4F  &middot;  2026</div><div class="imp-url">www.hypercreativemethod.com</div></div></div>';})();
     [].slice.call(g.querySelectorAll('.js-start')).forEach(function(b){b.addEventListener('click',startTest);});
   })();
 
