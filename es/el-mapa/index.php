@@ -158,13 +158,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div>
       <h3 class="sun-h">Afilar</h3>
-      <p class="sun-p">Cómo el material en bruto se convierte en idea. Haces que corte: te fijas en lo que los demás pasaron de largo, reescribes la pregunta y estrellas entre sí cosas lejanas para ver qué sobrevive.</p>
-      <p class="sun-w">Notario &middot; Reformulador &middot; Colisionador</p>
+      <p class="sun-p">Cómo el material en bruto se convierte en idea. Haces que corte: te fijas en lo que los demás pasaron de largo, reescribes la pregunta, estrellas entre sí cosas lejanas para ver qué sobrevive y piensas en borradores.</p>
+      <p class="sun-w">Notario &middot; Reformulador &middot; Colisionador &middot; Bocetista</p>
     </div>
     <div>
       <h3 class="sun-h">Proteger</h3>
-      <p class="sun-p">Cómo el trabajo sobrevive al contacto con el mundo. Lo mantienes vivo bajo presión: piensas en borradores, defiendes del comité lo que construyes y no sueltas los mandos.</p>
-      <p class="sun-w">Bocetista &middot; Guardián &middot; Personaje</p>
+      <p class="sun-p">Cómo el trabajo sobrevive al contacto con el mundo. Lo mantienes vivo bajo presión: defiendes lo que construyes, del ruido de fuera y del comité de dentro, y no sueltas los mandos.</p>
+      <p class="sun-w">Guardián &middot; Personaje</p>
     </div>
   </div>
 

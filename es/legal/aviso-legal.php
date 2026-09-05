@@ -79,7 +79,7 @@ article a{color:var(--ink);text-decoration:underline;text-decoration-color:var(-
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
-<main class="wrap legal"><a class="back" href="/es/">&#8592; Inicio</a><h1 class="t" style="margin-top:1.4rem">Aviso legal</h1><article><p style="color:var(--mute)">Traducción de cortesía. En caso de discrepancia entre versiones, prevalece la <a href="/legal/legal-notice">versión en inglés</a>.</p>
+<main class="wrap legal"><a class="back" href="/es/">&#8592; Inicio</a><h1 class="t" style="margin-top:1.4rem">Aviso legal</h1><article><p style="color:var(--mute)">Traducción de cortesía. En caso de discrepancia entre versiones, prevalece la <a href="/legal/legal-notice?lang=en&amp;remember=0">versión en inglés</a>.</p>
 <p><strong>Última actualización: 17 de junio de 2026</strong></p>
 <p>Este Aviso legal explica quién gestiona este sitio web y las condiciones básicas bajo las que se pone a disposición. Al usar el sitio web, usted acepta este Aviso, junto con nuestros Términos de uso, nuestra Política de privacidad y nuestra Política de cookies.</p>
 <h3>Quién gestiona este sitio web</h3>

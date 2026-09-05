@@ -79,7 +79,7 @@ article a{color:var(--ink);text-decoration:underline;text-decoration-color:var(-
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
-<main class="wrap legal"><a class="back" href="/es/">&#8592; Inicio</a><h1 class="t" style="margin-top:1.4rem">Términos de uso</h1><article><p style="color:var(--mute)">Traducción de cortesía. En caso de discrepancia entre versiones, prevalece la <a href="/legal/terms">versión en inglés</a>.</p>
+<main class="wrap legal"><a class="back" href="/es/">&#8592; Inicio</a><h1 class="t" style="margin-top:1.4rem">Términos de uso</h1><article><p style="color:var(--mute)">Traducción de cortesía. En caso de discrepancia entre versiones, prevalece la <a href="/legal/terms?lang=en&amp;remember=0">versión en inglés</a>.</p>
 <p><strong>Última actualización: 17 de junio de 2026</strong></p>
 <p>Estos Términos de uso rigen su acceso al sitio web de Hypercreative y su uso de él, así como de cualquier página, contenido y formulario relacionados que se pongan a disposición a través de él. El sitio web está operado por <strong>Stormridge LLC</strong>, bajo la marca <strong>Hypercreative</strong> (&quot;Hypercreative&quot;, &quot;la Empresa&quot;, &quot;nosotros&quot;). Al acceder al sitio web o usarlo, usted acepta estos Términos. Si no está de acuerdo, no use el sitio web.</p>
 <h3>Quiénes somos</h3>

@@ -79,7 +79,7 @@ article a{color:var(--ink);text-decoration:underline;text-decoration-color:var(-
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
-<main class="wrap legal"><a class="back" href="/es/">&#8592; Inicio</a><h1 class="t" style="margin-top:1.4rem">Política de privacidad</h1><article><p style="color:var(--mute)">Traducción de cortesía. En caso de discrepancia entre versiones, prevalece la <a href="/legal/privacy">versión en inglés</a>.</p>
+<main class="wrap legal"><a class="back" href="/es/">&#8592; Inicio</a><h1 class="t" style="margin-top:1.4rem">Política de privacidad</h1><article><p style="color:var(--mute)">Traducción de cortesía. En caso de discrepancia entre versiones, prevalece la <a href="/legal/privacy?lang=en&amp;remember=0">versión en inglés</a>.</p>
 <p><strong>Última actualización: 17 de junio de 2026</strong></p>
 <p>Esta Política de privacidad explica cómo <strong>Stormridge LLC</strong>, que opera bajo la marca <strong>Hypercreative</strong> (&quot;Hypercreative&quot;, &quot;la Empresa&quot;, &quot;nosotros&quot;), trata los datos personales recogidos a través de este sitio web. La mantenemos corta y clara a propósito. Si algo no queda claro, pregúntenos a través del formulario de contacto.</p>
 <h3>Quién responde de sus datos</h3>

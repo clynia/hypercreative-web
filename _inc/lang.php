@@ -80,13 +80,20 @@ if (!function_exists('hc_lang_switch')) {
     }
 }
 
-/* An explicit choice from the switcher, remembered for a year. */
+/* An explicit choice from the switcher, remembered for a year. Either way the
+   redirect below is skipped, so ?lang= always delivers the page it names.
+   Adding &remember=0 delivers it without recording anything: the Spanish legal
+   pages link to their English twin so it can be read, not to move the whole
+   site into English behind the visitor's back. */
 if (isset($_GET['lang']) && ($_GET['lang'] === 'en' || $_GET['lang'] === 'es')) {
-    $exp = time() + 31536000;
-    if (PHP_VERSION_ID >= 70300) {
-        setcookie('hc_lang', $_GET['lang'], ['expires' => $exp, 'path' => '/', 'samesite' => 'Lax']);
-    } else {
-        setcookie('hc_lang', $_GET['lang'], $exp, '/; samesite=Lax');
+    $remember = !isset($_GET['remember']) || $_GET['remember'] !== '0';
+    if ($remember) {
+        $exp = time() + 31536000;
+        if (PHP_VERSION_ID >= 70300) {
+            setcookie('hc_lang', $_GET['lang'], ['expires' => $exp, 'path' => '/', 'samesite' => 'Lax']);
+        } else {
+            setcookie('hc_lang', $_GET['lang'], $exp, '/; samesite=Lax');
+        }
     }
 } elseif ($HC_LANG === 'en' && empty($HC_NO_REDIRECT)) {
     /* No choice on this request. Spanish speakers go to the Spanish twin.

@@ -158,13 +158,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div>
       <h3 class="sun-h">Sharpen</h3>
-      <p class="sun-p">How raw material turns into an idea. You make it cut: you notice what others walked past, you rewrite the question, and you slam far-apart things together to see what survives.</p>
-      <p class="sun-w">Notary &middot; Reframer &middot; Collider</p>
+      <p class="sun-p">How raw material turns into an idea. You make it cut: you notice what others walked past, you rewrite the question, you slam far-apart things together to see what survives, and you think in drafts.</p>
+      <p class="sun-w">Notary &middot; Reframer &middot; Collider &middot; Sketcher</p>
     </div>
     <div>
       <h3 class="sun-h">Protect</h3>
-      <p class="sun-p">How the work survives contact with the world. You keep it alive under pressure: you think in drafts, you defend what you build from the committee, and you keep your own hands on the controls.</p>
-      <p class="sun-w">Sketcher &middot; Guardian &middot; Persona</p>
+      <p class="sun-p">How the work survives contact with the world. You keep it alive under pressure: you defend what you build, from the noise outside and the committee inside, and you keep your own hands on the controls.</p>
+      <p class="sun-w">Guardian &middot; Persona</p>
     </div>
   </div>
 

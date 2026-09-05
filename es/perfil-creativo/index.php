@@ -377,7 +377,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1 class="h1 reveal" style="--d:.05s">¿En qué perfil creativo estás <em>ahora mismo</em>?</h1>
     <p class="cw-sub reveal" style="--d:.12s">No cuánto de creativo eres. Desde dónde estás creando. Los once hábitos del método se reparten en tres familias: alimentar, afilar y proteger. Nueve perfiles giran alrededor de esas familias, y las setenta y dos firmas cuelgan entre los perfiles: el método entero, dibujado como un mapa que puedes girar. Ahora mismo estás trabajando desde uno de esos perfiles. Dos minutos te dicen cuál, qué lo matiza y qué hábito toca entrenar.</p>
     <div class="actions reveal" style="--d:.2s">
-      <button class="btn btn-primary" id="start-btn" type="button">Descubre tu perfil</button>
+      <button class="btn btn-primary" id="start-btn" type="button">Encuentra tu perfil</button>
       <a class="cw-full" href="/es/el-mapa/">Abre el mapa a pantalla completa</a>
     </div>
   </div>
@@ -700,7 +700,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var shareBtn=document.getElementById('share-card');
   if(shareBtn){shareBtn.addEventListener('click',function(){
     var url='https://hypercreativemethod.com/es/perfil-creativo/';
-    var txt='¿En qué perfil creativo estás ahora mismo? Descubre el tuyo con Hypercreative.';
+    var txt='¿En qué perfil creativo estás ahora mismo? Encuentra el tuyo con Hypercreative.';
     if(navigator.share){navigator.share({title:'Creative Profile',text:txt,url:url}).catch(function(){});}
     else if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(url).then(function(){var o=shareBtn.textContent;shareBtn.textContent='Enlace copiado';setTimeout(function(){shareBtn.textContent=o;},1800);}).catch(function(){window.prompt('Copia este enlace',url);});}
     else{window.prompt('Copia este enlace',url);}
@@ -810,7 +810,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       for(var fk in TYPES){var ft=TYPES[fk];if(ft.family!==F.k)continue;
         cards+='<article class="fiche"><span class="fiche-ico">'+iconSVG(fk)+'</span><div class="fiche-body"><h4 class="fiche-name">'+ft.name+'</h4><p class="fiche-one">'+ft.one+'</p></div></article>';}
       h+='<section class="fam-group"><div class="fam-head"><h3 class="fam-title">'+F.verb+'</h3><p class="fam-blurb">'+F.blurb+'</p></div><div class="fam-cards">'+cards+'</div></section>';}
-    h+='<div class="type-cta"><div class="tc-flex"><div class="tc-copy"><p class="type-cta-kicker">Entonces, ¿en cuál estás?</p><h3 class="type-cta-h">Descubre tu perfil y el hábito que más te va a mover.</h3><p class="type-cta-p">Dos minutos te señalan el perfil en el que estás este trimestre, el que lo matiza y lo único en lo que toca trabajar ahora.</p><button class="btn type-cta-btn js-start" type="button">Descubre tu perfil</button></div><div class="mock-wrap"><div class="mock-stage" id="ex-imprint" aria-hidden="true"></div></div></div></div>';
+    h+='<div class="type-cta"><div class="tc-flex"><div class="tc-copy"><p class="type-cta-kicker">Entonces, ¿en cuál estás?</p><h3 class="type-cta-h">Encuentra tu perfil y el hábito que más te va a mover.</h3><p class="type-cta-p">Dos minutos te señalan el perfil en el que estás este trimestre, el que lo matiza y lo único en lo que toca trabajar ahora.</p><button class="btn type-cta-btn js-start" type="button">Encuentra tu perfil</button></div><div class="mock-wrap"><div class="mock-stage" id="ex-imprint" aria-hidden="true"></div></div></div></div>';
     g.innerHTML=h;
     (function(){var ex=document.getElementById('ex-imprint');if(!ex)return;var k='explorer',s='sketcher',et=TYPES[k],es=TYPES[s];var d=(INFLECT[k]&&INFLECT[k][s])?(et.state+' '+INFLECT[k][s]):et.state;ex.innerHTML='<div class="imprint"><div class="imp-top"><span class="imp-brand">Hypercreative<span class="bp">.</span></span></div>'+'<div class="imp-core"><div class="imp-emblem"><span class="emb-ring">'+iconSVG(k)+'</span><span class="emb-badge">'+iconSVG(s)+'</span></div>'+'<div class="imp-name">'+et.name+'</div><div class="imp-blend">matizado por <b>'+shortName(es.name)+'</b></div>'+'<div class="imp-desc">'+d+'</div></div>'+'<div class="imp-cta"><div class="imp-hook">¿En qué perfil creativo estás?</div></div>'+'<div class="imp-foot"><div class="imp-serial">HCM-EXP-2K4F  &middot;  2026</div><div class="imp-url">www.hypercreativemethod.com</div></div></div>';})();
     [].slice.call(g.querySelectorAll('.js-start')).forEach(function(b){b.addEventListener('click',startTest);});
