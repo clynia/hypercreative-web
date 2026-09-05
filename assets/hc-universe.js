@@ -22,6 +22,9 @@
      anchor        "left" leaves room for a reading column, "center" fills
      focus         {lead, under} lights one signature and turns the sky to it
      hint          element whose text swaps on touch devices
+     i18n          the words the map says out loud, so a page in another
+                   language can hand over its own without touching the data
+                   keys. Left out, the map speaks the English it always has.
      onPick        called with the picked thing, or null
 
    Returns {focus, clear, destroy}. */
@@ -34,8 +37,66 @@ window.HCUniverse=(function(){
   var TYPES=W_.TYPES, INFLECT=W_.INFLECT, TYPE_ICON=W_.TYPE_ICON,
       FAM_DESC=W_.FAM_DESC, FAMILIES=W_.FAMILIES, FAM_ORDER=W_.FAM_ORDER;
   var KEYS=Object.keys(TYPES);
-  var NUMWORD={2:"Two",3:"Three",4:"Four"};
   var GROUND_INK="17,17,16", PAPER="247,246,243";
+
+  /* ---------- the words ----------
+     Everything the map says out loud sits here, and these defaults are the
+     English it has always said, so a mount that hands over no i18n reads
+     exactly as it did before. Another language hands over its own set and
+     gets whole sentences rather than translated fragments: the templates
+     carry {markers} so each language puts the pieces in its own order.
+
+       fam        what the three families are called on screen. The internal
+                  keys (Feed, Sharpen, Protect) are never touched
+       article    the article the profile names wear ("The Explorer"), taken
+                  off when the name goes inside a sentence or under a world
+       descLead   the head of FAM_DESC that the family sentence already says
+       numbers    how many profiles, written out
+       listJoin   what goes between names in a list, and before the last one
+       listLast
+       famSub     the four things the reading card says: under a family name,
+       famBody    the family paragraph, under a signature, and under a world
+       nodeSub
+       sunSub
+       touchHint  the line that replaces the hint on a touch screen */
+  var I18N={
+    fam:{Feed:"Feed", Sharpen:"Sharpen", Protect:"Protect"},
+    article:"The ",
+    descLead:"you ",
+    numbers:{2:"two", 3:"three", 4:"four"},
+    listJoin:", ",
+    listLast:" and ",
+    famSub:"one of the three families",
+    famBody:"Pull from this family and you {desc}. {n} profiles run their orbits around it: {profiles}.",
+    nodeSub:"shaded by the <b>{profile}</b>",
+    sunSub:"a profile orbiting the {family} family",
+    touchHint:"Drag to orbit &middot; pinch to zoom &middot; tap to hold"
+  };
+  function blend(base,over){
+    var o={},k;
+    for(k in base) o[k]=base[k];
+    if(over){ for(k in over) o[k]=over[k]; }
+    return o;
+  }
+  /* one language's words laid over the English ones, key by key, so a page
+     can translate one line and keep the rest */
+  function words(over){
+    var L=blend(I18N,over);
+    L.fam=blend(I18N.fam, over&&over.fam);
+    L.numbers=blend(I18N.numbers, over&&over.numbers);
+    return L;
+  }
+  /* {marker} becomes its value; anything not handed over is left alone */
+  function fill(tpl,vals){
+    return String(tpl).replace(/\{(\w+)\}/g,function(m,k){
+      return Object.prototype.hasOwnProperty.call(vals,k)?vals[k]:m;
+    });
+  }
+  /* "The Explorer" without its article, whatever the article is */
+  function cut(str,pre){
+    str=String(str);
+    return (pre && str.slice(0,pre.length)===pre) ? str.slice(pre.length) : str;
+  }
 
   function iconSVG(key){
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '+
@@ -64,9 +125,9 @@ window.HCUniverse=(function(){
   }
   function rgba(c,a){return "rgba("+c[0]+","+c[1]+","+c[2]+","+a+")";}
   function famColorCss(fam){var c=FAMILIES[fam].col;return "rgb("+c[0]+","+c[1]+","+c[2]+")";}
-  function listNames(mem){
+  function listNames(mem,L){
     var n=mem.map(function(k){return TYPES[k].name;});
-    return n.length>1 ? n.slice(0,-1).join(", ")+" and "+n[n.length-1] : n[0];
+    return n.length>1 ? n.slice(0,-1).join(L.listJoin)+L.listLast+n[n.length-1] : n[0];
   }
 
   function mount(opt){
@@ -85,6 +146,9 @@ window.HCUniverse=(function(){
     var anchor=opt.anchor||"center";
     var panel=opt.panel||null;
     var onPick=opt.onPick||null;
+    var L=words(opt.i18n);
+    /* the family as it is written on screen; the key underneath never moves */
+    function famName(f){ return L.fam[f]||f; }
 
     /* ---------- three suns, fixed, each in its own third of the sky ---------- */
     var R=210, FR=R*0.72;
@@ -347,7 +411,7 @@ window.HCUniverse=(function(){
             ctx.fillStyle=rgba(LIGHT?mixCol(ob.col,[19,19,15],0.35):ob.col,fon?1:(hotFams[ob.fam]?0.85:(active?0.26:0.7)));
             ctx.font="600 "+Math.round(15*Math.min(1.3,p.s))+"px Inter, system-ui, sans-serif";
             ctx.textAlign="center"; ctx.textBaseline="top";
-            ctx.fillText(ob.fam,p.x,p.y+fr*1.6);
+            ctx.fillText(famName(ob.fam),p.x,p.y+fr*1.6);
           }
         }else if(dr.k==="sun"){
           /* a world: a flat solid body in the colour of its sun, wearing its
@@ -384,7 +448,7 @@ window.HCUniverse=(function(){
             ctx.fillStyle="rgba("+FG+","+(isOn?0.95:(full?0.75:(spotlight?0.2:0.32)))+")";
             ctx.font="600 "+Math.round(12*Math.min(1.25,p.s))+"px Inter, system-ui, sans-serif";
             ctx.textAlign="center"; ctx.textBaseline="top";
-            ctx.fillText(TYPES[ob.key].name.replace("The ",""), p.x, p.y+r+8);
+            ctx.fillText(cut(TYPES[ob.key].name,L.article), p.x, p.y+r+8);
           }
         }else{
           /* the 72 sit low, like specks of light, until one is pointed at */
@@ -450,24 +514,27 @@ window.HCUniverse=(function(){
         panel.ico.className="p-ico multi";
         panel.ico.innerHTML=mem.map(function(k){return iconSVG(k);}).join("");
         panel.fam.style.display="none";
-        panel.name.textContent=a.fam;
+        panel.name.textContent=famName(a.fam);
         panel.name.style.color=famColorCss(a.fam);
-        panel.sub.innerHTML='one of the three families';
-        panel.body.innerHTML='Pull from this family and you '+FAM_DESC[a.fam].replace(/^you /,"")+'. '+
-          (NUMWORD[mem.length]||mem.length).toLowerCase()+' profiles run their orbits around it: '+listNames(mem)+'.';
+        panel.sub.innerHTML=L.famSub;
+        panel.body.innerHTML=fill(L.famBody,{
+          desc:cut(FAM_DESC[a.fam],L.descLead),
+          n:(L.numbers[mem.length]||mem.length),
+          profiles:listNames(mem,L)
+        });
       }else{
         panel.ico.className="p-ico";
         panel.ico.innerHTML=iconSVG(a.lead);
         panel.fam.style.display="";
-        panel.fam.textContent=a.fam;
+        panel.fam.textContent=famName(a.fam);
         panel.fam.style.color=famColorCss(a.fam);
         panel.name.textContent=TYPES[a.lead].name;
         panel.name.style.color="";
         if(a.kind==="node"){
-          panel.sub.innerHTML='shaded by the <b>'+TYPES[a.under].name.replace("The ","")+'</b>';
+          panel.sub.innerHTML=fill(L.nodeSub,{profile:cut(TYPES[a.under].name,L.article)});
           panel.body.innerHTML=INFLECT[a.lead][a.under];
         }else{
-          panel.sub.innerHTML='a profile orbiting the '+a.fam+' family';
+          panel.sub.innerHTML=fill(L.sunSub,{family:famName(a.fam)});
           panel.body.innerHTML=TYPES[a.lead].one+' '+TYPES[a.lead].sig;
         }
       }
@@ -545,7 +612,7 @@ window.HCUniverse=(function(){
       cv.addEventListener("pointercancel",endPtr);
       if(wheelZoom) cv.addEventListener("wheel",onWheel,{passive:false});
       if(opt.hint && matchMedia("(pointer:coarse)").matches){
-        opt.hint.innerHTML="Drag to orbit &middot; pinch to zoom &middot; tap to hold";
+        opt.hint.innerHTML=L.touchHint;
       }
     }else{
       cv.style.pointerEvents="none";

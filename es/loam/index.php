@@ -1,0 +1,459 @@
+<?php $HC_LANG='es'; $HC_EN='/loam/'; $HC_ES='/es/loam/'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TBPM9KTK');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loam · Siembra cualquier cosa. Cultiva ideas.</title>
+<link rel="icon" href="/loam/assets/loam-icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/loam/assets/loam-icon.png">
+<meta name="description" content="Un banco de semillas para tus ideas que no acaba en trastero. Captura cualquier fragmento sin ordenar nada. Cuando te atascas, tu propia tierra te lo devuelve en preguntas, nunca en respuestas. Una herramienta de Hypercreative.">
+<?php echo hc_hreflang(); ?>
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:site_name" content="Hypercreative">
+<meta property="og:locale" content="es_ES">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Loam · Siembra cualquier cosa. Cultiva ideas.">
+<meta property="og:description" content="Un banco de semillas para tus ideas que no acaba en trastero. Captura lo que sea sin ordenar nada. Cuando un problema real necesita una idea, tu propia tierra te la devuelve en preguntas, nunca en respuestas.">
+<meta property="og:url" content="https://hypercreativemethod.com/es/loam/">
+<meta property="og:image" content="https://hypercreativemethod.com/loam/assets/og-loam.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Loam · Siembra cualquier cosa. Cultiva ideas.">
+<meta name="twitter:description" content="Un banco de semillas para tus ideas. Tu propia tierra, devuelta en preguntas, nunca en respuestas.">
+<meta name="twitter:image" content="https://hypercreativemethod.com/loam/assets/og-loam.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"SoftwareApplication","@id":"https://hypercreativemethod.com/loam/#app","name":"Loam","applicationCategory":"ProductivityApplication","operatingSystem":"Web","url":"https://loam.hypercreativemethod.com","inLanguage":"es","description":"Un banco de semillas para las ideas que no acaba en trastero. Captura cualquier fragmento sin ordenar nada. Cuando un problema real necesita una idea, tu propio material vuelve como preguntas puente, nunca como respuestas.","isPartOf":{"@id":"https://hypercreativemethod.com/#org"},"publisher":{"@type":"Organization","name":"Hypercreative"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://hypercreativemethod.com/es/"},{"@type":"ListItem","position":2,"name":"Loam","item":"https://hypercreativemethod.com/es/loam/"}]}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F1EA; --paper-2:#FFFFFF; --tilled:#E7E1D4;
+    --ink:#13130F; --ink-soft:#4a4740; --ink-mute:#9A988F; --humus:#6B5E49;
+    --line:rgba(19,19,15,.12); --line-soft:rgba(19,19,15,.07);
+    --red:#E0463C; --red-dim:rgba(224,70,60,.12);
+    --maxw:1120px; --ease:cubic-bezier(.22,.61,.36,1);
+    --f:"Inter",system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--paper);color:var(--ink);font-family:var(--f);font-weight:300;
+    font-size:clamp(16px,1.05vw,18px);line-height:1.7;letter-spacing:.01em;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--red-dim)}
+  .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .j{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+  .lbl{font-family:var(--f);font-weight:500;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-mute)}
+
+  /* nav */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+    padding:1.35rem clamp(1.2rem,4vw,3rem);transition:background .5s var(--ease),border-color .5s var(--ease),padding .5s var(--ease);border-bottom:1px solid transparent}
+  .nav.scrolled{background:rgba(244,241,234,.82);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);border-bottom-color:var(--line);padding-top:.95rem;padding-bottom:.95rem}
+  .brand{display:inline-flex;align-items:baseline;gap:.5ch;font-weight:600;font-size:1.2rem;letter-spacing:-.02em}
+  .brand .s{color:var(--red)}
+  .brand .end{font-weight:400;font-size:.66rem;letter-spacing:.06em;color:var(--ink-mute);margin-left:.7ch;align-self:center}
+  @media(max-width:600px){.brand .end{display:none}}
+  .nav-r{display:flex;align-items:center;gap:clamp(1rem,2.6vw,1.8rem)}
+  .nav-link{font-weight:500;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);position:relative;transition:color .3s var(--ease)}
+  .nav-link:hover{color:var(--ink)}
+  .nav-link::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--red);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+  .nav-link:hover::after{transform:scaleX(1);transform-origin:left}
+  .nav-lang{display:inline-flex;align-items:center;gap:.45em;font-weight:500;font-size:.72rem;letter-spacing:.14em;color:var(--ink-mute)}
+  .nav-lang a{color:var(--ink-mute);transition:color .3s var(--ease)}
+  .nav-lang a:hover{color:var(--ink)}
+  .nav-lang a::after{display:none}
+  .nav-lang .on{color:var(--ink-soft);font-weight:500}
+  .nav-lang i{font-style:normal;opacity:.4}
+  .btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--f);font-weight:500;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
+    padding:.85rem 1.4rem;border:1px solid var(--line);border-radius:2px;cursor:pointer;transition:.3s var(--ease);white-space:nowrap}
+  .btn-primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn-primary:hover{background:var(--red);border-color:var(--red);transform:translateY(-1px)}
+  .btn-ghost{color:var(--ink-soft)}
+  .btn-ghost:hover{color:var(--ink);border-color:var(--red)}
+  .nav .btn{padding:.6rem 1rem}
+
+  /* hero */
+  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;
+    padding:8.5rem clamp(1.2rem,4vw,3rem) clamp(3rem,7vh,5rem)}
+  #ground{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+  .hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(60% 55% at 50% 40%,rgba(244,241,234,.35),rgba(244,241,234,.72) 72%,var(--paper) 92%)}
+  .hero-inner{position:relative;z-index:2;max-width:var(--maxw);width:100%;margin:0 auto;text-align:center}
+  .hero-logo{font-weight:600;font-size:clamp(3.8rem,12vw,8.6rem);line-height:1;letter-spacing:-.04em}
+  .hero-logo .s{color:var(--red)}
+  .hero-claim{margin:1.2rem auto 0;font-weight:300;font-size:clamp(1.5rem,3.6vw,2.5rem);letter-spacing:-.015em;color:var(--ink)}
+  .hero-sub{margin:1.35rem auto 0;max-width:44ch;color:var(--ink);font-size:clamp(1.06rem,1.6vw,1.3rem)}
+  .hero-how{margin:.85rem auto 0;max-width:50ch;color:var(--ink-soft);font-size:clamp(.98rem,1.3vw,1.08rem)}
+  .actions{display:flex;gap:12px;justify-content:center;margin-top:2.1rem;flex-wrap:wrap}
+  .cta-note{margin:1rem auto 0;font-size:.8rem;color:var(--ink-mute);text-align:center}
+
+  /* connector panel */
+  .conx{position:relative;z-index:2;margin:clamp(3rem,7vh,4.6rem) auto 0;max-width:540px;width:100%;
+    background:rgba(255,255,255,.5);border:1px solid var(--line);border-radius:6px;padding:clamp(1.5rem,3.5vw,2.3rem);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+  .conx-lbl{display:block;text-align:center;margin-bottom:1.5rem}
+  .cg{text-align:center}
+  .cg-row{display:flex;gap:1rem}
+  .cg-cell{flex:1 1 0;min-width:0;display:flex;justify-content:center}
+  .cg-chip{display:inline-block;max-width:100%;background:var(--paper-2);border:1px solid var(--line);border-radius:30px;padding:.55rem 1.05rem;font-size:.86rem;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 1px 2px rgba(19,19,15,.05)}
+  .cg-wire{position:relative;height:3.4rem;margin-top:-1px}
+  .cg-wire svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  .cg-path{fill:none;stroke:rgba(19,19,15,.22);stroke-width:1.2;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:120;stroke-dashoffset:120;transition:stroke-dashoffset 1s var(--ease) .3s}
+  .conx.on .cg-path{stroke-dashoffset:0}
+  .cg-seed{position:absolute;left:50%;bottom:-5px;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--red);opacity:0;transform:scale(0);transition:opacity .45s var(--ease) 1s,transform .45s var(--ease) 1s;z-index:2}
+  .cg-seed::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid var(--red);opacity:0}
+  .conx.on .cg-seed{opacity:1;transform:scale(1)}
+  .conx.on .cg-seed::after{animation:seedHalo 3.2s var(--ease) 1.6s infinite}
+  @keyframes seedHalo{0%{transform:scale(.55);opacity:.55}70%{opacity:0}100%{transform:scale(2);opacity:0}}
+  .cg-q{font-weight:300;font-size:clamp(1.2rem,2.6vw,1.6rem);line-height:1.28;letter-spacing:-.015em;color:var(--ink);margin:1.9rem auto 0;max-width:26ch;
+    opacity:0;transform:translateY(8px);transition:opacity .7s var(--ease) 1.2s,transform .7s var(--ease) 1.2s}
+  .conx.on .cg-q{opacity:1;transform:none}
+  .cg-cap{font-size:.82rem;color:var(--ink-mute);margin-top:.95rem;opacity:0;transition:opacity .7s var(--ease) 1.5s}
+  .conx.on .cg-cap{opacity:1}
+  @media(max-width:520px){.cg-chip{font-size:.78rem;padding:.5rem .85rem;white-space:normal}.cg-q{font-size:1.15rem}}
+
+  /* sections */
+  section{position:relative;z-index:1}
+  .band{max-width:var(--maxw);margin:0 auto;padding:clamp(4rem,9vh,7rem) clamp(1.2rem,4vw,3rem)}
+  .lede{font-weight:300;font-size:clamp(1.9rem,5vw,3.7rem);line-height:1.06;letter-spacing:-.02em;max-width:20ch}
+  .lede.center{margin:0 auto;text-align:center;max-width:24ch}
+  .sub{color:var(--ink-soft);margin-top:1.1rem;max-width:54ch;font-size:clamp(1rem,1.4vw,1.15rem)}
+  .sub.center{margin-left:auto;margin-right:auto;text-align:center}
+
+  /* seed example cards */
+  .cards{margin-top:clamp(2.4rem,6vh,3.6rem);display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:720px){.cards{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line);border-radius:4px;background:var(--paper-2);padding:1.6rem 1.5rem;transition:border-color .25s var(--ease),transform .25s var(--ease)}
+  .card:hover{border-color:var(--red);transform:translateY(-2px)}
+  .card .k{font-weight:500;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-mute)}
+  .card .t{font-weight:300;font-size:1rem;line-height:1.35;color:var(--ink-soft);margin-top:.4rem}
+  /* example thumbnails */
+  .thumb{aspect-ratio:16/11;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;margin-bottom:1.15rem;text-align:left;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(19,19,15,.05)}
+  .th-note{padding:.95rem 1rem}
+  .th-note-title{font-size:.9rem;font-weight:600;color:var(--ink)}
+  .th-note-body{font-size:.96rem;line-height:1.4;color:var(--ink-soft);margin-top:.35rem;flex:1}
+  .th-note-meta{font-size:.62rem;letter-spacing:.04em;color:var(--ink-mute)}
+  .th-link{padding:.9rem 1rem}
+  .th-link-row{display:flex;align-items:center;gap:.45rem}
+  .th-fav{width:13px;height:13px;border-radius:3px;background:#6aa84f;flex:none}
+  .th-host{font-size:.66rem;color:var(--ink-mute)}
+  .th-link-a{color:#1a56db;text-decoration:underline;text-underline-offset:2px;font-size:.92rem;line-height:1.32;font-weight:500;margin-top:.45rem;display:block}
+  .th-link-desc{font-size:.78rem;line-height:1.45;color:var(--ink-soft);margin-top:.4rem;flex:1}
+  .th-shot{padding:0}
+  .th-bar{display:flex;align-items:center;gap:5px;padding:.55rem .8rem;border-bottom:1px solid var(--line);background:#faf9f6}
+  .th-bar .dot{width:8px;height:8px;border-radius:50%;background:var(--tilled)}
+  .th-url{margin-left:.55rem;font-size:.58rem;color:var(--ink-mute);background:#fff;border:1px solid var(--line);border-radius:20px;padding:.1rem .55rem}
+  .th-shot-body{padding:.85rem .95rem;flex:1}
+  .th-shot-title{font-size:.95rem;font-weight:600;color:var(--ink);line-height:1.3}
+  .th-shot-text{font-size:.8rem;line-height:1.5;color:var(--ink-soft);margin-top:.4rem}
+  .th-shot-text mark{background:rgba(224,70,60,.16);color:var(--ink);padding:0 .12em;border-radius:2px}
+
+  /* quiet band (why / close) */
+  .quiet{background:var(--tilled);border-block:1px solid var(--line)}
+  .quiet-in{max-width:var(--maxw);margin:0 auto;padding:clamp(4.5rem,11vh,8rem) clamp(1.2rem,4vw,3rem);text-align:center}
+  .quiet .h{font-weight:300;font-size:clamp(1.8rem,4.6vw,3.2rem);line-height:1.12;letter-spacing:-.02em;max-width:24ch;margin:0 auto}
+  .quiet .q{font-weight:300;font-style:italic;color:var(--ink-soft);font-size:clamp(1.05rem,1.7vw,1.3rem);max-width:46ch;margin:1.5rem auto 0}
+  .quiet .cite{display:block;margin-top:1.4rem;font-weight:500;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
+
+  /* steps */
+  .steps{margin-top:clamp(2.6rem,6vh,4rem);display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+  .step{padding:2.1rem clamp(1.2rem,2.4vw,1.9rem) 2.4rem;border-bottom:1px solid var(--line);border-left:1px solid var(--line)}
+  .step:first-child{border-left:0}
+  @media(max-width:760px){.step{border-left:0}}
+  .step .n{font-weight:300;font-size:2rem;line-height:1;color:var(--ink-mute)}
+  .step .n b{color:var(--red);font-weight:300}
+  .step .st{font-weight:500;font-size:1.3rem;letter-spacing:-.01em;margin:.9rem 0 .6rem}
+  .step .sd{color:var(--ink-soft);font-size:.98rem}
+
+  /* connector diagram (differential) */
+  .diff{text-align:center}
+  .nf{margin:clamp(2.6rem,6vh,4rem) auto 0;max-width:640px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(1rem,4vw,2.6rem)}
+  @media(max-width:560px){.nf{grid-template-columns:1fr;gap:1.4rem}}
+  .nf-col{display:flex;flex-direction:column;gap:8px}
+  .nf-col .lbl{margin-bottom:.4rem}
+  .nf .chip2{background:var(--paper-2);border:1px solid var(--line);border-radius:30px;padding:.5rem .9rem;font-size:.82rem;color:var(--ink-soft)}
+  .nf-mid{display:grid;place-items:center;gap:.6rem}
+  .nf-seed{width:14px;height:14px;border-radius:50%;background:var(--red)}
+  .nf-mid .m{font-size:.78rem;color:var(--ink-mute);max-width:14ch;line-height:1.3}
+  @media(max-width:560px){.nf-mid{padding:.4rem 0}}
+
+  /* prompt handoff card */
+  .prompt-card{margin:clamp(2.4rem,6vh,3.6rem) auto 0;max-width:620px;border:1px solid var(--line);border-radius:6px;background:var(--paper-2);padding:clamp(1.3rem,3vw,1.8rem)}
+  .pc-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line-soft);padding-bottom:.8rem;margin-bottom:1.1rem}
+  .pc-copy{font-weight:500;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);border:1px solid var(--line);border-radius:2px;padding:.4rem .85rem}
+  .pc-line{color:var(--ink-mute);font-size:.9rem;margin-top:.6rem}
+  .pc-quote{color:var(--ink);font-size:1.05rem;margin:.35rem 0 .2rem}
+  .pc-seeds{list-style:none;margin:.5rem 0 0;padding:0}
+  .pc-seeds li{position:relative;padding-left:1.15rem;color:var(--ink-soft);font-size:.95rem;margin-top:.45rem}
+  .pc-seeds li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--ink-mute)}
+  .pc-seeds li:first-child::before{background:var(--red)}
+
+  /* advantages */
+  .adv{margin-top:clamp(2.6rem,6vh,4rem);display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  @media(max-width:820px){.adv{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.adv{grid-template-columns:1fr}}
+  .a{padding:1.7rem 1.6rem 1.9rem;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
+  .a .at{font-weight:500;font-size:1.12rem;letter-spacing:-.01em}
+  .a .ad{color:var(--ink-soft);font-size:.95rem;margin-top:.5rem}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:clamp(3rem,7vh,4.2rem) clamp(1.2rem,4vw,3rem) 2.4rem}
+  .foot{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+  .foot .brand{font-size:1.05rem}
+  .foot-r{display:flex;gap:1.4rem;align-items:center;font-weight:500;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-mute)}
+  .foot-r a:hover{color:var(--ink)}
+  .fine{max-width:var(--maxw);margin:1.4rem auto 0;font-size:.7rem;letter-spacing:.02em;color:var(--ink-mute)}
+
+  /* reveals */
+  .reveal{opacity:0;transform:translateY(20px);filter:blur(5px);transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s),filter .9s var(--ease) var(--d,0s)}
+  .reveal.in{opacity:1;transform:none;filter:blur(0)}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;filter:none;transition:none}
+    .conx .cg-path{stroke-dashoffset:0}
+    .conx .cg-seed{opacity:1;transform:scale(1)}
+    .conx .cg-seed::after{animation:none}
+    .cg-q{opacity:1;transform:none}
+    .cg-cap{opacity:1}
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBPM9KTK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top">Loam<span class="s">.</span><span class="end">una herramienta de Hypercreative</span></a>
+  <nav class="nav-r" aria-label="Principal">
+    <a class="nav-link" href="https://loam.hypercreativemethod.com/demo">Demo</a>
+    <a class="btn btn-primary" href="https://loam.hypercreativemethod.com">Abrir Loam</a>
+    <?php echo hc_lang_switch(); ?>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <canvas id="ground" aria-hidden="true"></canvas>
+  <div class="hero-scrim"></div>
+  <div class="hero-inner">
+    <h1 class="hero-logo reveal">Loam<span class="s">.</span><span class="sr-only"> Un banco de semillas para tus ideas. Siembra cualquier cosa, cultiva ideas.</span></h1>
+    <p class="hero-claim reveal" style="--d:.1s">Siembra cualquier cosa. Cultiva ideas.</p>
+    <p class="hero-sub reveal" style="--d:.16s">Una app privada para esas medias ideas que se te pierden por el camino.</p>
+    <p class="hero-how reveal" style="--d:.22s">Guarda cualquier pensamiento, enlace o foto en un toque, sin ordenar nada. Cuando te atascas, Loam te devuelve tu propio material y te hace la pregunta que lo desbloquea.</p>
+    <div class="actions reveal" style="--d:.28s">
+      <a class="btn btn-primary" href="https://loam.hypercreativemethod.com">Abrir Loam</a>
+      <a class="btn btn-ghost" href="https://loam.hypercreativemethod.com/demo">Ver la demo en directo</a>
+    </div>
+    <p class="cta-note reveal" style="--d:.3s">Gratis. Se abre en tu navegador, no hay nada que descargar.</p>
+
+    <div class="conx reveal" id="conx" style="--d:.32s" aria-label="Cómo funciona el conector">
+      <span class="conx-lbl lbl">dos cosas que guardaste</span>
+      <div class="cg">
+        <div class="cg-row">
+          <div class="cg-cell"><span class="cg-chip">la queja de un cliente</span></div>
+          <div class="cg-cell"><span class="cg-chip">foto de un andamio</span></div>
+        </div>
+        <div class="cg-wire">
+          <svg viewBox="0 0 100 46" preserveAspectRatio="none" aria-hidden="true">
+            <path class="cg-path" d="M25,1 C25,26 50,20 50,45"/>
+            <path class="cg-path" d="M75,1 C75,26 50,20 50,45"/>
+          </svg>
+          <span class="cg-seed" aria-hidden="true"></span>
+        </div>
+        <p class="cg-q">¿Qué construirías si la queja fuera un muro de carga?</p>
+        <p class="cg-cap">Una pregunta que conecta dos de tus notas. La idea la haces tú.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="what">
+  <h2 class="lede reveal">Un solo sitio para cada idea que acabarías perdiendo.</h2>
+  <p class="sub j reveal" style="--d:.08s">Una frase que te gustó. Un enlace que merece la pena guardar. La foto de una página. Una nota de voz en el coche. Suéltalo en un toque y no vuelvas a ordenarlo nunca.</p>
+  <div class="cards">
+    <div class="card reveal">
+      <div class="thumb th-note">
+        <div class="th-note-title">Idea</div>
+        <div class="th-note-body">La gente no compra taladros, compra agujeros.</div>
+        <div class="th-note-meta">Ayer, 9:41</div>
+      </div>
+      <span class="k">Nota</span><p class="t">Una frase que te gustó.</p>
+    </div>
+    <div class="card reveal" style="--d:.08s">
+      <div class="thumb th-link">
+        <div class="th-link-row"><span class="th-fav"></span><span class="th-host">blog.duolingo.com</span></div>
+        <a class="th-link-a">Cómo usa Duolingo las rachas para que los usuarios vuelvan</a>
+        <p class="th-link-desc">Rachas, recordatorios y aversión a la pérdida como mecánicas de retención.</p>
+      </div>
+      <span class="k">Enlace</span><p class="t">Un enlace que merece la pena guardar.</p>
+    </div>
+    <div class="card reveal" style="--d:.16s">
+      <div class="thumb th-shot">
+        <div class="th-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="th-url">read.work</span></div>
+        <div class="th-shot-body">
+          <div class="th-shot-title">Las mejores interfaces desaparecen</div>
+          <p class="th-shot-text">El buen diseño se aparta. <mark>Cuando funciona, dejas de verlo.</mark></p>
+        </div>
+      </div>
+      <span class="k">Foto</span><p class="t">Una página que fotografiaste, leída con OCR.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quiet" id="why">
+  <div class="quiet-in">
+    <h2 class="h reveal">Tus mejores ideas llegan en el peor momento y se esfuman.</h2>
+    <p class="q reveal" style="--d:.1s">"Tu cabeza no guarda la idea que no capturaste. Pasa página." Loam es el sitio donde cazarlas todas antes de que se vayan.</p>
+    <span class="cite reveal" style="--d:.18s">Del método Hypercreative sobre crear bajo presión</span>
+  </div>
+</section>
+
+<section class="band" id="how">
+  <h2 class="lede reveal">Tres movimientos. Nada que organizar.</h2>
+  <div class="steps">
+    <div class="step reveal"><div class="n"><b>01</b> Guarda</div><div class="st">Échalo dentro</div><p class="sd j">Cualquier fragmento entra en un toque. Sin etiquetas, sin carpetas, nunca. Capturar tiene que costar casi nada para que no dejes de hacerlo.</p></div>
+    <div class="step reveal" style="--d:.1s"><div class="n"><b>02</b> Espera</div><div class="st">Loam lo lee</div><p class="sd j">En segundo plano, una foto pasa por OCR, una nota de voz se transcribe, un enlace se resume. Tú no haces nada. No hay nada que ordenar.</p></div>
+    <div class="step reveal" style="--d:.2s"><div class="n"><b>03</b> Conecta</div><div class="st">Desatáscate</div><p class="sd j">Plantea un problema real. Loam te devuelve tus propias notas, las cercanas y las lejanas, cada una convertida en una pregunta. Incluida alguna que habías olvidado.</p></div>
+  </div>
+</section>
+
+<section class="band diff" id="connector">
+  <h2 class="lede center reveal">No es una máquina de respuestas. Te devuelve tus propias ideas.</h2>
+  <p class="sub center j reveal" style="--d:.08s">Escribe el problema en el que estás atascado. Loam saca tus propias notas guardadas, unas cercanas al problema y otras lejanas, y las convierte en una pregunta que las conecta. Nunca escribe la idea por ti: el hallazgo sigue siendo tuyo.</p>
+  <div class="nf reveal" style="--d:.14s">
+    <div class="nf-col">
+      <span class="lbl">Cerca de tu problema</span>
+      <span class="chip2">la queja de un cliente</span>
+      <span class="chip2">la propuesta del mes pasado</span>
+    </div>
+    <div class="nf-mid">
+      <span class="nf-seed"></span>
+      <span class="m">una pregunta puente</span>
+    </div>
+    <div class="nf-col">
+      <span class="lbl">Lejos de él</span>
+      <span class="chip2">foto de un andamio</span>
+      <span class="chip2">una frase de una película</span>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="handoff">
+  <h2 class="lede reveal">Loam no lo resuelve. Lo resuelve tu IA.</h2>
+  <p class="sub j reveal" style="--d:.08s">Para resolver ya está la IA. Por eso, en un toque, Loam monta un prompt con tus semillas relacionadas dentro, listo para pegar en ChatGPT, Claude o lo que uses. La respuesta vuelve construida con tus propias ideas, y empiezas la conversación ahí, no en la página en blanco.</p>
+  <div class="prompt-card reveal" style="--d:.14s">
+    <div class="pc-top">
+      <span class="lbl">Prompt para tu IA</span>
+      <span class="pc-copy">Copiar</span>
+    </div>
+    <p class="pc-line">Eres mi compañero de pensamiento. Mi problema:</p>
+    <p class="pc-quote">"¿Cómo consigo que los usuarios nuevos se queden?"</p>
+    <p class="pc-line">Construido con mi propio material guardado:</p>
+    <ul class="pc-seeds">
+      <li>La gente no compra taladros, compra agujeros.</li>
+      <li>Los juegos enseñan sus reglas sin manual.</li>
+      <li>Origami: una hoja, formas infinitas, cero desperdicio.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="advantages">
+  <h2 class="lede reveal">Hecho para no estorbar.</h2>
+  <p class="sub j reveal" style="--d:.06s">Una app de notas guarda lo que metes y ahí lo deja. Loam es la que te lo devuelve, justo cuando un problema real lo necesita.</p>
+  <div class="adv">
+    <div class="a reveal"><div class="at">Cero fricción</div><p class="ad">Captura en un toque. No ordenas nada, nunca.</p></div>
+    <div class="a reveal" style="--d:.05s"><div class="at">Todo puede ser una semilla</div><p class="ad">Texto, enlaces, fotos, voz, un fichero de notas entero partido en muchas.</p></div>
+    <div class="a reveal" style="--d:.1s"><div class="at">Tu propio material</div><p class="ad">Solo te devuelve lo que le diste, en forma de preguntas.</p></div>
+    <div class="a reveal" style="--d:.15s"><div class="at">La idea sigue siendo tuya</div><p class="ad">Sin respuestas genéricas, sin puntuaciones, sin morralla de IA. Solo tu propio material.</p></div>
+    <div class="a reveal" style="--d:.2s"><div class="at">Privado por defecto</div><p class="ad">Exporta tu banco entero o bórralo todo, cuando quieras.</p></div>
+    <div class="a reveal" style="--d:.25s"><div class="at">Funciona sin conexión</div><p class="ad">Planta una semilla donde sea. Se sincroniza cuando vuelves a tener red.</p></div>
+  </div>
+</section>
+
+<section class="quiet" id="close">
+  <div class="quiet-in">
+    <h2 class="h reveal">No vuelvas a empezar en la página en blanco.</h2>
+    <p class="q reveal" style="--d:.1s">Lo difícil nunca fue tener ideas. Fue tener una preparada cuando toca.</p>
+    <div class="actions reveal" style="--d:.18s;justify-content:center">
+      <a class="btn btn-primary" href="https://loam.hypercreativemethod.com">Abrir Loam</a>
+      <a class="btn btn-ghost" href="https://loam.hypercreativemethod.com/demo">Ver la demo</a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="foot">
+    <a class="brand" href="#top">Loam<span class="s">.</span></a>
+    <div class="foot-r">
+      <a href="https://loam.hypercreativemethod.com">Abrir Loam</a>
+      <a href="/es/">Hypercreative</a>
+    </div>
+  </div>
+  <p class="fine">Loam está hecho por Hypercreative&#8482;, una empresa que entrena a líderes y equipos para crear a demanda. &copy; 2026 Hypercreative.</p>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav */
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>24)},{passive:true});
+
+  /* reveals + connector trigger */
+  var rev=[].slice.call(document.querySelectorAll('.reveal'));
+  function lightConx(){var c=document.getElementById('conx');if(c)c.classList.add('on');}
+  if(reduce||!('IntersectionObserver'in window)){rev.forEach(function(e){e.classList.add('in')});lightConx();}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.16,rootMargin:'0px 0px -8% 0px'});
+    rev.forEach(function(e){io.observe(e)});
+    requestAnimationFrame(function(){setTimeout(lightConx,500)});
+  }
+
+  /* ground: drifting seeds behind the hero (the one red event stays the connector) */
+  var canvas=document.getElementById('ground');
+  if(!canvas) return;
+  var ctx=canvas.getContext('2d'), dpr=Math.min(devicePixelRatio||1,2), W,H, pts=[], sp;
+  function build(){
+    W=canvas.clientWidth; H=canvas.clientHeight;
+    canvas.width=W*dpr; canvas.height=H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    var cols=Math.max(6,Math.min(13,Math.round(W/140))); sp=W/cols;
+    var rows=Math.ceil(H/sp)+1; pts=[];
+    for(var r=0;r<rows;r++)for(var c=0;c<=cols;c++){
+      var gx=c*sp+(sp*0.5), gy=r*sp;
+      var ang=Math.random()*Math.PI*2, mag=sp*(0.16+Math.random()*0.28);
+      pts.push({gx:gx,gy:gy,dx:Math.cos(ang)*mag,dy:Math.sin(ang)*mag,ph:Math.random()*Math.PI*2,spd:0.00018+Math.random()*0.0004});
+    }
+  }
+  addEventListener('resize',build); build();
+  function draw(t){
+    ctx.clearRect(0,0,W,H); var thr=sp*1.35;
+    for(var i=0;i<pts.length;i++){var p=pts[i];
+      p.x=p.gx+p.dx*Math.sin(t*p.spd+p.ph);
+      p.y=p.gy+p.dy*Math.cos(t*p.spd*0.9+p.ph);
+    }
+    for(var a=0;a<pts.length;a++){var pa=pts[a];
+      for(var b=a+1;b<pts.length;b++){var pb=pts[b];
+        var dx=pa.x-pb.x,dy=pa.y-pb.y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<thr){ctx.strokeStyle='rgba(19,19,15,'+((1-d/thr)*0.09).toFixed(3)+')';ctx.lineWidth=0.8;
+          ctx.beginPath();ctx.moveTo(pa.x,pa.y);ctx.lineTo(pb.x,pb.y);ctx.stroke();}
+      }
+    }
+    for(var k=0;k<pts.length;k++){var pp=pts[k];
+      ctx.beginPath();ctx.arc(pp.x,pp.y,1.5,0,6.2832);ctx.fillStyle='rgba(19,19,15,0.30)';ctx.fill();}
+  }
+  if(reduce){draw(0);}
+  else{(function frame(t){draw(t);requestAnimationFrame(frame);})(0);}
+})();
+</script>
+</body>
+</html>

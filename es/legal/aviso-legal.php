@@ -1,4 +1,4 @@
-<?php $HC_LANG='en'; $HC_EN='/legal/cookies'; $HC_ES='/es/legal/cookies'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html><html lang="en"><head>
+<?php $HC_LANG='es'; $HC_EN='/legal/legal-notice'; $HC_ES='/es/legal/aviso-legal'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html><html lang="es"><head>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -6,9 +6,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TBPM9KTK');</script>
 <!-- End Google Tag Manager --><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cookie policy | Hypercreative</title>
-<meta name="description" content="Cookie policy for Hypercreative, the corporate creativity training brand."><?php echo hc_hreflang(); ?><meta name="robots" content="noindex,follow"><meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Cookie policy | Hypercreative"><meta property="og:description" content="Cookie policy for Hypercreative, the corporate creativity training brand."><meta property="og:url" content="https://hypercreativemethod.com/legal/cookies"><meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Cookie policy | Hypercreative"><meta name="twitter:description" content="Cookie policy for Hypercreative, the corporate creativity training brand."><meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="../favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<title>Aviso legal | Hypercreative</title>
+<meta name="description" content="Aviso legal de Hypercreative, la marca de entrenamiento creativo para empresas.">
+<?php echo hc_hreflang(); ?>
+<meta name="robots" content="noindex,follow"><meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="es_ES"><meta property="og:type" content="website"><meta property="og:title" content="Aviso legal | Hypercreative"><meta property="og:description" content="Aviso legal de Hypercreative, la marca de entrenamiento creativo para empresas."><meta property="og:url" content="https://hypercreativemethod.com/es/legal/aviso-legal"><meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Aviso legal | Hypercreative"><meta name="twitter:description" content="Aviso legal de Hypercreative, la marca de entrenamiento creativo para empresas."><meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
@@ -77,33 +79,35 @@ article a{color:var(--ink);text-decoration:underline;text-decoration-color:var(-
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
-<main class="wrap legal"><a class="back" href="../">&#8592; Home</a><h1 class="t" style="margin-top:1.4rem">Cookie policy</h1><article><p><strong>Last updated: 17 June 2026</strong></p>
-<p>This Cookie Policy explains how <strong>Stormridge LLC</strong>, operating under the brand <strong>Hypercreative</strong> (&quot;Hypercreative&quot;, &quot;the Company&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;), uses cookies and similar technology on this website. Read it together with our Privacy Policy.</p>
-<h3>What cookies are</h3>
-<p>A cookie is a small text file a website places on your device when you visit. It lets the site remember your actions and preferences over time, and it helps the site work and improve. We also use similar technology, such as pixels, tags, and local storage. In this Policy, &quot;cookies&quot; covers all of them.</p>
-<h3>Why we use them</h3>
-<p>We keep cookies to a minimum and use them for clear reasons:</p>
+<main class="wrap legal"><a class="back" href="/es/">&#8592; Inicio</a><h1 class="t" style="margin-top:1.4rem">Aviso legal</h1><article><p style="color:var(--mute)">Traducción de cortesía. En caso de discrepancia entre versiones, prevalece la <a href="/legal/legal-notice">versión en inglés</a>.</p>
+<p><strong>Última actualización: 17 de junio de 2026</strong></p>
+<p>Este Aviso legal explica quién gestiona este sitio web y las condiciones básicas bajo las que se pone a disposición. Al usar el sitio web, usted acepta este Aviso, junto con nuestros Términos de uso, nuestra Política de privacidad y nuestra Política de cookies.</p>
+<h3>Quién gestiona este sitio web</h3>
+<p><strong>Stormridge LLC</strong> (&quot;Stormridge&quot;, &quot;Hypercreative&quot;, &quot;la Empresa&quot;, &quot;nosotros&quot;) es propietaria de este sitio web y de la marca Hypercreative, y los gestiona. Es una sociedad de responsabilidad limitada constituida conforme a las leyes del Estado de Wyoming, Estados Unidos, que entrena la creatividad de la dirección y los equipos de las grandes organizaciones.</p>
 <ul>
-<li>To make the website work and stay secure.</li>
-<li>To remember your choices, including your cookie preferences.</li>
-<li>To understand, in aggregate, how the website is used so we can improve it.</li>
+<li><strong>Razón social:</strong> Stormridge LLC</li>
+<li><strong>Tipo de entidad:</strong> Limited Liability Company (Wyoming, USA)</li>
+<li><strong>Número de registro estatal:</strong> 2025-001733636</li>
+<li><strong>Domicilio social:</strong> 30 N Gould St Ste R, Sheridan, WY 82801, United States</li>
 </ul>
-<p>We do not use cookies to build intrusive profiles, and we do not sell data gathered through cookies.</p>
-<h3>The types we use</h3>
-<p><strong>Strictly necessary cookies.</strong> These keep the website running and secure. They support core functions such as page navigation, load balancing, and form submission. The website cannot work properly without them, so they do not require consent.</p>
-<p><strong>Preference cookies.</strong> These remember choices you make, such as your language or your cookie settings, so you do not have to set them again.</p>
-<p><strong>Analytics cookies.</strong> These help us see how visitors find and use the website, which pages they read, and where they run into trouble. The information is used in aggregate to make the website better. Where the law requires it, we set these only after you consent.</p>
-<p><strong>Third party cookies.</strong> Some cookies are set by the providers we use to host, secure, or analyse the website. Those providers process data under their own policies as well as ours. We work only with providers we consider trustworthy.</p>
-<h3>Your choices</h3>
-<p>When you first visit, the cookie banner lets you accept or decline cookies that are not strictly necessary. You can change your choice at any time through the cookie settings on the website.</p>
-<p>You can also manage cookies through your browser. Most browsers let you see what is stored, delete cookies, and block them. Each browser is different, so check the help section of yours. If you block strictly necessary cookies, parts of the website may stop working.</p>
-<h3>Consent</h3>
-<p>Where the law requires consent, we do not set non essential cookies until you give it. Your consent applies until you withdraw it or it expires, after which we will ask again. Withdrawing consent does not affect what was already done while consent was in place.</p>
-<h3>How long cookies last</h3>
-<p>Some cookies are session cookies and disappear when you close your browser. Others are persistent and stay for a set period or until you delete them. The duration depends on the cookie and its purpose.</p>
-<h3>Changes to this Policy</h3>
-<p>We may update this Cookie Policy as the website or the technology changes. The current version is always the one published here, with its date at the top.</p>
-<h3>Contact</h3>
-<p>For any question about cookies on the website, reach us through the contact form.</p></article></main><?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
+<p>La Empresa opera bajo la marca <strong>Hypercreative</strong>. &quot;Hypercreative&quot; es una marca de Stormridge LLC. Detrás del método está su fundador, Alfonso González Aguilar, a quien se puede encontrar pero que no es el centro. El trabajo habla primero.</p>
+<p>Para cualquier asunto relacionado con el sitio web o con la Empresa, el canal de contacto es el formulario de contacto del sitio web. Encauzamos las consultas por el formulario para que lleguen a las personas adecuadas y se atiendan como corresponde.</p>
+<h3>Qué es este sitio web</h3>
+<p>El sitio web presenta Hypercreative y el Método Hypercreative, nuestro punto de vista de que la creatividad es el nuevo activo de negocio, de que se entrena y de que la habilidad de verdad es la creatividad bajo presión. Existe para informar a organizaciones cualificadas y para que puedan ponerse en contacto con nosotros. Es un canal informativo y de contacto, no una tienda, y nada de lo que hay en él constituye una oferta vinculante de servicios. Toda colaboración se acuerda por separado y por escrito.</p>
+<h3>Propiedad intelectual</h3>
+<p>Todo el contenido del sitio web pertenece a Stormridge LLC o a quienes nos lo licencian. Esto incluye el nombre Hypercreative, el término Hypercreativity, el Método Hypercreative, la firma de marca &quot;Entrenamiento creativo para líderes&quot;, y todos los textos, el diseño, la estructura, los gráficos y demás materiales, junto con la metodología, los marcos de trabajo y las técnicas propias que aquí se presentan o se mencionan. El nombre y la marca Hypercreative son marcas de Stormridge LLC.</p>
+<p>Están protegidos por la legislación de propiedad intelectual y de marcas. Usted puede consultar el sitio web y conservar copias para su propia consulta interna y no comercial. No puede reproducir, distribuir ni modificar nada de ello, ni usarlo para construir, comercializar o prestar una oferta competidora, ni presentar nuestro método o cualquier parte de él como propio. Todos los derechos no concedidos expresamente quedan reservados.</p>
+<h3>Condiciones de uso</h3>
+<p>Usted se compromete a usar el sitio web de forma lícita y de buena fe, a no hacer un uso indebido de él, a no interferir en su funcionamiento y a no intentar acceder a él sin autorización. Podemos restringir o retirar el acceso cuando se haga un uso indebido del sitio web.</p>
+<h3>Responsabilidad</h3>
+<p>Cuidamos el sitio web y su contenido, pero lo ofrecemos &quot;tal cual&quot;. En la máxima medida permitida por la ley, la Empresa no responde de la exactitud, la integridad ni la disponibilidad del sitio web, ni de ninguna pérdida derivada de su uso o de cualquier sitio de terceros al que se llegue a través de un enlace. Los enlaces a sitios de terceros se facilitan por comodidad y no implican respaldo alguno.</p>
+<h3>Privacidad y cookies</h3>
+<p>Cómo tratamos los datos personales y las cookies se explica en nuestra Política de privacidad y en nuestra Política de cookies. Ambas forman parte de las condiciones bajo las que se ofrece el sitio web.</p>
+<h3>Ley aplicable</h3>
+<p>Este Aviso legal y el uso del sitio web se rigen por las leyes del Estado de Wyoming, Estados Unidos, sin atender a sus normas sobre conflicto de leyes. Cualquier controversia se somete a los tribunales competentes del Estado de Wyoming, sin perjuicio de las protecciones imperativas que puedan resultarle de aplicación.</p>
+<h3>Cambios</h3>
+<p>Podemos actualizar este Aviso legal cada cierto tiempo. La versión vigente es siempre la publicada aquí, con su fecha al principio.</p>
+<h3>Contacto</h3>
+<p>Para hablar con nosotros sobre cualquier cosa de este sitio web, use el formulario de contacto. Es la forma correcta de empezar una conversación con Hypercreative.</p></article></main><?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
 
 </body></html>

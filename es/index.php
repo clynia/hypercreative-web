@@ -1,5 +1,5 @@
-<?php $HC_LANG='en'; $HC_EN='/'; $HC_ES='/es/'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html>
-<html lang="en">
+<?php $HC_LANG='es'; $HC_EN='/'; $HC_ES='/es/'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html>
+<html lang="es">
 <head>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,27 +10,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hypercreative: Creativity training for leadership</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="description" content="Hypercreative is creativity training for leadership. Keynotes and tailor-made programs that teach leaders and teams to create useful ideas on demand.">
+<title>Hypercreative: entrenamiento creativo para líderes</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Hypercreative es entrenamiento creativo para líderes. Keynotes y programas a medida que enseñan a directivos y equipos a crear ideas útiles a demanda.">
 <?php echo hc_hreflang(); ?>
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:site_name" content="Hypercreative">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="es_ES">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hypercreative: Creativity training for leadership">
-<meta property="og:description" content="Corporate creativity training and keynotes that teach leadership teams to produce useful, original work on demand, when the deadline is real and the rules keep changing.">
-<meta property="og:url" content="https://hypercreativemethod.com/">
+<meta property="og:title" content="Hypercreative: entrenamiento creativo para líderes">
+<meta property="og:description" content="Entrenamiento creativo para empresas y keynotes que enseñan a los equipos directivos a producir trabajo útil y original a demanda, con un plazo real y las reglas cambiando por el camino.">
+<meta property="og:url" content="https://hypercreativemethod.com/es/">
 <meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hypercreative: Creativity training for leadership">
-<meta name="twitter:description" content="Corporate creativity training and keynotes that teach leaders and teams to create useful ideas on demand.">
+<meta name="twitter:title" content="Hypercreative: entrenamiento creativo para líderes">
+<meta name="twitter:description" content="Entrenamiento creativo para empresas y keynotes que enseñan a directivos y equipos a crear ideas útiles a demanda.">
 <meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Organization","@id":"https://hypercreativemethod.com/#org","name":"Hypercreative","url":"https://hypercreativemethod.com/","image":"https://hypercreativemethod.com/assets/og-default.png","slogan":"Creativity training for leadership","description":"Corporate creativity training and keynotes that teach leaders and teams to create useful, original work on demand.","founder":{"@id":"https://hypercreativemethod.com/#alfonso"}},
-{"@type":"WebSite","@id":"https://hypercreativemethod.com/#website","url":"https://hypercreativemethod.com/","name":"Hypercreative","publisher":{"@id":"https://hypercreativemethod.com/#org"},"inLanguage":"en"},
-{"@type":"Person","@id":"https://hypercreativemethod.com/#alfonso","name":"Alfonso González Aguilar","jobTitle":"Founder and keynote speaker","worksFor":{"@id":"https://hypercreativemethod.com/#org"},"description":"Founder of Hypercreative. Trains corporate leadership and teams to create on demand, drawing on years directing high-stakes film and production teams."}
+{"@type":"Organization","@id":"https://hypercreativemethod.com/#org","name":"Hypercreative","url":"https://hypercreativemethod.com/","image":"https://hypercreativemethod.com/assets/og-default.png","slogan":"Entrenamiento creativo para líderes","description":"Entrenamiento creativo para empresas y keynotes que enseñan a directivos y equipos a crear trabajo útil y original a demanda.","founder":{"@id":"https://hypercreativemethod.com/#alfonso"}},
+{"@type":"WebSite","@id":"https://hypercreativemethod.com/#website","url":"https://hypercreativemethod.com/","name":"Hypercreative","publisher":{"@id":"https://hypercreativemethod.com/#org"},"inLanguage":"es"},
+{"@type":"Person","@id":"https://hypercreativemethod.com/#alfonso","name":"Alfonso González Aguilar","jobTitle":"Fundador y conferenciante","worksFor":{"@id":"https://hypercreativemethod.com/#org"},"description":"Fundador de Hypercreative. Entrena a equipos directivos para crear a demanda, con años dirigiendo equipos de cine y producción donde el error se paga."}
 ]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -272,18 +272,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="nav" id="nav">
   <a class="brand" href="#top">Hypercreative<span class="bp">.</span></a>
-  <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
-  <nav class="nav-links" id="navLinks" aria-label="Primary">
-    <a href="/#method">The method</a>
-    <a href="/what-we-do/">What we do</a>
-    <a class="nav-hot" href="/creative-profile/">Creative Profile</a>
-    <a href="/blog/">Blog</a>
-    <a href="/press/">Press</a>
-    <a class="nav-cta" href="/#request">Let's talk</a>
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks" aria-label="Principal">
+    <a href="/es/#metodo">El método</a>
+    <a href="/es/que-hacemos/">Qué hacemos</a>
+    <a class="nav-hot" href="/es/perfil-creativo/">Creative Profile</a>
+    <a href="/es/blog/">Blog</a>
+    <a href="/es/prensa/">Prensa</a>
+    <a class="nav-cta" href="/es/#contacto">Hablemos</a>
     <?php echo hc_lang_switch(); ?>
   </nav>
 </header>
-<script>(function(){var n=document.getElementById("nav"),t=document.getElementById("navToggle");if(!n||!t)return;function set(o){n.classList.toggle("open",o);t.setAttribute("aria-expanded",o?"true":"false");t.setAttribute("aria-label",o?"Close menu":"Open menu");}t.addEventListener("click",function(){set(!n.classList.contains("open"));});n.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){set(false);});});})();</script>
+<script>(function(){var n=document.getElementById("nav"),t=document.getElementById("navToggle");if(!n||!t)return;function set(o){n.classList.toggle("open",o);t.setAttribute("aria-expanded",o?"true":"false");t.setAttribute("aria-label",o?"Cerrar menú":"Abrir menú");}t.addEventListener("click",function(){set(!n.classList.contains("open"));});n.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){set(false);});});})();</script>
 
 <section class="hero" id="top">
   <div class="hero-pin">
@@ -291,75 +291,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="hero-scrim"></div>
     <div class="hero-inner" id="hero-inner">
       <h1 class="hero-title">
-        <span class="sr-only">Hypercreative. Creativity training for leadership.</span>
+        <span class="sr-only">Hypercreative. Entrenamiento creativo para líderes.</span>
         <span class="reveal" style="--d:.05s">Hypercreative<sup class="tm">™</sup><svg class="ip" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle class="h" cx="50" cy="50" r="20"/><line class="c c1" x1="24" y1="62" x2="39" y2="53"/><circle class="n n1" cx="23" cy="63" r="3"/><line class="c c2" x1="74" y1="34" x2="61" y2="45"/><circle class="n n2" cx="75" cy="33" r="3"/><line class="c c3" x1="66" y1="76" x2="55" y2="62"/><circle class="n n3" cx="67" cy="77" r="3"/><circle class="d" cx="50" cy="50" r="14"/></svg></span>
       </h1>
-      <p class="hero-tag reveal" style="--d:.18s">Creativity training for leadership<span class="p">.</span></p>
-      <p class="hero-sub reveal" style="--d:.32s">We train the teams of the world's most demanding companies to solve any challenge, creatively, on demand.</p>
+      <p class="hero-tag reveal" style="--d:.18s">Entrenamiento creativo para líderes<span class="p">.</span></p>
+      <p class="hero-sub reveal" style="--d:.32s">Entrenamos a los equipos de las empresas más exigentes del mundo para resolver cualquier reto, de forma creativa y a demanda.</p>
       <div class="actions reveal" style="--d:.42s">
-        <a href="#method" class="btn btn-primary">Explore the method</a>
-        <a href="#request" class="btn btn-ghost">Request a session</a>
+        <a href="#metodo" class="btn btn-primary">Explora el método</a>
+        <a href="#contacto" class="btn btn-ghost">Solicita una sesión</a>
       </div>
     </div>
-    <a href="#method" class="scroll-cue" id="scroll-cue" aria-label="Scroll"><span></span></a>
+    <a href="#metodo" class="scroll-cue" id="scroll-cue" aria-label="Bajar"><span></span></a>
   </div>
 </section>
 
-<section class="band" id="method">
-  <span class="section-tag reveal">The method</span>
-  <p class="lede reveal" style="--d:.06s">A rigid grid becomes a living network. <em>That is the work.</em></p>
-  <p class="method-intro reveal" style="--d:.12s">We train leaders and teams to generate useful ideas on command, when the deadline is real and the rules keep changing. The work runs in three acts: first the individual mind, then the team, then the pressure of a real shoot.</p>
-  <div class="acts reveal" role="group" aria-label="The three acts of the method">
+<section class="band" id="metodo">
+  <span class="section-tag reveal">El método</span>
+  <p class="lede reveal" style="--d:.06s">Una rejilla rígida se convierte en una red viva. <em>Ese es el trabajo.</em></p>
+  <p class="method-intro reveal" style="--d:.12s">Entrenamos a directivos y equipos para producir ideas útiles cuando se les pide, con un plazo real y las reglas cambiando por el camino. El trabajo va en tres actos: primero la mente de cada uno, después el equipo, y al final la presión de un rodaje de verdad.</p>
+  <div class="acts reveal" role="group" aria-label="Los tres actos del método">
     <button class="act is-active" type="button" aria-expanded="true">
-      <span class="act-kicker">Act I</span>
-      <h3 class="act-title">The mind</h3>
-      <p class="act-desc">We train each person to think like a creative professional: to focus on command, capture raw material everywhere, connect ideas that do not belong together, and reframe a problem until a better answer shows up. Eleven habits that turn creativity from a mood you wait for into a muscle you control. It is usually the person most sure they are not creative who gains the most.</p>
+      <span class="act-kicker">Acto Uno</span>
+      <h3 class="act-title">La mente</h3>
+      <p class="act-desc">Entrenamos a cada persona para pensar como un profesional de la creatividad: concentrarse cuando hace falta, capturar materia prima en cualquier sitio, conectar ideas que no tenían por qué encontrarse y cambiar la pregunta hasta que aparece una respuesta mejor. Once hábitos que convierten la creatividad en un músculo que controlas, en vez de un estado de ánimo que esperas. Casi siempre, quien más gana es el que llegó convencido de que no era creativo.</p>
     </button>
     <button class="act" type="button" aria-expanded="false">
-      <span class="act-kicker">Act II</span>
-      <h3 class="act-title">The team</h3>
-      <p class="act-desc">Three brilliant people are not a creative team, they are three soloists. We turn a group of talents into one instrument, with a shared language, clear roles, and the safety to say the unfinished idea out loud. The room stops competing to look clever and starts compounding, so the best idea wins no matter who it comes from.</p>
+      <span class="act-kicker">Acto Dos</span>
+      <h3 class="act-title">El equipo</h3>
+      <p class="act-desc">Tres personas brillantes no son un equipo creativo: son tres solistas. Convertimos un grupo de talentos en un solo instrumento, con un lenguaje común, roles claros y la seguridad suficiente para decir en voz alta la idea a medio hacer. La sala deja de competir por parecer lista y empieza a sumar, así que gana la mejor idea venga de quien venga.</p>
     </button>
     <button class="act" type="button" aria-expanded="false">
-      <span class="act-kicker">Act III</span>
-      <h3 class="act-title">The shoot</h3>
-      <p class="act-desc">Theory dies on contact with a deadline. So we put it all to work on a real challenge, with a real deliverable and the rules changing halfway through on purpose. A clock, hard limits, real stakes: a rehearsal for how your business actually operates, and the act where the method proves it holds.</p>
+      <span class="act-kicker">Acto Tres</span>
+      <h3 class="act-title">El rodaje</h3>
+      <p class="act-desc">La teoría se muere en cuanto toca un plazo. Así que lo ponemos todo a trabajar sobre un reto real, con un entregable real y las reglas cambiando a mitad de camino a propósito. Un reloj, límites duros y algo en juego: un ensayo de cómo funciona de verdad tu negocio, y el acto donde el método demuestra que aguanta.</p>
     </button>
   </div>
 </section>
 
 <section class="quiet" id="asset">
   <video class="quiet-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
-    <source src="assets/creativity-is-the-ultimate.mp4" type="video/mp4">
+    <source src="/assets/creativity-is-the-ultimate.mp4" type="video/mp4">
   </video>
   <div class="quiet-scrim"></div>
   <div class="quiet-inner">
-    <p class="l reveal"><a href="blog/creativity-is-the-ultimate-asset">Creativity is the ultimate asset.</a></p>
-    <p class="s reveal" style="--d:.12s">Twenty years ago it did not count. Today the most valuable companies in the world are built on it.</p>
+    <p class="l reveal"><a href="/es/blog/la-creatividad-es-el-nuevo-activo">La creatividad es el nuevo activo.</a></p>
+    <p class="s reveal" style="--d:.12s">Hace veinte años no contaba. Hoy las empresas más valiosas del mundo están construidas sobre ella.</p>
   </div>
 </section>
 
 
 <!--GEN-->
-<section class="tq" id="creative-world-cta" aria-label="Take the Creative Profile test">
+<section class="tq" id="creative-world-cta" aria-label="Haz el test Creative Profile">
   <div class="tq-in">
-    <h2 class="tq-h">Which creative profile are you on <span class="p">right now</span>?</h2>
-    <p class="tq-sub">The eleven habits of the method fall into three families: feed, sharpen and protect. Nine profiles turn around them. Twenty quick either/or questions tell you which profile you are on this quarter, the one running underneath it, and the single habit to work on next.</p>
-    <div class="tq-cta"><a class="btn tq-btn" href="/creative-profile/">Find your profile</a><a class="btn tq-btn2" href="/universe/">Open the map</a></div>
+    <h2 class="tq-h">¿En qué perfil creativo estás <span class="p">ahora mismo</span>?</h2>
+    <p class="tq-sub">Los once hábitos del método se reparten en tres familias: alimentar, afilar y proteger. Alrededor de ellas giran nueve perfiles. Veinte preguntas rápidas de o esto o lo otro te dicen en qué perfil estás este trimestre, cuál corre por debajo y qué hábito te toca entrenar ahora.</p>
+    <div class="tq-cta"><a class="btn tq-btn" href="/es/perfil-creativo/">Encuentra tu perfil</a><a class="btn tq-btn2" href="/es/el-mapa/">Abre el mapa</a></div>
   </div>
 </section>
 <section class="band" id="programs">
-<span class="section-tag reveal">What we offer</span>
-<p class="lede reveal" style="--d:.06s">Two ways in. Everything we do is built around your organisation.</p>
-<div class="prods"><div class="prod reveal"><h3>Request a keynote</h3><p>Alfonso on stage for your leadership, your offsite or your convention. Pick one of our keynotes or tell us the room and we will guide you.</p><a class="prod-cta" href="#request" data-prod="Keynote">Request a keynote &#8594;</a></div><div class="prod reveal" style="--d:.12s"><h3>Tailor-made</h3><p>A program designed for your team and your challenge, from a half day to a full transformation. Built for you, never off a shelf.</p><a class="prod-cta" href="#request" data-prod="Tailor-made">Contact us for a tailor-made &#8594;</a></div></div>
+<span class="section-tag reveal">Qué ofrecemos</span>
+<p class="lede reveal" style="--d:.06s">Dos formas de entrar. Todo lo que hacemos se construye alrededor de tu organización.</p>
+<div class="prods"><div class="prod reveal"><h3>Pide una keynote</h3><p>Alfonso en el escenario para tu comité de dirección, tu offsite o tu convención. Elige una de nuestras keynotes o cuéntanos cómo es la sala y te guiamos.</p><a class="prod-cta" href="#contacto" data-prod="Keynote">Pide una keynote &#8594;</a></div><div class="prod reveal" style="--d:.12s"><h3>A medida</h3><p>Un programa diseñado para tu equipo y tu reto, desde media jornada hasta una transformación completa. Hecho para ti, nunca sacado de un catálogo.</p><a class="prod-cta" href="#contacto" data-prod="Tailor-made">Escríbenos para un programa a medida &#8594;</a></div></div>
 </section>
-<section class="band manifesto" id="manifesto" style="padding-bottom:clamp(2rem,5vh,3.5rem)"><h2 class="band-title reveal">The 7 laws of our manifesto</h2><p class="manifesto-lead reveal" style="--d:.05s">We did not invent creativity. We refuse to leave it to luck.</p><ol class="laws"><li class="law reveal" style="--d:0.04s"><span class="law-n">01</span><p class="law-t">We believe creativity is the most valuable asset a company owns, and the worst trained.</p></li><li class="law reveal" style="--d:0.10s"><span class="law-n">02</span><p class="law-t">It was never a gift handed to a lucky few. It is a discipline, and discipline can be built.</p></li><li class="law reveal" style="--d:0.16s"><span class="law-n">03</span><p class="law-t">The hard part is not having ideas. It is having the useful one, on time, when everything is against you. That is the only test that matters: creativity under pressure.</p></li><li class="law reveal" style="--d:0.22s"><span class="law-n">04</span><p class="law-t">If it cannot be repeated, it is not a method, it is luck. What you can name, break into steps and parameterize, you can run again on demand.</p></li><li class="law reveal" style="--d:0.28s"><span class="law-n">05</span><p class="law-t">Every mind creates differently, so a rigid method is a broken one. Ours adapts to the person in front of it, not the other way around.</p></li><li class="law reveal" style="--d:0.34s"><span class="law-n">06</span><p class="law-t">A team that creates together beats a room full of talent creating apart.</p></li><li class="law reveal" style="--d:0.40s"><span class="law-n">07</span><p class="law-t">The future belongs to the people who can build the answer no one has yet.</p></li></ol></section>
-<section class="band" id="journal" style="padding-top:clamp(2rem,5vh,3.5rem)"><h2 class="band-title reveal">The blog</h2><p class="band-sub reveal" style="--d:.06s">Ideas on creativity under pressure. Notes from the method, not the whole playbook.</p><div class="bt bt-3"><a class="bt-card reveal" href="blog/creativity-is-the-ultimate-asset"><img class="bt-thumb" src="blog/assets/blog-1.png" alt=""><h3>Creativity Is the Ultimate Asset</h3><p>The most valuable companies on earth run on it. Most leadership teams still treat it as a personality trait.</p></a><a class="bt-card reveal" href="blog/your-best-ideas-don-t-come-from-freedom"><img class="bt-thumb" src="blog/assets/blog-2.png" alt=""><h3>Your Best Ideas Don&#x27;t Come From Freedom</h3><p>Creativity is the ultimate business asset. It is not a gift, it is a trainable muscle, and the gym is constraint.</p></a><a class="bt-card reveal" href="blog/brainstorming-is-broken-and-what-replaces-it"><img class="bt-thumb" src="blog/assets/blog-3.png" alt=""><h3>Brainstorming Is Broken (And What Replaces It)</h3><p>The open brainstorm rewards the loudest voice and the safest idea. Structured creative methods produce better answers under pressure. One of these is a team skill. The other is a meeting.</p></a></div><p class="more-wrap reveal"><a class="btn btn-primary" href="blog/">See all 9 articles &#8594;</a></p></section>
-<section class="band" id="request">
-<span class="section-tag reveal" style="color:var(--ink);font-size:.95rem">Let's talk</span>
-<form id="rq" class="rq reveal" style="--d:.06s"><div class="rq-bar"><div class="rq-bar-fill" id="rq-fill"></div></div><button type="button" class="q-back" id="q-back" hidden>&#8592; Back</button><div class="qstep on" data-q="product"><p class="q">What are you after?</p><div class="q-opts"><button type="button" class="q-opt" data-name="product" data-val="Keynote">A keynote</button><button type="button" class="q-opt" data-name="product" data-val="Tailor-made">Something tailor-made</button></div></div><div class="qstep" data-q="keynote" data-if="Keynote"><p class="q">Which keynote interests you?</p><div class="q-opts"><button type="button" class="q-opt" data-name="keynote" data-val="Creativity under pressure">Creativity under pressure</button><button type="button" class="q-opt" data-name="keynote" data-val="Creativity is the ultimate asset">Creativity is the ultimate asset</button><button type="button" class="q-opt" data-name="keynote" data-val="Three habits to create under pressure">Three habits to create under pressure</button><button type="button" class="q-opt" data-name="keynote" data-val="Create from the future">Create from the future</button><button type="button" class="q-opt" data-name="keynote" data-val="Not sure yet">Not sure yet</button></div></div><div class="qstep" data-q="company"><p class="q">What is your company?</p><input data-name="company" required><button type="button" class="q-next">Continue</button></div><div class="qstep" data-q="name"><p class="q">And your name?</p><input data-name="name" required><button type="button" class="q-next">Continue</button></div><div class="qstep" data-q="email"><p class="q">Best email to reach you?</p><input type="email" data-name="email" required><button type="button" class="q-next">Continue</button></div><div class="qstep" data-q="location"><p class="q">Where is the event?</p><input data-name="location" placeholder="City, country"><button type="button" class="q-next">Continue</button></div><div class="qstep" data-q="attendees"><p class="q">Roughly how many people?</p><input data-name="attendees" placeholder="Approx. number"><button type="button" class="q-next">Continue</button></div><div class="qstep" data-q="date"><p class="q">When are you thinking?</p><input data-name="date" placeholder="e.g. Q4 2026"><button type="button" class="q-next">Continue</button></div><div class="qstep" data-q="message"><p class="q">Anything we should know?</p><textarea data-name="message" rows="3"></textarea><button type="button" class="q-next">Send request</button></div><div class="qstep" data-q="done"><p class="q">Thank you<span class="bp">.</span></p><p class="q-sub">We will get back to you within two business days.</p></div></form>
+<section class="band manifesto" id="manifesto" style="padding-bottom:clamp(2rem,5vh,3.5rem)"><h2 class="band-title reveal">Las 7 leyes de nuestro manifiesto</h2><p class="manifesto-lead reveal" style="--d:.05s">No inventamos la creatividad. Nos negamos a dejarla en manos de la suerte.</p><ol class="laws"><li class="law reveal" style="--d:0.04s"><span class="law-n">01</span><p class="law-t">Creemos que la creatividad es el activo más valioso de una empresa, y el peor entrenado.</p></li><li class="law reveal" style="--d:0.10s"><span class="law-n">02</span><p class="law-t">Nunca fue un don repartido entre unos pocos afortunados. Es una disciplina, y una disciplina se construye.</p></li><li class="law reveal" style="--d:0.16s"><span class="law-n">03</span><p class="law-t">Lo difícil no es tener ideas. Es tener la útil, a tiempo, con todo en contra. Esa es la única prueba que cuenta: creatividad bajo presión.</p></li><li class="law reveal" style="--d:0.22s"><span class="law-n">04</span><p class="law-t">Si no se puede repetir, no es un método: es suerte. Lo que puedes nombrar, trocear en pasos y parametrizar, lo puedes volver a ejecutar cuando quieras.</p></li><li class="law reveal" style="--d:0.28s"><span class="law-n">05</span><p class="law-t">Cada cabeza crea de una manera, así que un método rígido es un método roto. El nuestro se adapta a la persona que tiene delante, y no al revés.</p></li><li class="law reveal" style="--d:0.34s"><span class="law-n">06</span><p class="law-t">Un equipo que crea junto gana a una sala llena de talento creando por separado.</p></li><li class="law reveal" style="--d:0.40s"><span class="law-n">07</span><p class="law-t">El futuro es de quien sabe construir la respuesta que todavía no tiene nadie.</p></li></ol></section>
+<section class="band" id="journal" style="padding-top:clamp(2rem,5vh,3.5rem)"><h2 class="band-title reveal">El blog</h2><p class="band-sub reveal" style="--d:.06s">Ideas sobre creatividad bajo presión. Apuntes del método, no el manual entero.</p><div class="bt bt-3"><a class="bt-card reveal" href="/es/blog/la-creatividad-es-el-nuevo-activo"><img class="bt-thumb" src="/blog/assets/blog-1.png" alt=""><h3>La creatividad es el nuevo activo</h3><p>Las empresas más valiosas del planeta funcionan con ella. La mayoría de los comités de dirección la siguen tratando como un rasgo de carácter.</p></a><a class="bt-card reveal" href="/es/blog/tus-mejores-ideas-no-vienen-de-la-libertad"><img class="bt-thumb" src="/blog/assets/blog-2.png" alt=""><h3>Tus mejores ideas no vienen de la libertad</h3><p>La creatividad es el gran activo de un negocio. No es un don: es un músculo que se entrena, y el gimnasio es la restricción.</p></a><a class="bt-card reveal" href="/es/blog/el-brainstorming-esta-roto-y-esto-lo-sustituye"><img class="bt-thumb" src="/blog/assets/blog-3.png" alt=""><h3>El brainstorming está roto (y esto es lo que lo sustituye)</h3><p>El brainstorming abierto premia a la voz más alta y a la idea más segura. Los métodos creativos con estructura dan mejores respuestas bajo presión. Uno de los dos es una habilidad de equipo. El otro es una reunión.</p></a></div><p class="more-wrap reveal"><a class="btn btn-primary" href="/es/blog/">Ver los 9 artículos &#8594;</a></p></section>
+<section class="band" id="contacto">
+<span class="section-tag reveal" style="color:var(--ink);font-size:.95rem">Hablemos</span>
+<form id="rq" class="rq reveal" style="--d:.06s"><div class="rq-bar"><div class="rq-bar-fill" id="rq-fill"></div></div><button type="button" class="q-back" id="q-back" hidden>&#8592; Atrás</button><div class="qstep on" data-q="product"><p class="q">¿Qué estás buscando?</p><div class="q-opts"><button type="button" class="q-opt" data-name="product" data-val="Keynote">Una keynote</button><button type="button" class="q-opt" data-name="product" data-val="Tailor-made">Algo a medida</button></div></div><div class="qstep" data-q="keynote" data-if="Keynote"><p class="q">¿Qué keynote te interesa?</p><div class="q-opts"><button type="button" class="q-opt" data-name="keynote" data-val="Creativity under pressure">Creatividad bajo presión</button><button type="button" class="q-opt" data-name="keynote" data-val="Creativity is the ultimate asset">La creatividad es el nuevo activo</button><button type="button" class="q-opt" data-name="keynote" data-val="Three habits to create under pressure">Tres hábitos para crear bajo presión</button><button type="button" class="q-opt" data-name="keynote" data-val="Create from the future">Crear desde el futuro</button><button type="button" class="q-opt" data-name="keynote" data-val="Not sure yet">Todavía no lo sé</button></div></div><div class="qstep" data-q="company"><p class="q">¿Cuál es tu empresa?</p><input data-name="company" required><button type="button" class="q-next">Continuar</button></div><div class="qstep" data-q="name"><p class="q">¿Y tu nombre?</p><input data-name="name" required><button type="button" class="q-next">Continuar</button></div><div class="qstep" data-q="email"><p class="q">¿En qué correo te encontramos?</p><input type="email" data-name="email" required><button type="button" class="q-next">Continuar</button></div><div class="qstep" data-q="location"><p class="q">¿Dónde es el evento?</p><input data-name="location" placeholder="Ciudad, país"><button type="button" class="q-next">Continuar</button></div><div class="qstep" data-q="attendees"><p class="q">¿Cuánta gente, más o menos?</p><input data-name="attendees" placeholder="Número aproximado"><button type="button" class="q-next">Continuar</button></div><div class="qstep" data-q="date"><p class="q">¿Para cuándo lo piensas?</p><input data-name="date" placeholder="Por ejemplo, Q4 2026"><button type="button" class="q-next">Continuar</button></div><div class="qstep" data-q="message"><p class="q">¿Algo que debamos saber?</p><textarea data-name="message" rows="3"></textarea><button type="button" class="q-next">Enviar solicitud</button></div><div class="qstep" data-q="done"><p class="q">Gracias<span class="bp">.</span></p><p class="q-sub">Te contestamos en un plazo de dos días laborables.</p></div></form>
 </section>
-<script>(function(){var EP="/api/lead.php";var pre=null;document.querySelectorAll(".prod-cta").forEach(function(a){a.addEventListener("click",function(){pre=a.getAttribute("data-prod");});});var f=document.getElementById("rq");if(f){var steps=[].slice.call(f.querySelectorAll(".qstep")),fill=document.getElementById("rq-fill"),back=document.getElementById("q-back"),st={},i=0;function vis(k){var s=steps[k],c=s.getAttribute("data-if");return !(c&&st.product!==c);}function show(k){var dir=k>=i?1:-1;while(k>0&&k<steps.length&&!vis(k))k+=dir;i=Math.max(0,Math.min(steps.length-1,k));steps.forEach(function(s,m){s.classList.toggle("on",m===i);});fill.style.width=Math.round(i/(steps.length-1)*100)+"%";back.hidden=(i===0||steps[i].getAttribute("data-q")==="done");var inp=steps[i].querySelector("input,textarea");if(inp)setTimeout(function(){inp.focus();},60);}function nx(){if(i<steps.length-1)show(i+1);}function err(s,m){var e=s.querySelector(".q-err");if(!e){e=document.createElement("p");e.className="q-err";s.appendChild(e);}e.textContent=m;}function submit(btn){var s=steps[i];btn.disabled=true;var t=btn.textContent;btn.textContent="Sending…";st.source="website";fetch(EP,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(st)}).then(function(r){if(!r.ok)throw 0;show(steps.length-1);}).catch(function(){btn.disabled=false;btn.textContent=t;err(s,"We could not send your request. Please try again in a moment.");});}f.querySelectorAll(".q-opt").forEach(function(b){b.addEventListener("click",function(){st[b.getAttribute("data-name")]=b.getAttribute("data-val");nx();});});f.querySelectorAll(".q-next").forEach(function(b){b.addEventListener("click",function(){var s=steps[i],inp=s.querySelector("input,textarea");if(inp){if(inp.hasAttribute("required")&&!inp.value.trim()){inp.classList.add("err");inp.focus();return;}inp.classList.remove("err");st[inp.getAttribute("data-name")]=inp.value;}if(s.getAttribute("data-q")==="message"){submit(b);}else{show(steps.length-1>i?i+1:i);}});});f.addEventListener("keydown",function(e){if(e.key==="Enter"){var s=steps[i];if(s.querySelector("textarea"))return;e.preventDefault();var nb=s.querySelector(".q-next");if(nb)nb.click();}});back.addEventListener("click",function(){show(i-1);});document.querySelectorAll(".prod-cta").forEach(function(a){a.addEventListener("click",function(){setTimeout(function(){if(pre){st.product=pre;show(1);}},10);});});show(0);}})();</script>
+<script>(function(){var EP="/api/lead.php";var pre=null;document.querySelectorAll(".prod-cta").forEach(function(a){a.addEventListener("click",function(){pre=a.getAttribute("data-prod");});});var f=document.getElementById("rq");if(f){var steps=[].slice.call(f.querySelectorAll(".qstep")),fill=document.getElementById("rq-fill"),back=document.getElementById("q-back"),st={},i=0;function vis(k){var s=steps[k],c=s.getAttribute("data-if");return !(c&&st.product!==c);}function show(k){var dir=k>=i?1:-1;while(k>0&&k<steps.length&&!vis(k))k+=dir;i=Math.max(0,Math.min(steps.length-1,k));steps.forEach(function(s,m){s.classList.toggle("on",m===i);});fill.style.width=Math.round(i/(steps.length-1)*100)+"%";back.hidden=(i===0||steps[i].getAttribute("data-q")==="done");var inp=steps[i].querySelector("input,textarea");if(inp)setTimeout(function(){inp.focus();},60);}function nx(){if(i<steps.length-1)show(i+1);}function err(s,m){var e=s.querySelector(".q-err");if(!e){e=document.createElement("p");e.className="q-err";s.appendChild(e);}e.textContent=m;}function submit(btn){var s=steps[i];btn.disabled=true;var t=btn.textContent;btn.textContent="Enviando…";st.source="website";fetch(EP,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(st)}).then(function(r){if(!r.ok)throw 0;show(steps.length-1);}).catch(function(){btn.disabled=false;btn.textContent=t;err(s,"No hemos podido enviar tu solicitud. Vuélvelo a intentar en un momento.");});}f.querySelectorAll(".q-opt").forEach(function(b){b.addEventListener("click",function(){st[b.getAttribute("data-name")]=b.getAttribute("data-val");nx();});});f.querySelectorAll(".q-next").forEach(function(b){b.addEventListener("click",function(){var s=steps[i],inp=s.querySelector("input,textarea");if(inp){if(inp.hasAttribute("required")&&!inp.value.trim()){inp.classList.add("err");inp.focus();return;}inp.classList.remove("err");st[inp.getAttribute("data-name")]=inp.value;}if(s.getAttribute("data-q")==="message"){submit(b);}else{show(steps.length-1>i?i+1:i);}});});f.addEventListener("keydown",function(e){if(e.key==="Enter"){var s=steps[i];if(s.querySelector("textarea"))return;e.preventDefault();var nb=s.querySelector(".q-next");if(nb)nb.click();}});back.addEventListener("click",function(){show(i-1);});document.querySelectorAll(".prod-cta").forEach(function(a){a.addEventListener("click",function(){setTimeout(function(){if(pre){st.product=pre;show(1);}},10);});});show(0);}})();</script>
 <!--/GEN-->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
 

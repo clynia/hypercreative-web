@@ -1,4 +1,13 @@
-<?php http_response_code(404); ?><!DOCTYPE html><html lang="en"><head>
+<?php
+http_response_code(404);
+/* One 404 for both languages: it answers in the language of the address that
+   missed. $HC_NO_REDIRECT keeps lang.php from bouncing a lost English URL to
+   the Spanish home, which would hide the error instead of reporting it. */
+$HC_LANG = (strpos(isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '', '/es/') === 0) ? 'es' : 'en';
+$HC_EN = '/'; $HC_ES = '/es/'; $HC_NO_REDIRECT = true;
+include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php';
+$es = ($HC_LANG === 'es');
+?><!DOCTYPE html><html lang="<?php echo $HC_LANG; ?>"><head>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -6,8 +15,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TBPM9KTK');</script>
 <!-- End Google Tag Manager --><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found | Hypercreative</title>
-<meta name="description" content="This page moved, changed its name or never existed. Here is where to go instead."><meta name="robots" content="noindex,follow"><meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Page not found | Hypercreative"><meta property="og:description" content="This page moved, changed its name or never existed. Here is where to go instead."><meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png"><meta name="twitter:card" content="summary_large_image">
+<?php
+$t404 = $es ? 'P&aacute;gina no encontrada | Hypercreative' : 'Page not found | Hypercreative';
+$d404 = $es ? 'Esta p&aacute;gina se movi&oacute;, cambi&oacute; de nombre o nunca existi&oacute;. Aqu&iacute; tienes por d&oacute;nde seguir.'
+            : 'This page moved, changed its name or never existed. Here is where to go instead.';
+?>
+<title><?php echo $t404; ?></title>
+<meta name="description" content="<?php echo $d404; ?>"><meta name="robots" content="noindex,follow"><meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="<?php echo $HC_LOCALE; ?>"><meta property="og:type" content="website"><meta property="og:title" content="<?php echo $t404; ?>"><meta property="og:description" content="<?php echo $d404; ?>"><meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
@@ -41,6 +55,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
 <main class="wrap">
 <p class="code" aria-hidden="true"><i>4</i><i class="zero">0</i><i>4</i></p>
+<?php if ($es): ?>
+<h1 class="t">El briefing cambi&oacute; a mitad.</h1>
+<p class="dek">Error 404. Esta p&aacute;gina se movi&oacute;, cambi&oacute; de nombre o nunca existi&oacute;. As&iacute; que te has quedado mirando una en blanco con el reloj corriendo, que resulta ser <strong>exactamente la situaci&oacute;n para la que entrenamos</strong>. Coge una de estas.</p>
+<nav class="lost" aria-label="P&aacute;ginas sugeridas">
+<a class="lost-link" href="/es/#metodo"><span class="lost-k">El m&eacute;todo</span><span class="lost-d">Tres actos: la mente, el equipo, el rodaje.</span></a>
+<a class="lost-link" href="/es/que-hacemos/"><span class="lost-k">Qu&eacute; hacemos</span><span class="lost-d">Keynotes y programas a medida para directivos y equipos.</span></a>
+<a class="lost-link" href="/es/perfil-creativo/"><span class="lost-k">Creative Profile</span><span class="lost-d">Mira en qu&eacute; perfil creativo est&aacute;s ahora mismo.</span></a>
+<a class="lost-link" href="/es/blog/"><span class="lost-k">Blog</span><span class="lost-d">C&oacute;mo se hace de verdad el trabajo &uacute;til y original bajo presi&oacute;n.</span></a>
+</nav>
+<a class="talk" href="/es/#contacto">Empieza una conversaci&oacute;n <span aria-hidden="true">&#8594;</span></a>
+<?php else: ?>
 <h1 class="t">The brief changed halfway.</h1>
 <p class="dek">Error 404. This page moved, changed its name or never existed. So you are staring at a blank one with the clock running, which happens to be <strong>the exact situation we train people for</strong>. Take one of these instead.</p>
 <nav class="lost" aria-label="Suggested pages">
@@ -50,6 +75,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="lost-link" href="/blog/"><span class="lost-k">Blog</span><span class="lost-d">How useful, original work actually gets made under pressure.</span></a>
 </nav>
 <a class="talk" href="/#request">Start a conversation <span aria-hidden="true">&#8594;</span></a>
+<?php endif; ?>
 </main>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
 </body></html>

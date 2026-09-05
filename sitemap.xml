@@ -1,19 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hypercreativemethod.com/</loc></url>
-  <url><loc>https://hypercreativemethod.com/loam/</loc></url>
-  <url><loc>https://hypercreativemethod.com/creative-profile/</loc></url>
-  <url><loc>https://hypercreativemethod.com/universe/</loc></url>
-  <url><loc>https://hypercreativemethod.com/what-we-do/</loc></url>
-  <url><loc>https://hypercreativemethod.com/press/</loc></url>
-  <url><loc>https://hypercreativemethod.com/blog/</loc></url>
-  <url><loc>https://hypercreativemethod.com/blog/creativity-is-the-ultimate-asset</loc></url>
-  <url><loc>https://hypercreativemethod.com/blog/your-best-ideas-don-t-come-from-freedom</loc></url>
-  <url><loc>https://hypercreativemethod.com/blog/brainstorming-is-broken-and-what-replaces-it</loc></url>
-  <url><loc>https://hypercreativemethod.com/blog/creativity-is-a-skill-not-a-gift</loc></url>
-  <url><loc>https://hypercreativemethod.com/blog/three-brilliant-people-are-not-a-creative-team</loc></url>
-  <url><loc>https://hypercreativemethod.com/blog/stop-waiting-for-inspiration-engineer-it</loc></url>
-  <url><loc>https://hypercreativemethod.com/blog/your-most-analytical-people-are-your-hidden-creatives</loc></url>
-  <url><loc>https://hypercreativemethod.com/blog/imagine-it-already-failed</loc></url>
-  <url><loc>https://hypercreativemethod.com/blog/imagine-it-already-happened</loc></url>
+<!-- Both languages, each page declaring its twin. English is x-default: it is
+     what a browser with no Spanish preference gets. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url><loc>https://hypercreativemethod.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/"/></url>
+  <url><loc>https://hypercreativemethod.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/"/></url>
+
+  <url><loc>https://hypercreativemethod.com/creative-profile/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/creative-profile/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/perfil-creativo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/creative-profile/"/></url>
+  <url><loc>https://hypercreativemethod.com/es/perfil-creativo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/creative-profile/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/perfil-creativo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/creative-profile/"/></url>
+
+  <url><loc>https://hypercreativemethod.com/universe/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/universe/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/el-mapa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/universe/"/></url>
+  <url><loc>https://hypercreativemethod.com/es/el-mapa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/universe/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/el-mapa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/universe/"/></url>
+
+  <url><loc>https://hypercreativemethod.com/what-we-do/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/what-we-do/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/que-hacemos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/what-we-do/"/></url>
+  <url><loc>https://hypercreativemethod.com/es/que-hacemos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/what-we-do/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/que-hacemos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/what-we-do/"/></url>
+
+  <url><loc>https://hypercreativemethod.com/press/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/press/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/prensa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/press/"/></url>
+  <url><loc>https://hypercreativemethod.com/es/prensa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/press/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/prensa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/press/"/></url>
+
+  <url><loc>https://hypercreativemethod.com/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/"/></url>
+  <url><loc>https://hypercreativemethod.com/es/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/"/></url>
+
+  <url><loc>https://hypercreativemethod.com/blog/creativity-is-the-ultimate-asset</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/creativity-is-the-ultimate-asset"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/la-creatividad-es-el-nuevo-activo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/creativity-is-the-ultimate-asset"/></url>
+  <url><loc>https://hypercreativemethod.com/es/blog/la-creatividad-es-el-nuevo-activo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/creativity-is-the-ultimate-asset"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/la-creatividad-es-el-nuevo-activo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/creativity-is-the-ultimate-asset"/></url>
+
+  <url><loc>https://hypercreativemethod.com/blog/your-best-ideas-don-t-come-from-freedom</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/your-best-ideas-don-t-come-from-freedom"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/tus-mejores-ideas-no-vienen-de-la-libertad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/your-best-ideas-don-t-come-from-freedom"/></url>
+  <url><loc>https://hypercreativemethod.com/es/blog/tus-mejores-ideas-no-vienen-de-la-libertad</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/your-best-ideas-don-t-come-from-freedom"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/tus-mejores-ideas-no-vienen-de-la-libertad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/your-best-ideas-don-t-come-from-freedom"/></url>
+
+  <url><loc>https://hypercreativemethod.com/blog/brainstorming-is-broken-and-what-replaces-it</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/brainstorming-is-broken-and-what-replaces-it"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/el-brainstorming-esta-roto-y-esto-lo-sustituye"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/brainstorming-is-broken-and-what-replaces-it"/></url>
+  <url><loc>https://hypercreativemethod.com/es/blog/el-brainstorming-esta-roto-y-esto-lo-sustituye</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/brainstorming-is-broken-and-what-replaces-it"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/el-brainstorming-esta-roto-y-esto-lo-sustituye"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/brainstorming-is-broken-and-what-replaces-it"/></url>
+
+  <url><loc>https://hypercreativemethod.com/blog/creativity-is-a-skill-not-a-gift</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/creativity-is-a-skill-not-a-gift"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/la-creatividad-es-una-habilidad-no-un-don"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/creativity-is-a-skill-not-a-gift"/></url>
+  <url><loc>https://hypercreativemethod.com/es/blog/la-creatividad-es-una-habilidad-no-un-don</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/creativity-is-a-skill-not-a-gift"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/la-creatividad-es-una-habilidad-no-un-don"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/creativity-is-a-skill-not-a-gift"/></url>
+
+  <url><loc>https://hypercreativemethod.com/blog/three-brilliant-people-are-not-a-creative-team</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/three-brilliant-people-are-not-a-creative-team"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/tres-personas-brillantes-no-son-un-equipo-creativo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/three-brilliant-people-are-not-a-creative-team"/></url>
+  <url><loc>https://hypercreativemethod.com/es/blog/tres-personas-brillantes-no-son-un-equipo-creativo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/three-brilliant-people-are-not-a-creative-team"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/tres-personas-brillantes-no-son-un-equipo-creativo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/three-brilliant-people-are-not-a-creative-team"/></url>
+
+  <url><loc>https://hypercreativemethod.com/blog/stop-waiting-for-inspiration-engineer-it</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/stop-waiting-for-inspiration-engineer-it"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/deja-de-esperar-la-inspiracion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/stop-waiting-for-inspiration-engineer-it"/></url>
+  <url><loc>https://hypercreativemethod.com/es/blog/deja-de-esperar-la-inspiracion</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/stop-waiting-for-inspiration-engineer-it"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/deja-de-esperar-la-inspiracion"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/stop-waiting-for-inspiration-engineer-it"/></url>
+
+  <url><loc>https://hypercreativemethod.com/blog/your-most-analytical-people-are-your-hidden-creatives</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/your-most-analytical-people-are-your-hidden-creatives"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/tus-perfiles-mas-analiticos-son-tus-creativos-ocultos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/your-most-analytical-people-are-your-hidden-creatives"/></url>
+  <url><loc>https://hypercreativemethod.com/es/blog/tus-perfiles-mas-analiticos-son-tus-creativos-ocultos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/your-most-analytical-people-are-your-hidden-creatives"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/tus-perfiles-mas-analiticos-son-tus-creativos-ocultos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/your-most-analytical-people-are-your-hidden-creatives"/></url>
+
+  <url><loc>https://hypercreativemethod.com/blog/imagine-it-already-failed</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/imagine-it-already-failed"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/imagina-que-ha-salido-mal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/imagine-it-already-failed"/></url>
+  <url><loc>https://hypercreativemethod.com/es/blog/imagina-que-ha-salido-mal</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/imagine-it-already-failed"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/imagina-que-ha-salido-mal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/imagine-it-already-failed"/></url>
+
+  <url><loc>https://hypercreativemethod.com/blog/imagine-it-already-happened</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/imagine-it-already-happened"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/imagina-que-ha-salido-bien"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/imagine-it-already-happened"/></url>
+  <url><loc>https://hypercreativemethod.com/es/blog/imagina-que-ha-salido-bien</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/blog/imagine-it-already-happened"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/blog/imagina-que-ha-salido-bien"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/blog/imagine-it-already-happened"/></url>
+
+  <url><loc>https://hypercreativemethod.com/loam/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/loam/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/loam/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/loam/"/></url>
+  <url><loc>https://hypercreativemethod.com/es/loam/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/loam/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/loam/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/loam/"/></url>
+
 </urlset>

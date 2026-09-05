@@ -1,0 +1,219 @@
+<?php $HC_LANG='es'; $HC_EN='/press/'; $HC_ES='/es/prensa/'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html><html lang="es"><head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TBPM9KTK');</script>
+<!-- End Google Tag Manager --><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prensa y dosier | Hypercreative</title>
+<meta name="description" content="Logotipos, manual de marca, colores, tipografía y textos corporativos para prensa y colaboradores de Hypercreative."><?php echo hc_hreflang(); ?><meta name="robots" content="index,follow"><meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="es_ES"><meta property="og:type" content="website"><meta property="og:title" content="Prensa y dosier | Hypercreative"><meta property="og:description" content="Logotipos, manual de marca, colores, tipografía y textos corporativos para prensa y colaboradores de Hypercreative."><meta property="og:url" content="https://hypercreativemethod.com/es/prensa/"><meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Prensa y dosier | Hypercreative"><meta name="twitter:description" content="Logotipos, manual de marca, colores, tipografía y textos corporativos para prensa y colaboradores de Hypercreative."><meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "inLanguage": "es", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://hypercreativemethod.com/es/"}, {"@type": "ListItem", "position": 2, "name": "Prensa", "item": "https://hypercreativemethod.com/es/prensa/"}]}</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F6F3;--ink:#13130F;--soft:#56554E;--mute:#9a988f;--line:rgba(0,0,0,.10);--red:#E0463C;--fd:'Inter',system-ui,-apple-system,sans-serif;--fb:'Inter',system-ui,-apple-system,sans-serif;--fm:'Space Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}body{background:var(--paper);color:var(--ink);font-family:var(--fb);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.nav{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;justify-content:space-between;max-width:980px;margin:0 auto;padding:1.5rem 1.5rem;border-bottom:1px solid var(--line);background:rgba(247,246,243,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.brand{font-family:var(--fd);font-weight:500;font-size:1.15rem;letter-spacing:-.01em}.bp{color:var(--red)}.tm{font-size:.34em;vertical-align:.7em;color:var(--mute);font-family:var(--fm);margin-left:.08em}
+.nlinks{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;font-family:var(--fm);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}.nlinks a:hover{color:var(--ink)}
+.wrap{max-width:760px;margin:0 auto;padding:4rem 1.5rem}
+.eyebrow{font-family:var(--fm);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--mute)}
+.byline{font-family:var(--fm);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:1.4rem}
+h1.t{font-family:var(--fd);font-weight:300;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.08;letter-spacing:-.02em;margin:.8rem 0}
+.dek{font-size:1.2rem;color:var(--soft);margin-bottom:1.5rem;max-width:60ch;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.post-hero{width:100%;border:1px solid var(--line);border-radius:4px;margin:.5rem 0 2.6rem}
+article h2{font-family:var(--fd);font-weight:400;font-size:1.55rem;margin:2.2rem 0 .7rem;letter-spacing:-.01em}
+article p{margin:0 0 1.15rem;font-size:1.08rem;text-align:justify;hyphens:auto;-webkit-hyphens:auto}article strong{font-weight:500}
+.pq{font-family:var(--fd);font-weight:300;font-style:italic;font-size:clamp(1.45rem,3vw,2.05rem);line-height:1.25;color:var(--ink);border-left:2px solid var(--red);padding:.3rem 0 .3rem 1.4rem;margin:2.2rem 0}
+.takeaway{border-top:1px solid var(--line);margin-top:2.6rem;padding-top:1.4rem}
+.tk-label{font-family:var(--fm);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:.5rem}
+.takeaway p{font-family:var(--fd);font-weight:300;font-size:1.45rem;line-height:1.3;color:var(--ink);margin:0}
+.legal article h2{font-size:1.3rem}.legal article p,.legal article li{font-size:.98rem;color:var(--soft)}.legal article ul{margin:0 0 1.2rem 1.2rem}
+.foot{border-top:1px solid var(--line);max-width:980px;margin:4rem auto 0;padding:2.6rem 1.5rem 2.4rem}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:2.4rem 3rem;flex-wrap:wrap}
+.foot .brand{text-transform:none;letter-spacing:-.01em;color:var(--ink);font-size:1.2rem}
+.foot-lead{flex:1 1 16rem;max-width:22rem}
+.foot-claim{margin-top:.7rem;color:var(--soft);font-size:.92rem;line-height:1.5}
+.foot-talk{display:inline-flex;align-items:center;gap:.45rem;margin-top:1.1rem;font-family:var(--fm);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.foot-talk span{transition:transform .25s ease}.foot-talk:hover span{transform:translateX(4px)}
+.foot-nav{display:flex;gap:clamp(1.8rem,5vw,4rem);flex-wrap:wrap}
+.foot-col{display:flex;flex-direction:column;gap:.65rem}
+.foot-h{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:.3rem}
+.foot-col a{color:var(--soft);font-size:.92rem;transition:color .2s ease}.foot-col a:hover{color:var(--ink)}
+.foot-legal{display:flex;justify-content:space-between;gap:.8rem 1.5rem;flex-wrap:wrap;margin-top:2.4rem;padding-top:1.3rem;border-top:1px solid var(--line);font-family:var(--fm);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.foot-fine{text-transform:none;letter-spacing:.03em;color:var(--mute);opacity:.9}
+.posts{display:grid;gap:1px;background:var(--line);border-block:1px solid var(--line)}
+.post-link{background:var(--paper);padding:1.6rem .2rem;display:flex;gap:1.4rem;align-items:center}.post-link:hover{background:#fff}
+.post-thumb{width:160px;height:92px;object-fit:cover;border:1px solid var(--line);border-radius:3px;flex:0 0 auto}
+@media(max-width:560px){.post-link{flex-direction:column;align-items:flex-start}.post-thumb{width:100%;height:auto;aspect-ratio:16/9}}
+.post-link h2{font-family:var(--fd);font-weight:400;font-size:1.5rem;margin:0 0 .4rem}.post-link p{color:var(--soft);margin:0;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.post-rt{display:block;margin-top:.6rem;font-family:var(--fm);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+article a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}article a:hover{color:var(--red)}
+.back{font-family:var(--fm);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}.back:hover{color:var(--red)}
+
+/* standard site header */
+.snav{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem;padding:1.15rem clamp(1.25rem,4vw,3.25rem);background:rgba(247,246,243,.82);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);border-bottom:1px solid rgba(0,0,0,.10)}
+.snav .brand{font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:1.18rem;letter-spacing:-.015em;color:#13130F}
+.snav .bp{color:#E0463C}
+.snav-links{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(1.2rem,3vw,2.4rem);font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+.snav-links a{position:relative;color:#56554E;transition:color .3s ease}
+.snav-links a:hover{color:#13130F}
+.snav-links a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:#E0463C;opacity:.8;transform:scaleX(0);transform-origin:right;transition:transform .4s ease}
+.snav-links a:not(.nav-cta):hover::after{transform:scaleX(1);transform-origin:left}
+.snav .nav-cta{border:1px solid rgba(0,0,0,.10);padding:8px 15px;border-radius:2px;color:#13130F}
+.snav .nav-cta:hover{border-color:#E0463C}
+.snav .nav-hot::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#E0463C;vertical-align:.14em;margin-right:.55em}
+.snav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0;border:0;background:none;cursor:pointer}
+.snav-toggle span{display:block;width:24px;height:2px;background:#13130F;transition:transform .3s ease,opacity .3s ease}
+.snav.open .snav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.snav.open .snav-toggle span:nth-child(2){opacity:0}
+.snav.open .snav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:760px){.snav-toggle{display:flex}.snav-links{position:fixed;top:0;bottom:0;right:0;width:min(80vw,300px);flex-direction:column;flex-wrap:nowrap;justify-content:center;align-items:flex-start;gap:1.7rem;padding:2rem;background:#F7F6F3;box-shadow:-24px 0 60px -30px rgba(0,0,0,.55);transform:translateX(100%);transition:transform .4s cubic-bezier(.22,.61,.36,1);font-size:.85rem}.snav.open .snav-links{transform:none}.snav-links a:not(.nav-cta)::after{display:none}.snav .nav-cta{margin-top:.4rem}}
+</style></head><body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBPM9KTK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
+<style>
+.pr h2{font-family:var(--fd);font-weight:400;font-size:1.5rem;letter-spacing:-.01em;margin:3.2rem 0 1rem}
+.pr .lead{font-family:var(--fm);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);display:block;margin:0 0 .6rem}
+.pr>p{color:var(--soft);max-width:65ch}
+.dl{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.55rem 1rem;border:1px solid var(--line);border-radius:3px;font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);cursor:pointer;background:#fff;transition:border-color .2s var(--ease),color .2s var(--ease)}
+.dl:hover{border-color:var(--red);color:var(--red)}.dl svg{width:14px;height:14px;flex:0 0 auto}
+.dl:focus-visible,.copy:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.dls{display:flex;gap:.6rem;flex-wrap:wrap;margin:.8rem 0 0}
+.logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0}
+@media(max-width:560px){.logo-grid{grid-template-columns:1fr}}
+.logo-card{border:1px solid var(--line);border-radius:4px;padding:2.6rem;display:flex;align-items:center;justify-content:center;aspect-ratio:16/7}
+.logo-card.dark{background:var(--ink);border-color:var(--ink)}
+.logo-card img{width:62%;height:auto}
+.sw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:1.2rem 0}
+.sw{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#fff}
+.sw .chip{height:74px}.sw .m{padding:.6rem .75rem}.sw .nm{font-weight:500;font-size:.9rem;color:var(--ink)}.sw .hx{font-family:var(--fm);font-size:.72rem;color:var(--soft)}.sw .rl{font-size:.72rem;color:var(--mute)}
+.spec{border:1px solid var(--line);border-radius:4px;padding:.4rem 1.6rem;margin:1.2rem 0;background:#fff}
+.spec .row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--line)}.spec .row:last-child{border-bottom:0}
+.spec .lbl{font-family:var(--fm);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+.bp-card{border:1px solid var(--line);border-radius:4px;padding:1.4rem 1.6rem;background:#fff;margin:1rem 0;position:relative}
+.bp-card p{color:var(--ink);max-width:none;margin:0;padding-right:5.5rem}
+.copy{position:absolute;top:.9rem;right:.9rem;min-height:34px;padding:.35rem .8rem;border:1px solid var(--line);border-radius:3px;background:var(--paper);font-family:var(--fm);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);cursor:pointer;transition:.2s}.copy:hover{color:var(--red);border-color:var(--red)}
+.manual-card{display:flex;gap:1.5rem;align-items:center;border:1px solid var(--line);border-radius:4px;padding:1.6rem 1.7rem;background:#fff;flex-wrap:wrap;margin:1.2rem 0}
+.manual-card .mt{flex:1 1 240px}.manual-card .mt h3{font-family:var(--fd);font-weight:500;font-size:1.15rem;margin:0 0 .3rem}.manual-card .mt p{margin:0;font-size:.95rem;color:var(--soft)}
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1rem;margin:1.2rem 0}
+.photo-ph{border:1px dashed rgba(0,0,0,.2);border-radius:4px;aspect-ratio:3/4;display:flex;flex-direction:column;gap:.45rem;align-items:center;justify-content:center;text-align:center;color:var(--mute);font-family:var(--fm);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:1rem}
+.contact-card{border:1px solid var(--line);border-radius:4px;padding:1.7rem;background:#fff;margin:1.2rem 0}
+.contact-card a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}.contact-card a:hover{color:var(--red)}
+.prompt-card{padding-top:3.1rem}
+.prompt{font-family:var(--fm);font-size:.72rem;line-height:1.6;color:var(--ink);white-space:pre-wrap;word-break:break-word;max-height:380px;overflow:auto;margin:0}
+.pr a.prompt-txt{color:var(--ink);text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}.pr a.prompt-txt:hover{color:var(--red)}
+.ai-logos{display:flex;align-items:center;gap:1.7rem;flex-wrap:wrap;margin:1.3rem 0 .2rem}
+.ai-logos img{height:24px;width:auto;opacity:.66;transition:opacity .2s var(--ease)}
+.ai-logos img:hover{opacity:1}
+</style>
+<main class="wrap pr">
+<a class="back" href="/es/">&#8592; Inicio</a>
+<p class="eyebrow" style="margin-top:1.4rem">Prensa / Dosier</p>
+<h1 class="t">Dosier de prensa</h1>
+<p class="dek">Todo lo que necesitas para escribir sobre Hypercreative: logotipos, manual de marca, colores, tipografía y textos corporativos. Si te hace falta cualquier otra cosa, pídela.</p>
+
+<h2>Texto corporativo</h2>
+<span class="lead">Corto</span>
+<div class="bp-card"><button class="copy" type="button" aria-label="Copiar el texto corporativo corto">Copiar</button><p>Hypercreative entrena a los equipos de las empresas más exigentes del mundo para crear ideas útiles a demanda. Convierte la creatividad en una disciplina entrenable y deja de tratarla como un rasgo de carácter.</p></div>
+<span class="lead">Largo</span>
+<div class="bp-card"><button class="copy" type="button" aria-label="Copiar el texto corporativo largo">Copiar</button><p>Hypercreative es una empresa de entrenamiento creativo para organizaciones. Enseña a los equipos directivos y a sus personas a generar ideas útiles y originales a demanda, con keynotes y programas a medida. El método se construyó dentro de equipos creativos de alta presión del cine y la producción, y hoy se exporta a grandes organizaciones. Hypercreative es una marca comercial.</p></div>
+
+<h2>Logotipo</h2>
+<p>Usa siempre los archivos que te damos. Deja aire alrededor del logotipo y no lo alteres, ni le cambies el color, ni lo gires, ni lo vuelvas a componer con otra tipografía. Las reglas completas están en el manual de marca.</p>
+<div class="logo-grid">
+<div><div class="logo-card light"><img src="/assets/press/logo-light.svg" alt="Logotipo de Hypercreative en oscuro sobre fondo claro"></div><div class="dls"><a class="dl" href="/assets/press/logo-light.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> SVG</a><a class="dl" href="/assets/press/logo-light.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> PNG</a></div></div>
+<div><div class="logo-card dark"><img src="/assets/press/logo-dark.svg" alt="Logotipo de Hypercreative en versión inversa, en claro sobre fondo oscuro"></div><div class="dls"><a class="dl" href="/assets/press/logo-dark.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> SVG</a><a class="dl" href="/assets/press/logo-dark.png" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> PNG</a></div></div>
+</div>
+<div class="dls"><a class="dl" href="/assets/press/logo-mark.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Símbolo (el punto)</a></div>
+
+<span class="lead">La vía rápida</span>
+<h2>Usa nuestro logotipo con cualquier IA</h2>
+<p>Hemos escrito un prompt que le enseña a cualquier IA, ChatGPT, Claude, Gemini o tus propias herramientas, a colocar bien nuestro logotipo y a revisar su propio trabajo. Lo pegas, pides lo que necesitas y él va a buscar los archivos oficiales y sigue nuestras reglas. Casi todas las marcas te entregan un PDF y cruzan los dedos. Nosotros entregamos el nuestro como un prompt que puedes ejecutar, porque hacia ahí van los sistemas de marca y queríamos llegar los primeros.</p>
+
+<div class="ai-logos" role="img" aria-label="Funciona con ChatGPT, Claude, Gemini, Copilot y Grok">
+<img src="/assets/press/ai/openai.svg" alt="ChatGPT" title="ChatGPT"><img src="/assets/press/ai/claude.svg" alt="Claude" title="Claude"><img src="/assets/press/ai/gemini.svg" alt="Gemini" title="Gemini"><img src="/assets/press/ai/copilot.svg" alt="Copilot" title="Copilot"><img src="/assets/press/ai/grok.svg" alt="Grok" title="Grok">
+</div>
+
+<div class="manual-card"><div class="mt"><h3>Pack de logotipos (todos los archivos)</h3><p>El logotipo para fondos claros y oscuros (SVG y PNG), el símbolo, el favicon y un archivo léeme breve.</p></div><a class="dl" href="/assets/press/Hypercreative-Logos.zip" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Descargar el pack</a></div>
+<span class="lead" style="margin-top:1.4rem">El prompt</span>
+<p style="margin:0 0 .8rem">Cópialo en cualquier IA o descárgalo como archivo. Sirve para cualquiera, no hacen falta conocimientos de diseño.</p>
+<div class="bp-card prompt-card"><button class="copy" type="button" aria-label="Copiar el prompt de marca">Copiar</button><pre class="prompt">LOGOTIPO DE HYPERCREATIVE: CÓMO USARLO BIEN
+
+Estás ayudando a alguien a colocar el logotipo de Hypercreative. Sigue estas reglas al pie de la letra y después pasa la lista de comprobación del final. Hypercreative es una empresa de entrenamiento creativo para líderes.
+
+1. USA LOS ARCHIVOS OFICIALES (nunca redibujes ni vuelvas a escribir el logotipo)
+   Pack de logotipos, todos los archivos (zip): https://hypercreativemethod.com/assets/press/Hypercreative-Logos.zip
+   Logotipo para fondos claros (SVG): https://hypercreativemethod.com/assets/press/logo-light.svg
+   Logotipo para fondos claros (PNG): https://hypercreativemethod.com/assets/press/logo-light.png
+   Logotipo para fondos oscuros (SVG): https://hypercreativemethod.com/assets/press/logo-dark.svg
+   Logotipo para fondos oscuros (PNG): https://hypercreativemethod.com/assets/press/logo-dark.png
+   Símbolo, el punto rojo (SVG): https://hypercreativemethod.com/assets/press/logo-mark.svg
+   Manual de marca completo (PDF): https://hypercreativemethod.com/assets/press/Hypercreative-Brand-Manual.pdf
+
+2. QUÉ ES EL LOGOTIPO
+   El logotipo es una sola palabra, "Hypercreative", compuesta en Inter Medium y cerrada por un punto rojo macizo, el punto de ignición. El punto forma parte del logotipo. No lo quites nunca.
+   Solo hay dos versiones:
+   - Positiva: palabra en tinta (#13130F) con el punto rojo (#E0463C). Para fondos claros.
+   - Inversa: palabra en papel (#F7F6F3) con el punto rojo. Para fondos oscuros.
+   El punto es siempre rojo, en las dos versiones.
+
+3. SIEMPRE
+   - Usa el archivo original, sin tocarlo.
+   - Elige la versión según el fondo: fondo claro, versión positiva; fondo oscuro, versión inversa.
+   - Deja alrededor del logotipo un aire de al menos un diámetro de punto por cada lado.
+   - Mantenlo a 104 px (o 28 mm) de ancho como mínimo. Por debajo de eso, usa el punto rojo solo, hasta 16 px.
+   - Mantén un contraste mínimo de 4,5 a 1 entre la palabra y su fondo.
+
+4. NUNCA
+   - Nunca vuelvas a escribir la palabra con otra tipografía ni otro grosor. Es Inter Medium.
+   - Nunca cambies el color de la palabra ni del punto, y nunca añadas degradados, sombras, contornos ni caja.
+   - Nunca lo estires, lo comprimas, lo gires, lo inclines ni lo curves.
+   - Nunca muevas, redimensiones ni elimines el punto rojo, ni lo cambies por otra forma.
+   - Nunca lo pongas sobre una imagen cargada, sobre una zona roja ni sobre un fondo de tono medio.
+   - Nunca pongas más de un elemento rojo en la misma vista.
+
+5. COLORES
+   Tinta #13130F. Papel #F7F6F3. Blanco #FFFFFF. Rojo #E0463C (solo acento, un rojo por vista).
+
+6. COMPRUEBA (todas las respuestas tienen que ser sí)
+   - ¿Has usado el archivo oficial, sin redibujarlo?
+   - ¿Es la versión correcta para el fondo (fondo claro, positiva; fondo oscuro, inversa)?
+   - ¿Está el punto rojo, y es rojo?
+   - ¿La palabra sigue intacta: Inter Medium, sin estirar ni girar?
+   - ¿Has dejado el aire, y el tamaño llega al mínimo?
+   - ¿Hay un solo elemento rojo en toda la vista?
+   Si alguna respuesta es no, está fuera de marca. Arréglalo antes de entregarlo.
+
+Archivos oficiales y manual completo: https://hypercreativemethod.com/es/prensa/</pre></div>
+<p style="font-size:.92rem;color:var(--soft);margin-top:.6rem">¿Prefieres un archivo? <a class="prompt-txt" href="/assets/press/hypercreative-brand-prompt-es.txt" download>Descarga el prompt en .txt</a></p>
+
+<h2>Si prefieres la vía clásica</h2>
+<p>Si prefieres pasarle un briefing a un diseñador o hacerlo a mano, aquí tienes el dosier de prensa de siempre.</p>
+
+<h2>Manual de marca</h2>
+<div class="manual-card"><div class="mt"><h3>El manual de marca (PDF)</h3><p>Las normas completas: logotipo, aire, color, tipografía, lo que se hace y lo que no, aplicaciones y legal.</p></div><a class="dl" href="/assets/press/Hypercreative-Brand-Manual.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Descargar el PDF</a></div>
+
+<h2>Color</h2>
+<p>Un rojo, y solo uno, por vista. El rojo es un acento, nunca un fondo ni un color de texto.</p>
+<div class="sw-grid"><div class="sw"><div class="chip" style="background:#13130F;"></div><div class="m"><div class="nm">Tinta</div><div class="hx">#13130F</div><div class="rl">Principal / texto</div></div></div><div class="sw"><div class="chip" style="background:#F7F6F3;box-shadow:inset 0 0 0 1px var(--line)"></div><div class="m"><div class="nm">Papel</div><div class="hx">#F7F6F3</div><div class="rl">Superficie</div></div></div><div class="sw"><div class="chip" style="background:#FFFFFF;box-shadow:inset 0 0 0 1px var(--line)"></div><div class="m"><div class="nm">Blanco</div><div class="hx">#FFFFFF</div><div class="rl">Superficie</div></div></div><div class="sw"><div class="chip" style="background:#E0463C;"></div><div class="m"><div class="nm">Rojo</div><div class="hx">#E0463C</div><div class="rl">Acento (uno por vista)</div></div></div><div class="sw"><div class="chip" style="background:#56554E;"></div><div class="m"><div class="nm">Tinta suave</div><div class="hx">#56554E</div><div class="rl">Secundario</div></div></div><div class="sw"><div class="chip" style="background:#9A988F;"></div><div class="m"><div class="nm">Tinta apagada</div><div class="hx">#9A988F</div><div class="rl">Terciario / etiquetas</div></div></div></div>
+
+<h2>Tipografía</h2>
+<div class="spec">
+<div class="row"><span style="font-family:var(--fd);font-weight:300;font-size:1.7rem">Hypercreative</span><span class="lbl">Inter Light&nbsp;300</span></div>
+<div class="row"><span style="font-family:var(--fd);font-weight:500;font-size:1.7rem">Hypercreative</span><span class="lbl">Inter Medium&nbsp;500</span></div>
+<div class="row"><span style="font-family:var(--fd);font-weight:600;font-size:1.7rem">Hypercreative</span><span class="lbl">Inter SemiBold&nbsp;600</span></div>
+<div class="row"><span style="font-family:var(--fm);font-size:1.05rem">Entrenamiento creativo para líderes</span><span class="lbl">Space Mono / etiquetas</span></div>
+</div>
+
+<h2>Contacto de prensa</h2>
+<div class="contact-card"><p style="margin:0;color:var(--ink)">Para entrevistas, conferencias y consultas de prensa, escribe a <a href="mailto:press@hypercreativemethod.com">press@hypercreativemethod.com</a>.</p></div></main>
+<script>document.querySelectorAll(".copy").forEach(function(b){b.addEventListener("click",function(){var p=b.closest(".bp-card").querySelector("pre, p");navigator.clipboard.writeText(p.innerText).then(function(){var o=b.textContent;b.textContent="Copiado";setTimeout(function(){b.textContent=o;},1500);});});});</script><?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
+
+</body></html>

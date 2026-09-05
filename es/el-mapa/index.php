@@ -1,4 +1,4 @@
-<?php $HC_LANG='en'; $HC_EN='/universe/'; $HC_ES='/es/el-mapa/'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html><html lang="en"><head>
+<?php $HC_LANG='es'; $HC_EN='/universe/'; $HC_ES='/es/el-mapa/'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html><html lang="es"><head>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -6,19 +6,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TBPM9KTK');</script>
 <!-- End Google Tag Manager --><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The map behind the Creative Profile test | Hypercreative</title>
-<meta name="description" content="The full map behind the Creative Profile test: nine creative profiles in three families, and the 72 signatures they make in pairs. Find the profile you are on right now.">
+<title>El mapa que hay detrás del test Creative Profile | Hypercreative</title>
+<meta name="description" content="El mapa completo que hay detrás del test Creative Profile: nueve perfiles creativos repartidos en tres familias y las 72 firmas que forman al emparejarse. Encuentra el perfil en el que estás ahora.">
 <?php echo hc_hreflang(); ?><meta name="robots" content="index,follow">
-<meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="en_US"><meta property="og:type" content="website">
-<meta property="og:title" content="The map behind the Creative Profile test | Hypercreative">
-<meta property="og:description" content="The full map behind the Creative Profile test: nine creative profiles in three families, and the 72 signatures they make in pairs.">
-<meta property="og:url" content="https://hypercreativemethod.com/universe/">
+<meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="es_ES"><meta property="og:type" content="website">
+<meta property="og:title" content="El mapa que hay detrás del test Creative Profile | Hypercreative">
+<meta property="og:description" content="El mapa completo que hay detrás del test Creative Profile: nueve perfiles creativos repartidos en tres familias y las 72 firmas que forman al emparejarse.">
+<meta property="og:url" content="https://hypercreativemethod.com/es/el-mapa/">
 <meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The map behind the Creative Profile test | Hypercreative">
-<meta name="twitter:description" content="The full map behind the Creative Profile test: nine creative profiles in three families, and the 72 signatures they make in pairs.">
+<meta name="twitter:title" content="El mapa que hay detrás del test Creative Profile | Hypercreative">
+<meta name="twitter:description" content="El mapa completo que hay detrás del test Creative Profile: nueve perfiles creativos repartidos en tres familias y las 72 firmas que forman al emparejarse.">
 <meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hypercreativemethod.com/"},{"@type":"ListItem","position":2,"name":"Creative Profile","item":"https://hypercreativemethod.com/creative-profile/"},{"@type":"ListItem","position":3,"name":"The map","item":"https://hypercreativemethod.com/universe/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"es","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://hypercreativemethod.com/es/"},{"@type":"ListItem","position":2,"name":"Creative Profile","item":"https://hypercreativemethod.com/es/perfil-creativo/"},{"@type":"ListItem","position":3,"name":"El mapa","item":"https://hypercreativemethod.com/es/el-mapa/"}]}</script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
@@ -92,7 +92,7 @@ body.focused .note{display:none}
   font-size:1.25rem;line-height:1;cursor:pointer;padding:.1rem .2rem}
 .px:hover{color:var(--ink)}
 
-/* the reading matter under the fold, so the page says something without JS */
+/* la lectura de debajo del pliegue, para que la página diga algo sin JS */
 .below{max-width:760px;margin:0 auto;padding:clamp(3rem,7vw,5rem) 1.5rem}
 .below h2{font-family:var(--fd);font-weight:400;font-size:clamp(1.5rem,3.4vw,2rem);
   letter-spacing:-.02em;line-height:1.15;margin-bottom:1rem}
@@ -123,20 +123,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
 
   <div class="stage">
-    <canvas id="uni" role="img" aria-label="A map you can turn: three families, nine profiles running their orbits around them, and the 72 signatures hanging between the profiles"></canvas>
+    <canvas id="uni" role="img" aria-label="Un mapa que puedes girar: tres familias, nueve perfiles recorriendo sus órbitas alrededor de ellas y las 72 firmas colgadas entre los perfiles"></canvas>
 
     <div class="hud">
-      <h1 class="title">The map of the method</h1>
-      <p class="lead">The eleven habits of the method fall into three families: feed, sharpen and protect. <em>You pull most of the energy you create with from one of them and orbit it nearly all the time.</em> Nine profiles turn around those families, and right now you are on one.</p>
-      <p class="note"><b>Right now, and that is the point.</b> Your profile says where you are pulling from this quarter, not who you are. Train the habits of another family and your orbit moves. No family is better than another.</p>
+      <h1 class="title">El mapa del método</h1>
+      <p class="lead">Los once hábitos del método se reparten en tres familias: alimentar, afilar y proteger. <em>De una de ellas sacas casi toda la energía con la que creas, y la orbitas casi todo el tiempo.</em> Nueve perfiles giran alrededor de esas familias, y ahora mismo estás en uno.</p>
+      <p class="note"><b>Ahora mismo, y ahí está la clave.</b> Tu perfil dice de dónde tiras este trimestre, no quién eres. Entrena los hábitos de otra familia y tu órbita se mueve. Ninguna familia es mejor que otra.</p>
       <p class="mine" id="mine"></p>
-      <a class="go" href="/creative-profile/?start=1">Find your profile</a>
+      <a class="go" href="/es/perfil-creativo/?start=1">Encuentra tu perfil</a>
     </div>
 
-    <div class="hint" id="hint">Drag to orbit &middot; scroll to zoom &middot; hover to slow, click to hold</div>
+    <div class="hint" id="hint">Arrastra para orbitar &middot; gira la rueda para acercar &middot; pasa el cursor para frenar, clic para fijar</div>
 
     <aside class="panel" id="panel" aria-live="polite" hidden>
-      <button class="px" id="px" type="button" aria-label="Close">&times;</button>
+      <button class="px" id="px" type="button" aria-label="Cerrar">&times;</button>
       <div class="p-ico" id="pIco"></div>
       <div class="p-fam" id="pFam"></div>
       <h2 class="p-name" id="pName"></h2>
@@ -147,34 +147,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <main class="below">
-  <h2>Nine profiles, and the 72 signatures between them</h2>
-  <p>The map above is the Hypercreative Method seen from outside. The method trains eleven habits, and those habits fall into three families: how you <strong>feed</strong> an idea, how you <strong>sharpen</strong> it, and how you <strong>protect</strong> it once it exists. Nine ways of working orbit those three families, and every one of them is shaded by a second. That is seventy-two signatures in all, and one of them is where you are working from this quarter.</p>
+  <h2>Nueve perfiles y las 72 firmas que hay entre ellos</h2>
+  <p>El mapa de arriba es el método de Hypercreative visto desde fuera. El método entrena once hábitos, y esos hábitos se reparten en tres familias: cómo <strong>alimentas</strong> una idea, cómo la <strong>afilas</strong> y cómo la <strong>proteges</strong> una vez existe. Nueve formas de trabajar orbitan esas tres familias, y todas vienen matizadas por una segunda. Son setenta y dos firmas en total, y en una de ellas estás trabajando este trimestre.</p>
 
   <div class="suns">
     <div>
-      <h3 class="sun-h">Feed</h3>
-      <p class="sun-p">Where your ideas come from. You fill the tank with raw material: you master your own field, you wander into fields that are not yours, and you keep everything worth keeping.</p>
-      <p class="sun-w">Cartographer &middot; Explorer &middot; Collector</p>
+      <h3 class="sun-h">Alimentar</h3>
+      <p class="sun-p">De dónde salen tus ideas. Llenas el depósito de material en bruto: dominas tu propio terreno, te metes en terrenos que no son tuyos y guardas todo lo que merece guardarse.</p>
+      <p class="sun-w">Cartógrafo &middot; Explorador &middot; Coleccionista</p>
     </div>
     <div>
-      <h3 class="sun-h">Sharpen</h3>
-      <p class="sun-p">How raw material turns into an idea. You make it cut: you notice what others walked past, you rewrite the question, and you slam far-apart things together to see what survives.</p>
-      <p class="sun-w">Notary &middot; Reframer &middot; Collider</p>
+      <h3 class="sun-h">Afilar</h3>
+      <p class="sun-p">Cómo el material en bruto se convierte en idea. Haces que corte: te fijas en lo que los demás pasaron de largo, reescribes la pregunta y estrellas entre sí cosas lejanas para ver qué sobrevive.</p>
+      <p class="sun-w">Notario &middot; Reformulador &middot; Colisionador</p>
     </div>
     <div>
-      <h3 class="sun-h">Protect</h3>
-      <p class="sun-p">How the work survives contact with the world. You keep it alive under pressure: you think in drafts, you defend what you build from the committee, and you keep your own hands on the controls.</p>
-      <p class="sun-w">Sketcher &middot; Guardian &middot; Persona</p>
+      <h3 class="sun-h">Proteger</h3>
+      <p class="sun-p">Cómo el trabajo sobrevive al contacto con el mundo. Lo mantienes vivo bajo presión: piensas en borradores, defiendes del comité lo que construyes y no sueltas los mandos.</p>
+      <p class="sun-w">Bocetista &middot; Guardián &middot; Personaje</p>
     </div>
   </div>
 
-  <p>None of this is a ranking. There is no best family, no top profile and no score anywhere in it. Where you are pulling from is a fact about this quarter, not a verdict about you, and it moves the moment you train the habits of another family.</p>
-  <a class="go" href="/creative-profile/?start=1">Find the profile you are on</a>
+  <p>Nada de esto es una clasificación. No hay familia mejor, ni perfil superior, ni una nota en ninguna parte. De dónde tiras es un hecho de este trimestre, no un veredicto sobre ti, y se mueve en cuanto entrenas los hábitos de otra familia.</p>
+  <a class="go" href="/es/perfil-creativo/?start=1">Encuentra el perfil en el que estás</a>
 </main>
 
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
 
-<script src="/assets/hc-worlds.js"></script>
+<script src="/assets/hc-worlds-es.js"></script>
 <script src="/assets/hc-universe.js"></script>
 <script>
 (function(){
@@ -182,29 +182,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var cv=document.getElementById("uni");
   if(!cv||!window.HCUniverse||!window.HCW) return;
 
-  /* a signature can be handed over in the address bar: /universe/?w=lead&u=under.
-     Anything that is not one of the nine worlds is simply dropped. */
+  /* una firma se puede pasar por la barra de direcciones: /es/el-mapa/?w=lead&u=under.
+     Lo que no sea uno de los nueve mundos, se descarta sin mas. */
   var q=new URLSearchParams(location.search);
   var w=(q.get("w")||"").toLowerCase(), u=(q.get("u")||"").toLowerCase();
   if(!Object.prototype.hasOwnProperty.call(HCW.TYPES,w)) w="";
   if(!Object.prototype.hasOwnProperty.call(HCW.TYPES,u)||u===w) u="";
 
+  /* los nombres llevan articulo delante ("El Cartografo"); en la frase va suelto */
+  function bare(n){ return String(n).replace(/^El /,""); }
+
   if(w){
     var lead=HCW.TYPES[w].name, mine=document.getElementById("mine");
     mine.innerHTML=u
-      ? 'Lit below is your own signature: the <b>'+lead.replace(/^The /,"")+
-        '</b>, shaded by the <b>'+HCW.TYPES[u].name.replace(/^The /,"")+
-        '</b>. Turn the map and you can see what it hangs between.'
-      : 'Lit below is the profile your test gave you: the <b>'+lead.replace(/^The /,"")+
-        '</b>. Turn the map and you can see what it orbits.';
+      ? 'Abajo se enciende tu propia firma: el <b>'+bare(lead)+
+        '</b>, con el matiz del <b>'+bare(HCW.TYPES[u].name)+
+        '</b>. Gira el mapa y ver&aacute;s entre qu&eacute; cuelga.'
+      : 'Abajo se enciende el perfil que te dio el test: el <b>'+bare(lead)+
+        '</b>. Gira el mapa y ver&aacute;s qu&eacute; orbita.';
     document.body.classList.add("focused");
   }
+
+  /* el motor del mapa habla ingles por defecto; aqui van sus palabras en
+     espanol. Las claves internas de las familias (Feed, Sharpen, Protect) no
+     se tocan: solo cambia lo que se lee en pantalla. */
+  var I18N_ES={
+    fam:{Feed:"Alimentar", Sharpen:"Afilar", Protect:"Proteger"},
+    article:"El ",
+    descLead:"",
+    numbers:{2:"dos", 3:"tres", 4:"cuatro"},
+    listJoin:", ",
+    listLast:" y ",
+    famSub:"una de las tres familias",
+    famBody:"Cuando tiras de esta familia, {desc}. A su alrededor giran {n} perfiles: {profiles}.",
+    nodeSub:"con el matiz del <b>{profile}</b>",
+    sunSub:"un perfil que orbita la familia {family}",
+    touchHint:"Arrastra para orbitar &middot; pellizca para acercar &middot; toca para fijar"
+  };
 
   HCUniverse.mount({
     canvas:cv,
     anchor:"left",
     theme:"paper",
     hint:document.getElementById("hint"),
+    i18n:I18N_ES,
     focus:w?{lead:w,under:u,live:true}:null,
     panel:{
       root:document.getElementById("panel"),

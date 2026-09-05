@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php $HC_LANG='en'; $HC_EN='/creative-profile/'; $HC_ES='/es/perfil-creativo/'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
@@ -13,7 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Creative Profile: which one are you on right now? | Hypercreative</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="description" content="A two-minute test that tells you which of the nine creative profiles you are on right now, not how creative you are. No score, a shareable card. From the Hypercreative Method.">
-<link rel="canonical" href="https://hypercreativemethod.com/creative-profile/">
+<?php echo hc_hreflang(); ?>
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:site_name" content="Hypercreative">
 <meta property="og:locale" content="en_US">
@@ -67,6 +67,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .nav-cta{border:1px solid var(--line);padding:8px 15px;border-radius:2px;color:var(--ink)!important}
   .nav-cta::after{display:none}
   .nav-cta:hover{border-color:var(--red)}
+  .nav-lang{display:inline-flex;align-items:center;gap:.45em;color:var(--ink-mute)}
+  .nav-links .nav-lang a{color:var(--ink-mute)}
+  .nav-links .nav-lang a:hover{color:var(--ink)}
+  .nav-lang a::after{display:none}
+  .nav-lang .on{color:var(--ink);font-weight:500}
+  .nav-lang i{font-style:normal;opacity:.4}
+  @media(max-width:760px){.nav-links .nav-lang a{display:inline}}
 
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.25rem,4vw,3.25rem);width:100%}
   main.wrap{flex:1 0 auto}
@@ -360,6 +367,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="/blog/">Blog</a>
     <a href="/press/">Press</a>
     <a class="nav-cta" href="/#request">Let's talk</a>
+    <?php echo hc_lang_switch(); ?>
   </nav>
 </header>
 

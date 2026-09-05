@@ -1,4 +1,4 @@
-<?php $HC_LANG='en'; $HC_EN='/legal/cookies'; $HC_ES='/es/legal/cookies'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html><html lang="en"><head>
+<?php $HC_LANG='es'; $HC_EN='/legal/cookies'; $HC_ES='/es/legal/cookies'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html><html lang="es"><head>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -6,9 +6,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TBPM9KTK');</script>
 <!-- End Google Tag Manager --><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cookie policy | Hypercreative</title>
-<meta name="description" content="Cookie policy for Hypercreative, the corporate creativity training brand."><?php echo hc_hreflang(); ?><meta name="robots" content="noindex,follow"><meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="en_US"><meta property="og:type" content="website"><meta property="og:title" content="Cookie policy | Hypercreative"><meta property="og:description" content="Cookie policy for Hypercreative, the corporate creativity training brand."><meta property="og:url" content="https://hypercreativemethod.com/legal/cookies"><meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Cookie policy | Hypercreative"><meta name="twitter:description" content="Cookie policy for Hypercreative, the corporate creativity training brand."><meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="../favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<title>Política de cookies | Hypercreative</title>
+<meta name="description" content="Política de cookies de Hypercreative, la marca de entrenamiento creativo para empresas.">
+<?php echo hc_hreflang(); ?>
+<meta name="robots" content="noindex,follow"><meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="es_ES"><meta property="og:type" content="website"><meta property="og:title" content="Política de cookies | Hypercreative"><meta property="og:description" content="Política de cookies de Hypercreative, la marca de entrenamiento creativo para empresas."><meta property="og:url" content="https://hypercreativemethod.com/es/legal/cookies"><meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Política de cookies | Hypercreative"><meta name="twitter:description" content="Política de cookies de Hypercreative, la marca de entrenamiento creativo para empresas."><meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
@@ -77,33 +79,34 @@ article a{color:var(--ink);text-decoration:underline;text-decoration-color:var(-
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
-<main class="wrap legal"><a class="back" href="../">&#8592; Home</a><h1 class="t" style="margin-top:1.4rem">Cookie policy</h1><article><p><strong>Last updated: 17 June 2026</strong></p>
-<p>This Cookie Policy explains how <strong>Stormridge LLC</strong>, operating under the brand <strong>Hypercreative</strong> (&quot;Hypercreative&quot;, &quot;the Company&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;), uses cookies and similar technology on this website. Read it together with our Privacy Policy.</p>
-<h3>What cookies are</h3>
-<p>A cookie is a small text file a website places on your device when you visit. It lets the site remember your actions and preferences over time, and it helps the site work and improve. We also use similar technology, such as pixels, tags, and local storage. In this Policy, &quot;cookies&quot; covers all of them.</p>
-<h3>Why we use them</h3>
-<p>We keep cookies to a minimum and use them for clear reasons:</p>
+<main class="wrap legal"><a class="back" href="/es/">&#8592; Inicio</a><h1 class="t" style="margin-top:1.4rem">Política de cookies</h1><article><p style="color:var(--mute)">Traducción de cortesía. En caso de discrepancia entre versiones, prevalece la <a href="/legal/cookies">versión en inglés</a>.</p>
+<p><strong>Última actualización: 17 de junio de 2026</strong></p>
+<p>Esta Política de cookies explica cómo <strong>Stormridge LLC</strong>, que opera bajo la marca <strong>Hypercreative</strong> (&quot;Hypercreative&quot;, &quot;la Empresa&quot;, &quot;nosotros&quot;), usa cookies y tecnología similar en este sitio web. Léala junto con nuestra Política de privacidad.</p>
+<h3>Qué son las cookies</h3>
+<p>Una cookie es un pequeño archivo de texto que un sitio web coloca en su dispositivo cuando lo visita. Permite al sitio recordar sus acciones y sus preferencias a lo largo del tiempo, y ayuda a que el sitio funcione y mejore. También usamos tecnología similar, como píxeles, etiquetas y almacenamiento local. En esta Política, &quot;cookies&quot; se refiere a todas ellas.</p>
+<h3>Por qué las usamos</h3>
+<p>Reducimos las cookies al mínimo y las usamos por razones claras:</p>
 <ul>
-<li>To make the website work and stay secure.</li>
-<li>To remember your choices, including your cookie preferences.</li>
-<li>To understand, in aggregate, how the website is used so we can improve it.</li>
+<li>Para que el sitio web funcione y se mantenga seguro.</li>
+<li>Para recordar sus decisiones, incluidas sus preferencias de cookies.</li>
+<li>Para entender, de forma agregada, cómo se usa el sitio web y poder mejorarlo.</li>
 </ul>
-<p>We do not use cookies to build intrusive profiles, and we do not sell data gathered through cookies.</p>
-<h3>The types we use</h3>
-<p><strong>Strictly necessary cookies.</strong> These keep the website running and secure. They support core functions such as page navigation, load balancing, and form submission. The website cannot work properly without them, so they do not require consent.</p>
-<p><strong>Preference cookies.</strong> These remember choices you make, such as your language or your cookie settings, so you do not have to set them again.</p>
-<p><strong>Analytics cookies.</strong> These help us see how visitors find and use the website, which pages they read, and where they run into trouble. The information is used in aggregate to make the website better. Where the law requires it, we set these only after you consent.</p>
-<p><strong>Third party cookies.</strong> Some cookies are set by the providers we use to host, secure, or analyse the website. Those providers process data under their own policies as well as ours. We work only with providers we consider trustworthy.</p>
-<h3>Your choices</h3>
-<p>When you first visit, the cookie banner lets you accept or decline cookies that are not strictly necessary. You can change your choice at any time through the cookie settings on the website.</p>
-<p>You can also manage cookies through your browser. Most browsers let you see what is stored, delete cookies, and block them. Each browser is different, so check the help section of yours. If you block strictly necessary cookies, parts of the website may stop working.</p>
-<h3>Consent</h3>
-<p>Where the law requires consent, we do not set non essential cookies until you give it. Your consent applies until you withdraw it or it expires, after which we will ask again. Withdrawing consent does not affect what was already done while consent was in place.</p>
-<h3>How long cookies last</h3>
-<p>Some cookies are session cookies and disappear when you close your browser. Others are persistent and stay for a set period or until you delete them. The duration depends on the cookie and its purpose.</p>
-<h3>Changes to this Policy</h3>
-<p>We may update this Cookie Policy as the website or the technology changes. The current version is always the one published here, with its date at the top.</p>
-<h3>Contact</h3>
-<p>For any question about cookies on the website, reach us through the contact form.</p></article></main><?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
+<p>No usamos cookies para construir perfiles intrusivos, y no vendemos los datos recogidos mediante cookies.</p>
+<h3>Los tipos que usamos</h3>
+<p><strong>Cookies estrictamente necesarias.</strong> Mantienen el sitio web en funcionamiento y seguro. Dan soporte a funciones básicas como la navegación entre páginas, el reparto de carga y el envío de formularios. El sitio web no puede funcionar bien sin ellas, así que no requieren consentimiento.</p>
+<p><strong>Cookies de preferencias.</strong> Recuerdan las decisiones que usted toma, como su idioma o su configuración de cookies, para que no tenga que volver a fijarlas.</p>
+<p><strong>Cookies de analítica.</strong> Nos ayudan a ver cómo los visitantes encuentran y usan el sitio web, qué páginas leen y dónde se atascan. La información se usa de forma agregada para mejorar el sitio web. Cuando la ley lo exige, solo las instalamos después de que usted dé su consentimiento.</p>
+<p><strong>Cookies de terceros.</strong> Algunas cookies las instalan los proveedores que usamos para alojar, proteger o analizar el sitio web. Esos proveedores tratan datos conforme a sus propias políticas además de la nuestra. Solo trabajamos con proveedores que consideramos fiables.</p>
+<h3>Sus opciones</h3>
+<p>En su primera visita, el banner de cookies le permite aceptar o rechazar las cookies que no son estrictamente necesarias. Puede cambiar su decisión en cualquier momento desde la configuración de cookies del sitio web.</p>
+<p>También puede gestionar las cookies desde su navegador. La mayoría de los navegadores permiten ver qué hay almacenado, borrar cookies y bloquearlas. Cada navegador es distinto, así que consulte la sección de ayuda del suyo. Si bloquea las cookies estrictamente necesarias, partes del sitio web pueden dejar de funcionar.</p>
+<h3>Consentimiento</h3>
+<p>Cuando la ley exige consentimiento, no instalamos cookies no esenciales hasta que usted lo da. Su consentimiento vale hasta que lo retira o hasta que caduca, momento en el que volveremos a pedirlo. Retirar el consentimiento no afecta a lo que ya se hizo mientras estuvo vigente.</p>
+<h3>Cuánto duran las cookies</h3>
+<p>Algunas cookies son de sesión y desaparecen al cerrar el navegador. Otras son persistentes y permanecen durante un periodo determinado o hasta que usted las borra. La duración depende de la cookie y de su finalidad.</p>
+<h3>Cambios en esta Política</h3>
+<p>Podemos actualizar esta Política de cookies a medida que cambien el sitio web o la tecnología. La versión vigente es siempre la publicada aquí, con su fecha al principio.</p>
+<h3>Contacto</h3>
+<p>Para cualquier duda sobre las cookies del sitio web, escríbanos a través del formulario de contacto.</p></article></main><?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
 
 </body></html>

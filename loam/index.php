@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php $HC_LANG='en'; $HC_EN='/loam/'; $HC_ES='/es/loam/'; include $_SERVER['DOCUMENT_ROOT'].'/_inc/lang.php'; ?><!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
@@ -13,7 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Loam · Seed anything. Grow ideas.</title>
 <link rel="icon" href="assets/loam-icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/loam-icon.png">
 <meta name="description" content="An anti-hoarding seed bank for your ideas. Capture any fragment without sorting. When you are stuck, your own ground hands it back as questions, never answers. A Hypercreative tool.">
-<link rel="canonical" href="https://hypercreativemethod.com/loam/">
+<?php echo hc_hreflang(); ?>
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:site_name" content="Hypercreative">
 <meta property="og:locale" content="en_US">
@@ -67,6 +67,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .nav-link:hover{color:var(--ink)}
   .nav-link::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:var(--red);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
   .nav-link:hover::after{transform:scaleX(1);transform-origin:left}
+  .nav-lang{display:inline-flex;align-items:center;gap:.45em;font-weight:500;font-size:.72rem;letter-spacing:.14em;color:var(--ink-mute)}
+  .nav-lang a{color:var(--ink-mute);transition:color .3s var(--ease)}
+  .nav-lang a:hover{color:var(--ink)}
+  .nav-lang a::after{display:none}
+  .nav-lang .on{color:var(--ink-soft);font-weight:500}
+  .nav-lang i{font-style:normal;opacity:.4}
   .btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--f);font-weight:500;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
     padding:.85rem 1.4rem;border:1px solid var(--line);border-radius:2px;cursor:pointer;transition:.3s var(--ease);white-space:nowrap}
   .btn-primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
@@ -230,6 +236,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <nav class="nav-r" aria-label="Primary">
     <a class="nav-link" href="https://loam.hypercreativemethod.com/demo">Demo</a>
     <a class="btn btn-primary" href="https://loam.hypercreativemethod.com">Open Loam</a>
+    <?php echo hc_lang_switch(); ?>
   </nav>
 </header>
 
@@ -237,7 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <canvas id="ground" aria-hidden="true"></canvas>
   <div class="hero-scrim"></div>
   <div class="hero-inner">
-    <h1 class="hero-logo reveal">Loam<span class="s">.</span><span class="sr-only"> — an idea seed bank. Seed anything, grow ideas.</span></h1>
+    <h1 class="hero-logo reveal">Loam<span class="s">.</span><span class="sr-only"> An idea seed bank. Seed anything, grow ideas.</span></h1>
     <p class="hero-claim reveal" style="--d:.1s">Seed anything. Grow ideas.</p>
     <p class="hero-sub reveal" style="--d:.16s">A private app for the half-ideas you would otherwise lose.</p>
     <p class="hero-how reveal" style="--d:.22s">Save any thought, link, or photo in one tap, without sorting. When you are stuck, Loam hands your own material back and asks the question that unlocks it.</p>

@@ -1,0 +1,48 @@
+LOGOTIPO DE HYPERCREATIVE: CÓMO USARLO BIEN
+
+Estás ayudando a alguien a colocar el logotipo de Hypercreative. Sigue estas reglas al pie de la letra y después pasa la lista de comprobación del final. Hypercreative es una empresa de entrenamiento creativo para líderes.
+
+1. USA LOS ARCHIVOS OFICIALES (nunca redibujes ni vuelvas a escribir el logotipo)
+   Pack de logotipos, todos los archivos (zip): https://hypercreativemethod.com/assets/press/Hypercreative-Logos.zip
+   Logotipo para fondos claros (SVG): https://hypercreativemethod.com/assets/press/logo-light.svg
+   Logotipo para fondos claros (PNG): https://hypercreativemethod.com/assets/press/logo-light.png
+   Logotipo para fondos oscuros (SVG): https://hypercreativemethod.com/assets/press/logo-dark.svg
+   Logotipo para fondos oscuros (PNG): https://hypercreativemethod.com/assets/press/logo-dark.png
+   Símbolo, el punto rojo (SVG): https://hypercreativemethod.com/assets/press/logo-mark.svg
+   Manual de marca completo (PDF): https://hypercreativemethod.com/assets/press/Hypercreative-Brand-Manual.pdf
+
+2. QUÉ ES EL LOGOTIPO
+   El logotipo es una sola palabra, "Hypercreative", compuesta en Inter Medium y cerrada por un punto rojo macizo, el punto de ignición. El punto forma parte del logotipo. No lo quites nunca.
+   Solo hay dos versiones:
+   - Positiva: palabra en tinta (#13130F) con el punto rojo (#E0463C). Para fondos claros.
+   - Inversa: palabra en papel (#F7F6F3) con el punto rojo. Para fondos oscuros.
+   El punto es siempre rojo, en las dos versiones.
+
+3. SIEMPRE
+   - Usa el archivo original, sin tocarlo.
+   - Elige la versión según el fondo: fondo claro, versión positiva; fondo oscuro, versión inversa.
+   - Deja alrededor del logotipo un aire de al menos un diámetro de punto por cada lado.
+   - Mantenlo a 104 px (o 28 mm) de ancho como mínimo. Por debajo de eso, usa el punto rojo solo, hasta 16 px.
+   - Mantén un contraste mínimo de 4,5 a 1 entre la palabra y su fondo.
+
+4. NUNCA
+   - Nunca vuelvas a escribir la palabra con otra tipografía ni otro grosor. Es Inter Medium.
+   - Nunca cambies el color de la palabra ni del punto, y nunca añadas degradados, sombras, contornos ni caja.
+   - Nunca lo estires, lo comprimas, lo gires, lo inclines ni lo curves.
+   - Nunca muevas, redimensiones ni elimines el punto rojo, ni lo cambies por otra forma.
+   - Nunca lo pongas sobre una imagen cargada, sobre una zona roja ni sobre un fondo de tono medio.
+   - Nunca pongas más de un elemento rojo en la misma vista.
+
+5. COLORES
+   Tinta #13130F. Papel #F7F6F3. Blanco #FFFFFF. Rojo #E0463C (solo acento, un rojo por vista).
+
+6. COMPRUEBA (todas las respuestas tienen que ser sí)
+   - ¿Has usado el archivo oficial, sin redibujarlo?
+   - ¿Es la versión correcta para el fondo (fondo claro, positiva; fondo oscuro, inversa)?
+   - ¿Está el punto rojo, y es rojo?
+   - ¿La palabra sigue intacta: Inter Medium, sin estirar ni girar?
+   - ¿Has dejado el aire, y el tamaño llega al mínimo?
+   - ¿Hay un solo elemento rojo en toda la vista?
+   Si alguna respuesta es no, está fuera de marca. Arréglalo antes de entregarlo.
+
+Archivos oficiales y manual completo: https://hypercreativemethod.com/es/prensa/
