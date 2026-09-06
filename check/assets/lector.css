@@ -27,6 +27,13 @@
 
 * { box-sizing: border-box; }
 
+/* Sin esto, dos toques seguidos sobre el mismo sitio los lee iOS como doble
+   toque y hace zoom, y una pulsacion larga abre la lupa de seleccion. */
+button, input, textarea, .grabar {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* display:flex y display:grid ganan al atributo hidden del navegador */
 [hidden] { display: none !important; }
 
@@ -135,53 +142,51 @@ body {
 
 .aviso { color: var(--rojo); font-size: 14px; margin: 0; }
 
-/* Teclado propio: el del sistema tapa media pantalla en el movil */
-.teclado {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-top: auto;
-}
-.teclado button {
-  height: 58px;
-  border: 0;
-  border-radius: 12px;
-  background: var(--sobre);
-  color: var(--tinta);
-  font-family: var(--dato);
-  font-size: 21px;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 1px var(--linea);
-  transition: transform .08s ease, background .12s ease;
-}
-.teclado button:active { transform: scale(0.96); background: var(--linea); }
-.teclado button.tenue { font-family: var(--ui); font-size: 14px; color: var(--suave); }
-.teclado button:focus-visible { outline: 2px solid var(--rojo); outline-offset: 2px; }
-
 .numero-zona { display: flex; flex-direction: column; gap: 12px; }
 
+.clave {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--linea);
+  background: transparent;
+  color: var(--tinta);
+  font-family: var(--dato);
+  font-size: 30px;
+  letter-spacing: 14px;
+  text-indent: 14px;
+  text-align: center;
+  padding: 14px 0 12px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.clave:focus { outline: none; border-bottom-color: var(--tinta); }
+.clave::placeholder { color: var(--linea); }
+.clave.error { border-bottom-color: var(--rojo); animation: tiembla .3s ease; }
+
 .numero {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  caret-color: var(--rojo);
   font-family: var(--dato);
   font-weight: 700;
   font-size: clamp(56px, 17vw, 76px);
   line-height: 1;
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
-  display: flex;
-  align-items: center;
-  gap: 4px;
   min-height: 76px;
+  color: var(--tinta);
 }
-.numero .cursor {
-  width: 3px;
-  height: 0.72em;
-  background: var(--rojo);
-  animation: late 1.1s steps(1) infinite;
-}
-@keyframes late { 50% { opacity: 0; } }
+.numero:focus { outline: none; }
+.numero::placeholder { color: var(--linea); }
+
 @media (prefers-reduced-motion: reduce) {
-  .numero .cursor { animation: none; }
-  .casillas.error b { animation: none; }
+  .clave.error { animation: none; }
 }
 
 .destino {
@@ -198,6 +203,7 @@ body {
   display: flex;
   gap: 8px;
 }
+.ubicacion b { white-space: nowrap; }
 .ubicacion span { font-family: var(--ui); }
 .extracto {
   margin: 0;
@@ -222,6 +228,10 @@ body {
 
 .grabar {
   position: relative;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
   width: 92px;
   height: 92px;
   border: 0;
@@ -261,7 +271,8 @@ body {
 }
 .grabar:disabled { opacity: .35; cursor: default; }
 .grabar:focus-visible { outline: 2px solid var(--tinta); outline-offset: 6px; border-radius: 50%; }
-.pista { text-align: center; font-size: 13px; }
+.pista { text-align: center; font-size: 13px; min-height: 2.4em; }
+.fila-menor { display: flex; gap: 18px; align-items: center; justify-content: center; flex-wrap: wrap; }
 
 .texto-boton {
   border: 0;

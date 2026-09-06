@@ -1,7 +1,7 @@
 /* Cascara offline: la app abre aunque no haya red, y las notas grabadas sin
    cobertura esperan en el movil (esa cola vive en IndexedDB, no aqui). */
-var CACHE = 'hc-lectura-v1';
-var CASCARA = ['./', 'assets/lector.css?v=1', 'assets/lector.js?v=1', 'assets/manifest.webmanifest'];
+var CACHE = 'hc-lectura-v2';
+var CASCARA = ['./', 'assets/lector.css?v=2', 'assets/lector.js?v=2', 'assets/manifest.webmanifest'];
 
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) {

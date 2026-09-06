@@ -157,6 +157,33 @@ switch ($accion) {
         }
         json_salida(['ok' => true]);
 
+    // Si un lector pierde su clave, o si una se expone, se emite otra. La
+    // anterior deja de servir en el acto y sus intentos fallidos se olvidan.
+    case 'nueva_clave':
+        $d  = entrada();
+        $id = (int)($d['id'] ?? 0);
+        if (!$id) {
+            json_error('Falta el ejemplar.');
+        }
+        $q = db()->prepare('SELECT token, numero, nombre FROM ejemplares WHERE id = ?');
+        $q->execute([$id]);
+        $ej = $q->fetch();
+        if (!$ej) {
+            json_error('Ese ejemplar no existe.', 404);
+        }
+        $token = bin2hex(random_bytes(9));
+        $pin   = str_pad((string)random_int(0, 999999), 6, '0', STR_PAD_LEFT);
+        db()->prepare('UPDATE ejemplares SET token = ?, pin_hash = ?, estado = ? WHERE id = ?')
+            ->execute([$token, password_hash($pin, PASSWORD_DEFAULT), 'activo', $id]);
+        db()->prepare('DELETE FROM intentos WHERE token = ?')->execute([$ej['token']]);
+        json_salida([
+            'ok'     => true,
+            'numero' => (int)$ej['numero'],
+            'nombre' => $ej['nombre'],
+            'token'  => $token,
+            'pin'    => $pin,
+        ]);
+
     // Lo rellena el analisis: dimension, tono y transcripcion de cada nota.
     case 'clasificar':
         $d = entrada();

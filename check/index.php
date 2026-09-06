@@ -45,7 +45,7 @@ $totalVersiculos = (int)db()->query('SELECT COUNT(*) FROM versiculos')->fetchCol
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap">
-<link rel="stylesheet" href="assets/lector.css?v=1">
+<link rel="stylesheet" href="assets/lector.css?v=2">
 </head>
 <body
   data-token="<?= htmlspecialchars($token, ENT_QUOTES) ?>"
@@ -57,11 +57,10 @@ $totalVersiculos = (int)db()->query('SELECT COUNT(*) FROM versiculos')->fetchCol
   <div class="marca"><span>Hypercreative</span><i class="punto"></i></div>
   <h1 class="saluda">Hola<?= $primerNombre !== '' ? ', ' . htmlspecialchars($primerNombre, ENT_QUOTES) : '' ?>.</h1>
   <p class="pie-puerta">Tu ejemplar lleva una clave de seis digitos impresa junto al codigo.</p>
-  <div class="casillas" id="casillas" aria-label="Clave de seis digitos">
-    <b></b><b></b><b></b><b></b><b></b><b></b>
-  </div>
+  <input class="clave" id="clave" type="text" inputmode="numeric" pattern="[0-9]*"
+         maxlength="6" placeholder="------" autocomplete="one-time-code"
+         enterkeyhint="go" aria-label="Clave de seis digitos">
   <p class="aviso" id="avisoPin" role="alert" hidden></p>
-  <div class="teclado" id="tecladoPin"></div>
   <p class="confidencial">Este manuscrito no esta publicado. Te lo presto para que lo rompas, no para que lo compartas.</p>
 </section>
 
@@ -74,7 +73,9 @@ $totalVersiculos = (int)db()->query('SELECT COUNT(*) FROM versiculos')->fetchCol
   <div class="rail" id="rail" title="Tu recorrido por el libro"><canvas id="railLienzo"></canvas></div>
 
   <div class="numero-zona">
-    <div class="numero" id="numero"><span></span><em class="cursor"></em></div>
+    <input class="numero" id="numero" type="text" inputmode="numeric" pattern="[0-9]*"
+           maxlength="4" placeholder="000" enterkeyhint="done"
+           aria-label="Numero del versiculo">
     <div class="destino" id="destino" hidden>
       <p class="ubicacion"><b id="capitulo"></b><span id="seccion"></span></p>
       <p class="extracto" id="extracto"></p>
@@ -82,16 +83,17 @@ $totalVersiculos = (int)db()->query('SELECT COUNT(*) FROM versiculos')->fetchCol
     <p class="destino-vacio" id="destinoVacio">Teclea el numero del margen, junto al parrafo.</p>
   </div>
 
-  <div class="teclado" id="tecladoNum"></div>
-
   <div class="acciones">
     <button class="grabar" id="grabar" type="button" aria-label="Grabar nota de voz">
       <canvas class="onda" id="onda"></canvas>
       <span class="disco"></span>
       <em class="reloj" id="reloj"></em>
     </button>
-    <p class="pista" id="pistaGrabar">Pulsa y habla. Vuelve a pulsar cuando acabes.</p>
-    <button class="texto-boton" id="prefieroEscribir" type="button">Prefiero escribir</button>
+    <p class="pista" id="pistaGrabar">Manten pulsado y habla, o toca una vez para manos libres.</p>
+    <div class="fila-menor">
+      <button class="texto-boton" id="prefieroEscribir" type="button">Prefiero escribir</button>
+      <button class="texto-boton" id="sinNumero" type="button">Nota sin numero</button>
+    </div>
   </div>
 
   <div class="escribir" id="escribir" hidden>
@@ -154,6 +156,6 @@ $totalVersiculos = (int)db()->query('SELECT COUNT(*) FROM versiculos')->fetchCol
 
 <div class="brindis" id="brindis" role="status" aria-live="polite"></div>
 
-<script src="assets/lector.js?v=1"></script>
+<script src="assets/lector.js?v=2"></script>
 </body>
 </html>

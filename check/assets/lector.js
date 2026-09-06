@@ -1,6 +1,10 @@
 /* Lectura de revision, lado del lector.
    Regla del proyecto: aqui solo hay un numero y un boton. Todo lo listo pasa
-   por debajo, sin pedirle nada a quien nos esta ayudando. */
+   por debajo, sin pedirle nada a quien nos esta ayudando.
+
+   Los numeros se teclean con el teclado del movil, no con uno dibujado: con un
+   teclado propio, dos toques seguidos sobre la misma tecla los lee iOS como
+   doble toque y hace zoom sobre la pantalla. */
 (function () {
   'use strict';
 
@@ -12,12 +16,12 @@
   var $ = function (id) { return document.getElementById(id); };
 
   var estado = {
-    numero: '',
-    pin: '',
     lector: null,
     notas: [],
     marcas: [],
-    grabando: null
+    grabando: null,
+    gesto: null,
+    pararAlArrancar: false
   };
 
   /* ---------------------------------------------------------------- red */
@@ -28,7 +32,8 @@
       method: opciones.cuerpo ? 'POST' : 'GET',
       headers: opciones.json ? { 'Content-Type': 'application/json' } : undefined,
       body: opciones.cuerpo || undefined,
-      credentials: 'same-origin'
+      credentials: 'same-origin',
+      cache: 'no-store'
     }).then(function (r) {
       return r.json().catch(function () { return { ok: false }; });
     });
@@ -147,63 +152,40 @@
     brindis.t = setTimeout(function () { b.classList.remove('visible'); }, 2200);
   }
 
-  /* --------------------------------------------------------------- teclas */
-
-  function construirTeclado(contenedor, alPulsar, extra) {
-    contenedor.innerHTML = '';
-    ['1', '2', '3', '4', '5', '6', '7', '8', '9', extra || '', '0', 'borrar'].forEach(function (t) {
-      var b = document.createElement('button');
-      b.type = 'button';
-      if (t === '') {
-        b.disabled = true;
-        b.style.visibility = 'hidden';
-      } else if (t === 'borrar') {
-        b.className = 'tenue';
-        b.textContent = 'Borrar';
-      } else if (!/^\d$/.test(t)) {
-        b.className = 'tenue';
-        b.textContent = t === 'sin' ? 'Sin numero' : t;
-      } else {
-        b.textContent = t;
-      }
-      b.addEventListener('click', function () { alPulsar(t); });
-      contenedor.appendChild(b);
-    });
+  function soloDigitos(campo, maximo) {
+    var limpio = (campo.value || '').replace(/\D/g, '').slice(0, maximo);
+    if (campo.value !== limpio) { campo.value = limpio; }
+    return limpio;
   }
 
   /* --------------------------------------------------------------- puerta */
 
-  function pintarPin() {
-    var casillas = $('casillas').children;
-    for (var i = 0; i < casillas.length; i++) {
-      casillas[i].textContent = estado.pin[i] ? '.' : '';
-      casillas[i].classList.toggle('llena', Boolean(estado.pin[i]));
-    }
-  }
+  var enviandoPin = false;
 
-  function teclaPin(t) {
+  function alEscribirPin() {
+    var pin = soloDigitos($('clave'), 6);
     $('avisoPin').hidden = true;
-    $('casillas').classList.remove('error');
-    if (t === 'borrar') { estado.pin = estado.pin.slice(0, -1); }
-    else if (/^\d$/.test(t) && estado.pin.length < 6) { estado.pin += t; }
-    pintarPin();
-    if (estado.pin.length === 6) { enviarPin(); }
+    $('clave').classList.remove('error');
+    if (pin.length === 6 && !enviandoPin) { enviarPin(pin); }
   }
 
-  function enviarPin() {
-    api('pin', { json: true, cuerpo: JSON.stringify({ token: TOKEN, pin: estado.pin }) })
+  function enviarPin(pin) {
+    enviandoPin = true;
+    $('clave').blur();
+    api('pin', { json: true, cuerpo: JSON.stringify({ token: TOKEN, pin: pin }) })
       .then(function (r) {
+        enviandoPin = false;
         if (r.ok) {
           estado.lector = r.lector;
           entrarEnLaSala(true);
         } else {
-          $('casillas').classList.add('error');
+          $('clave').classList.add('error');
           $('avisoPin').textContent = r.error || 'No ha entrado.';
           $('avisoPin').hidden = false;
-          estado.pin = '';
-          setTimeout(pintarPin, 320);
+          $('clave').value = '';
+          setTimeout(function () { $('clave').focus(); }, 400);
         }
-      });
+      }, function () { enviandoPin = false; });
   }
 
   /* ----------------------------------------------------------------- sala */
@@ -211,63 +193,59 @@
   var temporizador = null;
 
   function limpiarNumero() {
-    estado.numero = '';
-    pintarNumero();
+    $('numero').value = '';
+    pintarDestino(null);
   }
 
-  function pintarNumero() {
-    $('numero').firstElementChild.textContent = estado.numero;
-    if (estado.numero === '') {
+  function pintarDestino(v) {
+    if (!v) {
       $('destino').hidden = true;
       $('destinoVacio').hidden = false;
       return;
     }
+    $('capitulo').textContent = 'Capitulo ' + v.cap_num;
+    $('seccion').textContent = v.seccion || v.cap_titulo;
+    $('extracto').textContent = v.extracto;
+    $('destino').hidden = false;
+    $('destinoVacio').hidden = true;
+  }
+
+  function alEscribirNumero() {
+    var n = soloDigitos($('numero'), 4);
+    $('destinoVacio').textContent = 'Teclea el numero del margen, junto al parrafo.';
     clearTimeout(temporizador);
-    temporizador = setTimeout(buscarVersiculo, 180);
+    if (n === '') {
+      pintarDestino(null);
+      return;
+    }
+    temporizador = setTimeout(buscarVersiculo, 220);
   }
 
   function buscarVersiculo() {
-    var n = parseInt(estado.numero, 10);
-    if (!n) { return; }
+    var n = numeroActual();
+    if (!n) {
+      pintarDestino(null);
+      $('destinoVacio').textContent = 'Ese numero no existe. El libro llega hasta el ' + TOTAL + '.';
+      return;
+    }
     api('versiculo&n=' + n).then(function (r) {
       if (!r.ok) {
-        $('destino').hidden = true;
-        $('destinoVacio').hidden = false;
+        pintarDestino(null);
         $('destinoVacio').textContent = 'Ese numero no existe. El libro llega hasta el ' + TOTAL + '.';
         return;
       }
-      var v = r.versiculo;
-      $('capitulo').textContent = 'Capitulo ' + v.cap_num;
-      $('seccion').textContent = v.seccion || v.cap_titulo;
-      $('extracto').textContent = v.extracto;
-      $('destino').hidden = false;
-      $('destinoVacio').hidden = true;
+      pintarDestino(r.versiculo);
     });
   }
 
-  function teclaNumero(t) {
-    if (t === 'sin') {
-      estado.numero = '';
-      pintarNumero();
-      brindis('La proxima nota ira sin numero');
-      return;
-    }
-    if (t === 'borrar') {
-      estado.numero = estado.numero.slice(0, -1);
-    } else if (/^\d$/.test(t) && estado.numero.length < 4) {
-      if (estado.numero === '' && t === '0') { return; }
-      estado.numero += t;
-    }
-    $('destinoVacio').textContent = 'Teclea el numero del margen, junto al parrafo.';
-    pintarNumero();
-  }
-
   function numeroActual() {
-    var n = parseInt(estado.numero, 10);
+    var n = parseInt($('numero').value, 10);
     return n > 0 && n <= TOTAL ? n : null;
   }
 
   /* --------------------------------------------------------------- grabar */
+
+  var MANTENER_MS = 450;   // por debajo de esto fue un toque, no una pulsacion
 
   function mimeDisponible() {
     var opciones = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/ogg;codecs=opus'];
@@ -275,6 +253,11 @@
       if (window.MediaRecorder && MediaRecorder.isTypeSupported(opciones[i])) { return opciones[i]; }
     }
     return '';
+  }
+
+  function pista(texto) {
+    var p = $('pistaGrabar');
+    if (p) { p.textContent = texto; }
   }
 
   function arrancarGrabacion(boton, lienzo, reloj, alTerminar) {
@@ -299,12 +282,19 @@
         var duracion = Date.now() - inicio;
         flujo.getTracks().forEach(function (t) { t.stop(); });
         ctx.close();
-        cancelAnimationFrame(estado.grabando.cuadro);
-        clearInterval(estado.grabando.tic);
+        if (estado.grabando) {
+          cancelAnimationFrame(estado.grabando.cuadro);
+          clearInterval(estado.grabando.tic);
+        }
         boton.dataset.grabando = '0';
         reloj.textContent = '';
         limpiarLienzo(lienzo);
         estado.grabando = null;
+        pista('Manten pulsado y habla, o toca una vez para manos libres.');
+        if (duracion < 600) {
+          brindis('Muy corta. Manten pulsado mientras hablas.');
+          return;
+        }
         alTerminar(new Blob(trozos, { type: mime || 'audio/webm' }), duracion);
       };
 
@@ -327,9 +317,63 @@
         }, 250)
       };
       reloj.textContent = '0:00';
+
+      // Si solto el dedo antes de que el microfono llegara a abrirse, se para
+      // en cuanto arranca: la pulsacion ya habia terminado.
+      if (estado.pararAlArrancar) {
+        estado.pararAlArrancar = false;
+        setTimeout(function () { if (estado.grabando) { estado.grabando.rec.stop(); } }, 400);
+      }
     }).catch(function () {
+      estado.pararAlArrancar = false;
+      pista('Manten pulsado y habla, o toca una vez para manos libres.');
       brindis('Necesito permiso para el microfono.');
     });
+  }
+
+  /* Mantener pulsado graba y soltar envia, como una nota de voz de toda la
+     vida. Un toque corto deja grabando en manos libres hasta el toque siguiente. */
+  function conectarBoton(boton, lienzo, reloj, hecho) {
+    function abajo(e) {
+      e.preventDefault();
+      if (estado.grabando) {              // estaba en manos libres: parar
+        estado.grabando.rec.stop();
+        estado.gesto = null;
+        return;
+      }
+      estado.gesto = Date.now();
+      pista('Suelta para enviar.');
+      arrancarGrabacion(boton, lienzo, reloj, hecho);
+    }
+
+    function arriba(e) {
+      if (e) { e.preventDefault(); }
+      if (estado.gesto === null) { return; }
+      var mantenido = Date.now() - estado.gesto >= MANTENER_MS;
+      estado.gesto = null;
+      if (!mantenido) {
+        pista('Grabando. Toca otra vez para parar.');
+        return;                            // fue un toque: sigue grabando
+      }
+      if (estado.grabando) {
+        estado.grabando.rec.stop();
+      } else {
+        estado.pararAlArrancar = true;     // el microfono aun no habia abierto
+      }
+    }
+
+    if (window.PointerEvent) {
+      boton.addEventListener('pointerdown', abajo);
+      boton.addEventListener('pointerup', arriba);
+      boton.addEventListener('pointercancel', arriba);
+    } else {
+      boton.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (estado.grabando) { estado.grabando.rec.stop(); }
+        else { arrancarGrabacion(boton, lienzo, reloj, hecho); }
+      });
+    }
+    boton.addEventListener('contextmenu', function (e) { e.preventDefault(); });
   }
 
   function limpiarLienzo(lienzo) {
@@ -471,28 +515,26 @@
   }
 
   function conectar() {
-    construirTeclado($('tecladoPin'), teclaPin);
-    construirTeclado($('tecladoNum'), teclaNumero, 'sin');
-
-    $('grabar').addEventListener('click', function () {
-      if (estado.grabando) {
-        estado.grabando.rec.stop();
-        return;
-      }
-      var v = numeroActual();
-      arrancarGrabacion($('grabar'), $('onda'), $('reloj'), function (blob, duracion) {
-        guardarNota({ versiculo: v, tipo: 'audio', blob: blob, duracion_ms: duracion });
-      });
+    $('clave').addEventListener('input', alEscribirPin);
+    $('clave').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); alEscribirPin(); }
     });
 
-    $('grabarFin').addEventListener('click', function () {
-      if (estado.grabando) {
-        estado.grabando.rec.stop();
-        return;
-      }
-      arrancarGrabacion($('grabarFin'), $('ondaFin'), $('relojFin'), function (blob, duracion) {
-        guardarNota({ versiculo: null, tipo: 'cierre', blob: blob, duracion_ms: duracion }).then(terminar);
-      });
+    $('numero').addEventListener('input', alEscribirNumero);
+    $('numero').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); $('numero').blur(); }
+    });
+    $('sinNumero').addEventListener('click', function () {
+      limpiarNumero();
+      $('numero').blur();
+      brindis('La proxima nota ira sin numero');
+    });
+
+    conectarBoton($('grabar'), $('onda'), $('reloj'), function (blob, duracion) {
+      guardarNota({ versiculo: numeroActual(), tipo: 'audio', blob: blob, duracion_ms: duracion });
+    });
+    conectarBoton($('grabarFin'), $('ondaFin'), $('relojFin'), function (blob, duracion) {
+      guardarNota({ versiculo: null, tipo: 'cierre', blob: blob, duracion_ms: duracion }).then(terminar);
     });
 
     $('terminarSinNota').addEventListener('click', terminar);
@@ -529,17 +571,6 @@
 
     window.addEventListener('online', vaciarCola);
     window.addEventListener('resize', dibujarRail);
-
-    // El teclado fisico tambien vale, para probar desde el ordenador.
-    document.addEventListener('keydown', function (e) {
-      if (!$('sala').hidden && document.activeElement.tagName !== 'TEXTAREA') {
-        if (/^\d$/.test(e.key)) { teclaNumero(e.key); }
-        if (e.key === 'Backspace') { teclaNumero('borrar'); }
-      } else if (!$('puerta').hidden) {
-        if (/^\d$/.test(e.key)) { teclaPin(e.key); }
-        if (e.key === 'Backspace') { teclaPin('borrar'); }
-      }
-    });
   }
 
   conectar();
@@ -558,6 +589,8 @@
       if (!TOKEN) {
         $('avisoPin').textContent = 'Escanea el codigo de tu ejemplar para empezar.';
         $('avisoPin').hidden = false;
+      } else {
+        setTimeout(function () { $('clave').focus(); }, 250);
       }
     }
   });

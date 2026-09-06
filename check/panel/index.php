@@ -190,6 +190,11 @@ button.plano{background:none;color:var(--suave);text-decoration:underline;text-u
         <option value="terminado">Terminado</option>
       </select>
     </div>
+    <div class="campo">
+      <label>Acceso</label>
+      <button class="plano" id="nuevaClave" type="button" style="align-self:flex-start">Emitir una clave nueva</button>
+      <p class="nota-regla" id="claveNueva" hidden></p>
+    </div>
     <div class="cabecera">
       <button class="plano" id="cerrarFicha" type="button">Cancelar</button>
       <button class="accion" id="guardarFicha" type="button">Guardar</button>
@@ -358,6 +363,7 @@ button.plano{background:none;color:var(--suave);text-decoration:underline;text-u
   function abrirFicha(e) {
     D.ficha = e;
     $('fichaNombre').textContent = e.nombre;
+    $('claveNueva').hidden = true;
     $('fNombre').value = e.nombre || '';
     $('fPerfil').value = e.perfil || '';
     $('fLente').value = e.lente || '';
@@ -493,7 +499,23 @@ button.plano{background:none;color:var(--suave);text-decoration:underline;text-u
     });
   });
   $('clave').addEventListener('keydown', function (e) { if (e.key === 'Enter') { $('entrar').click(); } });
-  $('cerrarFicha').addEventListener('click', function () { $('velo').hidden = true; });
+  $('nuevaClave').addEventListener('click', function () {
+    if (!confirm('La clave actual dejara de funcionar. Seguro?')) { return; }
+    api('nueva_clave', { id: D.ficha.id }).then(function (r) {
+      if (!r.ok) { return; }
+      var enlace = location.origin + '/check/?e=' + r.token;
+      var caja = $('claveNueva');
+      caja.hidden = false;
+      caja.innerHTML = 'Ejemplar ' + r.numero + '<br>' + escapar(enlace) +
+        '<br>clave <b style="font-family:var(--dato);color:var(--rojo)">' + r.pin + '</b>' +
+        '<br>Apuntala ahora: no se vuelve a ensenar.';
+      cargarTodo();
+    });
+  });
+  $('cerrarFicha').addEventListener('click', function () {
+    $('velo').hidden = true;
+    $('claveNueva').hidden = true;
+  });
   $('guardarFicha').addEventListener('click', guardarFicha);
   $('filtroLector').addEventListener('change', cargarNotas);
   $('filtroDesde').addEventListener('change', cargarNotas);
