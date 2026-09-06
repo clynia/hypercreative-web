@@ -1,0 +1,15 @@
+# La reescritura de URL limpia del sitio convierte cualquier .php en un 301, y
+# un 301 sobre un POST lo degrada a GET: se llevaria por delante cada nota que
+# manda un lector. Con RewriteEngine On y ninguna regla, este directorio queda
+# fuera de la reescritura del padre.
+RewriteEngine On
+
+Options -Indexes
+
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
+
+<FilesMatch "\.(sql|db|sqlite|json)$">
+  Require all denied
+</FilesMatch>
