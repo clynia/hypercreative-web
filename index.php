@@ -45,12 +45,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     --f-display:"Inter",system-ui,-apple-system,sans-serif; --f-body:"Inter",system-ui,-apple-system,sans-serif; --f-mono:"Space Mono",ui-monospace,monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  .nav-lang{display:inline-flex;align-items:center;gap:.45em;color:var(--ink-mute)}
-  .nav-links .nav-lang a{color:var(--ink-mute)}
-  .nav-links .nav-lang a:hover{color:var(--ink)}
-  .nav-links .nav-lang a::after{display:none}
+  .nav-lang{display:inline-flex;align-items:center;gap:.45em;margin-left:auto;margin-right:1.1rem;
+    font-family:var(--f-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-mute)}
+  .nav .nav-lang a{color:var(--ink-mute);transition:color .3s var(--ease)}
+  .nav .nav-lang a:hover{color:var(--ink)}
+  .nav .nav-lang a::after{display:none}
   .nav-lang .on{color:var(--ink)}
   .nav-lang i{font-style:normal;opacity:.4}
+  @media(min-width:761px){.nav .nav-lang{order:3;margin-left:clamp(1.2rem,3vw,2.4rem);margin-right:0}.nav-links{order:2;margin-left:auto}}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-weight:300;
     font-size:clamp(16px,1.05vw,18px);line-height:1.7;letter-spacing:.01em;overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -79,7 +81,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .nav-cta{border:1px solid var(--line);padding:8px 15px;border-radius:2px;color:var(--ink)!important}
   .nav-cta::after{display:none}
   .nav-cta:hover{border-color:var(--red)}
-  .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0;border:0;background:none;cursor:pointer;z-index:60}
+  .nav-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0;border:0;background:none;cursor:pointer;z-index:60}
+  @media(min-width:761px){.nav-toggle{display:none}}
   .nav-toggle span{display:block;width:24px;height:2px;background:var(--ink);transition:transform .3s var(--ease),opacity .3s var(--ease)}
   .nav.open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .nav.open .nav-toggle span:nth-child(2){opacity:0}
@@ -272,6 +275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header class="nav" id="nav">
   <a class="brand" href="#top">Hypercreative<span class="bp">.</span></a>
+  <?php echo hc_lang_switch(); ?>
   <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
   <nav class="nav-links" id="navLinks" aria-label="Primary">
     <a href="/#method">The method</a>
@@ -280,7 +284,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="/blog/">Blog</a>
     <a href="/press/">Press</a>
     <a class="nav-cta" href="/#request">Let's talk</a>
-    <?php echo hc_lang_switch(); ?>
   </nav>
 </header>
 <script>(function(){var n=document.getElementById("nav"),t=document.getElementById("navToggle");if(!n||!t)return;function set(o){n.classList.toggle("open",o);t.setAttribute("aria-expanded",o?"true":"false");t.setAttribute("aria-label",o?"Close menu":"Open menu");}t.addEventListener("click",function(){set(!n.classList.contains("open"));});n.querySelectorAll(".nav-links a").forEach(function(a){a.addEventListener("click",function(){set(false);});});})();</script>
