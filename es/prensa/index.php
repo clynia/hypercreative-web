@@ -144,7 +144,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p style="margin:0 0 .8rem">Cópialo en cualquier IA o descárgalo como archivo. Sirve para cualquiera, no hacen falta conocimientos de diseño.</p>
 <div class="bp-card prompt-card"><button class="copy" type="button" aria-label="Copiar el prompt de marca">Copiar</button><pre class="prompt">LOGOTIPO DE HYPERCREATIVE: CÓMO USARLO BIEN
 
-Estás ayudando a alguien a colocar el logotipo de Hypercreative. Sigue estas reglas al pie de la letra y después pasa la lista de comprobación del final. Hypercreative es una empresa de entrenamiento creativo para líderes.
+Estás ayudando a alguien a colocar el logotipo de Hypercreative. Sigue estas reglas al pie de la letra y después pasa la lista de comprobación del final. Hypercreative es una empresa de entrenamiento en creatividad bajo presión.
 
 1. USA LOS ARCHIVOS OFICIALES (nunca redibujes ni vuelvas a escribir el logotipo)
    Pack de logotipos, todos los archivos (zip): https://hypercreativemethod.com/assets/press/Hypercreative-Logos.zip
@@ -208,7 +208,7 @@ Archivos oficiales y manual completo: https://hypercreativemethod.com/es/prensa/
 <div class="row"><span style="font-family:var(--fd);font-weight:300;font-size:1.7rem">Hypercreative</span><span class="lbl">Inter Light&nbsp;300</span></div>
 <div class="row"><span style="font-family:var(--fd);font-weight:500;font-size:1.7rem">Hypercreative</span><span class="lbl">Inter Medium&nbsp;500</span></div>
 <div class="row"><span style="font-family:var(--fd);font-weight:600;font-size:1.7rem">Hypercreative</span><span class="lbl">Inter SemiBold&nbsp;600</span></div>
-<div class="row"><span style="font-family:var(--fm);font-size:1.05rem">Entrenamiento creativo para líderes</span><span class="lbl">Space Mono / etiquetas</span></div>
+<div class="row"><span style="font-family:var(--fm);font-size:1.05rem">Entrenamiento en creatividad bajo presión</span><span class="lbl">Space Mono / etiquetas</span></div>
 </div>
 
 <h2>Contacto de prensa</h2>

@@ -99,12 +99,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </ul>
 <p>We may suspend or block access to anyone who breaches these Terms, without notice.</p>
 <h3>Intellectual property</h3>
-<p>The website and everything in it belongs to Hypercreative or to those who license content to us. This includes the name Hypercreative, the term Hypercreativity, the Hypercreative Method, the brand signature &quot;Creativity training for leadership&quot;, all text, design, structure, graphics, and other materials, together with the underlying methodology, frameworks, and proprietary techniques presented or referenced on the website.</p>
+<p>The website and everything in it belongs to Hypercreative or to those who license content to us. This includes the name Hypercreative, the term Hypercreativity, the Hypercreative Method, the brand signature &quot;Creativity training under pressure&quot;, all text, design, structure, graphics, and other materials, together with the underlying methodology, frameworks, and proprietary techniques presented or referenced on the website.</p>
 <p>These are protected by intellectual property law. You may view the website and print or download pages for your own internal, non-commercial reference. You may not use our materials to build, market, or deliver a competing training offer, and you may not present our method or any part of it as your own. All rights not expressly granted are reserved.</p>
 <h3>Method and content</h3>
 <p>The Hypercreative Method, its principles, its techniques, and the way we run sessions are our proprietary work. Describing them on the website does not place them in the public domain and does not grant you any licence to teach, reproduce, or commercialise them.</p>
 <h3>Trademarks</h3>
-<p>The Hypercreative name, the Hypercreative Method, and the signature &quot;Creativity training for leadership&quot;, together with the other names and signatures we use to identify our work, are trademarks of Stormridge LLC, whether registered or not. You may not use them without our prior written consent, except to refer accurately to us or to our work.</p>
+<p>The Hypercreative name, the Hypercreative Method, and the signature &quot;Creativity training under pressure&quot;, together with the other names and signatures we use to identify our work, are trademarks of Stormridge LLC, whether registered or not. You may not use them without our prior written consent, except to refer accurately to us or to our work.</p>
 <h3>Third party links</h3>
 <p>The website may link to third party sites or services we do not control. We provide those links for convenience. We do not endorse them and we are not responsible for their content, their practices, or any harm that follows from your use of them. Your dealings with any third party are between you and that third party.</p>
 <h3>No professional advice</h3>

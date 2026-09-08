@@ -485,7 +485,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="foot">
     <div class="foot-lead">
       <a class="brand" href="/es/">Hypercreative<span class="bp">.</span></a>
-      <p class="foot-claim">Entrenamiento creativo para líderes.</p>
+      <p class="foot-claim">Entrenamiento en creatividad bajo presión.</p>
       <a class="foot-talk" href="/es/#contacto">Empieza una conversación <span aria-hidden="true">&#8594;</span></a>
     </div>
     <nav class="foot-nav" aria-label="Pie">
@@ -511,7 +511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </nav>
   </div>
-  <div class="foot-legal"><span class="foot-fine">&copy; 2026 Hypercreative&#8482;. Todos los derechos reservados.</span><span class="foot-fine">Entrenamiento creativo para líderes.</span></div>
+  <div class="foot-legal"><span class="foot-fine">&copy; 2026 Hypercreative&#8482;. Todos los derechos reservados.</span><span class="foot-fine">Entrenamiento en creatividad bajo presión.</span></div>
 </footer>
 
 <script src="/assets/hc-worlds-es.js"></script>

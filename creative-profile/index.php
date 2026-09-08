@@ -485,7 +485,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="foot">
     <div class="foot-lead">
       <a class="brand" href="/">Hypercreative<span class="bp">.</span></a>
-      <p class="foot-claim">Creativity training for leadership.</p>
+      <p class="foot-claim">Creativity training under pressure.</p>
       <a class="foot-talk" href="/#request">Start a conversation <span aria-hidden="true">&#8594;</span></a>
     </div>
     <nav class="foot-nav" aria-label="Footer">
@@ -511,7 +511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </nav>
   </div>
-  <div class="foot-legal"><span class="foot-fine">&copy; 2026 Hypercreative&#8482;. All rights reserved.</span><span class="foot-fine">Creativity training for leadership.</span></div>
+  <div class="foot-legal"><span class="foot-fine">&copy; 2026 Hypercreative&#8482;. All rights reserved.</span><span class="foot-fine">Creativity training under pressure.</span></div>
 </footer>
 
 <script src="/assets/hc-worlds.js"></script>

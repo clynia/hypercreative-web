@@ -145,7 +145,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p style="margin:0 0 .8rem">Copy this into any AI, or download it as a file. It works for anyone, no design skills needed.</p>
 <div class="bp-card prompt-card"><button class="copy" type="button" aria-label="Copy the brand prompt">Copy</button><pre class="prompt">HYPERCREATIVE LOGO: HOW TO USE IT CORRECTLY
 
-You are helping someone place the Hypercreative logo. Follow these rules exactly, then run the checklist at the end. Hypercreative is a company that provides creativity training for leadership.
+You are helping someone place the Hypercreative logo. Follow these rules exactly, then run the checklist at the end. Hypercreative is a company that provides creativity training under pressure.
 
 1. USE THE OFFICIAL FILES (never redraw or re-type the logo)
    Logo pack, all files (zip): https://hypercreativemethod.com/assets/press/Hypercreative-Logos.zip
@@ -209,7 +209,7 @@ Official files and the full manual: https://hypercreativemethod.com/press/</pre>
 <div class="row"><span style="font-family:var(--fd);font-weight:300;font-size:1.7rem">Hypercreative</span><span class="lbl">Inter Light&nbsp;300</span></div>
 <div class="row"><span style="font-family:var(--fd);font-weight:500;font-size:1.7rem">Hypercreative</span><span class="lbl">Inter Medium&nbsp;500</span></div>
 <div class="row"><span style="font-family:var(--fd);font-weight:600;font-size:1.7rem">Hypercreative</span><span class="lbl">Inter SemiBold&nbsp;600</span></div>
-<div class="row"><span style="font-family:var(--fm);font-size:1.05rem">Creativity training for leadership</span><span class="lbl">Space Mono / labels</span></div>
+<div class="row"><span style="font-family:var(--fm);font-size:1.05rem">Creativity training under pressure</span><span class="lbl">Space Mono / labels</span></div>
 </div>
 
 <h2>Press contact</h2>

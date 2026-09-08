@@ -10,25 +10,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hypercreative: Creativity training for leadership</title>
+<title>Hypercreative: Creativity training under pressure</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="description" content="Hypercreative is creativity training for leadership. Keynotes and tailor-made programs that teach leaders and teams to create useful ideas on demand.">
+<meta name="description" content="Hypercreative is creativity training under pressure. Keynotes and tailor-made programs that teach leaders and teams to create useful ideas on demand.">
 <?php echo hc_hreflang(); ?>
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:site_name" content="Hypercreative">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hypercreative: Creativity training for leadership">
+<meta property="og:title" content="Hypercreative: Creativity training under pressure">
 <meta property="og:description" content="Corporate creativity training and keynotes that teach leadership teams to produce useful, original work on demand, when the deadline is real and the rules keep changing.">
 <meta property="og:url" content="https://hypercreativemethod.com/">
 <meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hypercreative: Creativity training for leadership">
+<meta name="twitter:title" content="Hypercreative: Creativity training under pressure">
 <meta name="twitter:description" content="Corporate creativity training and keynotes that teach leaders and teams to create useful ideas on demand.">
 <meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Organization","@id":"https://hypercreativemethod.com/#org","name":"Hypercreative","url":"https://hypercreativemethod.com/","image":"https://hypercreativemethod.com/assets/og-default.png","slogan":"Creativity training for leadership","description":"Corporate creativity training and keynotes that teach leaders and teams to create useful, original work on demand.","founder":{"@id":"https://hypercreativemethod.com/#alfonso"}},
+{"@type":"Organization","@id":"https://hypercreativemethod.com/#org","name":"Hypercreative","url":"https://hypercreativemethod.com/","image":"https://hypercreativemethod.com/assets/og-default.png","slogan":"Creativity training under pressure","description":"Corporate creativity training and keynotes that teach leaders and teams to create useful, original work on demand.","founder":{"@id":"https://hypercreativemethod.com/#alfonso"}},
 {"@type":"WebSite","@id":"https://hypercreativemethod.com/#website","url":"https://hypercreativemethod.com/","name":"Hypercreative","publisher":{"@id":"https://hypercreativemethod.com/#org"},"inLanguage":"en"},
 {"@type":"Person","@id":"https://hypercreativemethod.com/#alfonso","name":"Alfonso González Aguilar","jobTitle":"Founder and keynote speaker","worksFor":{"@id":"https://hypercreativemethod.com/#org"},"description":"Founder of Hypercreative. Trains corporate leadership and teams to create on demand, drawing on years directing high-stakes film and production teams."}
 ]}
@@ -294,10 +294,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="hero-scrim"></div>
     <div class="hero-inner" id="hero-inner">
       <h1 class="hero-title">
-        <span class="sr-only">Hypercreative. Creativity training for leadership.</span>
+        <span class="sr-only">Hypercreative. Creativity training under pressure.</span>
         <span class="reveal" style="--d:.05s">Hypercreative<sup class="tm">™</sup><svg class="ip" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle class="h" cx="50" cy="50" r="20"/><line class="c c1" x1="24" y1="62" x2="39" y2="53"/><circle class="n n1" cx="23" cy="63" r="3"/><line class="c c2" x1="74" y1="34" x2="61" y2="45"/><circle class="n n2" cx="75" cy="33" r="3"/><line class="c c3" x1="66" y1="76" x2="55" y2="62"/><circle class="n n3" cx="67" cy="77" r="3"/><circle class="d" cx="50" cy="50" r="14"/></svg></span>
       </h1>
-      <p class="hero-tag reveal" style="--d:.18s">Creativity training for leadership<span class="p">.</span></p>
+      <p class="hero-tag reveal" style="--d:.18s">Creativity training under pressure<span class="p">.</span></p>
       <p class="hero-sub reveal" style="--d:.32s">We train the teams of the world's most demanding companies to solve any challenge, creatively, on demand.</p>
       <div class="actions reveal" style="--d:.42s">
         <a href="#method" class="btn btn-primary">Explore the method</a>
