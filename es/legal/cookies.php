@@ -81,9 +81,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
 <main class="wrap legal"><a class="back" href="/es/">&#8592; Inicio</a><h1 class="t" style="margin-top:1.4rem">Política de cookies</h1><article><p style="color:var(--mute)">Traducción de cortesía. En caso de discrepancia entre versiones, prevalece la <a href="/legal/cookies?lang=en&amp;remember=0">versión en inglés</a>.</p>
 <p><strong>Última actualización: 17 de junio de 2026</strong></p>
-<p>Esta Política de cookies explica cómo <strong>Stormridge LLC</strong>, que opera bajo la marca <strong>Hypercreative</strong> (&quot;Hypercreative&quot;, &quot;la Empresa&quot;, &quot;nosotros&quot;), usa cookies y tecnología similar en este sitio web. Léala junto con nuestra Política de privacidad.</p>
+<p>Esta Política de cookies explica cómo <strong>Stormridge LLC</strong>, que opera bajo la marca <strong>Hypercreative</strong> (&quot;Hypercreative&quot;, &quot;la Empresa&quot;, &quot;nosotros&quot;), usa cookies y tecnologías similares en este sitio web. Léala junto con nuestra Política de privacidad.</p>
 <h3>Qué son las cookies</h3>
-<p>Una cookie es un pequeño archivo de texto que un sitio web coloca en su dispositivo cuando lo visita. Permite al sitio recordar sus acciones y sus preferencias a lo largo del tiempo, y ayuda a que el sitio funcione y mejore. También usamos tecnología similar, como píxeles, etiquetas y almacenamiento local. En esta Política, &quot;cookies&quot; se refiere a todas ellas.</p>
+<p>Una cookie es un pequeño archivo de texto que un sitio web instala en su dispositivo cuando lo visita. Permite al sitio recordar sus acciones y sus preferencias a lo largo del tiempo, y ayuda a que el sitio funcione y mejore. También usamos tecnologías similares, como píxeles, etiquetas y almacenamiento local. En esta Política, &quot;cookies&quot; se refiere a todas ellas.</p>
 <h3>Por qué las usamos</h3>
 <p>Reducimos las cookies al mínimo y las usamos por razones claras:</p>
 <ul>
@@ -91,17 +91,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Para recordar sus decisiones, incluidas sus preferencias de cookies.</li>
 <li>Para entender, de forma agregada, cómo se usa el sitio web y poder mejorarlo.</li>
 </ul>
-<p>No usamos cookies para construir perfiles intrusivos, y no vendemos los datos recogidos mediante cookies.</p>
+<p>No usamos cookies para elaborar perfiles intrusivos, y no vendemos los datos recogidos mediante cookies.</p>
 <h3>Los tipos que usamos</h3>
-<p><strong>Cookies estrictamente necesarias.</strong> Mantienen el sitio web en funcionamiento y seguro. Dan soporte a funciones básicas como la navegación entre páginas, el reparto de carga y el envío de formularios. El sitio web no puede funcionar bien sin ellas, así que no requieren consentimiento.</p>
+<p><strong>Cookies estrictamente necesarias.</strong> Mantienen el sitio web en funcionamiento y seguro. Dan soporte a funciones básicas como la navegación entre páginas, el equilibrio de carga de los servidores y el envío de formularios. El sitio web no puede funcionar bien sin ellas, así que no requieren consentimiento.</p>
 <p><strong>Cookies de preferencias.</strong> Recuerdan las decisiones que usted toma, como su idioma o su configuración de cookies, para que no tenga que volver a fijarlas.</p>
-<p><strong>Cookies de analítica.</strong> Nos ayudan a ver cómo los visitantes encuentran y usan el sitio web, qué páginas leen y dónde se atascan. La información se usa de forma agregada para mejorar el sitio web. Cuando la ley lo exige, solo las instalamos después de que usted dé su consentimiento.</p>
+<p><strong>Cookies de analítica.</strong> Nos ayudan a ver cómo los visitantes encuentran y usan el sitio web, qué páginas leen y dónde se atascan. La información se usa de forma agregada para mejorarlo. Cuando la ley lo exige, solo las instalamos después de que usted dé su consentimiento.</p>
 <p><strong>Cookies de terceros.</strong> Algunas cookies las instalan los proveedores que usamos para alojar, proteger o analizar el sitio web. Esos proveedores tratan datos conforme a sus propias políticas además de la nuestra. Solo trabajamos con proveedores que consideramos fiables.</p>
 <h3>Sus opciones</h3>
 <p>En su primera visita, el banner de cookies le permite aceptar o rechazar las cookies que no son estrictamente necesarias. Puede cambiar su decisión en cualquier momento desde la configuración de cookies del sitio web.</p>
-<p>También puede gestionar las cookies desde su navegador. La mayoría de los navegadores permiten ver qué hay almacenado, borrar cookies y bloquearlas. Cada navegador es distinto, así que consulte la sección de ayuda del suyo. Si bloquea las cookies estrictamente necesarias, partes del sitio web pueden dejar de funcionar.</p>
+<p>También puede gestionar las cookies desde su navegador. La mayoría de los navegadores permiten ver qué hay almacenado, borrar cookies y bloquearlas. Cada navegador es distinto, así que consulte la sección de ayuda del suyo. Si bloquea las cookies estrictamente necesarias, algunas partes del sitio web pueden dejar de funcionar.</p>
 <h3>Consentimiento</h3>
-<p>Cuando la ley exige consentimiento, no instalamos cookies no esenciales hasta que usted lo da. Su consentimiento vale hasta que lo retira o hasta que caduca, momento en el que volveremos a pedirlo. Retirar el consentimiento no afecta a lo que ya se hizo mientras estuvo vigente.</p>
+<p>Cuando la ley exige consentimiento, no instalamos cookies no esenciales hasta que usted lo da. Su consentimiento es válido hasta que lo retire o hasta que caduque, momento en el que volveremos a pedirlo. Retirar el consentimiento no afecta al tratamiento realizado mientras estuvo vigente.</p>
 <h3>Cuánto duran las cookies</h3>
 <p>Algunas cookies son de sesión y desaparecen al cerrar el navegador. Otras son persistentes y permanecen durante un periodo determinado o hasta que usted las borra. La duración depende de la cookie y de su finalidad.</p>
 <h3>Cambios en esta Política</h3>

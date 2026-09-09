@@ -465,18 +465,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button class="btn btn-primary" id="dl-card" type="button">Descargar la tarjeta</button>
           <button class="btn btn-ghost" id="share-card" type="button">Compartir</button>
         </div>
-        <p class="card-share-note">Publica tu tarjeta si te apetece, o pasa el test para que alguien más encuentre el suyo.</p>
+        <p class="card-share-note">Publica tu tarjeta si te apetece, o comparte el test para que alguien más encuentre el suyo.</p>
       </div>
     </div>
 
     <div class="unlock" id="unlock">
       <h2>Debajo de tu perfil hay más.</h2>
-      <p>El entrenamiento completo de tu perfil, los hábitos en sombra que proteger este mes y tu sitio dentro del método viven detrás del libro. Déjanos tu email y te avisamos en cuanto esté listo.</p>
+      <p>El entrenamiento completo de tu perfil, los hábitos en sombra que proteger este mes y tu sitio dentro del método llegan con el libro. Déjanos tu email y te avisamos en cuanto esté listo.</p>
       <form class="unlock-form" id="unlock-form" novalidate>
         <input type="email" id="unlock-email" placeholder="tu@email.com" aria-label="Tu email" required>
         <button class="btn btn-primary" type="submit" id="unlock-submit">Avísame</button>
       </form>
-      <p class="unlock-note" id="unlock-note">La tarjeta ya es tuya. El email solo abre la profundidad, nunca el resultado.</p>
+      <p class="unlock-note" id="unlock-note">La tarjeta ya es tuya. El email solo abre lo que hay debajo, nunca el resultado.</p>
     </div>
   </section>
 </main>
@@ -486,7 +486,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="foot-lead">
       <a class="brand" href="/es/">Hypercreative<span class="bp">.</span></a>
       <p class="foot-claim">Entrenamiento en creatividad bajo presión.</p>
-      <a class="foot-talk" href="/es/#contacto">Empieza una conversación <span aria-hidden="true">&#8594;</span></a>
+      <a class="foot-talk" href="/es/#contacto">Hablemos <span aria-hidden="true">&#8594;</span></a>
     </div>
     <nav class="foot-nav" aria-label="Pie">
       <div class="foot-col">
@@ -567,13 +567,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* 20 preguntas de elección forzada en tres rondas de familia; cada perfil se disputa 4 o 5 veces */
   var Q=[
     /* --- ronda Alimentar --- */
-    {fam:"Feed",q:"Te cae encima un proyecto nuevo. ¿Primer instinto?",a:{t:"Bajar a fondo en el terreno que ya es mío.",type:"cartographer"},b:{t:"Irme a merodear por un terreno que no es mío a buscar material.",type:"explorer"}},
+    {fam:"Feed",q:"Te cae encima un proyecto nuevo. ¿Primer instinto?",a:{t:"Meterme a fondo en el terreno que ya es mío.",type:"cartographer"},b:{t:"Irme a merodear por un terreno que no es mío a buscar material.",type:"explorer"}},
     {fam:"Feed",q:"Tus notas, enlaces y capturas guardadas están&hellip;",a:{t:"Desbordadas. Lo guardo todo y no ordeno nada.",type:"seedcollector"},b:{t:"Justas. Solo guardo lo que he decidido que importa.",type:"persona"}},
     {fam:"Feed",q:"¿Por qué acude a ti la gente?",a:{t:"Porque conozco un terreno más a fondo que nadie.",type:"cartographer"},b:{t:"Porque siempre traigo algo de un sitio raro que no pinta nada.",type:"explorer"}},
     {fam:"Feed",q:"Tu material en bruto sale sobre todo de&hellip;",a:{t:"Todo lo que he ido guardando y nunca pierdo.",type:"seedcollector"},b:{t:"Sitios y mundos por los que he pasado de verdad.",type:"explorer"}},
-    {fam:"Feed",q:"¿Cuándo piensas más afilado?",a:{t:"Cuando estoy metido a fondo en el terreno que domino.",type:"cartographer"},b:{t:"Cuando ya me he puesto el yo creativo que he elegido.",type:"persona"}},
+    {fam:"Feed",q:"¿Cuándo piensas más afilado?",a:{t:"Cuando estoy metido a fondo en el terreno que domino.",type:"cartographer"},b:{t:"Cuando ya he entrado en el papel que he elegido para crear.",type:"persona"}},
     {fam:"Feed",q:"A solas, delante de un montón de material tuyo, ¿qué haces?",a:{t:"Salgo a recoger más antes de tocarlo.",type:"seedcollector"},b:{t:"Hago borradores sucios y los cribo en frío.",type:"sketcher"}},
-    {fam:"Feed",q:"Un problema en blanco delante. ¿A qué echas mano primero?",a:{t:"Al detalle por el que todos han pasado de largo.",type:"notary"},b:{t:"A algo de un mundo que no tiene nada que ver.",type:"explorer"}},
+    {fam:"Feed",q:"Un problema delante y la página en blanco. ¿A qué echas mano primero?",a:{t:"Al detalle por el que todos han pasado de largo.",type:"notary"},b:{t:"A algo de un mundo que no tiene nada que ver.",type:"explorer"}},
     /* --- ronda Afilar --- */
     {fam:"Sharpen",q:"¿Tu mejor jugada ante un problema en blanco?",a:{t:"Ver la anomalía que no ha visto nadie.",type:"notary"},b:{t:"Reescribirlo hasta convertirlo en una pregunta mejor.",type:"reframer"}},
     {fam:"Sharpen",q:"Cuando una idea funciona de verdad, ha salido de&hellip;",a:{t:"Chocar dos cosas muy lejanas entre sí.",type:"collider"},b:{t:"Un montón de borradores sucios, cribados en frío.",type:"sketcher"}},
@@ -585,7 +585,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {fam:"Sharpen",q:"¿Qué es lo que te tienes que obligar a hacer?",a:{t:"Lanzar de una vez la versión sucia.",type:"sketcher"},b:{t:"Salir de mi terreno y explorar.",type:"cartographer"}},
     /* --- ronda Proteger --- */
     {fam:"Protect",q:"¿Qué es lo que más protege tu trabajo creativo?",a:{t:"Que nadie toque mis mandos sin que yo le invite.",type:"guardian"},b:{t:"Que ya tengo decidido quién soy cuando creo.",type:"persona"}},
-    {fam:"Protect",q:"Tu creatividad depende sobre todo de&hellip;",a:{t:"El ritual que me pone y el estado en el que llego.",type:"persona"},b:{t:"Mantener las opiniones ajenas lejos de los mandos.",type:"guardian"}},
+    {fam:"Protect",q:"Tu creatividad depende sobre todo de&hellip;",a:{t:"El ritual que me enciende y el estado en el que llego.",type:"persona"},b:{t:"Mantener las opiniones ajenas lejos de los mandos.",type:"guardian"}},
     {fam:"Protect",q:"Te cae encima una opinión que no pediste. ¿Qué haces?",a:{t:"Mi criterio sigue siendo mío y sigo adelante.",type:"guardian"},b:{t:"Voy a contrastarla con cómo lo hacen en otros campos.",type:"explorer"}},
     {fam:"Protect",q:"Bajo presión, tu ventaja real es&hellip;",a:{t:"Pillar el detalle que se le ha escapado a todo el mundo.",type:"notary"},b:{t:"Mantener el ruido de fuera lejos de los mandos.",type:"guardian"}},
     {fam:"Protect",q:"¿Por qué se fía la gente de tu criterio?",a:{t:"Porque no subcontrato mi criterio a nadie.",type:"guardian"},b:{t:"Porque veo lo que a otros se les pasa antes de tener una opinión.",type:"notary"}}
@@ -801,7 +801,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   (function(){var g=document.getElementById('types-grid');if(!g)return;
     var FAMS=[
       {k:"Feed",verb:"Alimentar",blurb:"De dónde salen tus ideas. Estos perfiles llenan el depósito: dominan su propio terreno, se meten en terrenos que no son suyos y guardan todo lo que merece la pena."},
-      {k:"Sharpen",verb:"Afilar",blurb:"Cómo el material en bruto se convierte en una idea. Estos perfiles hacen que corte: ven lo que a otros se les pasa, reescriben la pregunta, estrellan cosas muy lejanas entre sí y piensan en borradores."},
+      {k:"Sharpen",verb:"Afilar",blurb:"Cómo el material en bruto se convierte en una idea. Estos perfiles hacen que ese material corte: ven lo que a otros se les pasa, reescriben la pregunta, estrellan cosas muy lejanas entre sí y piensan en borradores."},
       {k:"Protect",verb:"Proteger",blurb:"Cómo sobrevive el trabajo al contacto con el mundo. Estos perfiles defienden lo que construyen, del ruido de fuera y del comité de dentro, y no sueltan los mandos."}
     ];
     var h='';

@@ -7,16 +7,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TBPM9KTK');</script>
 <!-- End Google Tag Manager --><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>El mapa del test Creative Profile | Hypercreative</title>
-<meta name="description" content="El mapa que hay detrás del test Creative Profile: nueve perfiles creativos en tres familias y las 72 firmas que forman al emparejarse. Encuentra el tuyo.">
+<meta name="description" content="El mapa que hay detrás del test Creative Profile: nueve perfiles creativos en tres familias y las 72 firmas que salen al emparejarlos. Encuentra el tuyo.">
 <?php echo hc_hreflang(); ?><meta name="robots" content="index,follow">
 <meta property="og:site_name" content="Hypercreative"><meta property="og:locale" content="es_ES"><meta property="og:type" content="website">
 <meta property="og:title" content="El mapa del test Creative Profile | Hypercreative">
-<meta property="og:description" content="El mapa que hay detrás del test Creative Profile: nueve perfiles creativos en tres familias y las 72 firmas que forman al emparejarse. Encuentra el tuyo.">
+<meta property="og:description" content="El mapa que hay detrás del test Creative Profile: nueve perfiles creativos en tres familias y las 72 firmas que salen al emparejarlos. Encuentra el tuyo.">
 <meta property="og:url" content="https://hypercreativemethod.com/es/el-mapa/">
 <meta property="og:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="El mapa del test Creative Profile | Hypercreative">
-<meta name="twitter:description" content="El mapa que hay detrás del test Creative Profile: nueve perfiles creativos en tres familias y las 72 firmas que forman al emparejarse. Encuentra el tuyo.">
+<meta name="twitter:description" content="El mapa que hay detrás del test Creative Profile: nueve perfiles creativos en tres familias y las 72 firmas que salen al emparejarlos. Encuentra el tuyo.">
 <meta name="twitter:image" content="https://hypercreativemethod.com/assets/og-default.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","inLanguage":"es","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://hypercreativemethod.com/es/"},{"@type":"ListItem","position":2,"name":"Creative Profile","item":"https://hypercreativemethod.com/es/perfil-creativo/"},{"@type":"ListItem","position":3,"name":"El mapa","item":"https://hypercreativemethod.com/es/el-mapa/"}]}</script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -148,7 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main class="below">
   <h2>Nueve perfiles y las 72 firmas que hay entre ellos</h2>
-  <p>El mapa de arriba es el método de Hypercreative visto desde fuera. El método entrena once hábitos, y esos hábitos se reparten en tres familias: cómo <strong>alimentas</strong> una idea, cómo la <strong>afilas</strong> y cómo la <strong>proteges</strong> una vez existe. Nueve formas de trabajar orbitan esas tres familias, y todas vienen matizadas por una segunda. Son setenta y dos firmas en total, y en una de ellas estás trabajando este trimestre.</p>
+  <p>El mapa de arriba es el método de Hypercreative visto desde fuera. El método entrena once hábitos, y esos hábitos se reparten en tres familias: cómo <strong>alimentas</strong> una idea, cómo la <strong>afilas</strong> y cómo la <strong>proteges</strong> una vez existe. Nueve formas de trabajar orbitan esas tres familias, y todas vienen matizadas por una segunda forma. Son setenta y dos firmas en total, y en una de ellas estás trabajando este trimestre.</p>
 
   <div class="suns">
     <div>
@@ -158,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div>
       <h3 class="sun-h">Afilar</h3>
-      <p class="sun-p">Cómo el material en bruto se convierte en idea. Haces que corte: te fijas en lo que los demás pasaron de largo, reescribes la pregunta, estrellas entre sí cosas lejanas para ver qué sobrevive y piensas en borradores.</p>
+      <p class="sun-p">Cómo el material en bruto se convierte en idea. Haces que corte: te fijas en lo que los demás pasan por alto, reescribes la pregunta, haces chocar cosas lejanas entre sí para ver qué sobrevive y piensas en borradores.</p>
       <p class="sun-w">Notario &middot; Reformulador &middot; Colisionador &middot; Bocetista</p>
     </div>
     <div>
@@ -197,7 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     mine.innerHTML=u
       ? 'Abajo se enciende tu propia firma: el <b>'+bare(lead)+
         '</b>, con el matiz del <b>'+bare(HCW.TYPES[u].name)+
-        '</b>. Gira el mapa y ver&aacute;s entre qu&eacute; cuelga.'
+        '</b>. Gira el mapa y ver&aacute;s entre qu&eacute; perfiles cuelga.'
       : 'Abajo se enciende el perfil que te dio el test: el <b>'+bare(lead)+
         '</b>. Gira el mapa y ver&aacute;s qu&eacute; orbita.';
     document.body.classList.add("focused");

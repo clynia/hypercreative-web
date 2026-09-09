@@ -78,20 +78,20 @@ article a{color:var(--ink);text-decoration:underline;text-decoration-color:var(-
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
-<main class="wrap"><a class="back" href="/es/blog/">&#8592; Blog</a><h1 class="t" style="margin-top:1.4rem">Tus mejores ideas no vienen de la libertad</h1><p class="byline">Por Alfonso G. Aguilar &middot; 4 min de lectura</p><p class="dek">La creatividad es el gran activo de la empresa. No es un don, es un músculo que se entrena, y el gimnasio es la restricción.</p><img class="post-hero" src="/blog/assets/blog-2.png" alt="Un reloj de arena agotado y, debajo, una figura de papel plegado tomando forma, para mostrar cómo la restricción y la presión del plazo impulsan la creatividad"><article><p>Hay un mito en el centro de cómo tratan las empresas la creatividad. Para conseguir grandes ideas, das libertad a gente lista. Espacio abierto, sin plazo, una pared en blanco y unas cuantas notas adhesivas. Y luego esperas a que aparezca el genio.</p>
+<main class="wrap"><a class="back" href="/es/blog/">&#8592; Blog</a><h1 class="t" style="margin-top:1.4rem">Tus mejores ideas no vienen de la libertad</h1><p class="byline">Por Alfonso G. Aguilar &middot; 4 min de lectura</p><p class="dek">La creatividad es el gran activo de la empresa. No es un don, es un músculo que se entrena, y el gimnasio es la restricción.</p><img class="post-hero" src="/blog/assets/blog-2.png" alt="Un reloj de arena agotado y, debajo, una figura de papel plegado tomando forma, para mostrar cómo la restricción y la presión del plazo impulsan la creatividad"><article><p>Hay un mito en el centro de cómo tratan las empresas la creatividad. Para conseguir grandes ideas, das libertad a gente lista. Espacio abierto, sin plazo, una pared en blanco y unos cuantos post-its. Y luego esperas a que aparezca el genio.</p>
 <p>Casi nunca aparece. Lo que aparece es una reunión larga y unas cuantas ideas que nadie ejecuta.</p>
 <p>La verdad va en la dirección contraria. El mejor trabajo suele salir cuando el reloj corre, el presupuesto se ha acabado y las reglas acaban de cambiar. La restricción no es el obstáculo de la idea. La restricción es lo que obliga a la idea a existir.</p>
 <blockquote class="pq">Tus mejores ideas no las produce la libertad. Las produce el plazo.</blockquote>
 <h2>Esto no lo aprendimos en un aula</h2>
 <p>La creatividad la aprendimos en rodajes, donde el plan de trabajo es imposible, el material falla y al tiempo le da igual lo que tuvieras previsto. Ahí no puedes esperar a la inspiración. Produces lo que sirve, a tiempo, con lo que hay.</p>
-<p>No es una historia romántica sobre el arte. Es una descripción justa de cómo vive de verdad un comité de dirección. Complejidad, cambio y una decisión que no puede esperar.</p>
+<p>No es una historia romántica sobre el arte. Es una descripción exacta de cómo vive de verdad un comité de dirección. Complejidad, cambio y una decisión que no puede esperar.</p>
 <h2>Lo que la creatividad no es</h2>
 <p>No es un talento místico reservado a unos elegidos. No es un brainstorming donde todas las ideas valen igual y por eso mismo ninguna importa. No es pintar. Nada de eso le sirve a una empresa.</p>
-<p>El reto de verdad de un directivo no es tener ideas. Es tener la idea útil, a tiempo, con todo en contra y con un equipo que tira junto en vez de competir por parecer el más listo.</p>
+<p>El reto de verdad de un directivo no es tener ideas. Es tener la idea útil, a tiempo, con todo en contra y con un equipo que empuja en la misma dirección en vez de competir por parecer el más listo.</p>
 <p>Eso es otra habilidad. Y aquí está lo que casi todo el mundo entiende mal. Se entrena, <a href="/es/blog/la-creatividad-es-una-habilidad-no-un-don" target="_blank" rel="noopener">igual que se construye cualquier otra habilidad que importe</a>.</p>
 <h2>Por qué hace falta un rumbo</h2>
 <p>El motor de las buenas ideas no es la libertad. Es el rumbo. La creatividad sin destino es solo ruido, y estar sentado en una sala llena de ruido agota.</p>
-<p>Aquí es donde se cae casi toda la formación en creatividad. Optimiza la sensación de estar siendo creativo. La energía de la sala, el resultado lleno de colores, la impresión de que ha pasado algo. Luego llega el lunes y no ha cambiado nada.</p>
+<p>Aquí es donde se cae casi toda la formación en creatividad. Optimiza la sensación de ser creativo. La energía de la sala, el resultado lleno de colores, la impresión de que ha pasado algo. Luego llega el lunes y no ha cambiado nada.</p>
 <p>Nosotros optimizamos lo contrario. El resultado tiene que servir y tiene que sobrevivir al contacto con la realidad.</p>
 <blockquote class="pq">Quita el plazo, quita el límite y quita las reglas que se mueven, y no liberas a nadie. Los dejas tirados.</blockquote>
 <h2>El gran activo</h2>
@@ -100,9 +100,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Eso cambia lo que hay en juego. Si la creatividad es el activo, entrenarla no es un extra. Es ventaja competitiva. Las empresas que la traten como una disciplina van a dejar atrás a las que la tratan como un estado de ánimo.</p>
 <h2>Entrenada, no invocada</h2>
 <p>Si la creatividad se entrena, la pregunta ya no es si eres una empresa creativa. La pregunta es si la estás entrenando y cómo de bien.</p>
-<p>Aquí no vamos a desplegar el método entero. Una parte hay que vivirla, no leerla. Pero la forma es lo bastante simple para contarla.</p>
+<p>Aquí no vamos a desplegar el método entero. Una parte hay que vivirla, no leerla. Pero la estructura es lo bastante simple para contarla.</p>
 <p>Primero entrenas la mente de cada uno. Después entrenas al equipo, porque tres personas brillantes no son un equipo creativo. Son tres solistas. La sinergia sale de un lenguaje común y unos roles claros, igual que una orquesta no es un montón de músicos sino un solo instrumento con muchas partes.</p>
-<p>Y luego lo pones todo bajo presión. Un reto real, un plazo real, las reglas moviéndose a mitad de camino a propósito. Ahí es donde el entrenamiento se demuestra, porque ahí es donde opera de verdad el negocio.</p>
+<p>Y luego lo pones todo bajo presión. Un reto real, un plazo real, las reglas cambiando a mitad de sesión a propósito. Ahí es donde el entrenamiento se demuestra, porque ahí es donde opera de verdad el negocio.</p>
 <blockquote class="pq">Las empresas que ganen la próxima década no serán las que más libertad tengan en la sala. Serán las que <a href="/es/blog/deja-de-esperar-la-inspiracion" target="_blank" rel="noopener">aprendieron a crear cuando hace falta</a>.</blockquote>
 <p>No entrenamos creatividad en abstracto. Entrenamos cómo piensa un equipo cuando lo tiene todo en contra.</p>
 <div class="takeaway"><span class="tk-label">Lo que te llevas</span><p>Creatividad bajo presión. De eso va todo.</p></div></article></main><?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>

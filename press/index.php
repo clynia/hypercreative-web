@@ -132,7 +132,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="dls"><a class="dl" href="../assets/press/logo-mark.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Symbol (the dot)</a></div>
 
-<span class="lead">The fast way</span>
 <h2>Use our logo with any AI</h2>
 <p>We wrote one prompt that teaches any AI, ChatGPT, Claude, Gemini or your own tools, how to place our logo correctly and check its own work. Paste it in, ask for what you need, and it pulls the official files and follows our rules. Most brands hand you a PDF and hope for the best. We ship ours as a prompt you can run, because that is where brand systems are going and we wanted to get there first.</p>
 
@@ -141,7 +140,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 
-<span class="lead" style="margin-top:1.4rem">The prompt</span>
 <p style="margin:0 0 .8rem">Copy this into any AI, or download it as a file. It works for anyone, no design skills needed.</p>
 <div class="bp-card prompt-card"><button class="copy" type="button" aria-label="Copy the brand prompt">Copy</button><pre class="prompt">HYPERCREATIVE LOGO: HOW TO USE IT CORRECTLY
 

@@ -97,19 +97,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Para entender, de forma agregada, cómo se usa el sitio web.</li>
 <li>Para cumplir nuestras obligaciones legales y regulatorias.</li>
 </ul>
-<p>No vendemos sus datos personales. No los usamos para tomar decisiones sobre usted por medios automatizados con efectos jurídicos o similarmente significativos.</p>
+<p>No vendemos sus datos personales. No los usamos para tomar decisiones automatizadas sobre usted que produzcan efectos jurídicos o le afecten significativamente de modo similar.</p>
 <h3>La base jurídica</h3>
-<p>Cuando la ley exige una base jurídica, nos apoyamos en las siguientes. Tratamos los datos de su formulario de contacto porque es necesario para dar los pasos que usted nos pide y para perseguir nuestro interés legítimo en atender consultas de negocio cualificadas. Tratamos los datos técnicos y de analítica sobre la base de nuestro interés legítimo en mantener un sitio web seguro y eficaz y, cuando así se exige, sobre el consentimiento que usted da a través del banner de cookies. Tratamos determinados datos porque estamos legalmente obligados a ello.</p>
+<p>Cuando la ley exige una base jurídica, nos apoyamos en las siguientes. Tratamos los datos de su formulario de contacto porque es necesario para dar curso a su petición y para perseguir nuestro interés legítimo en atender consultas de negocio cualificadas. Tratamos los datos técnicos y de analítica sobre la base de nuestro interés legítimo en mantener un sitio web seguro y eficaz y, cuando así se exige, sobre el consentimiento que usted da a través del banner de cookies. Tratamos determinados datos porque estamos legalmente obligados a ello.</p>
 <h3>Cuánto tiempo los conservamos</h3>
 <p>Conservamos los datos personales solo mientras los necesitamos para la finalidad con la que los recogimos, y después durante el periodo necesario para cumplir obligaciones legales, contables o probatorias. Los datos de consultas que no derivan en una colaboración se conservan un tiempo razonable y luego se eliminan o se anonimizan. Cuando los datos ya no hacen falta, los suprimimos de forma segura.</p>
 <h3>Con quién los compartimos</h3>
 <p>Compartimos datos personales solo cuando hay un motivo para hacerlo.</p>
 <ul>
 <li><strong>Proveedores de servicios.</strong> Trabajamos con proveedores de confianza que alojan el sitio web, envían y almacenan comunicaciones y nos ayudan a analizar el uso. Actúan siguiendo nuestras instrucciones y están obligados a proteger los datos.</li>
-<li><strong>Asesores profesionales y autoridades.</strong> Podemos revelar datos cuando lo exija la ley, la normativa o un procedimiento legal, o para proteger nuestros derechos.</li>
+<li><strong>Asesores profesionales y autoridades.</strong> Podemos revelar datos cuando lo exija la ley, la normativa o un procedimiento judicial, o para proteger nuestros derechos.</li>
 <li><strong>Operaciones societarias.</strong> Si la Empresa participa en una reorganización, una fusión o una venta, los datos pueden transferirse como parte de ese proceso, sujetos a esta Política.</li>
 </ul>
-<p>No compartimos sus datos con nadie más para su propio marketing.</p>
+<p>No compartimos sus datos con nadie más para que los use en su propio marketing.</p>
 <h3>Transferencias internacionales</h3>
 <p>Nuestros proveedores pueden tratar datos en países distintos del suyo. Cuando los datos cruzan fronteras, nos apoyamos en las garantías adecuadas reconocidas por la ley aplicable, para que sus datos conserven la protección que aquí se describe.</p>
 <h3>Cómo los protegemos</h3>
@@ -120,11 +120,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Acceder a los datos personales que tenemos sobre usted.</li>
 <li>Rectificar los datos que sean incorrectos o incompletos.</li>
 <li>Pedirnos que eliminemos sus datos.</li>
-<li>Limitar u oponerse a la forma en que los tratamos.</li>
-<li>Recibir sus datos en un formato portable.</li>
+<li>Limitar el tratamiento de sus datos u oponerse a él.</li>
+<li>Recibir sus datos en un formato de uso común que le permita llevárselos.</li>
 <li>Retirar el consentimiento cuando nos hayamos apoyado en él, sin que ello afecte al tratamiento anterior.</li>
 </ul>
-<p>Para ejercer cualquiera de estos derechos, contacte con nosotros a través del formulario del sitio web. Responderemos dentro del plazo que permita la ley. Puede que antes necesitemos verificar su identidad. Si cree que hemos gestionado mal sus datos, también tiene derecho a reclamar ante su autoridad local de protección de datos.</p>
+<p>Para ejercer cualquiera de estos derechos, contacte con nosotros a través del formulario del sitio web. Responderemos dentro del plazo que establece la ley. Puede que antes necesitemos verificar su identidad. Si cree que hemos gestionado mal sus datos, también tiene derecho a reclamar ante la autoridad de protección de datos que le corresponda.</p>
 <h3>Menores</h3>
 <p>El sitio web es para uso profesional por parte de adultos. No recogemos datos de menores a sabiendas. Si cree que un menor nos ha facilitado datos personales, díganoslo a través del formulario de contacto y los eliminaremos.</p>
 <h3>Sitios de terceros</h3>

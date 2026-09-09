@@ -120,9 +120,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2>Texto corporativo</h2>
 <span class="lead">Corto</span>
-<div class="bp-card"><button class="copy" type="button" aria-label="Copiar el texto corporativo corto">Copiar</button><p>Hypercreative entrena a los equipos de las empresas más exigentes del mundo para crear ideas útiles a demanda. Convierte la creatividad en una disciplina entrenable y deja de tratarla como un rasgo de carácter.</p></div>
+<div class="bp-card"><button class="copy" type="button" aria-label="Copiar el texto corporativo corto">Copiar</button><p>Hypercreative entrena a los equipos de las empresas más exigentes del mundo para crear ideas útiles a demanda. La creatividad deja de ser un rasgo de carácter y pasa a ser una disciplina entrenable.</p></div>
 <span class="lead">Largo</span>
-<div class="bp-card"><button class="copy" type="button" aria-label="Copiar el texto corporativo largo">Copiar</button><p>Hypercreative es una empresa de entrenamiento creativo para organizaciones. Enseña a los equipos directivos y a sus personas a generar ideas útiles y originales a demanda, con conferencias y programas a medida. El método se construyó dentro de equipos creativos de alta presión del cine y la producción, y hoy se exporta a grandes organizaciones. Hypercreative es una marca comercial.</p></div>
+<div class="bp-card"><button class="copy" type="button" aria-label="Copiar el texto corporativo largo">Copiar</button><p>Hypercreative es una empresa de entrenamiento creativo para organizaciones. Enseña a los directivos y a sus equipos a generar ideas útiles y originales a demanda, con conferencias y programas a medida. El método se construyó dentro de equipos creativos del cine y la producción que trabajan bajo presión, y hoy se exporta a grandes organizaciones. Hypercreative es una marca comercial.</p></div>
 
 <h2>Logotipo</h2>
 <p>Usa siempre los archivos que te damos. Deja aire alrededor del logotipo y no lo alteres, ni le cambies el color, ni lo gires, ni lo vuelvas a componer con otra tipografía. Las reglas completas están en el manual de marca.</p>
@@ -132,15 +132,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="dls"><a class="dl" href="/assets/press/logo-mark.svg" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Símbolo (el punto)</a></div>
 
-<span class="lead">La vía rápida</span>
 <h2>Usa nuestro logotipo con cualquier IA</h2>
-<p>Hemos escrito un prompt que le enseña a cualquier IA, ChatGPT, Claude, Gemini o tus propias herramientas, a colocar bien nuestro logotipo y a revisar su propio trabajo. Lo pegas, pides lo que necesitas y él va a buscar los archivos oficiales y sigue nuestras reglas. Casi todas las marcas te entregan un PDF y cruzan los dedos. Nosotros entregamos el nuestro como un prompt que puedes ejecutar, porque hacia ahí van los sistemas de marca y queríamos llegar los primeros.</p>
+<p>Hemos escrito un prompt que le enseña a cualquier IA (ChatGPT, Claude, Gemini o tus propias herramientas) a colocar bien nuestro logotipo y a revisar su propio trabajo. Lo pegas, pides lo que necesitas y la IA va a buscar los archivos oficiales y sigue nuestras reglas. Casi todas las marcas te entregan un PDF y cruzan los dedos. Nosotros entregamos el nuestro como un prompt que puedes ejecutar, porque hacia ahí van los sistemas de marca y queríamos llegar los primeros.</p>
 
 <div class="ai-logos" role="img" aria-label="Funciona con ChatGPT, Claude, Gemini, Copilot y Grok">
 <img src="/assets/press/ai/openai.svg" alt="ChatGPT" title="ChatGPT"><img src="/assets/press/ai/claude.svg" alt="Claude" title="Claude"><img src="/assets/press/ai/gemini.svg" alt="Gemini" title="Gemini"><img src="/assets/press/ai/copilot.svg" alt="Copilot" title="Copilot"><img src="/assets/press/ai/grok.svg" alt="Grok" title="Grok">
 </div>
 
-<span class="lead" style="margin-top:1.4rem">El prompt</span>
 <p style="margin:0 0 .8rem">Cópialo en cualquier IA o descárgalo como archivo. Sirve para cualquiera, no hacen falta conocimientos de diseño.</p>
 <div class="bp-card prompt-card"><button class="copy" type="button" aria-label="Copiar el prompt de marca">Copiar</button><pre class="prompt">LOGOTIPO DE HYPERCREATIVE: CÓMO USARLO BIEN
 
@@ -197,10 +195,10 @@ Archivos oficiales y manual completo: https://hypercreativemethod.com/es/prensa/
 
 <div class="manual-card"><div class="mt"><h3>Pack de logotipos (todos los archivos)</h3><p>El logotipo para fondos claros y oscuros (SVG y PNG), el símbolo, el favicon y un archivo léeme breve.</p></div><a class="dl" href="/assets/press/Hypercreative-Logos.zip" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Descargar el pack</a></div>
 <h2>Manual de marca</h2>
-<div class="manual-card"><div class="mt"><h3>El manual de marca (PDF)</h3><p>Las normas completas: logotipo, aire, color, tipografía, lo que se hace y lo que no, aplicaciones y legal.</p></div><a class="dl" href="/assets/press/Hypercreative-Brand-Manual.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Descargar el PDF</a></div>
+<div class="manual-card"><div class="mt"><h3>El manual de marca (PDF)</h3><p>Las normas completas: logotipo, aire, color, tipografía, lo que se hace y lo que no, aplicaciones y el apartado legal.</p></div><a class="dl" href="/assets/press/Hypercreative-Brand-Manual.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg> Descargar el PDF</a></div>
 
 <h2>Color</h2>
-<p>Un rojo, y solo uno, por vista. El rojo es un acento, nunca un fondo ni un color de texto.</p>
+<p>Un rojo, y solo uno, en cada pieza. El rojo es un acento, nunca un fondo ni un color de texto.</p>
 <div class="sw-grid"><div class="sw"><div class="chip" style="background:#13130F;"></div><div class="m"><div class="nm">Tinta</div><div class="hx">#13130F</div><div class="rl">Principal / texto</div></div></div><div class="sw"><div class="chip" style="background:#F7F6F3;box-shadow:inset 0 0 0 1px var(--line)"></div><div class="m"><div class="nm">Papel</div><div class="hx">#F7F6F3</div><div class="rl">Superficie</div></div></div><div class="sw"><div class="chip" style="background:#FFFFFF;box-shadow:inset 0 0 0 1px var(--line)"></div><div class="m"><div class="nm">Blanco</div><div class="hx">#FFFFFF</div><div class="rl">Superficie</div></div></div><div class="sw"><div class="chip" style="background:#E0463C;"></div><div class="m"><div class="nm">Rojo</div><div class="hx">#E0463C</div><div class="rl">Acento (uno por vista)</div></div></div><div class="sw"><div class="chip" style="background:#56554E;"></div><div class="m"><div class="nm">Tinta suave</div><div class="hx">#56554E</div><div class="rl">Secundario</div></div></div><div class="sw"><div class="chip" style="background:#9A988F;"></div><div class="m"><div class="nm">Tinta apagada</div><div class="hx">#9A988F</div><div class="rl">Terciario / etiquetas</div></div></div></div>
 
 <h2>Tipografía</h2>

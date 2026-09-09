@@ -12,7 +12,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Loam · Siembra cualquier cosa. Cultiva ideas.</title>
 <link rel="icon" href="/loam/assets/loam-icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/loam/assets/loam-icon.png">
-<meta name="description" content="Un banco de semillas para tus ideas que no acaba en trastero. Cuando te atascas, tu propia tierra te lo devuelve en preguntas, nunca en respuestas.">
+<meta name="description" content="Un banco de semillas para tus ideas que no acaba en el trastero. Cuando te atascas, te devuelve tu propio material convertido en preguntas, nunca en respuestas.">
 <?php echo hc_hreflang(); ?>
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:site_name" content="Hypercreative">
@@ -246,8 +246,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-inner">
     <h1 class="hero-logo reveal">Loam<span class="s">.</span><span class="sr-only"> Un banco de semillas para tus ideas. Siembra cualquier cosa, cultiva ideas.</span></h1>
     <p class="hero-claim reveal" style="--d:.1s">Siembra cualquier cosa. Cultiva ideas.</p>
-    <p class="hero-sub reveal" style="--d:.16s">Una app privada para esas medias ideas que se te pierden por el camino.</p>
-    <p class="hero-how reveal" style="--d:.22s">Guarda cualquier pensamiento, enlace o foto en un toque, sin ordenar nada. Cuando te atascas, Loam te devuelve tu propio material y te hace la pregunta que lo desbloquea.</p>
+    <p class="hero-sub reveal" style="--d:.16s">Una app privada para esas ideas a medio hacer que se te pierden por el camino.</p>
+    <p class="hero-how reveal" style="--d:.22s">Guarda cualquier pensamiento, enlace o foto con un toque, sin ordenar nada. Cuando te atascas, Loam te devuelve tu propio material y te hace la pregunta que te desatasca.</p>
     <div class="actions reveal" style="--d:.28s">
       <a class="btn btn-primary" href="https://loam.hypercreativemethod.com">Abrir Loam</a>
       <a class="btn btn-ghost" href="https://loam.hypercreativemethod.com/demo">Ver la demo en directo</a>
@@ -311,7 +311,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="quiet" id="why">
   <div class="quiet-in">
     <h2 class="h reveal">Tus mejores ideas llegan en el peor momento y se esfuman.</h2>
-    <p class="q reveal" style="--d:.1s">"Tu cabeza no guarda la idea que no capturaste. Pasa página." Loam es el sitio donde cazarlas todas antes de que se vayan.</p>
+    <p class="q reveal" style="--d:.1s">"La idea que no capturaste no vuelve: tu cabeza pasa página." Loam es el sitio donde cazarlas todas antes de que se vayan.</p>
     <span class="cite reveal" style="--d:.18s">Del método Hypercreative sobre crear bajo presión</span>
   </div>
 </section>
@@ -354,7 +354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="lbl">Prompt para tu IA</span>
       <span class="pc-copy">Copiar</span>
     </div>
-    <p class="pc-line">Eres mi compañero de pensamiento. Mi problema:</p>
+    <p class="pc-line">Piensa conmigo. Mi problema:</p>
     <p class="pc-quote">"¿Cómo consigo que los usuarios nuevos se queden?"</p>
     <p class="pc-line">Construido con mi propio material guardado:</p>
     <ul class="pc-seeds">

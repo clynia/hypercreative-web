@@ -78,17 +78,17 @@ article a{color:var(--ink);text-decoration:underline;text-decoration-color:var(-
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/header.php'; ?>
-<main class="wrap"><a class="back" href="/es/blog/">&#8592; Blog</a><h1 class="t" style="margin-top:1.4rem">La creatividad es el nuevo activo</h1><p class="byline">Por Alfonso G. Aguilar &middot; 3 min de lectura</p><p class="dek">Las empresas más valiosas del planeta funcionan con ella. La mayoría de los comités de dirección la siguen tratando como un rasgo de carácter.</p><img class="post-hero" src="/blog/assets/blog-1.png" alt="Un folio en blanco color crema sobre un pedestal de museo, iluminado por un foco, como símbolo de la creatividad como activo más valioso de una empresa"><article><p>Hace veinte años la creatividad no aparecía en ningún balance. Era una palabra blanda. Algo que tenía la planta de marketing y no tenía la de finanzas.</p>
+<main class="wrap"><a class="back" href="/es/blog/">&#8592; Blog</a><h1 class="t" style="margin-top:1.4rem">La creatividad es el nuevo activo</h1><p class="byline">Por Alfonso G. Aguilar &middot; 3 min de lectura</p><p class="dek">Las empresas más valiosas del planeta funcionan con ella. La mayoría de los comités de dirección la siguen tratando como un rasgo de carácter.</p><img class="post-hero" src="/blog/assets/blog-1.png" alt="Un folio en blanco color crema sobre un pedestal de museo, iluminado por un foco, símbolo de la creatividad como el activo más valioso de una empresa"><article><p>Hace veinte años la creatividad no aparecía en ningún balance. Era una palabra blanda. Algo que tenía la planta de marketing y no tenía la de finanzas.</p>
 <p>Mira ahora de qué están hechas las empresas más valiosas del mundo. No las sostienen materias primas más baratas ni fábricas más grandes. Las sostiene la capacidad de imaginar algo que todavía no existe y sacarlo antes que nadie.</p>
 <p>El mercado ya lo ha descontado. La mayoría de los comités de dirección, no.</p>
 <blockquote class="pq">La creatividad dejó de ser un rasgo de carácter el día que empezó a aparecer en la valoración.</blockquote>
 <h2>Lo que los líderes entienden mal</h2>
-<p>La creencia de siempre es que la creatividad es un don. El artista lo tiene, el contable no. Así que las empresas contratan buscándolo, esperan que aparezca y protegen en voz baja a las pocas personas que parecen tenerlo.</p>
+<p>La creencia de siempre es que la creatividad es un don. El artista lo tiene, el contable no. Así que las empresas contratan buscándolo, esperan que aparezca y protegen en silencio a las pocas personas que parecen tenerlo.</p>
 <p>Es el supuesto más caro de la sala. La creatividad no es un rasgo. Es <a href="/es/blog/la-creatividad-es-una-habilidad-no-un-don" target="_blank" rel="noopener">una habilidad, y una habilidad se entrena</a>.</p>
 <p>En cuanto un líder acepta eso, el problema cambia de forma. Dejas de cazar unicornios y empiezas a construir capacidad. El director financiero que está convencido de que esto no va con él suele acabar siendo la persona más interesante de la mesa.</p>
 <h2>La creatividad que de verdad importa</h2>
 <p>Hay una versión de la creatividad que no le sirve de nada a una empresa, y es justo la que vende casi toda la formación. El brainstorming donde toda idea es bienvenida. El taller en el que se pinta. El offsite que sienta de maravilla y el martes no ha cambiado nada.</p>
-<p>Un líder no necesita más ideas. Necesita la idea útil, a tiempo, con todo en contra, y salida de un equipo que tira junto en vez de lucirse por separado.</p>
+<p>Un líder no necesita más ideas. Necesita la idea útil, a tiempo, con todo en contra, y salida de un equipo que tira a una en vez de lucirse por separado.</p>
 <p>Eso es otra disciplina. La llamamos creatividad bajo presión. Es lo que ocurre en un rodaje, donde el plazo es imposible, el material falla, las reglas cambian cada día y aun así el trabajo sale.</p>
 <blockquote class="pq">La página en blanco con tiempo infinito no produce nada. El plazo de las cinco en punto produce el trabajo.</blockquote>
 <p>La restricción no es el enemigo de la creatividad. Los plazos, los límites, las reglas que se mueven. No la matan. La encienden.</p>
@@ -98,10 +98,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>El arreglo no es más talento. Es orquestación. Un lenguaje común, roles definidos y un clima donde el último en llegar puede contradecir al primero, porque a veces la mejor idea viene del rango más bajo de la sala. Ese es el trabajo del líder, y casi nadie está entrenado para hacerlo.</p>
 <h2>Qué significa esto para ti</h2>
 <p>Si la creatividad es el activo, la pregunta cambia. Ya no es si tienes gente creativa. La tienes, y está infrautilizada.</p>
-<p>La pregunta de verdad es si tu organización puede producir una respuesta útil bajo presión real, a demanda, con un equipo que rema junto. Casi ninguna puede. No porque la gente sea floja, sino porque nadie entrenó nunca esa capacidad. Se entrenó la hoja de cálculo, la negociación, el marco estratégico, y lo único que el mercado paga hoy más caro se dejó al azar.</p>
+<p>La pregunta de verdad es si tu organización puede producir una respuesta útil bajo presión real, a demanda, con un equipo que rema junto. Casi ninguna puede. No porque la gente sea vaga, sino porque nadie entrenó nunca esa capacidad. Se entrenó la hoja de cálculo, la negociación, el marco estratégico, y lo único que el mercado paga hoy más caro se dejó al azar.</p>
 <blockquote class="pq">La generación anterior sistematizó la excelencia operativa. Esta tendrá que sistematizar la creatividad o perder contra la empresa que lo haga.</blockquote>
-<p>Esta idea no la inventamos nosotros. La inventó el mercado. Nosotros construimos el método para entrenarla, el mismo que usábamos dentro de equipos creativos a presión mucho antes de abrirlo al mundo.</p>
+<p>Esta idea no la inventamos nosotros. La inventó el mercado. Nosotros construimos el método para entrenarla, el mismo que usábamos en equipos creativos bajo presión mucho antes de abrirlo al mundo.</p>
 <p>La creatividad no se compra. Se entrena. De eso va todo esto.</p>
-<div class="takeaway"><span class="tk-label">Lo que te llevas</span><p>La creatividad bajo presión es lo más valioso que tu equipo no está practicando.</p></div></article></main><?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
+<div class="takeaway"><span class="tk-label">Lo que te llevas</span><p>La creatividad bajo presión es lo más valioso que tu equipo no practica.</p></div></article></main><?php include $_SERVER['DOCUMENT_ROOT'].'/_inc/footer.php'; ?>
 
 </body></html>
