@@ -90,7 +90,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><strong>Número de registro estatal:</strong> 2025-001733636</li>
 <li><strong>Domicilio social:</strong> 30 N Gould St Ste R, Sheridan, WY 82801, United States</li>
 </ul>
-<p>La Empresa opera bajo la marca <strong>Hypercreative</strong>. &quot;Hypercreative&quot; es una marca de Stormridge LLC. Detrás del método está su fundador, <a href="/es/fundador/">Alfonso González Aguilar</a>, a quien se puede encontrar, pero que no es el centro de todo esto. El trabajo habla primero.</p>
+<p>La Empresa opera bajo la marca <strong>Hypercreative</strong>. &quot;Hypercreative&quot; es una marca de Stormridge LLC. Detrás del método está su fundador, <a href="/es/fundador/">Alfonso G. Aguilar</a>, a quien se puede encontrar, pero que no es el centro de todo esto. El trabajo habla primero.</p>
 <p>Para cualquier asunto relacionado con el sitio web o con la Empresa, el canal de contacto es el formulario de contacto del sitio web. Encauzamos las consultas por el formulario para que lleguen a las personas adecuadas y se atiendan como corresponde.</p>
 <h3>Qué es este sitio web</h3>
 <p>El sitio web presenta Hypercreative y el Método Hypercreative, nuestra convicción de que la creatividad es el nuevo activo de negocio, de que se entrena y de que la habilidad de verdad es la creatividad bajo presión. Existe para informar a las organizaciones que encajan con lo que hacemos y para que puedan ponerse en contacto con nosotros. Es un canal informativo y de contacto, no una tienda, y nada de lo que hay en él constituye una oferta vinculante de servicios. Toda colaboración se acuerda por separado y por escrito.</p>
