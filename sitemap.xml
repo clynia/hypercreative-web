@@ -39,6 +39,14 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/que-hacemos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/what-we-do/"/></url>
 
+  <url><loc>https://hypercreativemethod.com/founder/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/founder/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/fundador/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/founder/"/></url>
+  <url><loc>https://hypercreativemethod.com/es/fundador/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/founder/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/fundador/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hypercreativemethod.com/founder/"/></url>
   <url><loc>https://hypercreativemethod.com/press/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://hypercreativemethod.com/press/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://hypercreativemethod.com/es/prensa/"/>

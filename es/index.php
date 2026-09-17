@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://hypercreativemethod.com/#org","name":"Hypercreative","url":"https://hypercreativemethod.com/","image":"https://hypercreativemethod.com/assets/og-default.png","slogan":"Entrenamiento en creatividad bajo presión","description":"Entrenamiento en creatividad para empresas y conferencias que enseñan a directivos y equipos a crear trabajo útil y original a demanda.","founder":{"@id":"https://hypercreativemethod.com/#alfonso"}},
 {"@type":"WebSite","@id":"https://hypercreativemethod.com/#website","url":"https://hypercreativemethod.com/","name":"Hypercreative","publisher":{"@id":"https://hypercreativemethod.com/#org"},"inLanguage":"es"},
-{"@type":"Person","@id":"https://hypercreativemethod.com/#alfonso","name":"Alfonso González Aguilar","jobTitle":"Fundador y conferenciante","worksFor":{"@id":"https://hypercreativemethod.com/#org"},"description":"Fundador de Hypercreative. Entrena a equipos directivos para crear a demanda, tras años dirigiendo equipos de cine y producción donde el error se paga."}
+{"@type":"Person","@id":"https://hypercreativemethod.com/#alfonso","name":"Alfonso González Aguilar","jobTitle":"Fundador y conferenciante","worksFor":{"@id":"https://hypercreativemethod.com/#org"},"description":"Fundador de Hypercreative. Entrena a equipos directivos para crear a demanda, tras años dirigiendo equipos de cine y producción donde el error se paga.","url":"https://hypercreativemethod.com/es/fundador/","image":"https://hypercreativemethod.com/assets/founder/alfonso-gonzalez-aguilar.jpg"}
 ]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
