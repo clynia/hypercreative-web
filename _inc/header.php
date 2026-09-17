@@ -3,7 +3,7 @@
 .snav .brand{font-family:'Inter',system-ui,sans-serif;font-weight:500;font-size:1.18rem;letter-spacing:-.015em;color:#13130F}
 .snav .bp{color:#E0463C}
 .snav-links{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(1.2rem,3vw,2.4rem);font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
-.snav-links a{position:relative;color:#56554E;transition:color .3s ease}
+.snav-links a{white-space:nowrap;position:relative;color:#56554E;transition:color .3s ease}
 .snav-links a:hover{color:#13130F}
 .snav-links a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:0;bottom:-5px;height:1px;background:#E0463C;opacity:.8;transform:scaleX(0);transform-origin:right;transition:transform .4s ease}
 .snav-links a:not(.nav-cta):hover::after{transform:scaleX(1);transform-origin:left}
@@ -15,8 +15,10 @@
 .snav.open .snav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .snav.open .snav-toggle span:nth-child(2){opacity:0}
 .snav.open .snav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-@media(max-width:760px){.snav-toggle{display:flex}.snav-links{position:fixed;top:0;bottom:0;right:0;width:min(80vw,300px);flex-direction:column;flex-wrap:nowrap;justify-content:center;align-items:flex-start;gap:1.7rem;padding:2rem;background:#F7F6F3;box-shadow:-24px 0 60px -30px rgba(0,0,0,.55);transform:translateX(100%);transition:transform .4s cubic-bezier(.22,.61,.36,1);font-size:.85rem}.snav.open .snav-links{transform:none}.snav-links a:not(.nav-cta)::after{display:none}.snav .nav-cta{margin-top:.4rem}}
-/* El selector vive en la barra, no dentro del menu: en movil el panel se va
+@media(max-width:1199px){.snav-toggle{display:flex}.snav-links{position:fixed;top:0;bottom:0;right:0;width:min(80vw,300px);flex-direction:column;flex-wrap:nowrap;justify-content:center;align-items:flex-start;gap:1.7rem;padding:2rem;background:#F7F6F3;box-shadow:-24px 0 60px -30px rgba(0,0,0,.55);transform:translateX(100%);transition:transform .4s cubic-bezier(.22,.61,.36,1);font-size:.85rem}.snav.open .snav-links{transform:none}.snav-links a:not(.nav-cta)::after{display:none}.snav .nav-cta{margin-top:.4rem}}
+/* Con siete entradas el menu no cabe en una linea por debajo de ~1170 px:
+   ahi pasa a hamburguesa en vez de partirse en dos filas.
+   El selector vive en la barra, no dentro del menu: en movil el panel se va
    fuera de pantalla y con el se iba el unico modo de cambiar de idioma. */
 .nav-lang{display:inline-flex;align-items:center;gap:.45em;margin-left:auto;margin-right:1.1rem;
   font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#9a988f}
@@ -25,7 +27,7 @@
 .snav .nav-lang a::after{display:none}
 .nav-lang .on{color:#13130F}
 .nav-lang i{font-style:normal;opacity:.4}
-@media(min-width:761px){.snav .nav-lang{order:3;margin-left:clamp(1.2rem,3vw,2.4rem);margin-right:0}.snav-links{order:2;margin-left:auto}}
+@media(min-width:1200px){.snav .nav-lang{order:3;margin-left:clamp(1.2rem,3vw,2.4rem);margin-right:0}.snav-links{order:2;margin-left:auto}}
 </style>
 <?php $es = (isset($HC_LANG) && $HC_LANG === 'es'); ?>
 <header class="snav" id="nav"><a class="brand" href="<?php echo $es ? '/es/' : '/'; ?>">Hypercreative<span class="bp">.</span></a><?php echo function_exists('hc_lang_switch') ? hc_lang_switch() : ''; ?><button class="snav-toggle" id="navToggle" type="button" data-open="<?php echo $es ? 'Abrir men&uacute;' : 'Open menu'; ?>" data-close="<?php echo $es ? 'Cerrar men&uacute;' : 'Close menu'; ?>" aria-label="<?php echo $es ? 'Abrir men&uacute;' : 'Open menu'; ?>" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button><nav class="snav-links" id="navLinks" aria-label="<?php echo $es ? 'Principal' : 'Primary'; ?>"><?php if ($es): ?><a href="/es/#metodo">El m&eacute;todo</a><a href="/es/que-hacemos/">Qu&eacute; hacemos</a><a href="/es/fundador/">Fundador</a><a class="nav-hot" href="/es/perfil-creativo/">Creative Profile</a><a href="/es/blog/">Blog</a><a href="/es/prensa/">Prensa</a><a class="nav-cta" href="/es/#contacto">Hablemos</a><?php else: ?><a href="/#method">The method</a><a href="/what-we-do/">What we do</a><a href="/founder/">Founder</a><a class="nav-hot" href="/creative-profile/">Creative Profile</a><a href="/blog/">Blog</a><a href="/press/">Press</a><a class="nav-cta" href="/#request">Let&#39;s talk</a><?php endif; ?></nav></header>
